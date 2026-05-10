@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: RoomModel.ma
-//Last modified: Sun, May 10, 2026 11:26:53 AM
+//Name: RoomModel.0023.ma
+//Last modified: Sun, May 10, 2026 11:24:49 AM
 //Codeset: 1252
 file -rdi 1 -ns "BowlStack" -rfn "BowlStackRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/BowlStack.ma";
 file -r -ns "BowlStack" -dr 1 -rfn "BowlStackRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/BowlStack.ma";
@@ -14,19 +14,20 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202505300603-a12e894a3d";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "2095FE20-40CB-E45D-B7B2-468C669BC5E3";
+fileInfo "UUID" "32E357FB-4E91-A1DC-6014-03A266387178";
+fileInfo "exportedFrom" "C:/GitHub/Essentials/DAGV1100and1200/Maya/scenes/RoomModel.ma";
 createNode transform -s -n "persp";
 	rename -uid "A8FC7424-475E-16E3-1C25-2E8C0A69C5A3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -11.789304341024064 5.9866624148339129 12.664535265585343 ;
-	setAttr ".r" -type "double3" -14.138352942134878 -41.80000000000117 -1.0666187385028613e-15 ;
+	setAttr ".t" -type "double3" -4.2101238275429091 11.979476302590635 26.624539161876683 ;
+	setAttr ".r" -type "double3" -8.138352942134901 -33.800000000001127 4.7843172752690445e-16 ;
 	setAttr ".rp" -type "double3" -8.8817841970012523e-16 8.8817841970012523e-16 -8.8817841970012523e-16 ;
 	setAttr ".rpt" -type "double3" 1.2798302854983973e-15 1.4650856670627229e-16 -1.8075299617322927e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DC266339-4277-C1FD-BA56-389ABCBE33FB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 17.715091996070367;
+	setAttr ".coi" 25.526413384497115;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9185,7 +9186,6 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
-	setAttr ".msaa" yes;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
@@ -9247,10 +9247,6 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "layerManager.dli[1]" "FloorLyr.id";
 connectAttr "layerManager.dli[2]" "WallsLyr.id";
 connectAttr "polySurfaceShape2.o" "polySplit11.ip";
@@ -9301,4 +9297,4 @@ connectAttr "groupId50.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId51.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId52.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId53.msg" ":initialShadingGroup.gn" -na;
-// End of RoomModel.ma
+// End of RoomModel.0023.ma
