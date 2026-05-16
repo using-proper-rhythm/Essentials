@@ -11,11 +11,11 @@ TagManager:
   - Player
   - Water
   - UI
-  - Level
-  - 
-  - 
-  - 
   - Enemies
+  - Level
+  - Hazards
+  - 
+  - 
   - 
   - 
   - PowerUps
@@ -43,3 +43,4 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  m_MigratedRenderPipelines: []
