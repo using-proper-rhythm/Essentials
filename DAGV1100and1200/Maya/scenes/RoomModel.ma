@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: RoomModel.ma
-//Last modified: Sun, May 17, 2026 09:04:30 PM
+//Last modified: Mon, May 18, 2026 04:00:09 PM
 //Codeset: 1252
 file -rdi 1 -ns "BowlStack" -rfn "BowlStackRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/BowlStack.ma";
 file -rdi 1 -ns "TableMesh" -rfn "TableMeshRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/TableMesh.ma";
@@ -34,19 +34,19 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202505300603-a12e894a3d";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "BF37F2DE-41A2-09D8-D308-619046834190";
+fileInfo "UUID" "18804806-457C-774C-398B-2BBD2B397AD8";
 createNode transform -s -n "persp";
 	rename -uid "A8FC7424-475E-16E3-1C25-2E8C0A69C5A3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -24.646466915410112 29.3948681406806 41.565193721984599 ;
-	setAttr ".r" -type "double3" -26.138352941743801 686.60000000002981 1.9048708282187414e-15 ;
+	setAttr ".t" -type "double3" -40.499861648430148 17.033153560020189 52.06179383717194 ;
+	setAttr ".r" -type "double3" -11.738352941759766 681.39999999998963 0 ;
 	setAttr ".rp" -type "double3" -8.8817841970012523e-16 8.8817841970012523e-16 -8.8817841970012523e-16 ;
 	setAttr ".rpt" -type "double3" 1.2798302854983973e-15 1.4650856670627229e-16 -1.8075299617322927e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DC266339-4277-C1FD-BA56-389ABCBE33FB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 71.703284032106126;
+	setAttr ".coi" 84.82812136935101;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -105,7 +105,6 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "Floor";
 	rename -uid "080330E1-4CD9-C309-7379-FCB5D4A55056";
-	setAttr ".s" -type "double3" 23.961725138581052 0.064153530916367871 23.961725138581052 ;
 createNode mesh -n "FloorShape" -p "Floor";
 	rename -uid "A1A03187-47FA-BF5E-1CE9-DB823C55271B";
 	setAttr -k off ".v";
@@ -126,23 +125,23 @@ createNode mesh -n "FloorShape" -p "Floor";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
 	setAttr ".pv" -type "double2" 0.5 0.375 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0 0.01128298 0.49998021
+		 0 0.011244357 0.011282161 0.49998096 0.011244416 0.011282086 0.50001889 0.50001895
+		 0.49998114 0.01128298 0.51126331 0.50001967 0.51122552 0.01132071 1 0.50005746 0.99996227
+		 0.51126343 0.49998045 3.7699938e-05 0.50001973 0.51122528 0.011243582 0.011243433
+		 3.7789345e-05;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0 -8.0932713 0 0 -8.0932713 
-		0 0 -0.50000191 0 0 -0.50000191 0 0 -0.50000191 0 0 -0.50000191 0 0 -8.0932713 0 
-		0 -8.0932713 0;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 8 ".vt[0:7]"  -11.98086262 -0.5512886 11.98086262 11.98086262 -0.5512886 11.98086262
+		 -11.98086262 -1.1920929e-07 11.98086262 11.98086262 -1.1920929e-07 11.98086262 -11.98086262 -1.1920929e-07 -11.98086262
+		 11.98086262 -1.1920929e-07 -11.98086262 -11.98086262 -0.5512886 -11.98086262 11.98086262 -0.5512886 -11.98086262;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
 		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
 	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
 		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
+		mu 0 4 13 1 3 2
 		f 4 1 7 -3 -7
 		mu 0 4 2 3 5 4
 		f 4 2 9 -4 -9
@@ -150,12 +149,16 @@ createNode mesh -n "FloorShape" -p "Floor";
 		f 4 3 11 -1 -11
 		mu 0 4 6 7 9 8
 		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
+		mu 0 4 12 10 5 3
 		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
+		mu 0 4 11 0 2 4;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 4 
+		2 0 
+		3 0 
+		4 0 
+		5 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "wall2";
 	rename -uid "C072071A-4C72-4F46-C284-E1BCFE500B80";
@@ -399,15 +402,15 @@ createNode mesh -n "wallShape" -p "wall";
 		40 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "0D4E217E-48F5-A438-FEC4-47B1800BEACB";
+	rename -uid "096BA463-4659-B936-0686-BF99EECC2789";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "E0445437-404A-ED29-24F3-649564350E40";
+	rename -uid "991594C6-450D-C792-E25C-A4BB25DD3B0D";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "D02F7A5A-4EEC-0FA5-4208-3298F1E65AD3";
+	rename -uid "939523C8-4593-0DD4-2F34-588C46284C07";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7135E4A0-41FF-6FCF-459F-5590E17E57F8";
+	rename -uid "9770D0F3-4FE5-DC06-D8D0-27A37F22D5D5";
 	setAttr ".cdl" 1;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
@@ -415,7 +418,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "4FF248DB-4314-F955-1E5F-16B186EE3899";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8C3A0B8A-4B46-3153-389A-6E94FC722E78";
+	rename -uid "5F94D681-4CB2-7560-FA94-3481D4E09188";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C8B8F35D-45D0-10F1-E4BB-838AC82812B9";
 	setAttr ".g" yes;
@@ -487,7 +490,6 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode displayLayer -n "FloorLyr";
 	rename -uid "CB486FAC-4E23-8138-9F5F-9889BD0DA847";
-	setAttr ".dt" 2;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
 createNode displayLayer -n "WallsLyr";
@@ -619,16 +621,17 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 8 ".r";
+	setAttr -s 10 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.68354428 0.68354428 0.68354428 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 63 ".dsm";
+	setAttr -s 61 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 5 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
