@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Scene 2.ma
-//Last modified: Thu, Jul 16, 2026 11:55:23 PM
+//Name: Scene 2.0001.ma
+//Last modified: Thu, Jul 16, 2026 11:54:55 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202505300603-a12e894a3d";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "A825AF7E-4923-73AF-2D04-49B9E36E95E8";
+fileInfo "UUID" "95AD6668-4C54-1D6A-91A6-89905C433122";
+fileInfo "exportedFrom" "C:/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Scene 2.ma";
 createNode transform -s -n "persp";
 	rename -uid "9F8A7154-49EE-BF5C-D47A-4F861ED4971A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.248937227747893 13.412655142413142 51.366505971960777 ;
-	setAttr ".r" -type "double3" -11.738352729665921 2.9999999999998979 -1.9905746893448694e-16 ;
+	setAttr ".t" -type "double3" 11.107092559111056 21.913749800962499 59.238735146779597 ;
+	setAttr ".r" -type "double3" -18.338352729665981 1.3999999999999275 2.4855503070594138e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5566EBBA-4332-08A4-4709-04A07AF692EB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 48.791195641474687;
+	setAttr ".coi" 58.568574489373404;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -272,12 +273,12 @@ createNode mesh -n "pCubeShape5" -p "pCube5";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "GuitarCase";
+createNode transform -n "pCube6";
 	rename -uid "94D4161A-46A6-97A7-F3DF-DB9880BEEAD6";
 	setAttr ".t" -type "double3" 11.800377678986903 3.1887358232697518 5.9774786116229226 ;
 	setAttr ".r" -type "double3" -25.677492102537013 41.202608299753869 2.0922050635337985 ;
 	setAttr ".s" -type "double3" 1.8776032249248169 6.3680026024771301 0.61933975162281252 ;
-createNode mesh -n "GuitarCaseShape" -p "GuitarCase";
+createNode mesh -n "pCubeShape6" -p "pCube6";
 	rename -uid "1EA0E7FE-4BC9-307A-75DC-748BBC1534B8";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -526,7 +527,7 @@ connectAttr "polyCube2.out" "BackWallShape1Orig.i";
 connectAttr "polyCube3.out" "pCubeShape1.i";
 connectAttr "polyCube4.out" "pCubeShape3.i";
 connectAttr "polyCube5.out" "pCubeShape4.i";
-connectAttr "polyCube6.out" "GuitarCaseShape.i";
+connectAttr "polyCube6.out" "pCubeShape6.i";
 connectAttr "polyBevel1.out" "pCubeShape7.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -536,10 +537,6 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "BackWallShape1Orig.w" "polySplit1.ip";
 connectAttr "polyTweak1.out" "polySplit2.ip";
 connectAttr "polySplit1.out" "polyTweak1.ip";
@@ -559,6 +556,6 @@ connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "GuitarCaseShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape6.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape7.iog" ":initialShadingGroup.dsm" -na;
-// End of Scene 2.ma
+// End of Scene 2.0001.ma
