@@ -1,12 +1,18 @@
 //Maya ASCII 2025ff03 scene
 //Name: Scene 2.ma
-//Last modified: Wed, Jul 22, 2026 03:39:46 PM
+//Last modified: Tue, Jul 28, 2026 10:15:02 PM
 //Codeset: 1252
 file -rdi 1 -ns "GuitarCase1" -rfn "GuitarCaseRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/GuitarCase.ma";
 file -rdi 1 -ns "TVScene2" -rfn "TVScene2RN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/TVScene2.ma";
+file -rdi 1 -ns "NewChairScene2" -rfn "NewChairScene2RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/NewChairScene2.ma";
+file -rdi 1 -ns "NewChairScene3" -rfn "NewChairScene2RN1" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/NewChairScene2.ma";
 file -r -ns "GuitarCase1" -dr 1 -rfn "GuitarCaseRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/GuitarCase.ma";
 file -r -ns "TVScene2" -dr 1 -rfn "TVScene2RN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/TVScene2.ma";
+file -r -ns "NewChairScene2" -dr 1 -rfn "NewChairScene2RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/NewChairScene2.ma";
+file -r -ns "NewChairScene3" -dr 1 -rfn "NewChairScene2RN1" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/NewChairScene2.ma";
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -17,17 +23,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202505300603-a12e894a3d";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "5F56A1AB-4B69-98CF-4D9B-80B1E6C8E815";
+fileInfo "UUID" "20C7D671-43F8-52E3-F1D5-56A748615D7C";
 createNode transform -s -n "persp";
 	rename -uid "9F8A7154-49EE-BF5C-D47A-4F861ED4971A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.5603352837825604 10.012889376577082 27.65303467379421 ;
-	setAttr ".r" -type "double3" -2.1383527296677154 11.400000000001052 0 ;
+	setAttr ".t" -type "double3" -9.3682313742441288 20.373124896590163 58.130847878249561 ;
+	setAttr ".r" -type "double3" -15.938352729705255 -370.1999999998971 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5566EBBA-4332-08A4-4709-04A07AF692EB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 33.19186492116647;
+	setAttr ".coi" 61.261446486499096;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -129,12 +135,12 @@ createNode mesh -n "BackWallShape1Orig" -p "BackWall";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube1";
+createNode transform -n "truss1";
 	rename -uid "2653C8DA-439D-255D-F792-EA817ACB4BF5";
-	setAttr ".t" -type "double3" 0 19.278574065092339 4.3216060554793971 ;
-	setAttr ".r" -type "double3" -2.0159267876196406e-16 9.5742568090906985 -8.9357428998436212 ;
+	setAttr ".t" -type "double3" 0 20.019981342387993 9.9243996771734047 ;
+	setAttr ".r" -type "double3" 0.52305138742583324 6.2653803338414278 -6.2211255676401871 ;
 	setAttr ".s" -type "double3" 37.69230779686881 2.247377150805062 2.247377150805062 ;
-createNode mesh -n "pCubeShape1" -p "pCube1";
+createNode mesh -n "trussShape1" -p "truss1";
 	rename -uid "4CA90937-4E31-DF64-1443-59B19D302DC9";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -144,12 +150,12 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube2";
+createNode transform -n "truss2";
 	rename -uid "16832991-4F6D-BCFA-00F5-41B3BED37A0C";
-	setAttr ".t" -type "double3" 0 23.439993014413073 -2.4435473262970504 ;
-	setAttr ".r" -type "double3" -3.647574322100712 -17.6309054050345 5.368690042528617 ;
+	setAttr ".t" -type "double3" 0 23.923451218364324 -7.5589804009228505 ;
+	setAttr ".r" -type "double3" -2.7503678003170107 -8.1346948866294468 5.1679583839141028 ;
 	setAttr ".s" -type "double3" 37.69230779686881 2.247377150805062 2.247377150805062 ;
-createNode mesh -n "pCubeShape2" -p "pCube2";
+createNode mesh -n "trussShape2" -p "truss2";
 	rename -uid "530393D7-4EBC-3EE1-3FA3-88B4015B4F61";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -196,12 +202,12 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube3";
+createNode transform -n "table";
 	rename -uid "ECB1AFC7-4086-2D48-DB3F-91B3FC0049A3";
 	setAttr ".t" -type "double3" -9.8258404489392497 1.5250105201309798 1.8215596653174813 ;
 	setAttr ".r" -type "double3" 0 31.574323522257814 0 ;
 	setAttr ".s" -type "double3" 7.045537634047772 3.0624211621578246 2.7524737433037259 ;
-createNode mesh -n "pCubeShape3" -p "pCube3";
+createNode mesh -n "tableShape" -p "table";
 	rename -uid "5C4B43DB-4151-6723-E922-5D902D846894";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -211,12 +217,13 @@ createNode mesh -n "pCubeShape3" -p "pCube3";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube4";
+createNode transform -n "chair2";
 	rename -uid "6366907B-45C3-F1F5-1C67-8E96471A9AF8";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 9.9483668883932417 1.9999999999999964 3.9513747132102921 ;
 	setAttr ".r" -type "double3" 0 43.416344356801083 0 ;
 	setAttr ".s" -type "double3" 3.8984750445778102 3.8984750445778102 3.8984750445778102 ;
-createNode mesh -n "pCubeShape4" -p "pCube4";
+createNode mesh -n "chairShape2" -p "chair2";
 	rename -uid "4AFA1FD4-4E95-358F-C3DB-F0AC78FDDCF2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -226,12 +233,13 @@ createNode mesh -n "pCubeShape4" -p "pCube4";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube5";
+createNode transform -n "chair1";
 	rename -uid "45BACF03-4372-A0B9-43F5-F2AD406AA1EC";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 6.4695401585978844 1.9999999999999982 0.53641086335227683 ;
 	setAttr ".r" -type "double3" 0 41.829275520924568 0 ;
 	setAttr ".s" -type "double3" 3.8984750445778102 3.8984750445778102 3.8984750445778102 ;
-createNode mesh -n "pCubeShape5" -p "pCube5";
+createNode mesh -n "chairShape1" -p "chair1";
 	rename -uid "7259F2A3-43AA-87A6-C2A3-A0A33621489D";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -312,20 +320,20 @@ createNode mesh -n "tvplaceholderShape" -p "tvplaceholder";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "7C6D16AA-444D-01B0-C28A-E7A3EE2AEA15";
+	rename -uid "90025F93-4179-7AB7-A35F-95A8CC970227";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3816C49F-4F4B-D5DD-8A34-E7985C191F76";
+	rename -uid "6EFD05DD-4E95-A816-B4E9-A58860BF57DB";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "DAB96992-4287-3AFA-D68B-8B91E8A4F1D4";
+	rename -uid "9BD8C564-4FF7-7F40-CB14-1A81ABE0F090";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "307780A5-4368-C8E1-89BD-EC82DD75BE93";
+	rename -uid "03FF0215-4AE9-8660-9053-D9B946DDDADC";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "4EFAD5FF-4084-34C7-A0DF-9884B0C7CC38";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A9E5B067-491A-EE8B-D75C-1BAEB906B400";
+	rename -uid "225CB71A-4AAB-2E44-ED84-23A7F3242E1F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "36AA6135-4C31-6AB5-3627-B28C72812EFE";
 	setAttr ".g" yes;
@@ -353,14 +361,14 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 653\n            -height 320\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 301\n            -height 374\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 653\n            -height 319\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 300\n            -height 373\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 653\n            -height 319\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 301\n            -height 373\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
 		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1313\n            -height 686\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
@@ -563,22 +571,18 @@ createNode reference -n "GuitarCaseRN";
 		+ "00000002 0.96926414999999999 0.46091991999999998 0.96930432 0.45386931000000003 0.96923411000000004 0.46504193999999999 0.97047198000000001 0.42458525000000003 0.96927881000000005 0.57300346999999996 0.96907567999999999 0.49305283999999999 0.97057199000000005 0.45324835000000002 0.97044790000000003 0.53520148999999995 0.97055351999999995 0.44136444000000002 0.96915971999999995 0.48145222999999998 0.96914553999999997 0.48727477000000002 0.97053838000000003 0.44730276000000002 0.96925329999999998 0.40800816000000001 0.96925128000000005 0.39567356999999997 0.969221 0.420479 0.96923815999999996 0.42983964000000002 0.96926308000000005 0.43995708 0.96930707000000005 0.44595936000000003 0.96925640000000002 0.57767652999999997 0.97010660000000004 0.56541090999999999 0.97026062000000002 0.54633617000000001 0.97035252999999999 0.54034298999999997 0.72881985000000005 0.37153119000000001 0.97037589999999996 0.40498582 0.97042012 0.39883369000000002 0.97044516000000003 0.38846359000000003 0.97046268000000002 0.37886921000"
 		+ "000001 0.97043073000000002 0.36608692999999998 0.97043334999999997 0.35344439999999999 0.97043740999999994 0.34454920999999999 0.72186267000000004 0.32733246999999999 0.96924745999999995 0.38699510999999998 0.77241391000000004 0.34463680000000002 0.74219798999999997 0.58061618000000004 0.73033327000000003 0.32596832999999997 0.76117038999999997 0.32733246999999999"
 		)
-		3 "GuitarCase1:groupId18.groupId" "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape.instObjGroups.objectGroups[0]" 
+		3 "|GuitarCase1:GuitarCase|GuitarCase1:Handle|GuitarCase1:HandleShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "GuitarCase1:groupId17.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "GuitarCase1:groupId19.message" ":initialShadingGroup.groupNodes" "-na"
 		
+		3 "|GuitarCase1:GuitarCase|GuitarCase1:Shell|GuitarCase1:ShellShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "GuitarCase1:groupId17.groupId" "|GuitarCase1:GuitarCase|GuitarCase1:Latch|GuitarCase1:LatchShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|GuitarCase1:GuitarCase|GuitarCase1:Latch|GuitarCase1:LatchShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "|GuitarCase1:GuitarCase|GuitarCase1:Latch|GuitarCase1:LatchShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "GuitarCase1:groupId19.message" ":initialShadingGroup.groupNodes" "-na"
-		
 		3 "GuitarCase1:groupId19.groupId" "|GuitarCase1:GuitarCase|GuitarCase1:Latch2|GuitarCase1:Latch2Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|GuitarCase1:GuitarCase|GuitarCase1:Latch2|GuitarCase1:Latch2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
@@ -587,9 +591,13 @@ createNode reference -n "GuitarCaseRN";
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "GuitarCase1:groupId18.message" ":initialShadingGroup.groupNodes" "-na"
 		
-		3 "|GuitarCase1:GuitarCase|GuitarCase1:Shell|GuitarCase1:ShellShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|GuitarCase1:GuitarCase|GuitarCase1:Handle|GuitarCase1:HandleShape.instObjGroups" 
+		3 "GuitarCase1:groupId17.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "GuitarCase1:groupId18.groupId" "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "GuitarCaseRN" "|GuitarCase1:GuitarCase|GuitarCase1:Latch|GuitarCase1:LatchShape.instObjGroups" 
 		"GuitarCaseRN.placeHolderList[1]" ""
@@ -608,7 +616,7 @@ createNode standardSurface -n "Scene2_MAT";
 createNode shadingEngine -n "standardSurface2SG";
 	rename -uid "59A17129-42DB-268C-9F6F-CEB649EC9F98";
 	setAttr ".ihi" 0;
-	setAttr -s 7 ".dsm";
+	setAttr -s 19 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "70AE00D2-48BA-5C2B-EEC8-88A09C80BE29";
@@ -632,345 +640,32 @@ createNode reference -n "TVScene2RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"TVScene2RN"
 		"TVScene2RN" 0
-		"TVScene2RN" 173
+		"TVScene2RN" 13
 		2 "|TVScene2:TV" "translate" " -type \"double3\" -3.20487959340963968 7.15700113979929586 -4.58283278767395252"
 		
 		2 "|TVScene2:TV" "rotate" " -type \"double3\" 0 8.79919164358165595 0"
 		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvPivot" " -type \"double2\" 0.95434703907340102 0.8513730938528099"
 		
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints" 
-		" -s 68"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[0]" 
-		" -type \"float2\" 0.96489108000000001 0.81876802000000004"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[1]" 
-		" -type \"float2\" 0.95347667000000003 0.81890439999999998"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[2]" 
-		" -type \"float2\" 0.94550192 0.82707213999999996"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[3]" 
-		" -type \"float2\" 0.94563830000000004 0.83848655000000005"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[4]" 
-		" -type \"float2\" 0.95380591999999997 0.84646129999999997"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[5]" 
-		" -type \"float2\" 0.96522032999999996 0.84632485999999996"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[6]" 
-		" -type \"float2\" 0.97319513999999996 0.83815724000000003"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[7]" 
-		" -type \"float2\" 0.97305876000000002 0.82674276999999996"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[8]" 
-		" -type \"float2\" 0.92831474999999997 0.88443530000000004"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[9]" 
-		" -type \"float2\" 0.92002373999999998 0.87614524000000005"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[10]" 
-		" -type \"float2\" 0.92002307999999999 0.86442065000000001"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[11]" 
-		" -type \"float2\" 0.92831313999999998 0.85612959"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[12]" 
-		" -type \"float2\" 0.94003778999999998 0.85612893000000001"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[13]" 
-		" -type \"float2\" 0.94832872999999995 0.86441897999999995"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[14]" 
-		" -type \"float2\" 0.94832945000000002 0.87614369000000003"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[15]" 
-		" -type \"float2\" 0.94003939999999997 0.88443470000000002"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[16]" 
-		" -type \"float2\" 0.99630302000000004 0.86176257999999994"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[17]" 
-		" -type \"float2\" 0.99630373999999999 0.85538667000000002"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[18]" 
-		" -type \"float2\" 0.99010902999999995 0.85538601999999997"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[19]" 
-		" -type \"float2\" 0.99010830999999999 0.86176187000000004"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[20]" 
-		" -type \"float2\" 0.99630445000000001 0.84901077000000003"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[21]" 
-		" -type \"float2\" 0.99010973999999996 0.84901011000000004"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[22]" 
-		" -type \"float2\" 0.99630516999999996 0.84263491999999995"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[23]" 
-		" -type \"float2\" 0.99011046000000003 0.8426342"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[24]" 
-		" -type \"float2\" 0.99630587999999998 0.83625901000000002"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[25]" 
-		" -type \"float2\" 0.99011110999999996 0.83625828999999996"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[26]" 
-		" -type \"float2\" 0.99630660000000004 0.82988309999999998"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[27]" 
-		" -type \"float2\" 0.99011188999999999 0.82988238000000003"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[28]" 
-		" -type \"float2\" 0.99630724999999998 0.82350718999999994"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[29]" 
-		" -type \"float2\" 0.99011260000000001 0.82350646999999999"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[30]" 
-		" -type \"float2\" 0.99630803000000001 0.81713128000000002"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[31]" 
-		" -type \"float2\" 0.99011326 0.81713057"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[32]" 
-		" -type \"float2\" 0.99630874000000003 0.81075536999999998"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[33]" 
-		" -type \"float2\" 0.99011397000000001 0.81075465999999996"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[34]" 
-		" -type \"float2\" 0.98258972 0.81067312000000002"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[35]" 
-		" -type \"float2\" 0.95030797 0.81150579"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[36]" 
-		" -type \"float2\" 0.98877930999999997 0.85550331999999996"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[37]" 
-		" -type \"float2\" 0.92515159000000002 0.89207303999999998"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[38]" 
-		" -type \"float2\" 0.93802965000000005 0.82408106000000003"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[39]" 
-		" -type \"float2\" 0.98878001999999998 0.84909904000000003"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[40]" 
-		" -type \"float2\" 0.93823962999999999 0.84165524999999997"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[41]" 
-		" -type \"float2\" 0.98878074000000005 0.84269475999999999"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[42]" 
-		" -type \"float2\" 0.95081490000000002 0.85393357000000003"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[43]" 
-		" -type \"float2\" 0.98878144999999995 0.83629047999999995"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[44]" 
-		" -type \"float2\" 0.96838908999999995 0.85372353000000001"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[45]" 
-		" -type \"float2\" 0.98878222999999998 0.82988620000000002"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[46]" 
-		" -type \"float2\" 0.98066741000000002 0.84114825999999998"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[47]" 
-		" -type \"float2\" 0.98878294 0.82348191999999998"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[48]" 
-		" -type \"float2\" 0.98045742999999996 0.82357407000000005"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[49]" 
-		" -type \"float2\" 0.98878372000000003 0.81707770000000002"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[50]" 
-		" -type \"float2\" 0.94320338999999997 0.89207196"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[51]" 
-		" -type \"float2\" 0.98877853000000004 0.8619076"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[52]" 
-		" -type \"float2\" 0.95596713 0.87930679"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[53]" 
-		" -type \"float2\" 0.95596616999999995 0.86125499000000005"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[54]" 
-		" -type \"float2\" 0.94320088999999996 0.84849118999999995"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[55]" 
-		" -type \"float2\" 0.92514914000000004 0.84849220999999997"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[56]" 
-		" -type \"float2\" 0.91238534000000004 0.86125748999999996"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[57]" 
-		" -type \"float2\" 0.91238629999999998 0.87930929999999996"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[58]" 
-		" -type \"float2\" 0.98258895000000002 0.81707739999999995"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[59]" 
-		" -type \"float2\" 0.96788209999999997 0.81129574999999998"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[60]" 
-		" -type \"float2\" 0.98258822999999995 0.82348167999999999"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[61]" 
-		" -type \"float2\" 0.98258752000000005 0.82988596000000003"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[62]" 
-		" -type \"float2\" 0.98258679999999998 0.83629017999999999"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[63]" 
-		" -type \"float2\" 0.98258603 0.84269446000000003"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[64]" 
-		" -type \"float2\" 0.98258531000000005 0.84909873999999996"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[65]" 
-		" -type \"float2\" 0.98258453999999995 0.85550302"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[66]" 
-		" -type \"float2\" 0.98258382 0.86190723999999996"
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvSet[0].uvSetPoints[67]" 
-		" -type \"float2\" 0.98878443000000005 0.81067341999999998"
+		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvst[0].uvsp[0:67]" 
+		(" -s 68 -type \"float2\" 0.96489108000000001 0.81876802000000004 0.95347667000000003 0.81890439999999998 0.94550192 0.82707213999999996 0.94563830000000004 0.83848655000000005 0.95380591999999997 0.84646129999999997 0.96522032999999996 0.84632485999999996 0.97319513999999996 0.83815724000000003 0.97305876000000002 0.82674276999999996 0.92831474999999997 0.88443530000000004 0.92002373999999998 0.87614524000000005 0.92002307999999999 0.86442065000000001 0.92831313999999998 0.85612959 0.94003778999999998 0.85612893000000001 0.94832872999999995 0.86441897999999995 0.94832945000000002 0.87614369000000003 0.94003939999999997 0.88443470000000002 0.99630302000000004 0.86176257999999994 0.99630373999999999 0.85538667000000002 0.99010902999999995 0.85538601999999997 0.99010830999999999 0.86176187000000004 0.99630445000000001 0.84901077000000003 0.99010973999999996 0.84901011000000004 0.99630516999999996 0.84263491999999995 0.99011046000000003 0.8426342 0.99630587999999998 0.83625901000000002 0.99011110999999996 0.83625828"
+		+ "999999996 0.99630660000000004 0.82988309999999998 0.99011188999999999 0.82988238000000003 0.99630724999999998 0.82350718999999994 0.99011260000000001 0.82350646999999999 0.99630803000000001 0.81713128000000002 0.99011326 0.81713057 0.99630874000000003 0.81075536999999998 0.99011397000000001 0.81075465999999996 0.98258972 0.81067312000000002 0.95030797 0.81150579 0.98877930999999997 0.85550331999999996 0.92515159000000002 0.89207303999999998 0.93802965000000005 0.82408106000000003 0.98878001999999998 0.84909904000000003 0.93823962999999999 0.84165524999999997 0.98878074000000005 0.84269475999999999 0.95081490000000002 0.85393357000000003 0.98878144999999995 0.83629047999999995 0.96838908999999995 0.85372353000000001 0.98878222999999998 0.82988620000000002 0.98066741000000002 0.84114825999999998 0.98878294 0.82348191999999998 0.98045742999999996 0.82357407000000005 0.98878372000000003 0.81707770000000002 0.94320338999999997 0.89207196 0.98877853000000004 0.8619076 0.95596713 0.87930679 0.95596616999999995 0.861"
+		+ "25499000000005 0.94320088999999996 0.84849118999999995 0.92514914000000004 0.84849220999999997 0.91238534000000004 0.86125748999999996 0.91238629999999998 0.87930929999999996 0.98258895000000002 0.81707739999999995 0.96788209999999997 0.81129574999999998 0.98258822999999995 0.82348167999999999 0.98258752000000005 0.82988596000000003 0.98258679999999998 0.83629017999999999 0.98258603 0.84269446000000003 0.98258531000000005 0.84909873999999996 0.98258453999999995 0.85550302 0.98258382 0.86190723999999996 0.98878443000000005 0.81067341999999998"
+		)
 		2 "|TVScene2:TV|TVScene2:TVBase" "translate" " -type \"double3\" 0 0 0"
 		2 "|TVScene2:TV|TVScene2:TVBase" "rotate" " -type \"double3\" 0 0 0"
 		2 "|TVScene2:TV|TVScene2:TVBase" "scale" " -type \"double3\" 1.01106498652176846 1.01106498652176846 0.95503574090061238"
 		
 		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvPivot" " -type \"double2\" 0.95194235444068909 0.9514556878069842"
 		
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints" 
-		" -s 92"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[0]" 
-		" -type \"float2\" 0.72116153999999999 0.88679463000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[1]" 
-		" -type \"float2\" 0.87049562000000003 0.88678168999999996"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[2]" 
-		" -type \"float2\" 0.87050353999999996 0.97876304000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[3]" 
-		" -type \"float2\" 0.72116946999999998 0.97877597999999999"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[4]" 
-		" -type \"float2\" 0.94302684000000003 0.90803902999999997"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[5]" 
-		" -type \"float2\" 0.99272227000000002 0.90804510999999999"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[6]" 
-		" -type \"float2\" 0.99180895000000002 0.90861875000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[7]" 
-		" -type \"float2\" 0.94385403000000001 0.90859181"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[8]" 
-		" -type \"float2\" 0.99261575999999996 0.93848407"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[9]" 
-		" -type \"float2\" 0.99178933999999996 0.93813205"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[10]" 
-		" -type \"float2\" 0.94291305999999997 0.93903917000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[11]" 
-		" -type \"float2\" 0.94388121000000003 0.93812454000000001"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[12]" 
-		" -type \"float2\" 0.96164864000000005 0.99239480000000002"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[13]" 
-		" -type \"float2\" 0.91116244000000002 0.99239748999999999"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[14]" 
-		" -type \"float2\" 0.91140085000000004 0.99210845999999997"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[15]" 
-		" -type \"float2\" 0.96138274999999995 0.99210739000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[16]" 
-		" -type \"float2\" 0.96047020000000005 0.99175279999999999"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[17]" 
-		" -type \"float2\" 0.91174018000000001 0.99174684000000002"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[18]" 
-		" -type \"float2\" 0.91199039999999998 0.99144381000000004"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[19]" 
-		" -type \"float2\" 0.96020514000000001 0.99146420000000002"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[20]" 
-		" -type \"float2\" 0.91120327000000001 0.96113557000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[21]" 
-		" -type \"float2\" 0.91146797000000002 0.96142351999999998"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[22]" 
-		" -type \"float2\" 0.96046966 0.96142673000000001"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[23]" 
-		" -type \"float2\" 0.9602195 0.96172975999999999"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[24]" 
-		" -type \"float2\" 0.96180575999999995 0.96052079999999995"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[25]" 
-		" -type \"float2\" 0.9614743 0.96092588000000001"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[26]" 
-		" -type \"float2\" 0.91173976999999995 0.96142083"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[27]" 
-		" -type \"float2\" 0.91200477000000002 0.96170937999999995"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[28]" 
-		" -type \"float2\" 0.87351674000000001 0.98103218999999997"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[29]" 
-		" -type \"float2\" 0.87343048999999995 0.88616782000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[30]" 
-		" -type \"float2\" 0.71881485000000001 0.87276142999999995"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[31]" 
-		" -type \"float2\" 0.71868127999999998 0.8868047"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[32]" 
-		" -type \"float2\" 0.71864545000000002 0.98329264000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[33]" 
-		" -type \"float2\" 0.98372965999999995 0.94201285000000001"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[34]" 
-		" -type \"float2\" 0.98740834 0.99100149000000004"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[35]" 
-		" -type \"float2\" 0.98680573999999999 0.94090468000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[36]" 
-		" -type \"float2\" 0.87335991999999996 0.98870884999999997"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[37]" 
-		" -type \"float2\" 0.98378003000000003 0.97245877999999997"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[38]" 
-		" -type \"float2\" 0.70317447 0.98334920000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[39]" 
-		" -type \"float2\" 0.71891475000000005 0.75204188000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[40]" 
-		" -type \"float2\" 0.88454396000000002 0.88612652000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[41]" 
-		" -type \"float2\" 0.87336630000000004 0.87275343999999999"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[42]" 
-		" -type \"float2\" 0.98736398999999997 0.94145118999999999"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[43]" 
-		" -type \"float2\" 0.98644555 0.97189879000000001"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[44]" 
-		" -type \"float2\" 0.88517201000000001 0.98098832000000002"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[45]" 
-		" -type \"float2\" 0.71892946999999996 0.99348068"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[46]" 
-		" -type \"float2\" 0.87320416999999995 0.87277853000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[47]" 
-		" -type \"float2\" 0.70702595000000001 0.88684772999999995"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[48]" 
-		" -type \"float2\" 0.70716846 0.85869240999999996"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[49]" 
-		" -type \"float2\" 0.70317447 0.76219647999999995"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[50]" 
-		" -type \"float2\" 0.87335198999999997 0.75659025000000002"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[51]" 
-		" -type \"float2\" 0.88517541 0.76429343000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[52]" 
-		" -type \"float2\" 0.88468723999999999 0.85915576999999999"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[53]" 
-		" -type \"float2\" 0.71897792999999999 0.87276142999999995"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[54]" 
-		" -type \"float2\" 0.88171959 0.98520964"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[55]" 
-		" -type \"float2\" 0.98378003000000003 0.97420894999999996"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[56]" 
-		" -type \"float2\" 0.99002641000000002 0.99487221000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[57]" 
-		" -type \"float2\" 0.70779853999999998 0.98891836"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[58]" 
-		" -type \"float2\" 0.98967349999999998 0.93851686000000001"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[59]" 
-		" -type \"float2\" 0.98680586000000003 0.93858147000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[60]" 
-		" -type \"float2\" 0.88119977999999999 0.87605584000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[61]" 
-		" -type \"float2\" 0.98736911999999999 0.99377459000000001"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[62]" 
-		" -type \"float2\" 0.98945605999999997 0.99380409999999997"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[63]" 
-		" -type \"float2\" 0.98372972000000003 0.93860710000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[64]" 
-		" -type \"float2\" 0.71045493999999998 0.87626040000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[65]" 
-		" -type \"float2\" 0.98736435 0.93854265999999997"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[66]" 
-		" -type \"float2\" 0.98644531000000002 0.97547054"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[67]" 
-		" -type \"float2\" 0.98955327000000004 0.93854296000000004"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[68]" 
-		" -type \"float2\" 0.87339628000000002 0.85937171999999995"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[69]" 
-		" -type \"float2\" 0.71900927999999997 0.85872733999999995"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[70]" 
-		" -type \"float2\" 0.71889168000000003 0.76223147000000002"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[71]" 
-		" -type \"float2\" 0.87333459000000002 0.76426673000000001"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[72]" 
-		" -type \"float2\" 0.98425644999999995 0.97547035999999998"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[73]" 
-		" -type \"float2\" 0.98425662999999997 0.97189862000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[74]" 
-		" -type \"float2\" 0.98164253999999995 0.93860710000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[75]" 
-		" -type \"float2\" 0.98164247999999998 0.94201285000000001"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[76]" 
-		" -type \"float2\" 0.98390043000000005 0.93858134999999998"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[77]" 
-		" -type \"float2\" 0.99257892000000003 0.93851709000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[78]" 
-		" -type \"float2\" 0.99257863000000002 0.94237791999999998"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[79]" 
-		" -type \"float2\" 0.98390025000000003 0.94090450000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[80]" 
-		" -type \"float2\" 0.99221534 0.99487239000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[81]" 
-		" -type \"float2\" 0.98159110999999999 0.97420888999999999"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[82]" 
-		" -type \"float2\" 0.98159116999999996 0.97245872"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[83]" 
-		" -type \"float2\" 0.99221557000000005 0.99196386000000003"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[84]" 
-		" -type \"float2\" 0.71061295000000002 0.86927462"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[85]" 
-		" -type \"float2\" 0.98955285999999998 0.94145148999999995"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[86]" 
-		" -type \"float2\" 0.98949682999999999 0.99100149000000004"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[87]" 
-		" -type \"float2\" 0.88135779000000003 0.86923139999999999"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[88]" 
-		" -type \"float2\" 0.98967313999999995 0.94237769000000005"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[89]" 
-		" -type \"float2\" 0.70779049000000005 0.75662052999999996"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[90]" 
-		" -type \"float2\" 0.88171679000000003 0.76007723999999999"
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvSet[0].uvSetPoints[91]" 
-		" -type \"float2\" 0.99002665000000001 0.99196362000000005"
-		3 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
+		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvst[0].uvsp[0:91]" 
+		(" -s 92 -type \"float2\" 0.72116153999999999 0.88679463000000003 0.87049562000000003 0.88678168999999996 0.87050353999999996 0.97876304000000003 0.72116946999999998 0.97877597999999999 0.94302684000000003 0.90803902999999997 0.99272227000000002 0.90804510999999999 0.99180895000000002 0.90861875000000003 0.94385403000000001 0.90859181 0.99261575999999996 0.93848407 0.99178933999999996 0.93813205 0.94291305999999997 0.93903917000000003 0.94388121000000003 0.93812454000000001 0.96164864000000005 0.99239480000000002 0.91116244000000002 0.99239748999999999 0.91140085000000004 0.99210845999999997 0.96138274999999995 0.99210739000000003 0.96047020000000005 0.99175279999999999 0.91174018000000001 0.99174684000000002 0.91199039999999998 0.99144381000000004 0.96020514000000001 0.99146420000000002 0.91120327000000001 0.96113557000000005 0.91146797000000002 0.96142351999999998 0.96046966 0.96142673000000001 0.9602195 0.96172975999999999 0.96180575999999995 0.96052079999999995 0.9614743 0.96092588000000001 0.9117397699999999"
+		+ "5 0.96142083 0.91200477000000002 0.96170937999999995 0.87351674000000001 0.98103218999999997 0.87343048999999995 0.88616782000000005 0.71881485000000001 0.87276142999999995 0.71868127999999998 0.8868047 0.71864545000000002 0.98329264000000005 0.98372965999999995 0.94201285000000001 0.98740834 0.99100149000000004 0.98680573999999999 0.94090468000000005 0.87335991999999996 0.98870884999999997 0.98378003000000003 0.97245877999999997 0.70317447 0.98334920000000003 0.71891475000000005 0.75204188000000005 0.88454396000000002 0.88612652000000003 0.87336630000000004 0.87275343999999999 0.98736398999999997 0.94145118999999999 0.98644555 0.97189879000000001 0.88517201000000001 0.98098832000000002 0.71892946999999996 0.99348068 0.87320416999999995 0.87277853000000005 0.70702595000000001 0.88684772999999995 0.70716846 0.85869240999999996 0.70317447 0.76219647999999995 0.87335198999999997 0.75659025000000002 0.88517541 0.76429343000000005 0.88468723999999999 0.85915576999999999 0.71897792999999999 0.87276142999999995 0.88"
+		+ "171959 0.98520964 0.98378003000000003 0.97420894999999996 0.99002641000000002 0.99487221000000003 0.70779853999999998 0.98891836 0.98967349999999998 0.93851686000000001 0.98680586000000003 0.93858147000000003 0.88119977999999999 0.87605584000000003 0.98736911999999999 0.99377459000000001 0.98945605999999997 0.99380409999999997 0.98372972000000003 0.93860710000000003 0.71045493999999998 0.87626040000000005 0.98736435 0.93854265999999997 0.98644531000000002 0.97547054 0.98955327000000004 0.93854296000000004 0.87339628000000002 0.85937171999999995 0.71900927999999997 0.85872733999999995 0.71889168000000003 0.76223147000000002 0.87333459000000002 0.76426673000000001 0.98425644999999995 0.97547035999999998 0.98425662999999997 0.97189862000000005 0.98164253999999995 0.93860710000000003 0.98164247999999998 0.94201285000000001 0.98390043000000005 0.93858134999999998 0.99257892000000003 0.93851709000000005 0.99257863000000002 0.94237791999999998 0.98390025000000003 0.94090450000000003 0.99221534 0.99487239000000005 0."
+		+ "98159110999999999 0.97420888999999999 0.98159116999999996 0.97245872 0.99221557000000005 0.99196386000000003 0.71061295000000002 0.86927462 0.98955285999999998 0.94145148999999995 0.98949682999999999 0.99100149000000004 0.88135779000000003 0.86923139999999999 0.98967313999999995 0.94237769000000005 0.70779049000000005 0.75662052999999996 0.88171679000000003 0.76007723999999999 0.99002665000000001 0.99196362000000005"
+		)
 		3 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
+		"-na"
+		3 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
 		"-na"
 		5 3 "TVScene2RN" "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape.instObjGroups" 
 		"TVScene2RN.placeHolderList[1]" ":initialShadingGroup.dsm"
@@ -1000,6 +695,3269 @@ createNode polyBevel3 -n "polyBevel1";
 createNode polyCube -n "polyCube7";
 	rename -uid "B59889EE-4FD5-D281-1F0A-05BB7208692F";
 	setAttr ".cuv" 4;
+createNode reference -n "NewChairScene2RN";
+	rename -uid "A6DE05CB-45AA-2C92-9468-35828995E667";
+	setAttr -s 6 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"NewChairScene2RN"
+		"NewChairScene2RN" 0
+		"NewChairScene2RN" 610
+		2 "|NewChairScene2:ChairGRP" "translate" " -type \"double3\" 9.63724501434981917 1.96154465204206385 4.35653452765185989"
+		
+		2 "|NewChairScene2:ChairGRP" "rotate" " -type \"double3\" 0 -46.06481608998205957 0"
+		
+		2 "|NewChairScene2:ChairGRP" "scale" " -type \"double3\" 1.15207821356897466 1.15207821356897466 1.15207821356897466"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvPivot" " -type \"double2\" 0.5558968098909024 0.84681748829635894"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints" " -s 473"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[0]" " -type \"float2\" 0.67357224000000004 0.76842082"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[1]" " -type \"float2\" 0.67857951000000005 0.76672934999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[2]" " -type \"float2\" 0.42365881999999999 0.90076327"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[3]" " -type \"float2\" 0.41859215 0.90076160000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[4]" " -type \"float2\" 0.69257933000000005 0.91796898999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[5]" " -type \"float2\" 0.68739527 0.91850829000000001"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[6]" " -type \"float2\" 0.68561214000000004 0.95359092999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[7]" " -type \"float2\" 0.69088506999999999 0.95096946000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[8]" " -type \"float2\" 0.60785043000000005 0.96003753000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[9]" " -type \"float2\" 0.60452408000000002 0.96529405999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[10]" " -type \"float2\" 0.69146978999999997 0.92410243000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[11]" " -type \"float2\" 0.68605225999999997 0.92575651000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[12]" " -type \"float2\" 0.61287742999999995 0.96026272000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[13]" " -type \"float2\" 0.61087513000000004 0.96526659000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[14]" " -type \"float2\" 0.64529723000000005 0.96022825999999994"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[15]" " -type \"float2\" 0.64529776999999999 0.96525019000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[16]" " -type \"float2\" 0.68200254000000005 0.76428467"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[17]" " -type \"float2\" 0.56885277999999995 0.92429388000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[18]" " -type \"float2\" 0.56876671000000001 0.95203822999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[19]" " -type \"float2\" 0.42933261 0.71609402"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[20]" " -type \"float2\" 0.57182991999999999 0.85759437000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[21]" " -type \"float2\" 0.57417326999999996 0.86325598000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[22]" " -type \"float2\" 0.42486923999999998 0.86745720999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[23]" " -type \"float2\" 0.65138262999999996 0.857669"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[24]" " -type \"float2\" 0.67044508000000003 0.76786113"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[25]" " -type \"float2\" 0.51565665000000005 0.96090536999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[26]" " -type \"float2\" 0.51094793999999999 0.95427238999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[27]" " -type \"float2\" 0.61155915000000005 0.96896285000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[28]" " -type \"float2\" 0.60400670999999995 0.96863102999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[29]" " -type \"float2\" 0.48604058999999999 0.93949044000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[30]" " -type \"float2\" 0.64529818000000005 0.96898388999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[31]" " -type \"float2\" 0.64635670000000001 0.85766852000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[32]" " -type \"float2\" 0.66989392000000003 0.76261442999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[33]" " -type \"float2\" 0.52032047999999997 0.95886802999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[34]" " -type \"float2\" 0.640607 0.85766821999999998"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[35]" " -type \"float2\" 0.67204565000000005 0.75699203999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[36]" " -type \"float2\" 0.52516406999999998 0.95581453999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[37]" " -type \"float2\" 0.63703620000000005 0.85766750999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[38]" " -type \"float2\" 0.67197061000000002 0.75322389999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[39]" " -type \"float2\" 0.52838218000000003 0.95453905999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[40]" " -type \"float2\" 0.67064351 0.72821396999999999"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[41]" " -type \"float2\" 0.61213165999999997 0.85766613000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[42]" " -type \"float2\" 0.53294003000000001 0.91497408999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[43]" " -type \"float2\" 0.56608771999999996 0.91497569999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[44]" " -type \"float2\" 0.55237888999999996 0.94825709000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[45]" " -type \"float2\" 0.43820766 0.76123160000000001"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[46]" " -type \"float2\" 0.57362902000000004 0.92428767999999994"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[47]" " -type \"float2\" 0.68468463000000002 0.76010484"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[48]" " -type \"float2\" 0.43614312999999999 0.71162879000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[49]" " -type \"float2\" 0.68593764000000002 0.75548959000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[50]" " -type \"float2\" 0.57817215 0.92429793000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[51]" " -type \"float2\" 0.44049883000000001 0.71140205999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[52]" " -type \"float2\" 0.68665105000000004 0.75065075999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[53]" " -type \"float2\" 0.58289336999999997 0.92429912000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[54]" " -type \"float2\" 0.58282869999999998 0.95207076999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[55]" " -type \"float2\" 0.68247049999999998 0.72614151000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[56]" " -type \"float2\" 0.60762978000000001 0.92429262000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[57]" " -type \"float2\" 0.60760128000000002 0.95213395000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[58]" " -type \"float2\" 0.56527209 0.90637385999999998"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[59]" " -type \"float2\" 0.53187466000000005 0.90657567999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[60]" " -type \"float2\" 0.50406706000000001 0.90718054999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[61]" " -type \"float2\" 0.67390496 0.76523364000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[62]" " -type \"float2\" 0.67831211999999996 0.76352036000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[63]" " -type \"float2\" 0.67531918999999996 0.76048607000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[64]" " -type \"float2\" 0.67969005999999998 0.75913823000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[65]" " -type \"float2\" 0.67693108000000002 0.75592566000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[66]" " -type \"float2\" 0.68080121000000005 0.75486903999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[67]" " -type \"float2\" 0.67825067000000006 0.72692323000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[68]" " -type \"float2\" 0.67423838000000003 0.72770058999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[69]" " -type \"float2\" 0.56761223000000005 0.91281544999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[70]" " -type \"float2\" 0.56759225999999996 0.90882700999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[71]" " -type \"float2\" 0.67652308999999999 0.75250249999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[72]" " -type \"float2\" 0.68065673000000004 0.75162220000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[73]" " -type \"float2\" 0.64529848000000001 0.97205657000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[74]" " -type \"float2\" 0.56877297000000004 0.81885766999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[75]" " -type \"float2\" 0.57399224999999998 0.78575026999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[76]" " -type \"float2\" 0.57392447999999996 0.81942504999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[77]" " -type \"float2\" 0.59848707999999995 0.78574752999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[78]" " -type \"float2\" 0.59853672999999996 0.81958765"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[79]" " -type \"float2\" 0.61160481 0.78574604000000003"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[80]" " -type \"float2\" 0.61185908 0.81971472999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[81]" " -type \"float2\" 0.63686865999999998 0.78574317999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[82]" " -type \"float2\" 0.63709961999999998 0.81885076000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[83]" " -type \"float2\" 0.58255880999999998 0.85762917999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[84]" " -type \"float2\" 0.58256352 0.89033424999999999"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[85]" " -type \"float2\" 0.52668696999999998 0.94799250000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[86]" " -type \"float2\" 0.55116670999999995 0.94268370000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[87]" " -type \"float2\" 0.49070075000000002 0.93748622999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[88]" " -type \"float2\" 0.51427460000000003 0.95271223999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[89]" " -type \"float2\" 0.51812959000000003 0.9499898"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[90]" " -type \"float2\" 0.57099067999999997 0.82616210000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[91]" " -type \"float2\" 0.49592301 0.93701911000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[92]" " -type \"float2\" 0.57583189000000001 0.82512664999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[93]" " -type \"float2\" 0.43427166 0.75807464000000002"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[94]" " -type \"float2\" 0.51170367000000005 0.93245082999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[95]" " -type \"float2\" 0.54944395999999995 0.93149035999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[96]" " -type \"float2\" 0.52451842999999998 0.93262272999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[97]" " -type \"float2\" 0.43086487000000001 0.74910604999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[98]" " -type \"float2\" 0.51409106999999998 0.93824797999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[99]" " -type \"float2\" 0.54982131999999995 0.93468600999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[100]" " -type \"float2\" 0.52503960999999999 0.93669111000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[101]" " -type \"float2\" 0.43169582000000001 0.75230514999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[102]" " -type \"float2\" 0.43427159999999998 0.71645689000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[103]" " -type \"float2\" 0.57571494999999995 0.85529840000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[104]" " -type \"float2\" 0.57738107000000005 0.85863595999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[105]" " -type \"float2\" 0.42546546000000002 0.86150271"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[106]" " -type \"float2\" 0.43830773000000001 0.71624732000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[107]" " -type \"float2\" 0.57989453999999996 0.85230845"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[108]" " -type \"float2\" 0.42604651999999998 0.85599046999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[109]" " -type \"float2\" 0.58075076000000003 0.85374534000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[110]" " -type \"float2\" 0.41554257 0.82872188000000002"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[111]" " -type \"float2\" 0.42470163 0.85140669000000002"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[112]" " -type \"float2\" 0.41994858000000002 0.79958910000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[113]" " -type \"float2\" 0.44380017999999999 0.75264728000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[114]" " -type \"float2\" 0.45565971999999999 0.85102248000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[115]" " -type \"float2\" 0.42679042 0.85144931000000001"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[116]" " -type \"float2\" 0.42759566999999998 0.84023786"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[117]" " -type \"float2\" 0.45565936000000001 0.84038436000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[118]" " -type \"float2\" 0.45565903000000002 0.82977086"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[119]" " -type \"float2\" 0.42849186 0.82998519999999998"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[120]" " -type \"float2\" 0.42860686999999997 0.80029655"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[121]" " -type \"float2\" 0.45565811000000001 0.80018908"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[122]" " -type \"float2\" 0.44538799000000001 0.74606346999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[123]" " -type \"float2\" 0.59541445999999998 0.85762762999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[124]" " -type \"float2\" 0.42431693999999998 0.80006993000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[125]" " -type \"float2\" 0.44415643999999999 0.7491622"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[126]" " -type \"float2\" 0.42312157 0.82966768999999996"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[127]" " -type \"float2\" 0.58180701999999995 0.85214508"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[128]" " -type \"float2\" 0.42642087000000001 0.85372007000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[129]" " -type \"float2\" 0.42302346000000002 0.83865725999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[130]" " -type \"float2\" 0.45565978000000001 0.85333495999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[131]" " -type \"float2\" 0.45566024999999999 0.86727779999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[132]" " -type \"float2\" 0.45566004999999998 0.86153126000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[133]" " -type \"float2\" 0.45565987000000002 0.85564773999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[134]" " -type \"float2\" 0.66611653999999998 0.76841813000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[135]" " -type \"float2\" 0.68339258000000003 0.88391805000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[136]" " -type \"float2\" 0.67832594999999996 0.88391839999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[137]" " -type \"float2\" 0.66110926999999997 0.76672655000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[138]" " -type \"float2\" 0.68297028999999998 0.91658609999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[139]" " -type \"float2\" 0.41920865000000002 0.71127963000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[140]" " -type \"float2\" 0.66207020999999999 0.87584072000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[141]" " -type \"float2\" 0.66033894000000004 0.88215637000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[142]" " -type \"float2\" 0.68274396999999998 0.96002953999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[143]" " -type \"float2\" 0.65664345000000002 0.87349898000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[144]" " -type \"float2\" 0.42544061 0.71939140999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[145]" " -type \"float2\" 0.65471822000000002 0.84669733000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[146]" " -type \"float2\" 0.67972034000000003 0.96525930999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[147]" " -type \"float2\" 0.67771703000000005 0.96025579999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[148]" " -type \"float2\" 0.48982912000000001 0.90081518999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[149]" " -type \"float2\" 0.65768629000000001 0.76428180999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[150]" " -type \"float2\" 0.65110045999999999 0.72436093999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[151]" " -type \"float2\" 0.52248335000000001 0.92530327999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[152]" " -type \"float2\" 0.49628934000000002 0.92531012999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[153]" " -type \"float2\" 0.49052217999999997 0.86671352000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[154]" " -type \"float2\" 0.67631388000000003 0.95746279000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[155]" " -type \"float2\" 0.66924368999999995 0.76785851000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[156]" " -type \"float2\" 0.67602152000000004 0.80093634000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[157]" " -type \"float2\" 0.67617059000000002 0.83426188999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[158]" " -type \"float2\" 0.63465130000000003 0.719522"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[159]" " -type \"float2\" 0.67152922999999998 0.85643387000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[160]" " -type \"float2\" 0.67903714999999998 0.96895569999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[161]" " -type \"float2\" 0.66572522999999995 0.85013521000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[162]" " -type \"float2\" 0.66979491999999996 0.76261186999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[163]" " -type \"float2\" 0.68104750000000003 0.80093592000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[164]" " -type \"float2\" 0.64035892000000005 0.71073735000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[165]" " -type \"float2\" 0.66764330999999999 0.75698942000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[166]" " -type \"float2\" 0.62392574999999995 0.92419523000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[167]" " -type \"float2\" 0.42061746 0.96610408999999997"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[168]" " -type \"float2\" 0.66771840999999998 0.75322127000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[169]" " -type \"float2\" 0.62749463000000005 0.92419487"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[170]" " -type \"float2\" 0.42417305999999999 0.96642804000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[171]" " -type \"float2\" 0.66904609999999998 0.72821133999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[172]" " -type \"float2\" 0.48641153999999998 0.77587044000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[173]" " -type \"float2\" 0.45326369999999999 0.77588022000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[174]" " -type \"float2\" 0.65239292000000004 0.92419523000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[175]" " -type \"float2\" 0.42013925000000002 0.77642911999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[176]" " -type \"float2\" 0.44903123 0.96782166000000003"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[177]" " -type \"float2\" 0.48505305999999998 0.90080857000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[178]" " -type \"float2\" 0.65500420000000004 0.76010191000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[179]" " -type \"float2\" 0.65020496000000005 0.71967267999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[180]" " -type \"float2\" 0.48051009 0.90081834999999999"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[181]" " -type \"float2\" 0.65375130999999997 0.75548660999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[182]" " -type \"float2\" 0.65043163000000004 0.71531701000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[183]" " -type \"float2\" 0.47578910000000002 0.90081911999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[184]" " -type \"float2\" 0.65303802 0.75064783999999996"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[185]" " -type \"float2\" 0.65109753999999997 0.71073054999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[186]" " -type \"float2\" 0.45105368000000001 0.90081023999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[187]" " -type \"float2\" 0.65721911 0.72613865"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[188]" " -type \"float2\" 0.45108160000000003 0.92863565999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[189]" " -type \"float2\" 0.45220038000000001 0.78427886999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[190]" " -type \"float2\" 0.48559803000000001 0.78447246999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[191]" " -type \"float2\" 0.42736182 0.76328032999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[192]" " -type \"float2\" 0.66137670999999998 0.76351767999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[193]" " -type \"float2\" 0.66578382000000003 0.76523094999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[194]" " -type \"float2\" 0.65999883000000004 0.75913547999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[195]" " -type \"float2\" 0.66436963999999998 0.76048325999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[196]" " -type \"float2\" 0.65888780000000002 0.75486624000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[197]" " -type \"float2\" 0.66275786999999997 0.75592291"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[198]" " -type \"float2\" 0.66143887999999995 0.72692036999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[199]" " -type \"float2\" 0.48791753999999998 0.78201878000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[200]" " -type \"float2\" 0.48793656000000002 0.77803027999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[201]" " -type \"float2\" 0.66545122999999995 0.72769784999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[202]" " -type \"float2\" 0.65903239999999996 0.75161933999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[203]" " -type \"float2\" 0.66316593000000001 0.75249975999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[204]" " -type \"float2\" 0.67855339999999997 0.97202831999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[205]" " -type \"float2\" 0.57391685000000003 0.75207561000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[206]" " -type \"float2\" 0.59852903999999996 0.75190734999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[207]" " -type \"float2\" 0.61185138999999999 0.75177729000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[208]" " -type \"float2\" 0.63709210999999999 0.75263548000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[209]" " -type \"float2\" 0.41707578000000001 0.75004875999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[210]" " -type \"float2\" 0.66293263000000002 0.78506315000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[211]" " -type \"float2\" 0.65834433000000003 0.80952000999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[212]" " -type \"float2\" 0.63833695999999995 0.71939914999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[213]" " -type \"float2\" 0.66784613999999998 0.84553146000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[214]" " -type \"float2\" 0.65609269999999997 0.81789875000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[215]" " -type \"float2\" 0.6737417 0.85345727000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[216]" " -type \"float2\" 0.66843991999999997 0.84033084000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[217]" " -type \"float2\" 0.67528498000000003 0.84868639999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[218]" " -type \"float2\" 0.42908436 0.75249314"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[219]" " -type \"float2\" 0.67346114000000001 0.82464051000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[220]" " -type \"float2\" 0.67420393000000001 0.78650664999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[221]" " -type \"float2\" 0.61210197 0.74864388000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[222]" " -type \"float2\" 0.42011523000000001 0.74908768999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[223]" " -type \"float2\" 0.66773241999999999 0.82213639999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[224]" " -type \"float2\" 0.67099856999999996 0.78620206999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[225]" " -type \"float2\" 0.66953689000000005 0.81115925"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[226]" " -type \"float2\" 0.42331445000000001 0.74991821999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[227]" " -type \"float2\" 0.52467883000000004 0.92092675000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[228]" " -type \"float2\" 0.49858963000000001 0.92142040000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[229]" " -type \"float2\" 0.48585468999999998 0.86150073999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[230]" " -type \"float2\" 0.48861513000000001 0.86141049999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[231]" " -type \"float2\" 0.52694516999999996 0.91764754000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[232]" " -type \"float2\" 0.50158256000000001 0.91722345000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[233]" " -type \"float2\" 0.48527321000000001 0.85598861999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[234]" " -type \"float2\" 0.48675986999999998 0.85571324999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[235]" " -type \"float2\" 0.49577546 0.82871932000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[236]" " -type \"float2\" 0.50417506999999995 0.91485256000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[237]" " -type \"float2\" 0.49136758000000003 0.79958689000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[238]" " -type \"float2\" 0.42365830999999998 0.76202250000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[239]" " -type \"float2\" 0.48372303999999999 0.84023612999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[240]" " -type \"float2\" 0.48452905000000002 0.85144746000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[241]" " -type \"float2\" 0.48270934999999998 0.80029488000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[242]" " -type \"float2\" 0.48282626000000001 0.82998346999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[243]" " -type \"float2\" 0.59496033000000004 0.83040594999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[244]" " -type \"float2\" 0.48699926999999998 0.80006790000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[245]" " -type \"float2\" 0.42017328999999998 0.76237922999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[246]" " -type \"float2\" 0.48819652000000002 0.8296656"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[247]" " -type \"float2\" 0.48489874999999999 0.85371821999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[248]" " -type \"float2\" 0.48626477000000001 0.85384119000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[249]" " -type \"float2\" 0.48829519999999998 0.83865517000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[250]" " -type \"float2\" 0.48620777999999998 0.77801978999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[251]" " -type \"float2\" 0.45301828 0.77781856000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[252]" " -type \"float2\" 0.56550449000000003 0.90882516000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[253]" " -type \"float2\" 0.53215628999999998 0.90879564999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[254]" " -type \"float2\" 0.44125776999999999 0.75620723000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[255]" " -type \"float2\" 0.58566253999999995 0.82599931999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[256]" " -type \"float2\" 0.58591419 0.85762875999999999"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[257]" " -type \"float2\" 0.58567022999999996 0.88925827000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[258]" " -type \"float2\" 0.42215841999999998 0.77827751999999994"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[259]" " -type \"float2\" 0.42857056999999998 0.75508249000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[260]" " -type \"float2\" 0.48582983000000002 0.78202110999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[261]" " -type \"float2\" 0.45248145000000001 0.78205884000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[262]" " -type \"float2\" 0.42473959999999999 0.75312924000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[263]" " -type \"float2\" 0.56588346 0.91282635999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[264]" " -type \"float2\" 0.53269416000000003 0.91303575000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[265]" " -type \"float2\" 0.44080678000000001 0.76037102999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[266]" " -type \"float2\" 0.42076141 0.75300860000000003"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[267]" " -type \"float2\" 0.43686089 0.75756049000000003"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[268]" " -type \"float2\" 0.59044021000000002 0.88871986000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[269]" " -type \"float2\" 0.43960565000000001 0.75133830000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[270]" " -type \"float2\" 0.43478583999999998 0.74975168999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[271]" " -type \"float2\" 0.42721789999999998 0.75947951999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[272]" " -type \"float2\" 0.43490714000000003 0.75372981999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[273]" " -type \"float2\" 0.42234871000000002 0.75782811999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[274]" " -type \"float2\" 0.41878489000000002 0.75790619999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[275]" " -type \"float2\" 0.59080820999999994 0.85762817000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[276]" " -type \"float2\" 0.48645124000000001 0.86745523999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[277]" " -type \"float2\" 0.64529687000000002 0.95743692000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[278]" " -type \"float2\" 0.50174927999999996 0.91530590999999994"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[279]" " -type \"float2\" 0.48661782999999997 0.85140479000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[280]" " -type \"float2\" 0.48941591000000001 0.78428149000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[281]" " -type \"float2\" 0.48593249999999999 0.78448647000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[282]" " -type \"float2\" 0.50014477999999996 0.91636704999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[283]" " -type \"float2\" 0.48262518999999998 0.78457003999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[284]" " -type \"float2\" 0.4556576 0.78463972000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[285]" " -type \"float2\" 0.43550768000000001 0.92863667000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[286]" " -type \"float2\" 0.49524778000000003 0.91975147000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[287]" " -type \"float2\" 0.68051583000000004 0.95708298999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[288]" " -type \"float2\" 0.65150582999999995 0.87787318000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[289]" " -type \"float2\" 0.49062180999999999 0.92296361999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[290]" " -type \"float2\" 0.59956293999999999 0.74706751000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[291]" " -type \"float2\" 0.67360312 0.81166088999999997"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[292]" " -type \"float2\" 0.46449369000000001 0.97376465999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[293]" " -type \"float2\" 0.67200625000000003 0.77071619000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[294]" " -type \"float2\" 0.67528533999999996 0.77114022000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[295]" " -type \"float2\" 0.65257913000000001 0.74993885000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[296]" " -type \"float2\" 0.65248172999999998 0.75312066"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[297]" " -type \"float2\" 0.63721793999999998 0.74935359000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[298]" " -type \"float2\" 0.57582294999999994 0.74637352999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[299]" " -type \"float2\" 0.66815656000000001 0.95732265999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[300]" " -type \"float2\" 0.46466469999999999 0.96872245999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[301]" " -type \"float2\" 0.68628060999999996 0.97234445999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[302]" " -type \"float2\" 0.66331691000000004 0.88369149000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[303]" " -type \"float2\" 0.68658947999999997 0.96862227000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[304]" " -type \"float2\" 0.65243417000000004 0.78574138999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[305]" " -type \"float2\" 0.66979723999999996 0.71254735999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[306]" " -type \"float2\" 0.66815895000000003 0.89104974000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[307]" " -type \"float2\" 0.66717850999999995 0.71216440000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[308]" " -type \"float2\" 0.43548048 0.86739540000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[309]" " -type \"float2\" 0.65994567000000004 0.71073401000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[310]" " -type \"float2\" 0.66325498000000005 0.71141648000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[311]" " -type \"float2\" 0.62760115000000005 0.95744180999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[312]" " -type \"float2\" 0.65249741000000006 0.95736980000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[313]" " -type \"float2\" 0.62760210000000005 0.89092797000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[314]" " -type \"float2\" 0.65249950000000001 0.89100164000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[315]" " -type \"float2\" 0.43546154999999998 0.90080601000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[316]" " -type \"float2\" 0.45110559 0.86741257000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[317]" " -type \"float2\" 0.47585332000000002 0.92860103000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[318]" " -type \"float2\" 0.47586167000000001 0.86744266999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[319]" " -type \"float2\" 0.48057976000000002 0.92859018000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[320]" " -type \"float2\" 0.48058876 0.86745536000000001"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[321]" " -type \"float2\" 0.48506855999999998 0.92850845999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[322]" " -type \"float2\" 0.48513609000000002 0.86746776000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[323]" " -type \"float2\" 0.41554257 0.71073556000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[324]" " -type \"float2\" 0.48991251000000002 0.92855847000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[325]" " -type \"float2\" 0.48991965999999998 0.86748325999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[326]" " -type \"float2\" 0.67449439 0.85145676000000003"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[327]" " -type \"float2\" 0.66805249 0.92419558999999996"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[328]" " -type \"float2\" 0.62403101000000005 0.95745765999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[329]" " -type \"float2\" 0.68694144000000001 0.76764131000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[330]" " -type \"float2\" 0.68119615 0.83423764"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[331]" " -type \"float2\" 0.68119662999999997 0.76761376999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[332]" " -type \"float2\" 0.68600351000000004 0.91727727999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[333]" " -type \"float2\" 0.42723554000000002 0.71073710999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[334]" " -type \"float2\" 0.63537842 0.71141182999999997"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[335]" " -type \"float2\" 0.68644844999999999 0.85059178000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[336]" " -type \"float2\" 0.67617112000000001 0.76758932999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[337]" " -type \"float2\" 0.66553002999999999 0.87546109999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[338]" " -type \"float2\" 0.42906728 0.71848917000000001"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[339]" " -type \"float2\" 0.68607145999999997 0.96528541999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[340]" " -type \"float2\" 0.6864422 0.88394684000000001"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[341]" " -type \"float2\" 0.68339848999999997 0.85059118"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[342]" " -type \"float2\" 0.65474622999999998 0.87955368"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[343]" " -type \"float2\" 0.65347200999999999 0.87197577999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[344]" " -type \"float2\" 0.65151077999999996 0.84580540999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[345]" " -type \"float2\" 0.67448931999999995 0.88478619000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[346]" " -type \"float2\" 0.67833155000000001 0.85059023"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[347]" " -type \"float2\" 0.42505484999999998 0.85384309000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[348]" " -type \"float2\" 0.42455986000000001 0.85571527000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[349]" " -type \"float2\" 0.42538272999999999 0.78448843999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[350]" " -type \"float2\" 0.42869007999999997 0.78457177"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[351]" " -type \"float2\" 0.62316375999999996 0.95599210000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[352]" " -type \"float2\" 0.62316704000000001 0.95210349999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[353]" " -type \"float2\" 0.42270493999999997 0.86141257999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[354]" " -type \"float2\" 0.69625108999999996 0.95507383000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[355]" " -type \"float2\" 0.61007798000000002 0.95709049999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[356]" " -type \"float2\" 0.42079823999999999 0.86671573000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[357]" " -type \"float2\" 0.59957165000000001 0.82442724999999994"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[358]" " -type \"float2\" 0.61211037999999995 0.82284807999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[359]" " -type \"float2\" 0.56639718999999999 0.93945067999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[360]" " -type \"float2\" 0.56527333999999996 0.93323993999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[361]" " -type \"float2\" 0.65258729000000004 0.82154393000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[362]" " -type \"float2\" 0.56476283000000005 0.92997503000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[363]" " -type \"float2\" 0.63722621999999995 0.82213270999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[364]" " -type \"float2\" 0.48774186000000003 0.92995881999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[365]" " -type \"float2\" 0.65248912999999997 0.81836218000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[366]" " -type \"float2\" 0.56754631 0.94436078999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[367]" " -type \"float2\" 0.59634560000000003 0.89078431999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[368]" " -type \"float2\" 0.48293036 0.93138074999999998"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[369]" " -type \"float2\" 0.68478251000000001 0.96150404"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[370]" " -type \"float2\" 0.47989619 0.93351603000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[371]" " -type \"float2\" 0.59634858000000002 0.82452707999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[372]" " -type \"float2\" 0.66989261 0.71255004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[373]" " -type \"float2\" 0.67251139999999998 0.71216701999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[374]" " -type \"float2\" 0.67974424 0.71073681"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[375]" " -type \"float2\" 0.62320684999999998 0.89087802000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[376]" " -type \"float2\" 0.67643487000000002 0.71141927999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[377]" " -type \"float2\" 0.61200385999999996 0.89083796999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[378]" " -type \"float2\" 0.61200714000000001 0.82447504999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[379]" " -type \"float2\" 0.62322253000000005 0.92429"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[380]" " -type \"float2\" 0.60758108 0.89089370000000001"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[381]" " -type \"float2\" 0.58282405000000004 0.89092134999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[382]" " -type \"float2\" 0.57809979 0.95207076999999996"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[383]" " -type \"float2\" 0.57809675000000005 0.89093356999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[384]" " -type \"float2\" 0.57361090000000003 0.95198864000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[385]" " -type \"float2\" 0.57354927 0.89094554999999998"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[386]" " -type \"float2\" 0.42709246000000001 0.92937440000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[387]" " -type \"float2\" 0.69624059999999999 0.91758375999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[388]" " -type \"float2\" 0.43145484000000001 0.71073346999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[389]" " -type \"float2\" 0.42749920000000002 0.86830269999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[390]" " -type \"float2\" 0.56876545999999994 0.89096056999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[391]" " -type \"float2\" 0.59647119000000004 0.85766518000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[392]" " -type \"float2\" 0.63689404999999999 0.89092152999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[393]" " -type \"float2\" 0.63689804000000005 0.82439375000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[394]" " -type \"float2\" 0.64046239999999999 0.89094222000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[395]" " -type \"float2\" 0.64046353 0.82437402000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[396]" " -type \"float2\" 0.64620727 0.89096980999999997"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[397]" " -type \"float2\" 0.64620834999999999 0.82434660000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[398]" " -type \"float2\" 0.68463605999999999 0.91709196999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[399]" " -type \"float2\" 0.41597216999999997 0.93412012"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[400]" " -type \"float2\" 0.65123271999999999 0.89099424999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[401]" " -type \"float2\" 0.65123385 0.82432234000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[402]" " -type \"float2\" 0.41554533999999999 0.8674345"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[403]" " -type \"float2\" 0.68215042000000004 0.95340294000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[404]" " -type \"float2\" 0.68249106000000004 0.92470806999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[405]" " -type \"float2\" 0.68767339000000005 0.95981103000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[406]" " -type \"float2\" 0.41554257 0.90078955999999999"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[407]" " -type \"float2\" 0.41900556999999999 0.93342977999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[408]" " -type \"float2\" 0.41859528000000001 0.86743468000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[409]" " -type \"float2\" 0.69310826000000003 0.95691793999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[410]" " -type \"float2\" 0.42355527999999998 0.93047528999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[411]" " -type \"float2\" 0.42366229999999999 0.86743515999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[412]" " -type \"float2\" 0.61427999 0.95746940000000003"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[413]" " -type \"float2\" 0.69396709999999995 0.94929737000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[414]" " -type \"float2\" 0.69467133000000003 0.92320007000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[415]" " -type \"float2\" 0.42749524 0.90163212999999998"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[416]" " -type \"float2\" 0.42439972999999998 0.71204369999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[417]" " -type \"float2\" 0.67842144000000004 0.91363037000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[418]" " -type \"float2\" 0.6748845 0.91252856999999998"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[419]" " -type \"float2\" 0.64574306999999997 0.71414226000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[420]" " -type \"float2\" 0.64558643000000004 0.71750820000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[421]" " -type \"float2\" 0.64537692000000002 0.72154437999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[422]" " -type \"float2\" 0.41688079 0.71645163999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[423]" " -type \"float2\" 0.64573997000000005 0.72648334999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[424]" " -type \"float2\" 0.44893801 0.97354585000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[425]" " -type \"float2\" 0.66575861000000003 0.76975989"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[426]" " -type \"float2\" 0.41554257 0.97377181000000002"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[427]" " -type \"float2\" 0.42407706000000001 0.97310644000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[428]" " -type \"float2\" 0.65308535000000001 0.82150984000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[429]" " -type \"float2\" 0.66358077999999998 0.84666251999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[430]" " -type \"float2\" 0.65150582999999995 0.82487010999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[431]" " -type \"float2\" 0.66014194000000004 0.84810357999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[432]" " -type \"float2\" 0.42006236000000002 0.71749609999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[433]" " -type \"float2\" 0.64298052000000006 0.71938526999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[434]" " -type \"float2\" 0.68694102999999995 0.83421016000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[435]" " -type \"float2\" 0.64610641999999996 0.71073794000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[436]" " -type \"float2\" 0.6867972 0.80093586000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[437]" " -type \"float2\" 0.62403463999999997 0.89091264999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[438]" " -type \"float2\" 0.41707480000000002 0.76361126000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[439]" " -type \"float2\" 0.59043263999999995 0.82653653999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[440]" " -type \"float2\" 0.42086341999999999 0.78225935000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[441]" " -type \"float2\" 0.43138164000000001 0.75902795999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[442]" " -type \"float2\" 0.43224182999999999 0.75642872000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[443]" " -type \"float2\" 0.41734790999999999 0.75332546"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[444]" " -type \"float2\" 0.42439204000000003 0.78367960000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[445]" " -type \"float2\" 0.58255553000000004 0.82492410999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[446]" " -type \"float2\" 0.59496700999999996 0.88484943000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[447]" " -type \"float2\" 0.43968317000000001 0.74777442000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[448]" " -type \"float2\" 0.50053930000000002 0.90860152000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[449]" " -type \"float2\" 0.50183398000000001 0.91258340999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[450]" " -type \"float2\" 0.49981516999999998 0.91443240999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[451]" " -type \"float2\" 0.43510221999999998 0.74633813000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[452]" " -type \"float2\" 0.44505861000000002 0.75635052000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[453]" " -type \"float2\" 0.43182552000000002 0.74606645000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[454]" " -type \"float2\" 0.52884065999999996 0.91491215999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[455]" " -type \"float2\" 0.45105085 0.93229055000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[456]" " -type \"float2\" 0.43552023000000001 0.93254798999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[457]" " -type \"float2\" 0.48082834000000002 0.93242937000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[458]" " -type \"float2\" 0.60762656000000004 0.95580220000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[459]" " -type \"float2\" 0.42189928999999998 0.78428363999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[460]" " -type \"float2\" 0.57776839000000002 0.95585841000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[461]" " -type \"float2\" 0.58225649999999995 0.84972197000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[462]" " -type \"float2\" 0.57949090000000003 0.82687025999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[463]" " -type \"float2\" 0.58224916000000004 0.82496177999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[464]" " -type \"float2\" 0.57619494000000004 0.82917702000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[465]" " -type \"float2\" 0.57183479999999998 0.83147698999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[466]" " -type \"float2\" 0.44508520000000001 0.71073604000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[467]" " -type \"float2\" 0.4416737 0.71609056000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[468]" " -type \"float2\" 0.56876545999999994 0.75264418"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[469]" " -type \"float2\" 0.57098150000000003 0.74533916"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[470]" " -type \"float2\" 0.56883883000000002 0.78575086999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[471]" " -type \"float2\" 0.61204356000000004 0.97203534999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
+		"uvSet[0].uvSetPoints[472]" " -type \"float2\" 0.60431641000000003 0.97235316000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvPivot" " -type \"double2\" 0.46613454818725586 0.4338768869638443"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints" " -s 93"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[0]" " -type \"float2\" 0.50502497000000002 0.83774698000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[1]" " -type \"float2\" 0.55569862999999997 0.83776485999999994"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[2]" " -type \"float2\" 0.56634289000000004 0.80659400999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[3]" " -type \"float2\" 0.43417239000000002 0.74036670000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[4]" " -type \"float2\" 0.42721155 0.74655855000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[5]" " -type \"float2\" 0.49687165 0.71117872000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[6]" " -type \"float2\" 0.48978822999999999 0.73483776999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[7]" " -type \"float2\" 0.48796194999999998 0.71184325000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[8]" " -type \"float2\" 0.56302839999999998 0.73436928000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[9]" " -type \"float2\" 0.57290721 0.71185619"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[10]" " -type \"float2\" 0.57101672999999997 0.73489713999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[11]" " -type \"float2\" 0.62665468000000002 0.74044001000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[12]" " -type \"float2\" 0.53041797999999996 0.71073728999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[13]" " -type \"float2\" 0.53041744000000002 0.74251509000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[14]" " -type \"float2\" 0.50436491000000006 0.80900788000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[15]" " -type \"float2\" 0.49765205000000001 0.74278175999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[16]" " -type \"float2\" 0.53042853000000001 0.73394364000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[17]" " -type \"float2\" 0.5639807 0.71119653999999999"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[18]" " -type \"float2\" 0.55637968000000004 0.80903161000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[19]" " -type \"float2\" 0.53037029999999996 0.80920380000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[20]" " -type \"float2\" 0.56321352999999996 0.74279313999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[21]" " -type \"float2\" 0.49210268000000001 0.90080243000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[22]" " -type \"float2\" 0.49211895 0.84617268999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[23]" " -type \"float2\" 0.42591792000000001 0.71963357999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[24]" " -type \"float2\" 0.53036152999999997 0.83780301000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[25]" " -type \"float2\" 0.53033912000000005 0.90638410999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[26]" " -type \"float2\" 0.49765008999999999 0.90635865999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[27]" " -type \"float2\" 0.56302828000000005 0.90638036"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[28]" " -type \"float2\" 0.63496803999999996 0.71972882999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[29]" " -type \"float2\" 0.56859904999999999 0.84619856000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[30]" " -type \"float2\" 0.56857932 0.90082783"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[31]" " -type \"float2\" 0.43300691000000002 0.71862351999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[32]" " -type \"float2\" 0.62787026000000001 0.71869682999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[33]" " -type \"float2\" 0.63365238999999995 0.74661975999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[34]" " -type \"float2\" 0.49781766999999999 0.73435282999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[35]" " -type \"float2\" 0.49059278000000001 0.73902321000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[36]" " -type \"float2\" 0.49340700999999998 0.74264163000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[37]" " -type \"float2\" 0.493806 0.73451984000000003"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[38]" " -type \"float2\" 0.49758053000000002 0.73855090000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[39]" " -type \"float2\" 0.53042292999999996 0.73823594999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[40]" " -type \"float2\" 0.49241488999999999 0.71149289999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[41]" " -type \"float2\" 0.49372524000000001 0.90472978000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[42]" " -type \"float2\" 0.56695414 0.90475410000000001"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[43]" " -type \"float2\" 0.56843637999999996 0.71151810999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[44]" " -type \"float2\" 0.56327998999999995 0.73858416000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[45]" " -type \"float2\" 0.56703769999999998 0.73455345999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[46]" " -type \"float2\" 0.5674302 0.74265342999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[47]" " -type \"float2\" 0.57021213000000004 0.73905443999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[48]" " -type \"float2\" 0.49227184000000002 0.80144243999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[49]" " -type \"float2\" 0.43251952999999999 0.74584698999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[50]" " -type \"float2\" 0.62831532999999995 0.745924"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[51]" " -type \"float2\" 0.56848061000000005 0.80148202000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[52]" " -type \"float2\" 0.49402615 0.73784912000000002"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[53]" " -type \"float2\" 0.56681066999999996 0.73787670999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[54]" " -type \"float2\" 0.53034168000000004 0.89867377000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[55]" " -type \"float2\" 0.56044066000000003 0.89822416999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[56]" " -type \"float2\" 0.50024307000000001 0.89820414999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[57]" " -type \"float2\" 0.53035867000000003 0.84678710000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[58]" " -type \"float2\" 0.55805612000000004 0.84697222999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[59]" " -type \"float2\" 0.50266135000000001 0.84695326999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[60]" " -type \"float2\" 0.56341540999999995 0.80128573999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[61]" " -type \"float2\" 0.53037237999999998 0.80150294"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[62]" " -type \"float2\" 0.49737220999999998 0.80125396999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[63]" " -type \"float2\" 0.56672739999999999 0.73924374999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[64]" " -type \"float2\" 0.49411365000000002 0.73920536000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[65]" " -type \"float2\" 0.64536517999999998 0.72078562000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[66]" " -type \"float2\" 0.56591897999999996 0.83961034000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[67]" " -type \"float2\" 0.49480331 0.83958613999999998"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[68]" " -type \"float2\" 0.49440497 0.80655885000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[69]" " -type \"float2\" 0.41746134000000001 0.74943196999999995"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[70]" " -type \"float2\" 0.64338934000000003 0.74955159000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[71]" " -type \"float2\" 0.41554257 0.72069782000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[72]" " -type \"float2\" 0.63409567 0.74146884999999996"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[73]" " -type \"float2\" 0.55626850999999999 0.81633471999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[74]" " -type \"float2\" 0.64400190000000002 0.74227071"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[75]" " -type \"float2\" 0.53036821000000001 0.81647283000000004"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[76]" " -type \"float2\" 0.50446963 0.81631308999999996"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[77]" " -type \"float2\" 0.41690630000000001 0.74215299000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[78]" " -type \"float2\" 0.42687820999999998 0.74137567999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[79]" " -type \"float2\" 0.56531911999999995 0.74271642999999998"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[80]" " -type \"float2\" 0.56594783000000004 0.80138564000000001"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[81]" " -type \"float2\" 0.56514710000000001 0.74097573999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[82]" " -type \"float2\" 0.56518148999999995 0.80453949999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[83]" " -type \"float2\" 0.5621621 0.80511116999999999"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[84]" " -type \"float2\" 0.53037124999999996 0.80536180999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[85]" " -type \"float2\" 0.49860248000000001 0.80508124999999997"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[86]" " -type \"float2\" 0.49575529000000002 0.80411005000000002"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[87]" " -type \"float2\" 0.49482208 0.80134928000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[88]" " -type \"float2\" 0.49553250999999998 0.74270665999999996"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[89]" " -type \"float2\" 0.49578428000000002 0.74085319000000005"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[90]" " -type \"float2\" 0.49760869000000002 0.74073058000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[91]" " -type \"float2\" 0.53042005999999997 0.74049019999999999"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape" 
+		"uvSet[0].uvSetPoints[92]" " -type \"float2\" 0.56325376000000005 0.74083805000000003"
+		
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints" 
+		" -s 24"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[0]" 
+		" -type \"float2\" 0.46304166000000002 0.96343774000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[1]" 
+		" -type \"float2\" 0.46942368000000001 0.97752892999999996"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[2]" 
+		" -type \"float2\" 0.50281005999999995 0.95027642999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[3]" 
+		" -type \"float2\" 0.49955514000000001 0.97338015"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[4]" 
+		" -type \"float2\" 0.49471006000000001 0.95559943000000003"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[5]" 
+		" -type \"float2\" 0.50003302000000005 0.96369945999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[6]" 
+		" -type \"float2\" 0.50301622999999995 0.97960274999999997"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[7]" 
+		" -type \"float2\" 0.50304556 0.97338681999999999"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[8]" 
+		" -type \"float2\" 0.50926930000000004 0.97965287999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[9]" 
+		" -type \"float2\" 0.50926881999999996 0.97338289"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[10]" 
+		" -type \"float2\" 0.46969312000000002 0.97207098999999997"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[11]" 
+		" -type \"float2\" 0.46669206000000002 0.96750420000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[12]" 
+		" -type \"float2\" 0.51080126000000003 0.97871560000000002"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[13]" 
+		" -type \"float2\" 0.50440216000000004 0.97477961000000002"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[14]" 
+		" -type \"float2\" 0.50820982000000003 0.97483098999999995"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[15]" 
+		" -type \"float2\" 0.50817250999999997 0.97857094"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[16]" 
+		" -type \"float2\" 0.51080132 0.97494048"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[17]" 
+		" -type \"float2\" 0.46841001999999998 0.98289864999999998"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[18]" 
+		" -type \"float2\" 0.48823535000000001 0.94838666999999999"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[19]" 
+		" -type \"float2\" 0.49775717000000003 0.98290436999999997"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[20]" 
+		" -type \"float2\" 0.50813304999999998 0.95837647000000004"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[21]" 
+		" -type \"float2\" 0.51457638000000006 0.97494060000000005"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[22]" 
+		" -type \"float2\" 0.50443583999999997 0.97857892999999996"
+		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvSet[0].uvSetPoints[23]" 
+		" -type \"float2\" 0.51457631999999998 0.97871565999999999"
+		3 "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NewChairScene2:ChairGRP|NewChairScene2:Leg4|NewChairScene2:LegShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NewChairScene2:ChairGRP|NewChairScene2:Leg3|NewChairScene2:LegShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NewChairScene2:ChairGRP|NewChairScene2:Leg2|NewChairScene2:LegShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 3 "NewChairScene2RN" "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape.instObjGroups" 
+		"NewChairScene2RN.placeHolderList[1]" ":initialShadingGroup.dsm"
+		5 3 "NewChairScene2RN" "|NewChairScene2:ChairGRP|NewChairScene2:Seat|NewChairScene2:SeatShape.instObjGroups" 
+		"NewChairScene2RN.placeHolderList[2]" ":initialShadingGroup.dsm"
+		5 3 "NewChairScene2RN" "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape.instObjGroups" 
+		"NewChairScene2RN.placeHolderList[3]" ":initialShadingGroup.dsm"
+		5 3 "NewChairScene2RN" "|NewChairScene2:ChairGRP|NewChairScene2:Leg2|NewChairScene2:LegShape.instObjGroups" 
+		"NewChairScene2RN.placeHolderList[4]" ":initialShadingGroup.dsm"
+		5 3 "NewChairScene2RN" "|NewChairScene2:ChairGRP|NewChairScene2:Leg3|NewChairScene2:LegShape.instObjGroups" 
+		"NewChairScene2RN.placeHolderList[5]" ":initialShadingGroup.dsm"
+		5 3 "NewChairScene2RN" "|NewChairScene2:ChairGRP|NewChairScene2:Leg4|NewChairScene2:LegShape.instObjGroups" 
+		"NewChairScene2RN.placeHolderList[6]" ":initialShadingGroup.dsm";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "NewChairScene2RN1";
+	rename -uid "A3D3A792-4FEC-C463-0929-B0B137C474A9";
+	setAttr -s 6 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"NewChairScene2RN1"
+		"NewChairScene2RN1" 0
+		"NewChairScene2RN1" 609
+		2 "|NewChairScene3:ChairGRP" "translate" " -type \"double3\" 6.27080887263581843 1.96154465204206385 0.72196703350388436"
+		
+		2 "|NewChairScene3:ChairGRP" "rotate" " -type \"double3\" 0 -49.33845387703595975 0"
+		
+		2 "|NewChairScene3:ChairGRP" "scale" " -type \"double3\" 1.152 1.152 1.152"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvPivot" " -type \"double2\" 0.15869059821193363 0.8536090046751732"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints" " -s 473"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[0]" " -type \"float2\" 0.26898327 0.78013080000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[1]" " -type \"float2\" 0.27367637 0.7785455"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[2]" " -type \"float2\" 0.034748998000000003 0.90417033000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[3]" " -type \"float2\" 0.030000236 0.90416878000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[4]" " -type \"float2\" 0.28679790999999999 0.92029660999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[5]" " -type \"float2\" 0.28193906000000002 0.92080205999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[6]" " -type \"float2\" 0.28026780000000001 0.95368366999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[7]" " -type \"float2\" 0.28520992000000001 0.95122664999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[8]" " -type \"float2\" 0.20738474000000001 0.95972579999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[9]" " -type \"float2\" 0.20426705000000001 0.96465254"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[10]" " -type \"float2\" 0.28575792999999999 0.92604523999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[11]" " -type \"float2\" 0.28068032999999998 0.92759550000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[12]" " -type \"float2\" 0.21209629999999999 0.95993686"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[13]" " -type \"float2\" 0.21021971 0.96462685000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[14]" " -type \"float2\" 0.24248216 0.95990461000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[15]" " -type \"float2\" 0.24248269 0.96461140999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[16]" " -type \"float2\" 0.27688465000000001 0.77625418000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[17]" " -type \"float2\" 0.17083374000000001 0.92622464999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[18]" " -type \"float2\" 0.17075303 0.95222837000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[19]" " -type \"float2\" 0.040066864000000001 0.73108691000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[20]" " -type \"float2\" 0.17362412999999999 0.86370975000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[21]" " -type \"float2\" 0.17582043999999999 0.86901616999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[22]" " -type \"float2\" 0.035883483000000001 0.87295383000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[23]" " -type \"float2\" 0.24818577999999999 0.86377972000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[24]" " -type \"float2\" 0.26605227999999997 0.77960622000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[25]" " -type \"float2\" 0.12097505 0.96053922000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[26]" " -type \"float2\" 0.11656174 0.95432234000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[27]" " -type \"float2\" 0.21086076000000001 0.96809118999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[28]" " -type \"float2\" 0.20378217000000001 0.96778010999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[29]" " -type \"float2\" 0.093217044999999998 0.94046783"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[30]" " -type \"float2\" 0.24248305000000001 0.96811091999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[31]" " -type \"float2\" 0.24347516999999999 0.86377925"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[32]" " -type \"float2\" 0.26553574000000002 0.77468872"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[33]" " -type \"float2\" 0.12534624 0.95862972999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[34]" " -type \"float2\" 0.23808619 0.86377901000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[35]" " -type \"float2\" 0.26755246999999999 0.76941906999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[36]" " -type \"float2\" 0.129886 0.95576775000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[37]" " -type \"float2\" 0.23473944999999999 0.86377828999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[38]" " -type \"float2\" 0.26748212999999998 0.76588738000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[39]" " -type \"float2\" 0.1329022 0.95457232000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[40]" " -type \"float2\" 0.26623824000000001 0.74244648000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[41]" " -type \"float2\" 0.21139738 0.86377698000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[42]" " -type \"float2\" 0.13717413000000001 0.91748958999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[43]" " -type \"float2\" 0.16824219000000001 0.91749108000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[44]" " -type \"float2\" 0.15539342 0.94868445000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[45]" " -type \"float2\" 0.048385049999999999 0.77339268000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[46]" " -type \"float2\" 0.17531034000000001 0.92621887000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[47]" " -type \"float2\" 0.27939847000000001 0.77233660000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[48]" " -type \"float2\" 0.046450075 0.72690182999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[49]" " -type \"float2\" 0.28057292 0.76801090999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[50]" " -type \"float2\" 0.17956844 0.92622846000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[51]" " -type \"float2\" 0.050532486000000001 0.72668933999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[52]" " -type \"float2\" 0.28124145 0.76347560000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[53]" " -type \"float2\" 0.18399343000000001 0.92622959999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[54]" " -type \"float2\" 0.18393281 0.95225883"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[55]" " -type \"float2\" 0.27732321999999998 0.74050408999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[56]" " -type \"float2\" 0.20717790999999999 0.92622351999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[57]" " -type \"float2\" 0.20715120000000001 0.95231807000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[58]" " -type \"float2\" 0.16747770000000001 0.90942889000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[59]" " -type \"float2\" 0.13617557 0.90961808"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[60]" " -type \"float2\" 0.11011258 0.91018504"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[61]" " -type \"float2\" 0.26929512999999999 0.77714366000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[62]" " -type \"float2\" 0.27342572999999998 0.77553791000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[63]" " -type \"float2\" 0.27062060999999998 0.77269387"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[64]" " -type \"float2\" 0.2747173 0.77143066999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[65]" " -type \"float2\" 0.27213134999999999 0.76841956"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[66]" " -type \"float2\" 0.27575864999999999 0.76742929000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[67]" " -type \"float2\" 0.27336814999999998 0.74123669000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[68]" " -type \"float2\" 0.26960757000000002 0.74196529"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[69]" " -type \"float2\" 0.16967097 0.91546636999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[70]" " -type \"float2\" 0.16965225 0.91172814000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[71]" " -type \"float2\" 0.27174899000000002 0.76521116"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[72]" " -type \"float2\" 0.27562323 0.76438611999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[73]" " -type \"float2\" 0.24248334999999999 0.97099078000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[74]" " -type \"float2\" 0.17075893 0.82740336999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[75]" " -type \"float2\" 0.17565074999999999 0.79637307000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[76]" " -type \"float2\" 0.17558720999999999 0.82793516"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[77]" " -type \"float2\" 0.19860879000000001 0.79637051000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[78]" " -type \"float2\" 0.19865534000000001 0.82808757"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[79]" " -type \"float2\" 0.21090355999999999 0.79636914000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[80]" " -type \"float2\" 0.21114184999999999 0.82820660000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[81]" " -type \"float2\" 0.23458239 0.79636638999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[82]" " -type \"float2\" 0.23479887999999999 0.82739693000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[83]" " -type \"float2\" 0.18367985000000001 0.86374240999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[84]" " -type \"float2\" 0.18368425999999999 0.89439559000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[85]" " -type \"float2\" 0.13131332000000001 0.94843650000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[86]" " -type \"float2\" 0.15425727 0.94346070000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[87]" " -type \"float2\" 0.097584844000000004 0.93858933"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[88]" " -type \"float2\" 0.11967969000000001 0.95286006000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[89]" " -type \"float2\" 0.12329283000000001 0.95030844000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[90]" " -type \"float2\" 0.17283746999999999 0.83424955999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[91]" " -type \"float2\" 0.10247945999999999 0.93815154000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[92]" " -type \"float2\" 0.17737492999999999 0.83327907000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[93]" " -type \"float2\" 0.044695999 0.77043377999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[94]" " -type \"float2\" 0.11727008 0.93386983999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[95]" " -type \"float2\" 0.15264261000000001 0.93296968999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[96]" " -type \"float2\" 0.12928084000000001 0.93403095000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[97]" " -type \"float2\" 0.041502948999999997 0.76202786"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[98]" " -type \"float2\" 0.11950769999999999 0.93930327999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[99]" " -type \"float2\" 0.1529963 0.93596482000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[100]" " -type \"float2\" 0.12976932999999999 0.93784416000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[101]" " -type \"float2\" 0.042281803 0.76502627000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[102]" " -type \"float2\" 0.044695970000000002 0.73142706999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[103]" " -type \"float2\" 0.17726538 0.86155784000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[104]" " -type \"float2\" 0.17882696000000001 0.86468601"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[105]" " -type \"float2\" 0.036442276000000003 0.86737293000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[106]" " -type \"float2\" 0.048478868000000001 0.73123068000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[107]" " -type \"float2\" 0.18118276999999999 0.85875553000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[108]" " -type \"float2\" 0.036986914000000003 0.86220651999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[109]" " -type \"float2\" 0.18198523 0.86010224000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[110]" " -type \"float2\" 0.027141954999999999 0.83664870000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[111]" " -type \"float2\" 0.035726395000000001 0.85791033999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[112]" " -type \"float2\" 0.031271542999999999 0.8093437"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[113]" " -type \"float2\" 0.053626712 0.76534694000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[114]" " -type \"float2\" 0.064742236999999994 0.85755020000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[115]" " -type \"float2\" 0.037684138999999998 0.85795027000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[116]" " -type \"float2\" 0.038438883 0.84744220999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[117]" " -type \"float2\" 0.064741880000000002 0.84757948000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[118]" " -type \"float2\" 0.064741641000000003 0.83763188"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[119]" " -type \"float2\" 0.039278831 0.83783275000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[120]" " -type \"float2\" 0.039386597000000002 0.81000673999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[121]" " -type \"float2\" 0.064740688000000005 0.80990600999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[122]" " -type \"float2\" 0.055114920999999997 0.75917619000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[123]" " -type \"float2\" 0.19572898999999999 0.86374092000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[124]" " -type \"float2\" 0.035365845999999999 0.80979431000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[125]" " -type \"float2\" 0.053960618000000002 0.76208043000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[126]" " -type \"float2\" 0.034245457999999999 0.83753520000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[127]" " -type \"float2\" 0.18297526 0.85860234000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[128]" " -type \"float2\" 0.037337776000000003 0.86007856999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[129]" " -type \"float2\" 0.034153488000000003 0.84596068000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[130]" " -type \"float2\" 0.064742297000000004 0.85971761000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[131]" " -type \"float2\" 0.064742714000000007 0.87278568999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[132]" " -type \"float2\" 0.064742535000000004 0.86739962999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[133]" " -type \"float2\" 0.064742357 0.86188531000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[134]" " -type \"float2\" 0.26199528999999999 0.7801283"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[135]" " -type \"float2\" 0.27818747999999999 0.88838196000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[136]" " -type \"float2\" 0.27343872000000002 0.88838225999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[137]" " -type \"float2\" 0.25730218999999999 0.77854288000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[138]" " -type \"float2\" 0.27779165 0.91900044999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[139]" " -type \"float2\" 0.030578014000000001 0.72657459999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[140]" " -type \"float2\" 0.25820288000000002 0.88081133"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[141]" " -type \"float2\" 0.25658014000000001 0.88673084999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[142]" " -type \"float2\" 0.27757957999999999 0.95971835000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[143]" " -type \"float2\" 0.25311657999999998 0.87861650999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[144]" " -type \"float2\" 0.036419 0.73417741000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[145]" " -type \"float2\" 0.25131210999999998 0.85349642999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[146]" " -type \"float2\" 0.27474560999999997 0.96461998999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[147]" " -type \"float2\" 0.27286800999999999 0.95993041999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[148]" " -type \"float2\" 0.096767902000000003 0.90421896999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[149]" " -type \"float2\" 0.25409397 0.77625149000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[150]" " -type \"float2\" 0.24792132 0.73883522000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[151]" " -type \"float2\" 0.12737343000000001 0.92717075000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[152]" " -type \"float2\" 0.10282278 0.92717713000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[153]" " -type \"float2\" 0.097417474000000004 0.87225682000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[154]" " -type \"float2\" 0.27155288999999999 0.95731257999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[155]" " -type \"float2\" 0.26492628000000001 0.77960377999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[156]" " -type \"float2\" 0.27127888999999999 0.81060642000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[157]" " -type \"float2\" 0.27141860000000001 0.84184115999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[158]" " -type \"float2\" 0.23250415999999999 0.73429984000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[159]" " -type \"float2\" 0.26706841999999997 0.86262207999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[160]" " -type \"float2\" 0.27410533999999998 0.96808450999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[161]" " -type \"float2\" 0.26162854000000002 0.8567186"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[162]" " -type \"float2\" 0.26544294000000002 0.77468627999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[163]" " -type \"float2\" 0.2759895 0.81060593999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[164]" " -type \"float2\" 0.23785374000000001 0.72606634999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[165]" " -type \"float2\" 0.26342627000000002 0.76941663000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[166]" " -type \"float2\" 0.22245148000000001 0.92613226000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[167]" " -type \"float2\" 0.031898465000000001 0.96541178000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[168]" " -type \"float2\" 0.26349666999999999 0.76588487999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[169]" " -type \"float2\" 0.22579648999999999 0.92613184000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[170]" " -type \"float2\" 0.035230960999999998 0.96571534999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[171]" " -type \"float2\" 0.26474102999999999 0.74244403999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[172]" " -type \"float2\" 0.093564719000000005 0.78711306999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[173]" " -type \"float2\" 0.062496538999999997 0.78712225000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[174]" " -type \"float2\" 0.24913272 0.92613226000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[175]" " -type \"float2\" 0.031450237999999998 0.78763669999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[176]" " -type \"float2\" 0.058529581999999997 0.96702158000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[177]" " -type \"float2\" 0.092291473999999998 0.90421277"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[178]" " -type \"float2\" 0.25158021000000003 0.77233392000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[179]" " -type \"float2\" 0.24708202000000001 0.73444109999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[180]" " -type \"float2\" 0.088033527 0.90422195000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[181]" " -type \"float2\" 0.25040588000000003 0.76800811000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[182]" " -type \"float2\" 0.24729445999999999 0.73035866000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[183]" " -type \"float2\" 0.083608716999999999 0.90422267000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[184]" " -type \"float2\" 0.24973735 0.76347290999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[185]" " -type \"float2\" 0.24791858 0.72605997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[186]" " -type \"float2\" 0.060425158999999999 0.90421432000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[187]" " -type \"float2\" 0.25365611999999998 0.74050134000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[188]" " -type \"float2\" 0.060451354999999998 0.93029404000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[189]" " -type \"float2\" 0.06149992 0.79499405999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[190]" " -type \"float2\" 0.092802256 0.79517548999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[191]" " -type \"float2\" 0.038219656999999997 0.77531284"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[192]" " -type \"float2\" 0.25755283000000001 0.77553528999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[193]" " -type \"float2\" 0.26168349000000002 0.77714114999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[194]" " -type \"float2\" 0.25626144000000001 0.77142805000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[195]" " -type \"float2\" 0.26035800999999997 0.77269131000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[196]" " -type \"float2\" 0.25522009000000001 0.76742666999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[197]" " -type \"float2\" 0.25884739000000001 0.768417"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[198]" " -type \"float2\" 0.25761118999999999 0.741234"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[199]" " -type \"float2\" 0.094976246 0.79287565000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[200]" " -type \"float2\" 0.094994068000000001 0.78913741999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[201]" " -type \"float2\" 0.26137169999999998 0.74196273000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[202]" " -type \"float2\" 0.25535563 0.76438349000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[203]" " -type \"float2\" 0.25922981 0.76520865999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[204]" " -type \"float2\" 0.27365187000000002 0.97096431000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[205]" " -type \"float2\" 0.17558004999999999 0.76481109999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[206]" " -type \"float2\" 0.19864818000000001 0.76465344000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[207]" " -type \"float2\" 0.21113464000000001 0.76453148999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[208]" " -type \"float2\" 0.23479185 0.76533585999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[209]" " -type \"float2\" 0.028578962999999999 0.76291144"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[210]" " -type \"float2\" 0.25901111999999998 0.79572909999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[211]" " -type \"float2\" 0.25471070000000001 0.81865149999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[212]" " -type \"float2\" 0.23595854999999999 0.73418468000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[213]" " -type \"float2\" 0.26361641000000002 0.85240369999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[214]" " -type \"float2\" 0.25260033999999998 0.82650464999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[215]" " -type \"float2\" 0.26914206000000002 0.85983222999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[216]" " -type \"float2\" 0.26417294000000002 0.84752928999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[217]" " -type \"float2\" 0.27058854999999998 0.85536069000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[218]" " -type \"float2\" 0.039834137999999998 0.76520246000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[219]" " -type \"float2\" 0.26887908999999999 0.83282345999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[220]" " -type \"float2\" 0.26957533 0.79708201000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[221]" " -type \"float2\" 0.21136953999999999 0.76159465000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[222]" " -type \"float2\" 0.031427707999999999 0.76201063000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[223]" " -type \"float2\" 0.26350984 0.83047634000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[224]" " -type \"float2\" 0.26657101999999999 0.79679650000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[225]" " -type \"float2\" 0.26520105999999999 0.82018793000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[226]" " -type \"float2\" 0.034426237999999998 0.76278906999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[227]" " -type \"float2\" 0.12943115999999999 0.92306876000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[228]" " -type \"float2\" 0.10497877 0.92353147000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[229]" " -type \"float2\" 0.093042791 0.86737114000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[230]" " -type \"float2\" 0.095630080000000006 0.86728649999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[231]" " -type \"float2\" 0.13155532 0.91999531000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[232]" " -type \"float2\" 0.10778397000000001 0.91959780000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[233]" " -type \"float2\" 0.092497826000000005 0.86220479000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[234]" " -type \"float2\" 0.093891203000000006 0.86194669999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[235]" " -type \"float2\" 0.10234118 0.83664632000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[236]" " -type \"float2\" 0.11021382 0.91737568000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[237]" " -type \"float2\" 0.098209827999999999 0.80934161000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[238]" " -type \"float2\" 0.034748551000000003 0.77413385999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[239]" " -type \"float2\" 0.091044902999999996 0.84744054000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[240]" " -type \"float2\" 0.091800331999999998 0.85794853999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[241]" " -type \"float2\" 0.090094834999999998 0.81000512999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[242]" " -type \"float2\" 0.090204387999999996 0.8378312"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[243]" " -type \"float2\" 0.19530334999999999 0.83822708999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[244]" " -type \"float2\" 0.094115585000000002 0.80979246000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[245]" " -type \"float2\" 0.031482155999999997 0.7744683"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[246]" " -type \"float2\" 0.095237701999999994 0.83753323999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[247]" " -type \"float2\" 0.092146813999999994 0.86007683999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[248]" " -type \"float2\" 0.093427180999999998 0.860192"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[249]" " -type \"float2\" 0.095330208999999999 0.84595876999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[250]" " -type \"float2\" 0.093373745999999994 0.78912758999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[251]" " -type \"float2\" 0.062266494999999998 0.788939"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[252]" " -type \"float2\" 0.16769555 0.91172642000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[253]" " -type \"float2\" 0.13643949999999999 0.91169882000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[254]" " -type \"float2\" 0.051243808000000002 0.76868349000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[255]" " -type \"float2\" 0.18658885 0.83409697000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[256]" " -type \"float2\" 0.18682477 0.86374198999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[257]" " -type \"float2\" 0.18659607 0.89338708"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[258]" " -type \"float2\" 0.033342745 0.78936916999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[259]" " -type \"float2\" 0.039352621999999997 0.76762933"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[260]" " -type \"float2\" 0.093019514999999997 0.79287785"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[261]" " -type \"float2\" 0.061763341999999999 0.79291325999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[262]" " -type \"float2\" 0.035761978 0.76579863000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[263]" " -type \"float2\" 0.16805068000000001 0.91547661999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[264]" " -type \"float2\" 0.13694364000000001 0.91567290000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[265]" " -type \"float2\" 0.050821122000000003 0.77258605000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[266]" " -type \"float2\" 0.032033350000000002 0.76568550000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[267]" " -type \"float2\" 0.047122802999999998 0.76995188000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[268]" " -type \"float2\" 0.19106677 0.89288246999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[269]" " -type \"float2\" 0.049695338999999998 0.76412004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[270]" " -type \"float2\" 0.045177963000000002 0.76263296999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[271]" " -type \"float2\" 0.038084801000000001 0.77175050999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[272]" " -type \"float2\" 0.045291629 0.76636152999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[273]" " -type \"float2\" 0.033521082000000001 0.77020270000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[274]" " -type \"float2\" 0.030180838000000001 0.77027588999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[275]" " -type \"float2\" 0.19141169999999999 0.86374145999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[276]" " -type \"float2\" 0.093601911999999995 0.87295197999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[277]" " -type \"float2\" 0.24248185999999999 0.95728838000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[278]" " -type \"float2\" 0.10794017 0.91780061000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[279]" " -type \"float2\" 0.093758075999999996 0.85790849000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[280]" " -type \"float2\" 0.096380621 0.79499644000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[281]" " -type \"float2\" 0.093115746999999999 0.79518860999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[282]" " -type \"float2\" 0.1064364 0.91879516999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[283]" " -type \"float2\" 0.090015918 0.79526686999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[284]" " -type \"float2\" 0.064740241000000004 0.79533218999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[285]" " -type \"float2\" 0.045854504999999997 0.93029499000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[286]" " -type \"float2\" 0.10184658000000001 0.92196727000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[287]" " -type \"float2\" 0.27549115000000002 0.95695668"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[288]" " -type \"float2\" 0.2483013 0.88271635999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[289]" " -type \"float2\" 0.097510815000000001 0.92497784000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[290]" " -type \"float2\" 0.19961712000000001 0.76011722999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[291]" " -type \"float2\" 0.26901217999999999 0.82065803000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[292]" " -type \"float2\" 0.073021978000000001 0.97259176000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[293]" " -type \"float2\" 0.26751551000000001 0.78228217"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[294]" " -type \"float2\" 0.27058884999999999 0.78267962000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[295]" " -type \"float2\" 0.24930725000000001 0.76280837999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[296]" " -type \"float2\" 0.24921593 0.76579052000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[297]" " -type \"float2\" 0.2349098 0.76225984000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[298]" " -type \"float2\" 0.17736658 0.75946670999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[299]" " -type \"float2\" 0.26390733999999999 0.95718126999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[300]" " -type \"float2\" 0.073182255000000002 0.96786587999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[301]" " -type \"float2\" 0.28089430999999998 0.97126060999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[302]" " -type \"float2\" 0.25937131000000002 0.88816958999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[303]" " -type \"float2\" 0.28118380999999998 0.96777195000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[304]" " -type \"float2\" 0.24917135000000001 0.79636472000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[305]" " -type \"float2\" 0.26544514000000002 0.72776282000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[306]" " -type \"float2\" 0.26390954999999999 0.89506626"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[307]" " -type \"float2\" 0.26299062000000001 0.72740382000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[308]" " -type \"float2\" 0.045828964999999999 0.87289589999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[309]" " -type \"float2\" 0.25621160999999998 0.72606318999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[310]" " -type \"float2\" 0.25931332000000001 0.72670287"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[311]" " -type \"float2\" 0.22589627000000001 0.95729291000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[312]" " -type \"float2\" 0.24923065 0.95722543999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[313]" " -type \"float2\" 0.22589716000000001 0.89495206000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[314]" " -type \"float2\" 0.24923255999999999 0.89502113999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[315]" " -type \"float2\" 0.045811261999999998 0.90421039000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[316]" " -type \"float2\" 0.060473826000000001 0.87291198999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[317]" " -type \"float2\" 0.083668916999999995 0.93026154999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[318]" " -type \"float2\" 0.083676726000000007 0.87294024000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[319]" " -type \"float2\" 0.088098854000000004 0.93025142000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[320]" " -type \"float2\" 0.088107257999999994 0.87295210000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[321]" " -type \"float2\" 0.092305988000000005 0.93017483000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[322]" " -type \"float2\" 0.092369287999999994 0.87296373000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[323]" " -type \"float2\" 0.027141954999999999 0.72606468000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[324]" " -type \"float2\" 0.096846013999999994 0.93022168000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[325]" " -type \"float2\" 0.096852750000000001 0.87297820999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[326]" " -type \"float2\" 0.26984754 0.85795717999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[327]" " -type \"float2\" 0.26380977 0.92613250000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[328]" " -type \"float2\" 0.22255017999999999 0.95730782000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[329]" " -type \"float2\" 0.28151372000000002 0.77940016999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[330]" " -type \"float2\" 0.27612880000000001 0.84181839000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[331]" " -type \"float2\" 0.27612927999999998 0.77937436000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[332]" " -type \"float2\" 0.28063461000000001 0.91964829000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[333]" " -type \"float2\" 0.038101311999999998 0.72606616999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[334]" " -type \"float2\" 0.23318568000000001 0.72669846000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[335]" " -type \"float2\" 0.28105161000000001 0.85714656"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[336]" " -type \"float2\" 0.27141907999999998 0.77935153000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[337]" " -type \"float2\" 0.26144560999999999 0.88045554999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[338]" " -type \"float2\" 0.039818133999999998 0.73333185999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[339]" " -type \"float2\" 0.28069821 0.96464448999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[340]" " -type \"float2\" 0.28104575999999998 0.88840889999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[341]" " -type \"float2\" 0.27819303000000001 0.85714597000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[342]" " -type \"float2\" 0.25133839000000002 0.88429141"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[343]" " -type \"float2\" 0.25014403000000002 0.87718892000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[344]" " -type \"float2\" 0.24830589 0.85266041999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[345]" " -type \"float2\" 0.26984277000000001 0.88919561999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[346]" " -type \"float2\" 0.27344396999999998 0.85714506999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[347]" " -type \"float2\" 0.036057438999999997 0.86019385000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[348]" " -type \"float2\" 0.035593536000000002 0.86194855000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[349]" " -type \"float2\" 0.036364760000000003 0.79519039000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[350]" " -type \"float2\" 0.039464618999999999 0.79526848000000006"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[351]" " -type \"float2\" 0.2217373 0.95593417000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[352]" " -type \"float2\" 0.22174039000000001 0.95228952"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[353]" " -type \"float2\" 0.033854987000000003 0.86728841000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[354]" " -type \"float2\" 0.29023924000000001 0.95507354"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[355]" " -type \"float2\" 0.20947251 0.95696365999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[356]" " -type \"float2\" 0.032067891000000001 0.87225889999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[357]" " -type \"float2\" 0.19962534000000001 0.83262354000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[358]" " -type \"float2\" 0.21137740999999999 0.83114343999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[359]" " -type \"float2\" 0.16853222000000001 0.94043052000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[360]" " -type \"float2\" 0.16747883 0.93460940999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[361]" " -type \"float2\" 0.24931486999999999 0.82992107000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[362]" " -type \"float2\" 0.16700038 0.93154943000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[363]" " -type \"float2\" 0.23491755 0.83047289000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[364]" " -type \"float2\" 0.094811589000000002 0.93153417000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[365]" " -type \"float2\" 0.24922284 0.82693892999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[366]" " -type \"float2\" 0.16960922 0.9450326"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[367]" " -type \"float2\" 0.19660166000000001 0.89481741000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[368]" " -type \"float2\" 0.090301931000000002 0.93286692999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[369]" " -type \"float2\" 0.27949020000000002 0.96110034"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[370]" " -type \"float2\" 0.087458134000000007 0.93486822000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[371]" " -type \"float2\" 0.19660452 0.83271711999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[372]" " -type \"float2\" 0.26553449000000001 0.72776532000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[373]" " -type \"float2\" 0.26798895 0.72740632000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[374]" " -type \"float2\" 0.27476802 0.72606581000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[375]" " -type \"float2\" 0.22177770999999999 0.89490526999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[376]" " -type \"float2\" 0.27166632000000002 0.72670548999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[377]" " -type \"float2\" 0.21127762999999999 0.89486772000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[378]" " -type \"float2\" 0.21128067 0.83266830000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[379]" " -type \"float2\" 0.22179236999999999 0.92622101000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[380]" " -type \"float2\" 0.20713224999999999 0.89491993000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[381]" " -type \"float2\" 0.18392845999999999 0.89494591999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[382]" " -type \"float2\" 0.17950061 0.95225894"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[383]" " -type \"float2\" 0.17949775000000001 0.89495736000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[384]" " -type \"float2\" 0.17529330000000001 0.95218194"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[385]" " -type \"float2\" 0.17523554 0.89496850999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[386]" " -type \"float2\" 0.037967230999999997 0.93098645999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[387]" " -type \"float2\" 0.29022941000000002 0.91993552000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[388]" " -type \"float2\" 0.042055930999999998 0.72606272000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[389]" " -type \"float2\" 0.038348433000000001 0.87374627999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[390]" " -type \"float2\" 0.17075190000000001 0.89498264000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[391]" " -type \"float2\" 0.19671944 0.86377614999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[392]" " -type \"float2\" 0.23460618 0.89494604"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[393]" " -type \"float2\" 0.23460992999999999 0.83259218999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[394]" " -type \"float2\" 0.23795071000000001 0.89496540999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[395]" " -type \"float2\" 0.23795173 0.83257358999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[396]" " -type \"float2\" 0.2433351 0.89499134000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[397]" " -type \"float2\" 0.24333610999999999 0.83254795999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[398]" " -type \"float2\" 0.27935293 0.91947460000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[399]" " -type \"float2\" 0.027544584 0.9354344"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[400]" " -type \"float2\" 0.24804524 0.89501417000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[401]" " -type \"float2\" 0.24804630999999999 0.83252519000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[402]" " -type \"float2\" 0.027144577 0.87293255000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[403]" " -type \"float2\" 0.27702323000000001 0.95350747999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[404]" " -type \"float2\" 0.27734252999999998 0.92661285000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[405]" " -type \"float2\" 0.28219977000000002 0.95951355000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[406]" " -type \"float2\" 0.027141954999999999 0.90419495000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[407]" " -type \"float2\" 0.030387695999999999 0.93478733000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[408]" " -type \"float2\" 0.030003156999999999 0.87293273000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[409]" " -type \"float2\" 0.28729364000000002 0.95680195000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[410]" " -type \"float2\" 0.034651961000000002 0.93201827999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[411]" " -type \"float2\" 0.034752305999999997 0.87293315000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[412]" " -type \"float2\" 0.21341093999999999 0.95731878000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[413]" " -type \"float2\" 0.28809859999999998 0.94965946999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[414]" " -type \"float2\" 0.28875861000000003 0.92519951"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[415]" " -type \"float2\" 0.038344736999999997 0.90498471000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[416]" " -type \"float2\" 0.035443451000000001 0.72729074999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[417]" " -type \"float2\" 0.27352819 0.91623019999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[418]" " -type \"float2\" 0.27021316000000001 0.91519748999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[419]" " -type \"float2\" 0.24290004000000001 0.72925764000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[420]" " -type \"float2\" 0.24275318000000001 0.73241239999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[421]" " -type \"float2\" 0.24255684 0.73619533000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[422]" " -type \"float2\" 0.028396214999999999 0.73142213"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[423]" " -type \"float2\" 0.24289711999999999 0.74082446000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[424]" " -type \"float2\" 0.058442200999999999 0.97238665999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[425]" " -type \"float2\" 0.26165982999999998 0.78138584"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[426]" " -type \"float2\" 0.027141954999999999 0.97259843000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[427]" " -type \"float2\" 0.035141016999999997 0.97197478999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[428]" " -type \"float2\" 0.2497817 0.82988912000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[429]" " -type \"float2\" 0.25961861000000003 0.85346383000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[430]" " -type \"float2\" 0.2483013 0.83303863"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[431]" " -type \"float2\" 0.25639561 0.85481441000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[432]" " -type \"float2\" 0.031378205999999999 0.73240106999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[433]" " -type \"float2\" 0.24031076000000001 0.73417169000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[434]" " -type \"float2\" 0.28151330000000002 0.84179263999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[435]" " -type \"float2\" 0.24324061999999999 0.72606689000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[436]" " -type \"float2\" 0.28137854000000001 0.81060593999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[437]" " -type \"float2\" 0.22255352 0.89493769000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[438]" " -type \"float2\" 0.028578069000000001 0.77562302000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[439]" " -type \"float2\" 0.19105968000000001 0.83460051000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[440]" " -type \"float2\" 0.032128985999999998 0.79310113000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[441]" " -type \"float2\" 0.041987296 0.77132719999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[442]" " -type \"float2\" 0.042793537999999999 0.76889103999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[443]" " -type \"float2\" 0.028834011 0.76598250999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[444]" " -type \"float2\" 0.035436209000000003 0.79443227999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[445]" " -type \"float2\" 0.18367681 0.83308917000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[446]" " -type \"float2\" 0.19530955 0.88925487000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[447]" " -type \"float2\" 0.049767997000000001 0.76077980000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[448]" " -type \"float2\" 0.10680616 0.91151685000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[449]" " -type \"float2\" 0.10801959 0.91524886999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[450]" " -type \"float2\" 0.10612744 0.91698188000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[451]" " -type \"float2\" 0.045474465999999998 0.75943357"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[452]" " -type \"float2\" 0.054806199 0.76881783999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[453]" " -type \"float2\" 0.042403336999999999 0.75917893999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[454]" " -type \"float2\" 0.13333191999999999 0.91743153"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[455]" " -type \"float2\" 0.060422506000000001 0.93371963999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[456]" " -type \"float2\" 0.045866276999999997 0.93396091000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[457]" " -type \"float2\" 0.088331819000000006 0.93384975000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[458]" " -type \"float2\" 0.20717493000000001 0.95575619000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[459]" " -type \"float2\" 0.033099855999999997 0.79499847000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[460]" " -type \"float2\" 0.17919001000000001 0.95580887999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[461]" " -type \"float2\" 0.18339649 0.85633128999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[462]" " -type \"float2\" 0.18080446 0.83491325000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[463]" " -type \"float2\" 0.18338963 0.83312445999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[464]" " -type \"float2\" 0.17771527000000001 0.83707529000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[465]" " -type \"float2\" 0.17362865999999999 0.83923095000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[466]" " -type \"float2\" 0.054831142999999999 0.72606510000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[467]" " -type \"float2\" 0.051633652000000002 0.73108368999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[468]" " -type \"float2\" 0.17075190000000001 0.76534396000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[469]" " -type \"float2\" 0.17282887999999999 0.75849730000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[470]" " -type \"float2\" 0.17082068 0.79637367000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[471]" " -type \"float2\" 0.21131477000000001 0.97097087000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
+		"uvSet[0].uvSetPoints[472]" " -type \"float2\" 0.20407244999999999 0.97126877"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints" " -s 93"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[0]" " -type \"float2\" 0.1110104 0.84510755999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[1]" " -type \"float2\" 0.15850486999999999 0.84512436000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[2]" " -type \"float2\" 0.16848131999999999 0.81590909"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[3]" " -type \"float2\" 0.044602985999999997 0.75383675000000006"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[4]" " -type \"float2\" 0.038078841000000002 0.75964021999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[5]" " -type \"float2\" 0.10336858 0.72648000999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[6]" " -type \"float2\" 0.096729576999999997 0.74865466000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[7]" " -type \"float2\" 0.095017850000000001 0.72710282000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[8]" " -type \"float2\" 0.16537473 0.74821561999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[9]" " -type \"float2\" 0.17463382999999999 0.72711497999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[10]" " -type \"float2\" 0.17286190000000001 0.74871032999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[11]" " -type \"float2\" 0.22500917000000001 0.75390553000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[12]" " -type \"float2\" 0.13481027000000001 0.72606629"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[13]" " -type \"float2\" 0.13480979000000001 0.75585036999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[14]" " -type \"float2\" 0.11039177 0.81817156000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[15]" " -type \"float2\" 0.10410002 0.75610036000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[16]" " -type \"float2\" 0.13482019000000001 0.74781668000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[17]" " -type \"float2\" 0.16626731 0.7264967"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[18]" " -type \"float2\" 0.15914318 0.81819372999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[19]" " -type \"float2\" 0.13476557 0.81835513999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[20]" " -type \"float2\" 0.16554828999999999 0.75611103000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[21]" " -type \"float2\" 0.098898827999999994 0.90420705000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[22]" " -type \"float2\" 0.098914057 0.85300469000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[23]" " -type \"float2\" 0.036866362999999999 0.73440444000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[24]" " -type \"float2\" 0.13475736999999999 0.84516007000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[25]" " -type \"float2\" 0.13473639000000001 0.90943854999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[26]" " -type \"float2\" 0.10409817 0.90941470999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[27]" " -type \"float2\" 0.16537461000000001 0.90943503000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[28]" " -type \"float2\" 0.23280099000000001 0.73449372999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[29]" " -type \"float2\" 0.17059590999999999 0.85302895000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[30]" " -type \"float2\" 0.17057738 0.90423076999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[31]" " -type \"float2\" 0.043510611999999997 0.73345773999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[32]" " -type \"float2\" 0.22614857999999999 0.73352647000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[33]" " -type \"float2\" 0.23156794999999999 0.75969750000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[34]" " -type \"float2\" 0.10425526 0.74820017999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[35]" " -type \"float2\" 0.097483634999999999 0.75257759999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[36]" " -type \"float2\" 0.10012129 0.75596898999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[37]" " -type \"float2\" 0.10049524999999999 0.74835675999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[38]" " -type \"float2\" 0.10403299000000001 0.75213498000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[39]" " -type \"float2\" 0.13481494999999999 0.7518397"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[40]" " -type \"float2\" 0.099191456999999997 0.72677444999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[41]" " -type \"float2\" 0.10041957999999999 0.907888"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[42]" " -type \"float2\" 0.16905423999999999 0.90791076000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[43]" " -type \"float2\" 0.17044345 0.72679811999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[44]" " -type \"float2\" 0.16561058000000001 0.75216609000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[45]" " -type \"float2\" 0.16913249999999999 0.74838822999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[46]" " -type \"float2\" 0.16950038000000001 0.75598007"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[47]" " -type \"float2\" 0.17210779000000001 0.75260680999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[48]" " -type \"float2\" 0.099057347000000004 0.81108075000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[49]" " -type \"float2\" 0.043053771999999997 0.75897323999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[50]" " -type \"float2\" 0.22656568999999999 0.75904541999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[51]" " -type \"float2\" 0.17048487000000001 0.81111783000000004"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[52]" " -type \"float2\" 0.10070163 0.75147717999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[53]" " -type \"float2\" 0.16891977 0.75150304999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[54]" " -type \"float2\" 0.13473877000000001 0.90221189999999996"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[55]" " -type \"float2\" 0.16294934999999999 0.90179050000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[56]" " -type \"float2\" 0.10652846000000001 0.90177178000000002"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[57]" " -type \"float2\" 0.13475469000000001 0.85358053"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[58]" " -type \"float2\" 0.16071447999999999 0.85375403999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[59]" " -type \"float2\" 0.10879502000000001 0.85373628000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[60]" " -type \"float2\" 0.16573747999999999 0.81093389000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[61]" " -type \"float2\" 0.13476753 0.81113749999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[62]" " -type \"float2\" 0.10383773 0.81090408999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[63]" " -type \"float2\" 0.16884168999999999 0.75278431000000001"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[64]" " -type \"float2\" 0.10078362 0.75274830999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[65]" " -type \"float2\" 0.24254587 0.73548418000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[66]" " -type \"float2\" 0.168084 0.84685403000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[67]" " -type \"float2\" 0.10143 0.84683132000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[68]" " -type \"float2\" 0.10105667 0.81587613000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[69]" " -type \"float2\" 0.028940345999999999 0.76233333000000003"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[70]" " -type \"float2\" 0.24069402000000001 0.76244539"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[71]" " -type \"float2\" 0.027141954999999999 0.73540192999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[72]" " -type \"float2\" 0.23198339000000001 0.75486975999999995"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[73]" " -type \"float2\" 0.15903898999999999 0.82503873000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[74]" " -type \"float2\" 0.24126813 0.75562130999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[75]" " -type \"float2\" 0.13476366000000001 0.82516813"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[76]" " -type \"float2\" 0.11048988 0.82501840999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[77]" " -type \"float2\" 0.028420117000000002 0.75551098999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[78]" " -type \"float2\" 0.037766423 0.75478250000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[79]" " -type \"float2\" 0.16752174 0.75603907999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[80]" " -type \"float2\" 0.16811106000000001 0.81102746999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[81]" " -type \"float2\" 0.16736050999999999 0.75440757999999997"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[82]" " -type \"float2\" 0.16739276 0.81398349999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[83]" " -type \"float2\" 0.16456285000000001 0.81451934999999998"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[84]" " -type \"float2\" 0.13476646 0.81475419000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[85]" " -type \"float2\" 0.10499081 0.81449126999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[86]" " -type \"float2\" 0.10232225 0.81358098999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[87]" " -type \"float2\" 0.10144760999999999 0.81099337000000005"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[88]" " -type \"float2\" 0.10211346 0.75602990000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[89]" " -type \"float2\" 0.10234946 0.75429279000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[90]" " -type \"float2\" 0.1040594 0.75417787000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[91]" " -type \"float2\" 0.13481220999999999 0.75395255999999999"
+		
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
+		"uvSet[0].uvSetPoints[92]" " -type \"float2\" 0.16558596 0.75427854000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints" 
+		" -s 24"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[0]" 
+		" -type \"float2\" 0.071661025000000003 0.96291267999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[1]" 
+		" -type \"float2\" 0.077642679000000006 0.97611981999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[2]" 
+		" -type \"float2\" 0.10893443 0.95057714000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[3]" 
+		" -type \"float2\" 0.10588372 0.97223132999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[4]" 
+		" -type \"float2\" 0.10134259 0.95556616999999999"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[5]" 
+		" -type \"float2\" 0.10633162 0.96315801000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[6]" 
+		" -type \"float2\" 0.10912769999999999 0.97806351999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[7]" 
+		" -type \"float2\" 0.10915515000000001 0.97223764999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[8]" 
+		" -type \"float2\" 0.11498841999999999 0.97811049000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[9]" 
+		" -type \"float2\" 0.114988 0.97223389000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[10]" 
+		" -type \"float2\" 0.077895194000000001 0.97100430999999998"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[11]" 
+		" -type \"float2\" 0.075082420999999996 0.96672404000000001"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[12]" 
+		" -type \"float2\" 0.11642426 0.97723203999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[13]" 
+		" -type \"float2\" 0.11042663 0.97354299"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[14]" 
+		" -type \"float2\" 0.11399542999999999 0.97359114999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[15]" 
+		" -type \"float2\" 0.11396044 0.97709650000000003"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[16]" 
+		" -type \"float2\" 0.11642435 0.97369384999999997"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[17]" 
+		" -type \"float2\" 0.076692580999999996 0.98115264999999996"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[18]" 
+		" -type \"float2\" 0.095274121000000003 0.94880593000000002"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[19]" 
+		" -type \"float2\" 0.10419855 0.98115808000000004"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[20]" 
+		" -type \"float2\" 0.11392346 0.95816897999999995"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[21]" 
+		" -type \"float2\" 0.11996257 0.97369391000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[22]" 
+		" -type \"float2\" 0.11045824999999999 0.97710395000000005"
+		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvSet[0].uvSetPoints[23]" 
+		" -type \"float2\" 0.11996248 0.97723210000000005"
+		3 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NewChairScene3:ChairGRP|NewChairScene3:Leg4|NewChairScene3:LegShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NewChairScene3:ChairGRP|NewChairScene3:Leg3|NewChairScene3:LegShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NewChairScene3:ChairGRP|NewChairScene3:Leg2|NewChairScene3:LegShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 3 "NewChairScene2RN1" "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape.instObjGroups" 
+		"NewChairScene2RN1.placeHolderList[1]" ":initialShadingGroup.dsm"
+		5 3 "NewChairScene2RN1" "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape.instObjGroups" 
+		"NewChairScene2RN1.placeHolderList[2]" ":initialShadingGroup.dsm"
+		5 3 "NewChairScene2RN1" "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape.instObjGroups" 
+		"NewChairScene2RN1.placeHolderList[3]" ":initialShadingGroup.dsm"
+		5 3 "NewChairScene2RN1" "|NewChairScene3:ChairGRP|NewChairScene3:Leg2|NewChairScene3:LegShape.instObjGroups" 
+		"NewChairScene2RN1.placeHolderList[4]" ":initialShadingGroup.dsm"
+		5 3 "NewChairScene2RN1" "|NewChairScene3:ChairGRP|NewChairScene3:Leg3|NewChairScene3:LegShape.instObjGroups" 
+		"NewChairScene2RN1.placeHolderList[5]" ":initialShadingGroup.dsm"
+		5 3 "NewChairScene2RN1" "|NewChairScene3:ChairGRP|NewChairScene3:Leg4|NewChairScene3:LegShape.instObjGroups" 
+		"NewChairScene2RN1.placeHolderList[6]" ":initialShadingGroup.dsm";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1018,7 +3976,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 3 ".r";
+	setAttr -s 5 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -1053,12 +4011,24 @@ connectAttr "GuitarCaseRN.phl[4]" "standardSurface2SG.dsm" -na;
 connectAttr "GuitarCaseRN.phl[5]" "standardSurface2SG.dsm" -na;
 connectAttr "TVScene2RN.phl[1]" "standardSurface2SG.dsm" -na;
 connectAttr "TVScene2RN.phl[2]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN.phl[1]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN.phl[2]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN.phl[3]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN.phl[4]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN.phl[5]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN.phl[6]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN1.phl[1]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN1.phl[2]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN1.phl[3]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN1.phl[4]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN1.phl[5]" "standardSurface2SG.dsm" -na;
+connectAttr "NewChairScene2RN1.phl[6]" "standardSurface2SG.dsm" -na;
 connectAttr "polyCube1.out" "FloorShape.i";
 connectAttr "polyExtrudeFace2.out" "BackWallShape.i";
 connectAttr "polyCube2.out" "BackWallShape1Orig.i";
-connectAttr "polyCube3.out" "pCubeShape1.i";
-connectAttr "polyCube4.out" "pCubeShape3.i";
-connectAttr "polyCube5.out" "pCubeShape4.i";
+connectAttr "polyCube3.out" "trussShape1.i";
+connectAttr "polyCube4.out" "tableShape.i";
+connectAttr "polyCube5.out" "chairShape2.i";
 connectAttr "polyCube6.out" "caseplaceholderShape.i";
 connectAttr "polyBevel1.out" "tvplaceholderShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -1100,11 +4070,11 @@ connectAttr "Scene2_MAT.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "FloorShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "BackWallShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "trussShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "trussShape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "tableShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "chairShape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "chairShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "caseplaceholderShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "tvplaceholderShape.iog" ":initialShadingGroup.dsm" -na;
 // End of Scene 2.ma
