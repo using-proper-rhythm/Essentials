@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Scene 2.ma
-//Last modified: Sun, Aug 02, 2026 09:04:42 PM
+//Name: Scene 2.0012.ma
+//Last modified: Sun, Aug 02, 2026 08:51:45 PM
 //Codeset: 1252
 file -rdi 1 -ns "GuitarCase1" -rfn "GuitarCaseRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/GuitarCase.ma";
@@ -15,13 +15,13 @@ file -rdi 1 -ns "TableScene2" -rfn "TableScene2RN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/TableScene2.ma";
 file -rdi 1 -ns "StageLight" -rfn "StageLightRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
+file -rdi 1 -ns "FloorScene2" -rfn "FloorScene2RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/FloorScene2.ma";
+file -rdi 1 -ns "BackWallScene2" -rfn "BackWallScene2RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/BackWallScene2.ma";
 file -rdi 1 -ns "StageLight1" -rfn "StageLightRN1" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
 file -rdi 1 -ns "StageLight2" -rfn "StageLightRN2" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
 file -rdi 1 -ns "StageLight3" -rfn "StageLightRN3" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
-file -rdi 1 -ns "StageLight4" -rfn "StageLightRN4" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
-file -rdi 1 -ns "StageLight5" -rfn "StageLightRN5" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
-file -rdi 1 -ns "BackWallScene2" -rfn "BackWallScene2RN" -op "v=0;" -typ "mayaAscii"
-		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/BackWallScene2.ma";
 file -r -ns "GuitarCase1" -dr 1 -rfn "GuitarCaseRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/GuitarCase.ma";
 file -r -ns "TVScene2" -dr 1 -rfn "TVScene2RN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/TVScene2.ma";
 file -r -ns "NewChairScene2" -dr 1 -rfn "NewChairScene2RN" -op "v=0;" -typ "mayaAscii"
@@ -33,13 +33,13 @@ file -r -ns "LightingTruss1" -dr 1 -rfn "LightingTrussRN1" -typ "mayaAscii" "C:/
 file -r -ns "TableScene2" -dr 1 -rfn "TableScene2RN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/TableScene2.ma";
 file -r -ns "StageLight" -dr 1 -rfn "StageLightRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
+file -r -ns "FloorScene2" -dr 1 -rfn "FloorScene2RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/FloorScene2.ma";
+file -r -ns "BackWallScene2" -dr 1 -rfn "BackWallScene2RN" -op "v=0;" -typ "mayaAscii"
+		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/BackWallScene2.ma";
 file -r -ns "StageLight1" -dr 1 -rfn "StageLightRN1" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
 file -r -ns "StageLight2" -dr 1 -rfn "StageLightRN2" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
 file -r -ns "StageLight3" -dr 1 -rfn "StageLightRN3" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
-file -r -ns "StageLight4" -dr 1 -rfn "StageLightRN4" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
-file -r -ns "StageLight5" -dr 1 -rfn "StageLightRN5" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/StageLight.ma";
-file -r -ns "BackWallScene2" -dr 1 -rfn "BackWallScene2RN" -op "v=0;" -typ "mayaAscii"
-		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/BackWallScene2.ma";
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -50,23 +50,24 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202505300603-a12e894a3d";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "9F03CD6B-4FEA-B766-173E-E4986A6FA328";
+fileInfo "UUID" "07F67D84-4EC0-D1DB-8039-92A0DBB805EF";
+fileInfo "exportedFrom" "C:/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Scene 2.ma";
 createNode transform -s -n "persp";
 	rename -uid "9F8A7154-49EE-BF5C-D47A-4F861ED4971A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.35536043642550563 41.44399639069978 119.66806313348508 ;
-	setAttr ".r" -type "double3" -14.138352712419193 -721.7999999998159 -4.9720701062410239e-17 ;
+	setAttr ".t" -type "double3" -28.195846255156205 73.871194034951003 52.011194452801476 ;
+	setAttr ".r" -type "double3" -39.938352712715869 -33.799999999991861 -1.9137269101074111e-15 ;
 	setAttr ".rp" -type "double3" 5.3290705182007514e-15 2.1316282072803006e-14 0 ;
 	setAttr ".rpt" -type "double3" -6.5861845220034293e-16 -7.0135523392727074e-16 -5.9995452262861205e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5566EBBA-4332-08A4-4709-04A07AF692EB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 137.08522931565162;
+	setAttr ".coi" 84.870185013909293;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 4.3794010984437879 26.795386171958121 -6.6857599975132658 ;
+	setAttr ".tp" -type "double3" 12.195954798269341 28.694336351105214 -6.2923702746943118 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "D7C8D588-4DC2-2242-03E4-3D860C4E2C57";
@@ -541,8 +542,8 @@ createNode mesh -n "BackWallShape" -p "BackWall";
 	setAttr ".dr" 1;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "0E691DC8-4223-DC7D-A30F-8EB34B336222";
-	setAttr -s 12 ".lnk";
-	setAttr -s 12 ".slnk";
+	setAttr -s 9 ".lnk";
+	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
 	rename -uid "EC9C9A9D-4F5A-28DA-385F-57B0A560C385";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
@@ -578,17 +579,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 653\n            -height 320\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 653\n            -height 319\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 653\n            -height 319\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1313\n            -height 686\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1113\n            -height 686\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"{};\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n"
@@ -615,14 +616,66 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n"
 		+ "            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1313\\n    -height 686\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1313\\n    -height 686\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1113\\n    -height 686\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1113\\n    -height 686\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "65A66127-43BE-AAE2-87AF-F0934DE0F038";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 700 -ast 1 -aet 700 ";
 	setAttr ".st" 6;
+createNode standardSurface -n "Scene2_MAT";
+	rename -uid "4C95F1F0-42A8-77FE-FFCF-76BAB643B9AE";
+createNode shadingEngine -n "standardSurface2SG";
+	rename -uid "59A17129-42DB-268C-9F6F-CEB649EC9F98";
+	setAttr ".ihi" 0;
+	setAttr -s 215 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "70AE00D2-48BA-5C2B-EEC8-88A09C80BE29";
+createNode reference -n "sharedReferenceNode";
+	rename -uid "CC1B15F2-4989-ED25-3B89-ADB4232B76D6";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "FC143379-4E8E-E9F9-8719-36A8F0D7BE86";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -184.29850446967643 -532.45720349910948 ;
+	setAttr ".tgi[0].vh" -type "double2" 812.38529988384869 400.25027557496645 ;
+	setAttr -s 2 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 11.428571701049805;
+	setAttr ".tgi[0].ni[0].y" 142.85714721679688;
+	setAttr ".tgi[0].ni[0].nvs" 2387;
+	setAttr ".tgi[0].ni[1].x" 360;
+	setAttr ".tgi[0].ni[1].y" 142.85714721679688;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+createNode brush -n "art3dPaintLastPaintBrush";
+	rename -uid "46F888D2-4F68-A859-97EA-1B8A13B22EC7";
+	setAttr ".lcl[0]"  0 0.5 1;
+	setAttr ".pcl[0]"  0 0.5 1;
+	setAttr ".wsc[0]"  0 1 1;
+	setAttr ".lws[0]"  0 1 1;
+	setAttr ".pws[0]"  0 1 1;
+	setAttr ".tls[0]"  0 1 1;
+	setAttr -s 3 ".env";
+	setAttr ".env[0].envp" 0.20000000298023224;
+	setAttr ".env[0].envc" -type "float3" 0 0 0.15000001 ;
+	setAttr ".env[0].envi" 2;
+	setAttr ".env[1].envp" 0.5;
+	setAttr ".env[1].envc" -type "float3" 0.47999999 0.55000001 0.69999999 ;
+	setAttr ".env[1].envi" 2;
+	setAttr ".env[2].envp" 1;
+	setAttr ".env[2].envc" -type "float3" 0 0.1 0.44999999 ;
+	setAttr ".env[2].envi" 2;
+	setAttr ".rro[0]"  0 1 1;
+createNode tripleShadingSwitch -n "tripleShadingSwitch1";
+	rename -uid "9EAE5454-4473-2F9F-946A-01A86F89A3A8";
+createNode file -n "file1";
+	rename -uid "040BABE5-4CC3-AC31-CC54-5DB6A58D4166";
+	setAttr ".ftn" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//sourceimages/3dPaintTextures/Scene 2/FloorShape_baseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture1";
+	rename -uid "E6D7BB8C-4C88-2287-FC5D-6683A2857A00";
 createNode reference -n "GuitarCaseRN";
 	rename -uid "6FAD8325-443B-E4DE-0599-2F949FDCC25B";
 	setAttr ".fn[0]" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/GuitarCase.ma";
@@ -635,7 +688,7 @@ createNode reference -n "GuitarCaseRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"GuitarCaseRN"
 		"GuitarCaseRN" 0
-		"GuitarCaseRN" 38
+		"GuitarCaseRN" 35
 		2 "|GuitarCase1:GuitarCase" "translate" " -type \"double3\" 12.03836418428531907 2.61147260983227891 7.75347906467695136"
 		
 		2 "|GuitarCase1:GuitarCase" "rotate" " -type \"double3\" -30.60947549286951741 42.66213204985249519 -2.22507798708902138"
@@ -669,8 +722,6 @@ createNode reference -n "GuitarCaseRN";
 		2 "|GuitarCase1:GuitarCase|GuitarCase1:Latch|GuitarCase1:LatchShape" "uvst[0].uvsp[500:519]" 
 		" 0.96628486999999996 0.29261658000000002 0.96605753999999999 0.29270278999999999 0.96560513999999997 0.29288884999999998 0.96537589999999995 0.29297516000000001 0.93970829 0.26244813 0.97465193000000006 0.25629094000000002 0.93970781999999997 0.26622862000000003 0.93973899000000005 0.26598555000000002 0.93980609999999998 0.26574993000000002 0.93995088000000004 0.26528259999999998 0.94001769999999996 0.26504946000000001 0.94004708999999997 0.26481 0.94005256999999998 0.26386811999999998 0.94002216999999999 0.26362866000000001 0.93995457999999998 0.2633954 0.93980825000000001 0.26292768 0.93974042000000002 0.26269176999999999 0.94999074999999999 0.23509072 0.99547094000000003 0.23602772 0.99640876 0.20703304"
 		
-		2 "|GuitarCase1:GuitarCase|GuitarCase1:Latch|GuitarCase1:LatchShape" "displayFacesWithGroupId" 
-		" 0"
 		2 "|GuitarCase1:GuitarCase|GuitarCase1:Handle|GuitarCase1:HandleShape" "uvPivot" 
 		" -type \"double2\" 0.93879810247323237 0.12176033094817523"
 		2 "|GuitarCase1:GuitarCase|GuitarCase1:Handle|GuitarCase1:HandleShape" "uvst[0].uvsp[0:218]" 
@@ -683,10 +734,6 @@ createNode reference -n "GuitarCaseRN";
 		+ " 0.064813748000000004 0.9242186 0.064812898999999993 0.88190334999999997 0.064815283000000001 0.93256139999999998 0.12871920000000001 0.94582188 0.12871010999999999 0.88190972999999995 0.16579305 0.88192588000000005 0.15637060999999999 0.88191580999999997 0.14348406 0.98154944 0.156578 0.88191348000000003 0.14066169000000001 0.88190573000000005 0.13157742 0.98154925999999998 0.16826995 0.88190334999999997 0.12875475 0.88190745999999998 0.17868145999999999 0.88190924999999998 0.17068052 0.88192212999999997 0.15148407 0.95553796999999996 0.13345118 0.94673848000000005 0.15017285999999999 0.94613515999999998 0.15699436999999999 0.94896095999999996 0.13345139 0.97792124999999996 0.13345079000000001 0.99204146999999998 0.13345003 0.96601439 0.13160704000000001 0.96460307000000001 0.13214709999999999 0.94866943000000004 0.13945809000000001 0.98068767999999995 0.13345079000000001 0.94807403999999995 0.14221299000000001 0.97946840999999996 0.15638 0.98557335000000001 0.064812421999999995 0.94606435 0.0648133159999999"
 		+ "96 0.98624456000000005 0.15555127999999999 0.95264143000000001 0.064813167000000005 0.96857148000000004 0.15674365000000001 0.97509705999999996 0.066656590000000002 0.96460151999999999 0.06611678 0.98559213000000001 0.068481400999999997 0.9631902 0.064812898999999993 0.96042377000000001 0.064812958000000004 0.97140168999999998 0.15676166 0.95008939999999997 0.13917165000000001 0.95091539999999997 0.13800804 0.97976571000000001 0.13358375 0.96033763999999999 0.15554470000000001 0.96062386 0.14944874999999999 0.96511709999999995 0.15542489000000001 0.96240943999999995 0.14579839 0.97069006999999996 0.16300708 0.94739085000000001 0.16544006999999999 0.94608152000000001 0.16486973999999999 0.99518620999999996 0.13616365 0.99422776999999996 0.15267443999999999 0.99392581000000002 0.15407148000000001 0.98832178000000004 0.065294645999999998 0.98571085999999997 0.080693893000000003 0.96799511000000005 0.15541661000000001"
 		)
-		2 "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape" "displayFacesWithGroupId" 
-		" 0"
-		2 "|GuitarCase1:GuitarCase|GuitarCase1:Latch2|GuitarCase1:Latch2Shape" "displayFacesWithGroupId" 
-		" 0"
 		2 "|GuitarCase1:GuitarCase|GuitarCase1:Shell" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|GuitarCase1:GuitarCase|GuitarCase1:Shell" "rotate" " -type \"double3\" 0 0 0"
@@ -766,15 +813,6 @@ createNode reference -n "GuitarCaseRN";
 		"GuitarCaseRN.placeHolderList[5]" ":initialShadingGroup.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode standardSurface -n "Scene2_MAT";
-	rename -uid "4C95F1F0-42A8-77FE-FFCF-76BAB643B9AE";
-createNode shadingEngine -n "standardSurface2SG";
-	rename -uid "59A17129-42DB-268C-9F6F-CEB649EC9F98";
-	setAttr ".ihi" 0;
-	setAttr -s 217 ".dsm";
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo1";
-	rename -uid "70AE00D2-48BA-5C2B-EEC8-88A09C80BE29";
 createNode reference -n "TVScene2RN";
 	rename -uid "995EBBA9-497D-961F-CA85-2F972730F6A6";
 	setAttr -s 2 ".phl";
@@ -783,7 +821,7 @@ createNode reference -n "TVScene2RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"TVScene2RN"
 		"TVScene2RN" 0
-		"TVScene2RN" 14
+		"TVScene2RN" 13
 		2 "|TVScene2:TV" "translate" " -type \"double3\" -3.20487959340963968 7.15700113979929586 -4.58283278767395252"
 		
 		2 "|TVScene2:TV" "rotate" " -type \"double3\" 0 8.79919164358165595 0"
@@ -794,8 +832,6 @@ createNode reference -n "TVScene2RN";
 		+ "999999996 0.99630660000000004 0.82988309999999998 0.99011188999999999 0.82988238000000003 0.99630724999999998 0.82350718999999994 0.99011260000000001 0.82350646999999999 0.99630803000000001 0.81713128000000002 0.99011326 0.81713057 0.99630874000000003 0.81075536999999998 0.99011397000000001 0.81075465999999996 0.98258972 0.81067312000000002 0.95030797 0.81150579 0.98877930999999997 0.85550331999999996 0.92515159000000002 0.89207303999999998 0.93802965000000005 0.82408106000000003 0.98878001999999998 0.84909904000000003 0.93823962999999999 0.84165524999999997 0.98878074000000005 0.84269475999999999 0.95081490000000002 0.85393357000000003 0.98878144999999995 0.83629047999999995 0.96838908999999995 0.85372353000000001 0.98878222999999998 0.82988620000000002 0.98066741000000002 0.84114825999999998 0.98878294 0.82348191999999998 0.98045742999999996 0.82357407000000005 0.98878372000000003 0.81707770000000002 0.94320338999999997 0.89207196 0.98877853000000004 0.8619076 0.95596713 0.87930679 0.95596616999999995 0.861"
 		+ "25499000000005 0.94320088999999996 0.84849118999999995 0.92514914000000004 0.84849220999999997 0.91238534000000004 0.86125748999999996 0.91238629999999998 0.87930929999999996 0.98258895000000002 0.81707739999999995 0.96788209999999997 0.81129574999999998 0.98258822999999995 0.82348167999999999 0.98258752000000005 0.82988596000000003 0.98258679999999998 0.83629017999999999 0.98258603 0.84269446000000003 0.98258531000000005 0.84909873999999996 0.98258453999999995 0.85550302 0.98258382 0.86190723999999996 0.98878443000000005 0.81067341999999998"
 		)
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "displayFacesWithGroupId" 
-		" 232"
 		2 "|TVScene2:TV|TVScene2:TVBase" "translate" " -type \"double3\" 0.4676287954824177 0 -0.67188623961043792"
 		
 		2 "|TVScene2:TV|TVScene2:TVBase" "rotate" " -type \"double3\" 0 0 0"
@@ -819,10 +855,6 @@ createNode reference -n "TVScene2RN";
 		"TVScene2RN.placeHolderList[2]" ":initialShadingGroup.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "sharedReferenceNode";
-	rename -uid "CC1B15F2-4989-ED25-3B89-ADB4232B76D6";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"sharedReferenceNode";
 createNode reference -n "NewChairScene2RN";
 	rename -uid "A6DE05CB-45AA-2C92-9468-35828995E667";
 	setAttr -s 6 ".phl";
@@ -1088,7 +1120,7 @@ createNode reference -n "LightingTrussRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"LightingTrussRN"
 		"LightingTrussRN" 0
-		"LightingTrussRN" 337
+		"LightingTrussRN" 331
 		2 "|LightingTruss:LightingTruss" "translate" " -type \"double3\" 0 25.41187318762864678 9.98294721849696387"
 		
 		2 "|LightingTruss:LightingTruss" "rotate" " -type \"double3\" -0.59031376602348617 6.26310592693744184 -5.99826072004309285"
@@ -1127,8 +1159,6 @@ createNode reference -n "LightingTrussRN";
 		+ "427904999999995 0.26769187999999999 0.20568022 0.27130026000000002 0.097427904999999995 0.27130026000000002 0.20568022 0.27490869000000001 0.097427904999999995 0.27490869000000001 0.20568022 0.27851706999999998 0.097427904999999995 0.27851706999999998 0.20568022 0.28212546999999999 0.097427904999999995 0.28212546999999999 0.20568022 0.28573390999999998 0.097427904999999995 0.28573390999999998 0.20568022 0.28934230999999999 0.097427904999999995 0.28934230999999999 0.20568022 0.28974912000000003 0.025810570000000001 0.29615581000000002 0.038384460000000002 0.25325826000000001 0.052322715999999998 0.27977043000000001 0.015831843000000002 0.26719653999999998 0.0094251633000000008 0.25325826000000001 0.0072175711000000004 0.23932001 0.0094251633000000008 0.22674607999999999 0.015831903000000001 0.21676743000000001 0.025810570000000001 0.21036071000000001 0.038384481999999998 0.20815310000000001 0.052322715999999998 0.21036071000000001 0.066260978999999998 0.21676743000000001 0.078834883999999994 0.2267461400000000"
 		+ "1 0.088813558000000001 0.23932001 0.095220297999999995 0.25325826000000001 0.097427904999999995 0.26719651 0.095220297999999995 0.27977043000000001 0.088813558000000001 0.28974908999999999 0.078834883999999994 0.29615581000000002 0.066260978999999998 0.29836341999999999 0.052322715999999998 0.29615581000000002 0.26472369000000001 0.28974908999999999 0.27729756 0.25325826000000001 0.25078538 0.27977043000000001 0.28727627 0.26719651 0.29368295999999999 0.25325826000000001 0.29589053999999998 0.23932001 0.29368295999999999 0.22674614000000001 0.28727627 0.21676743000000001 0.27729756 0.21036071000000001 0.26472369000000001 0.20815310000000001 0.25078538 0.21036071000000001 0.23684716 0.21676743000000001 0.22427326 0.22674607999999999 0.2142946 0.23932001 0.20788783 0.25325826000000001 0.20568022 0.26719653999999998 0.20788783 0.27977043000000001 0.21429454000000001 0.28974912000000003 0.22427326 0.29615581000000002 0.23684716 0.29836341999999999 0.25078538"
 		)
-		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder9|LightingTruss:pCylinder9Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape" 
@@ -1147,8 +1177,6 @@ createNode reference -n "LightingTrussRN";
 		+ "427904999999995 0.26769187999999999 0.20568022 0.27130026000000002 0.097427904999999995 0.27130026000000002 0.20568022 0.27490869000000001 0.097427904999999995 0.27490869000000001 0.20568022 0.27851706999999998 0.097427904999999995 0.27851706999999998 0.20568022 0.28212546999999999 0.097427904999999995 0.28212546999999999 0.20568022 0.28573390999999998 0.097427904999999995 0.28573390999999998 0.20568022 0.28934230999999999 0.097427904999999995 0.28934230999999999 0.20568022 0.28974912000000003 0.025810570000000001 0.29615581000000002 0.038384460000000002 0.25325826000000001 0.052322715999999998 0.27977043000000001 0.015831843000000002 0.26719653999999998 0.0094251633000000008 0.25325826000000001 0.0072175711000000004 0.23932001 0.0094251633000000008 0.22674607999999999 0.015831903000000001 0.21676743000000001 0.025810570000000001 0.21036071000000001 0.038384481999999998 0.20815310000000001 0.052322715999999998 0.21036071000000001 0.066260978999999998 0.21676743000000001 0.078834883999999994 0.2267461400000000"
 		+ "1 0.088813558000000001 0.23932001 0.095220297999999995 0.25325826000000001 0.097427904999999995 0.26719651 0.095220297999999995 0.27977043000000001 0.088813558000000001 0.28974908999999999 0.078834883999999994 0.29615581000000002 0.066260978999999998 0.29836341999999999 0.052322715999999998 0.29615581000000002 0.26472369000000001 0.28974908999999999 0.27729756 0.25325826000000001 0.25078538 0.27977043000000001 0.28727627 0.26719651 0.29368295999999999 0.25325826000000001 0.29589053999999998 0.23932001 0.29368295999999999 0.22674614000000001 0.28727627 0.21676743000000001 0.27729756 0.21036071000000001 0.26472369000000001 0.20815310000000001 0.25078538 0.21036071000000001 0.23684716 0.21676743000000001 0.22427326 0.22674607999999999 0.2142946 0.23932001 0.20788783 0.25325826000000001 0.20568022 0.26719653999999998 0.20788783 0.27977043000000001 0.21429454000000001 0.28974912000000003 0.22427326 0.29615581000000002 0.23684716 0.29836341999999999 0.25078538"
 		)
-		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder11|LightingTruss:pCylinder11Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder11|LightingTruss:pCylinder11Shape" 
@@ -1167,8 +1195,6 @@ createNode reference -n "LightingTrussRN";
 		+ "427904999999995 0.26769187999999999 0.20568022 0.27130026000000002 0.097427904999999995 0.27130026000000002 0.20568022 0.27490869000000001 0.097427904999999995 0.27490869000000001 0.20568022 0.27851706999999998 0.097427904999999995 0.27851706999999998 0.20568022 0.28212546999999999 0.097427904999999995 0.28212546999999999 0.20568022 0.28573390999999998 0.097427904999999995 0.28573390999999998 0.20568022 0.28934230999999999 0.097427904999999995 0.28934230999999999 0.20568022 0.28974912000000003 0.025810570000000001 0.29615581000000002 0.038384460000000002 0.25325826000000001 0.052322715999999998 0.27977043000000001 0.015831843000000002 0.26719653999999998 0.0094251633000000008 0.25325826000000001 0.0072175711000000004 0.23932001 0.0094251633000000008 0.22674607999999999 0.015831903000000001 0.21676743000000001 0.025810570000000001 0.21036071000000001 0.038384481999999998 0.20815310000000001 0.052322715999999998 0.21036071000000001 0.066260978999999998 0.21676743000000001 0.078834883999999994 0.2267461400000000"
 		+ "1 0.088813558000000001 0.23932001 0.095220297999999995 0.25325826000000001 0.097427904999999995 0.26719651 0.095220297999999995 0.27977043000000001 0.088813558000000001 0.28974908999999999 0.078834883999999994 0.29615581000000002 0.066260978999999998 0.29836341999999999 0.052322715999999998 0.29615581000000002 0.26472369000000001 0.28974908999999999 0.27729756 0.25325826000000001 0.25078538 0.27977043000000001 0.28727627 0.26719651 0.29368295999999999 0.25325826000000001 0.29589053999999998 0.23932001 0.29368295999999999 0.22674614000000001 0.28727627 0.21676743000000001 0.27729756 0.21036071000000001 0.26472369000000001 0.20815310000000001 0.25078538 0.21036071000000001 0.23684716 0.21676743000000001 0.22427326 0.22674607999999999 0.2142946 0.23932001 0.20788783 0.25325826000000001 0.20568022 0.26719653999999998 0.20788783 0.27977043000000001 0.21429454000000001 0.28974912000000003 0.22427326 0.29615581000000002 0.23684716 0.29836341999999999 0.25078538"
 		)
-		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder11|LightingTruss:pCylinder11Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape" 
@@ -1187,8 +1213,6 @@ createNode reference -n "LightingTrussRN";
 		+ "427904999999995 0.26769187999999999 0.20568022 0.27130026000000002 0.097427904999999995 0.27130026000000002 0.20568022 0.27490869000000001 0.097427904999999995 0.27490869000000001 0.20568022 0.27851706999999998 0.097427904999999995 0.27851706999999998 0.20568022 0.28212546999999999 0.097427904999999995 0.28212546999999999 0.20568022 0.28573390999999998 0.097427904999999995 0.28573390999999998 0.20568022 0.28934230999999999 0.097427904999999995 0.28934230999999999 0.20568022 0.28974912000000003 0.025810570000000001 0.29615581000000002 0.038384460000000002 0.25325826000000001 0.052322715999999998 0.27977043000000001 0.015831843000000002 0.26719653999999998 0.0094251633000000008 0.25325826000000001 0.0072175711000000004 0.23932001 0.0094251633000000008 0.22674607999999999 0.015831903000000001 0.21676743000000001 0.025810570000000001 0.21036071000000001 0.038384481999999998 0.20815310000000001 0.052322715999999998 0.21036071000000001 0.066260978999999998 0.21676743000000001 0.078834883999999994 0.2267461400000000"
 		+ "1 0.088813558000000001 0.23932001 0.095220297999999995 0.25325826000000001 0.097427904999999995 0.26719651 0.095220297999999995 0.27977043000000001 0.088813558000000001 0.28974908999999999 0.078834883999999994 0.29615581000000002 0.066260978999999998 0.29836341999999999 0.052322715999999998 0.29615581000000002 0.26472369000000001 0.28974908999999999 0.27729756 0.25325826000000001 0.25078538 0.27977043000000001 0.28727627 0.26719651 0.29368295999999999 0.25325826000000001 0.29589053999999998 0.23932001 0.29368295999999999 0.22674614000000001 0.28727627 0.21676743000000001 0.27729756 0.21036071000000001 0.26472369000000001 0.20815310000000001 0.25078538 0.21036071000000001 0.23684716 0.21676743000000001 0.22427326 0.22674607999999999 0.2142946 0.23932001 0.20788783 0.25325826000000001 0.20568022 0.26719653999999998 0.20788783 0.27977043000000001 0.21429454000000001 0.28974912000000003 0.22427326 0.29615581000000002 0.23684716 0.29836341999999999 0.25078538"
 		)
-		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape" 
@@ -1207,8 +1231,6 @@ createNode reference -n "LightingTrussRN";
 		+ "427904999999995 0.26769187999999999 0.20568022 0.27130026000000002 0.097427904999999995 0.27130026000000002 0.20568022 0.27490869000000001 0.097427904999999995 0.27490869000000001 0.20568022 0.27851706999999998 0.097427904999999995 0.27851706999999998 0.20568022 0.28212546999999999 0.097427904999999995 0.28212546999999999 0.20568022 0.28573390999999998 0.097427904999999995 0.28573390999999998 0.20568022 0.28934230999999999 0.097427904999999995 0.28934230999999999 0.20568022 0.28974912000000003 0.025810570000000001 0.29615581000000002 0.038384460000000002 0.25325826000000001 0.052322715999999998 0.27977043000000001 0.015831843000000002 0.26719653999999998 0.0094251633000000008 0.25325826000000001 0.0072175711000000004 0.23932001 0.0094251633000000008 0.22674607999999999 0.015831903000000001 0.21676743000000001 0.025810570000000001 0.21036071000000001 0.038384481999999998 0.20815310000000001 0.052322715999999998 0.21036071000000001 0.066260978999999998 0.21676743000000001 0.078834883999999994 0.2267461400000000"
 		+ "1 0.088813558000000001 0.23932001 0.095220297999999995 0.25325826000000001 0.097427904999999995 0.26719651 0.095220297999999995 0.27977043000000001 0.088813558000000001 0.28974908999999999 0.078834883999999994 0.29615581000000002 0.066260978999999998 0.29836341999999999 0.052322715999999998 0.29615581000000002 0.26472369000000001 0.28974908999999999 0.27729756 0.25325826000000001 0.25078538 0.27977043000000001 0.28727627 0.26719651 0.29368295999999999 0.25325826000000001 0.29589053999999998 0.23932001 0.29368295999999999 0.22674614000000001 0.28727627 0.21676743000000001 0.27729756 0.21036071000000001 0.26472369000000001 0.20815310000000001 0.25078538 0.21036071000000001 0.23684716 0.21676743000000001 0.22427326 0.22674607999999999 0.2142946 0.23932001 0.20788783 0.25325826000000001 0.20568022 0.26719653999999998 0.20788783 0.27977043000000001 0.21429454000000001 0.28974912000000003 0.22427326 0.29615581000000002 0.23684716 0.29836341999999999 0.25078538"
 		)
-		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder14|LightingTruss:pCylinder14Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder14|LightingTruss:pCylinder14Shape" 
@@ -1227,8 +1249,6 @@ createNode reference -n "LightingTrussRN";
 		+ "427904999999995 0.26769187999999999 0.20568022 0.27130026000000002 0.097427904999999995 0.27130026000000002 0.20568022 0.27490869000000001 0.097427904999999995 0.27490869000000001 0.20568022 0.27851706999999998 0.097427904999999995 0.27851706999999998 0.20568022 0.28212546999999999 0.097427904999999995 0.28212546999999999 0.20568022 0.28573390999999998 0.097427904999999995 0.28573390999999998 0.20568022 0.28934230999999999 0.097427904999999995 0.28934230999999999 0.20568022 0.28974912000000003 0.025810570000000001 0.29615581000000002 0.038384460000000002 0.25325826000000001 0.052322715999999998 0.27977043000000001 0.015831843000000002 0.26719653999999998 0.0094251633000000008 0.25325826000000001 0.0072175711000000004 0.23932001 0.0094251633000000008 0.22674607999999999 0.015831903000000001 0.21676743000000001 0.025810570000000001 0.21036071000000001 0.038384481999999998 0.20815310000000001 0.052322715999999998 0.21036071000000001 0.066260978999999998 0.21676743000000001 0.078834883999999994 0.2267461400000000"
 		+ "1 0.088813558000000001 0.23932001 0.095220297999999995 0.25325826000000001 0.097427904999999995 0.26719651 0.095220297999999995 0.27977043000000001 0.088813558000000001 0.28974908999999999 0.078834883999999994 0.29615581000000002 0.066260978999999998 0.29836341999999999 0.052322715999999998 0.29615581000000002 0.26472369000000001 0.28974908999999999 0.27729756 0.25325826000000001 0.25078538 0.27977043000000001 0.28727627 0.26719651 0.29368295999999999 0.25325826000000001 0.29589053999999998 0.23932001 0.29368295999999999 0.22674614000000001 0.28727627 0.21676743000000001 0.27729756 0.21036071000000001 0.26472369000000001 0.20815310000000001 0.25078538 0.21036071000000001 0.23684716 0.21676743000000001 0.22427326 0.22674607999999999 0.2142946 0.23932001 0.20788783 0.25325826000000001 0.20568022 0.26719653999999998 0.20788783 0.27977043000000001 0.21429454000000001 0.28974912000000003 0.22427326 0.29615581000000002 0.23684716 0.29836341999999999 0.25078538"
 		)
-		2 "|LightingTruss:LightingTruss|LightingTruss:pCylinder14|LightingTruss:pCylinder14Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder15|LightingTruss:pCylinderShape2" 
 		"uvst[0].uvsp[0:83]" (" -s 84 -type \"float2\" 0.29615581000000002 0.038384460000000002 0.28974912000000003 0.025810570000000001 0.27977043000000001 0.015831843000000002 0.26719653999999998 0.0094251633000000008 0.25325826000000001 0.0072175711000000004 0.23932001 0.0094251633000000008 0.22674607999999999 0.015831903000000001 0.21676743000000001 0.025810570000000001 0.21036071000000001 0.038384481999999998 0.20815310000000001 0.052322715999999998 0.21036071000000001 0.066260978999999998 0.21676743000000001 0.078834883999999994 0.22674614000000001 0.088813558000000001 0.23932001 0.095220297999999995 0.25325826000000001 0.097427904999999995 0.26719651 0.095220297999999995 0.27977043000000001 0.088813558000000001 0.28974908999999999 0.078834883999999994 0.29615581000000002 0.066260978999999998 0.29836341999999999 0.052322715999999998 0.21717417 0.097427904999999995 0.22078254999999999 0.097427904999999995 0.22439095000000001 0.097427904999999995 0.22799939 0.097427904999999995 0.23160779000000001 0.097427904999999995 0.23521623 0.097427"
 		+ "904999999995 0.23882458000000001 0.097427904999999995 0.24243297999999999 0.097427904999999995 0.24604142000000001 0.097427904999999995 0.24964981999999999 0.097427904999999995 0.25325826000000001 0.097427904999999995 0.25686666000000002 0.097427904999999995 0.26047503999999999 0.097427904999999995 0.26408345 0.097427904999999995 0.26769187999999999 0.097427904999999995 0.27130026000000002 0.097427904999999995 0.27490869000000001 0.097427904999999995 0.27851706999999998 0.097427904999999995 0.28212546999999999 0.097427904999999995 0.28573390999999998 0.097427904999999995 0.28934230999999999 0.097427904999999995 0.21717417 0.20568022 0.22078254999999999 0.20568022 0.22439095000000001 0.20568022 0.22799939 0.20568022 0.23160779000000001 0.20568022 0.23521623 0.20568022 0.23882458000000001 0.20568022 0.24243297999999999 0.20568022 0.24604142000000001 0.20568022 0.24964981999999999 0.20568022 0.25325826000000001 0.20568022 0.25686666000000002 0.20568022 0.26047503999999999 0.20568022 0.26408345 0.20568022 0.26769"
@@ -2197,7 +2217,7 @@ createNode reference -n "LightingTrussRN1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"LightingTrussRN1"
 		"LightingTrussRN1" 0
-		"LightingTrussRN1" 337
+		"LightingTrussRN1" 331
 		2 "|LightingTruss1:LightingTruss" "translate" " -type \"double3\" -0.24899679316339429 29.28076999878213371 -7.63023285914733318"
 		
 		2 "|LightingTruss1:LightingTruss" "rotate" " -type \"double3\" -0.75569558963783956 -8.12612985662671328 5.33104198869054358"
@@ -2236,8 +2256,6 @@ createNode reference -n "LightingTrussRN1";
 		+ "00000003 0.20635112999999999 0.26608642999999998 0.098114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0.2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.08950138800"
 		+ "0000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002"
 		)
-		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder9|LightingTruss1:pCylinder9Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape" 
@@ -2256,8 +2274,6 @@ createNode reference -n "LightingTrussRN1";
 		+ "00000003 0.20635112999999999 0.26608642999999998 0.098114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0.2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.08950138800"
 		+ "0000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002"
 		)
-		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape" 
@@ -2276,8 +2292,6 @@ createNode reference -n "LightingTrussRN1";
 		+ "00000003 0.20635112999999999 0.26608642999999998 0.098114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0.2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.08950138800"
 		+ "0000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002"
 		)
-		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder12|LightingTruss1:pCylinder12Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder12|LightingTruss1:pCylinder12Shape" 
@@ -2296,8 +2310,6 @@ createNode reference -n "LightingTrussRN1";
 		+ "00000003 0.20635112999999999 0.26608642999999998 0.098114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0.2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.08950138800"
 		+ "0000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002"
 		)
-		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder12|LightingTruss1:pCylinder12Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape" 
@@ -2316,8 +2328,6 @@ createNode reference -n "LightingTrussRN1";
 		+ "00000003 0.20635112999999999 0.26608642999999998 0.098114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0.2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.08950138800"
 		+ "0000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002"
 		)
-		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder14|LightingTruss1:pCylinder14Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder14|LightingTruss1:pCylinder14Shape" 
@@ -2336,8 +2346,6 @@ createNode reference -n "LightingTrussRN1";
 		+ "00000003 0.20635112999999999 0.26608642999999998 0.098114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0.2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.08950138800"
 		+ "0000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002"
 		)
-		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder14|LightingTruss1:pCylinder14Shape" 
-		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape2" 
 		"uvst[0].uvsp[0:83]" (" -s 84 -type \"float2\" 0.29454627999999999 0.039079592000000003 0.28814047999999998 0.026507533999999999 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.21557602000000001 0.098114461 0.21918388999999999 0.098114461 0.22279177999999999 0.098114461 0.22639965000000001 0.098114461 0.23000756 0.098114461 0.23361544000000001 0.098114461 0.23722330999999999 0.098114461 0.24083120999999999 "
 		+ "0.098114461 0.24443910999999999 0.098114461 0.24804698 0.098114461 0.25165489000000002 0.098114461 0.25526272999999999 0.098114461 0.25887065999999997 0.098114461 0.26247856000000003 0.098114461 0.26608642999999998 0.098114461 0.2696943 0.098114461 0.2733022 0.098114461 0.27691007000000001 0.098114461 0.28051794000000002 0.098114461 0.28412586000000001 0.098114461 0.28773376000000001 0.098114461 0.21557602000000001 0.20635112999999999 0.21918388999999999 0.20635112999999999 0.22279177999999999 0.20635112999999999 0.22639965000000001 0.20635112999999999 0.23000756 0.20635112999999999 0.23361544000000001 0.20635112999999999 0.23722330999999999 0.20635112999999999 0.24083120999999999 0.20635112999999999 0.24443910999999999 0.20635112999999999 0.24804698 0.20635112999999999 0.25165489000000002 0.20635112999999999 0.25526272999999999 0.20635112999999999 0.25887065999999997 0.20635112999999999 0.26247856000000003 0.20635112999999999 0.26608642999999998 0.20635112999999999 0.2696943 0.20635112999999999 0.2733022 0.2"
@@ -3211,7 +3219,7 @@ createNode reference -n "TableScene2RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"TableScene2RN"
 		"TableScene2RN" 0
-		"TableScene2RN" 20
+		"TableScene2RN" 19
 		2 "|TableScene2:Desk" "translate" " -type \"double3\" -10.73081246179438075 1.72250441903632878 4.33964702343002529"
 		
 		2 "|TableScene2:Desk" "rotate" " -type \"double3\" 0 -158.75827699879658894 0"
@@ -3260,8 +3268,6 @@ createNode reference -n "TableScene2RN";
 		2 "|TableScene2:Desk|TableScene2:DeskShape" "uvst[0].uvsp[750:797]" (" 0.4677521 0.26257813000000002 0.46775174000000003 0.26065421 0.46234744999999999 0.26065530999999997 0.46234786999999999 0.26257902 0.45640652999999998 0.26065639000000002 0.45640686000000003 0.26258009999999998 0.44868237 0.26065772999999998 0.44868267000000001 0.26258153000000001 0.61175519 0.25842091 0.61393845000000002 0.25842124 0.61393814999999996 0.26034507000000001 0.61175489000000005 0.26034465000000001 0.60599678999999995 0.26034367000000003 0.60599714999999998 0.25841993000000002 0.60122186 0.26034284000000002 0.60122215999999995 0.25841903999999999 0.59712052000000004 0.26034209000000003 0.59712094000000004 0.25841838 0.59671598999999997 0.27918546999999999 0.60084932999999996 0.28345274999999998 0.59900801999999997 0.28520399000000002 0.59552497000000004 0.28193760000000001 0.45675567 0.28196204000000002 0.45327382999999999 0.28522974000000001 0.45143180999999999 0.28347906 0.45556365999999998 0.27921042000000001 0.59194970000000002 0.27663815000000003 0.59195023999999996 0.27992718999999999 0.4"
 		+ "6032964999999998 0.27995035000000001 0.46032906000000001 0.2766614 0.45085101999999999 0.29045325999999999 0.44868141 0.29069697999999999 0.60360223000000002 0.29066974000000001 0.60143261999999997 0.29042667 0.46620882000000002 0.14427197999999999 0.56969552999999995 0.14426889000000001 0.56969588999999998 0.15343155999999999 0.46620905000000001 0.15343466 0.56969702 0.19408064999999999 0.46621031000000002 0.19408370999999999 0.56969738000000003 0.20324333 0.46621054000000001 0.20324647000000001 0.56969851000000005 0.24389242 0.46621173999999999 0.24389547 0.61034465000000004 0.14426769 0.61034495 0.15343037000000001 0.42555969999999999 0.14427318 0.42555994000000003 0.15343589999999999"
 		)
-		2 "|TableScene2:Desk|TableScene2:DeskShape" "displayFacesWithGroupId" " 0"
-		
 		3 "TableScene2:groupId13.message" ":initialShadingGroup.groupNodes" "-na"
 		
 		3 "TableScene2:groupId13.groupId" "|TableScene2:Desk|TableScene2:DeskShape.instObjGroups.objectGroups[0].objectGroupId" 
@@ -3278,57 +3284,14 @@ createNode reference -n "TableScene2RN";
 		"TableScene2RN.placeHolderList[1]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "FC143379-4E8E-E9F9-8719-36A8F0D7BE86";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -184.29850446967643 -532.45720349910948 ;
-	setAttr ".tgi[0].vh" -type "double2" 812.38529988384869 400.25027557496645 ;
-	setAttr -s 2 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 11.428571701049805;
-	setAttr ".tgi[0].ni[0].y" 142.85714721679688;
-	setAttr ".tgi[0].ni[0].nvs" 2387;
-	setAttr ".tgi[0].ni[1].x" 360;
-	setAttr ".tgi[0].ni[1].y" 142.85714721679688;
-	setAttr ".tgi[0].ni[1].nvs" 1923;
-createNode brush -n "art3dPaintLastPaintBrush";
-	rename -uid "46F888D2-4F68-A859-97EA-1B8A13B22EC7";
-	setAttr ".lcl[0]"  0 0.5 1;
-	setAttr ".pcl[0]"  0 0.5 1;
-	setAttr ".wsc[0]"  0 1 1;
-	setAttr ".lws[0]"  0 1 1;
-	setAttr ".pws[0]"  0 1 1;
-	setAttr ".tls[0]"  0 1 1;
-	setAttr -s 3 ".env";
-	setAttr ".env[0].envp" 0.20000000298023224;
-	setAttr ".env[0].envc" -type "float3" 0 0 0.15000001 ;
-	setAttr ".env[0].envi" 2;
-	setAttr ".env[1].envp" 0.5;
-	setAttr ".env[1].envc" -type "float3" 0.47999999 0.55000001 0.69999999 ;
-	setAttr ".env[1].envi" 2;
-	setAttr ".env[2].envp" 1;
-	setAttr ".env[2].envc" -type "float3" 0 0.1 0.44999999 ;
-	setAttr ".env[2].envi" 2;
-	setAttr ".rro[0]"  0 1 1;
-createNode tripleShadingSwitch -n "tripleShadingSwitch1";
-	rename -uid "9EAE5454-4473-2F9F-946A-01A86F89A3A8";
-createNode file -n "file1";
-	rename -uid "040BABE5-4CC3-AC31-CC54-5DB6A58D4166";
-	setAttr ".ftn" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//sourceimages/3dPaintTextures/Scene 2/FloorShape_baseColor.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture1";
-	rename -uid "E6D7BB8C-4C88-2287-FC5D-6683A2857A00";
 createNode reference -n "StageLightRN";
 	rename -uid "A4C1C09D-4D56-B6E2-F028-D6AB100BA4B3";
 	setAttr ".phl[1]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"StageLightRN"
 		"StageLightRN" 0
-		"StageLightRN" 7
-		2 "|StageLight:Stage_light" "translate" " -type \"double3\" -11.18001672188195172 24.13566181141143474 11.60533377620191153"
-		
-		2 "|StageLight:Stage_light" "rotate" " -type \"double3\" -10.49675788322617187 6.73284944318300305 0"
-		
-		2 "|StageLight:Stage_light" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		"StageLightRN" 5
+		2 "|StageLight:Stage_light" "translate" " -type \"double3\" -7.33226959008184931 23.60882791539664893 10.60978275263361148"
 		
 		2 "|StageLight:Stage_light|StageLight:Stage_lightShape" "uvPivot" " -type \"double2\" 0.3607771135866642 0.49918940663337708"
 		
@@ -3342,6 +3305,32 @@ createNode reference -n "StageLightRN";
 		"-na"
 		5 3 "StageLightRN" "|StageLight:Stage_light|StageLight:Stage_lightShape.instObjGroups" 
 		"StageLightRN.placeHolderList[1]" ":initialShadingGroup.dsm";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "FloorScene2RN";
+	rename -uid "57B0084D-4734-968A-1112-D2AA23C30AFB";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"FloorScene2RN"
+		"FloorScene2RN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "BackWallScene2RN";
+	rename -uid "01C1BE9D-4C98-09BB-1836-B193D2E58096";
+	setAttr -s 2 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BackWallScene2RN"
+		"BackWallScene2RN" 0
+		"BackWallScene2RN" 4
+		3 "|BackWallScene2:BackWall|BackWallScene2:BackWallShape.instObjGroups" "BackWallScene2:standardSurface2SG.dagSetMembers" 
+		"-na"
+		3 "|BackWallScene2:Floor|BackWallScene2:FloorShape.instObjGroups" "BackWallScene2:standardSurface2SG.dagSetMembers" 
+		"-na"
+		5 3 "BackWallScene2RN" "|BackWallScene2:Floor|BackWallScene2:FloorShape.instObjGroups" 
+		"BackWallScene2RN.placeHolderList[1]" "BackWallScene2:standardSurface2SG.dsm"
+		5 3 "BackWallScene2RN" "|BackWallScene2:BackWall|BackWallScene2:BackWallShape.instObjGroups" 
+		"BackWallScene2RN.placeHolderList[2]" "BackWallScene2:standardSurface2SG.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "StageLightRN1";
@@ -3398,11 +3387,10 @@ createNode reference -n "StageLightRN2";
 lockNode -l 1 ;
 createNode reference -n "StageLightRN3";
 	rename -uid "D00B18BB-454C-6B90-D3AC-CEB555B263F6";
-	setAttr ".phl[1]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"StageLightRN3"
 		"StageLightRN3" 0
-		"StageLightRN3" 7
+		"StageLightRN3" 5
 		2 "|StageLight3:Stage_light" "translate" " -type \"double3\" 15.87312717678246976 28.32881048196846763 -4.70305736832006538"
 		
 		2 "|StageLight3:Stage_light" "rotate" " -type \"double3\" 0 49.8517637896979835 0"
@@ -3416,78 +3404,7 @@ createNode reference -n "StageLightRN3";
 		+ "992867 0.67874365999999997 0 -0.13118915 0.67124426000000004 0 -0.16386792 0.64947986999999996 0 -0.21476638000000001 0.61558139000000001 0 -0.27890210999999998 0.57286656000000002 0 -0.34999701 0.52551650999999999 0 -0.42109238999999998 0.47816634000000002 0 -0.48522809 0.43545157000000001 0 -0.43676710000000002 0.25236562000000001 0 -0.46944594000000001 0.23060158 0 -0.25063741 0.37632924000000001 0 -0.48070621000000002 0.22310208000000001 0 -0.46944591000000002 0.23060164999999999 0 -0.43676710000000002 0.25236562000000001 0 -0.38586846000000002 0.28626426999999999 0 -0.32173252000000002 0.32897936999999999 0 -0.25063717000000002 0.37632933000000002 0 -0.17954206 0.42367949999999999 0 -0.11540661000000001 0.46639430999999998 0 -0.064508297000000006 0.50029272000000002 0 -0.031829532000000001 0.52205687999999995 0 -0.020569067 0.52955638999999999 0 -0.031829532000000001 0.52205687999999995 0 -0.064508282 0.50029277999999999 0 -0.11540662 0.46639430999999998 0 -0.17954207999999999 0.42367947 0 -0.25063704999"
 		+ "999997 0.37632938999999999 0 -0.32173252000000002 0.32897939999999998 0 -0.38586854999999998 0.28626426999999999 0 0.28435843999999999 -0.62917613999999999 0 0.26796374000000001 -0.64009488000000003 0 0.26231464999999998 -0.64385718000000003 0 0.26796374000000001 -0.64009488000000003 0 0.28435843999999999 -0.62917613999999999 0 0.30989334000000002 -0.61216974000000002 0 0.34206912 -0.59074026000000002 0 0.37773638999999998 -0.56698548999999998 0 0.41340378 -0.54323076999999997 0 0.44557971000000002 -0.52180128999999997 0 0.47111458000000001 -0.50479490000000005 0 0.48750913000000001 -0.49387628 0 0.49315833999999997 -0.49011390999999999 0 0.48750913000000001 -0.49387628 0 0.47111458000000001 -0.50479490000000005 0 0.44557971000000002 -0.52180128999999997 0 0.41340378 -0.54323076999999997 0 0.37773638999999998 -0.56698548999999998 0 0.34206912 -0.59074026000000002 0 0.30989334000000002 -0.61216974000000002 0 0.33742797000000002 -0.70885956000000006 0 0.32103342000000001 -0.71977824000000001 0 0.430806130000000"
 		+ "01 -0.64666891000000004 0 0.31538444999999998 -0.72354048000000004 0 0.32103342000000001 -0.71977824000000001 0 0.337428 -0.70885956000000006 0 0.36296319999999999 -0.69185304999999997 0 0.39513925 -0.67042380999999995 0 0.43080631000000003 -0.64666878999999999 0 0.46647355000000001 -0.62291425 0 0.49864944999999999 -0.60148478000000005 0 0.52418429 -0.58447844000000004 0 0.54057865999999999 -0.57355970000000001 0 0.54622793000000003 -0.56979740000000001 0 0.54057865999999999 -0.57355970000000001 0 0.52418434999999997 -0.58447844000000004 0 0.49864944999999999 -0.60148478000000005 0 0.46647355000000001 -0.62291425 0 0.43080631000000003 -0.64666878999999999 0 0.39513925 -0.67042380999999995 0 0.36296310999999998 -0.69185304999999997"
-		)
-		3 "|StageLight3:Stage_light|StageLight3:Stage_lightShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
-		5 3 "StageLightRN3" "|StageLight3:Stage_light|StageLight3:Stage_lightShape.instObjGroups" 
-		"StageLightRN3.placeHolderList[1]" ":initialShadingGroup.dsm";
-lockNode -l 1 ;
-createNode reference -n "StageLightRN4";
-	rename -uid "83A24703-4CE2-C3F8-E3AD-D3BF3E3A07B6";
-	setAttr ".phl[1]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"StageLightRN4"
-		"StageLightRN4" 0
-		"StageLightRN4" 7
-		2 "|StageLight4:Stage_light" "translate" " -type \"double3\" -8.8256548906945298 25.93203286128853335 -8.24214046604644324"
-		
-		2 "|StageLight4:Stage_light" "rotate" " -type \"double3\" 0 38.77950659853942028 0"
-		
-		2 "|StageLight4:Stage_light" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		
-		2 "|StageLight4:Stage_light|StageLight4:Stage_lightShape" "uvPivot" " -type \"double2\" 0.3607771135866642 0.49918940663337708"
-		
-		2 "|StageLight4:Stage_light|StageLight4:Stage_lightShape" "pt[84:205]" (" -s 122 7.4505806000000003e-09 -0.37205142000000002 1.88286029999999993 -7.4505806000000003e-09 -0.66114461000000002 1.87497639999999999 2.2351741999999998e-08 -0.89056944999999998 1.86871929999999997 0 -1.03786930000000011 1.86470150000000001 -7.4505806000000003e-09 -1.08862560000000008 1.86331770000000008 2.2351741999999998e-08 -1.03786930000000011 1.86470249999999993 -1.4901161000000001e-08 -0.89056950999999995 1.86871910000000008 0 -0.66114485000000001 1.87497639999999999 1.4901161000000001e-08 -0.37205154000000001 1.88286029999999993 2.2351741999999998e-08 -0.051589094000000002 1.89160050000000002 -1.4901161000000001e-08 0.26887253 1.90034159999999996 0 0.55796528000000001 1.90822610000000004 1.4901161000000001e-08 0.78739040999999999 1.91448390000000002 1.4901161000000001e-08 0.93468969999999996 1.91850070000000006 -2.2351741999999998e-08 0.98544657000000002 1.91988490000000001 7.4505806000000003e-09 0.93468976000000004 1.918501 7.4505806000000003e-09 0.78739053000000003 1.91448379999999996 7.4505806000"
-		+ "000003e-09 0.55796528000000001 1.90822629999999993 1.4901161000000001e-08 0.26887250000000001 1.90034149999999991 -7.4505806000000003e-09 -0.051589068000000002 1.89160039999999996 1.4901161000000001e-08 -0.26887232 -1.90034189999999992 7.4505806000000003e-09 -0.55796498000000005 -1.90822660000000011 -1.4901161000000001e-08 -0.78739017 -1.9144836999999999 -1.4901161000000001e-08 -0.93469071000000004 -1.91849950000000002 1.4901161000000001e-08 -0.98544615999999996 -1.91988479999999995 -1.4901161000000001e-08 -0.93469082999999997 -1.91850019999999999 -7.4505806000000003e-09 -0.78739017 -1.9144835 0 -0.55796491999999998 -1.90822650000000005 0 -0.26887234999999998 -1.90034189999999992 7.4505806000000003e-09 0.051589321 -1.89160060000000008 -1.4901161000000001e-08 0.37205180999999998 -1.88286039999999999 1.4901161000000001e-08 0.66114479000000004 -1.8749768 -1.4901161000000001e-08 0.89056981000000002 -1.86871959999999993 -2.2351741999999998e-08 1.0378696999999999 -1.86470169999999991 7.4505806000000003e-09 1.088625"
-		+ "69999999992 -1.86331779999999991 -7.4505806000000003e-09 1.0378696999999999 -1.86470230000000003 0 0.89056986999999999 -1.86871950000000009 3.7252903000000002e-08 0.66114508999999999 -1.87497639999999999 -1.4901161000000001e-08 0.37205200999999999 -1.88286020000000009 -7.4505806000000003e-09 0.051589318000000002 -1.89160069999999991 -1.4901161000000001e-08 -0.72156405000000001 1.87332830000000006 -7.4505806000000003e-09 -0.83919065999999998 1.87012090000000009 0 -0.87972342999999997 1.869015 -7.4505806000000003e-09 -0.83919078000000003 1.870121 -7.4505806000000003e-09 -0.72156370000000003 1.87332879999999991 0 -0.53835469000000002 1.87832510000000008 1.4901161000000001e-08 -0.30749783000000003 1.88462139999999989 -2.2351741999999998e-08 -0.051588953 1.89160079999999997 7.4505806000000003e-09 0.20431846000000001 1.89858020000000005 0 0.43517631000000001 1.90487720000000005 0 0.61838530999999997 1.90987320000000005 -1.4901161000000001e-08 0.73601251999999995 1.913081 -7.4505806000000003e-09 0.77654420999999996 "
-		+ "1.9141861 0 0.73601269999999996 1.91308129999999998 1.4901161000000001e-08 0.61838526000000005 1.90987309999999999 7.4505806000000003e-09 0.43517619000000002 1.9048769000000001 3.7252903000000002e-08 0.20431863 1.89858079999999996 -1.4901161000000001e-08 -0.051588966999999999 1.89160079999999997 7.4505806000000003e-09 -0.30749783000000003 1.88462170000000007 2.2351741999999998e-08 -0.53835451999999995 1.87832519999999992 0 -0.70691853999999998 1.33632759999999995 7.4505806000000003e-09 -0.82454603999999998 1.33312080000000011 0 -0.036943041000000003 1.35460029999999998 -7.4505806000000003e-09 -0.86507803000000005 1.332015 0 -0.82454598000000001 1.3331211999999999 -1.1175870999999999e-08 -0.70691866000000003 1.33632770000000001 -1.1175870999999999e-08 -0.52370876 1.34132469999999993 7.4505806000000003e-09 -0.29285148 1.34762040000000005 3.7252903000000002e-09 -0.036942292000000002 1.3546 1.4901161000000001e-08 0.21896534000000001 1.36158 -3.7252903000000002e-09 0.44982174000000003 1.36787750000000008 -1.117587"
-		+ "0999999999e-08 0.63303076999999996 1.37287270000000006 -1.4901161000000001e-08 0.75065808999999994 1.376081 0 0.79118966999999996 1.37718650000000009 0 0.75065826999999996 1.376081 3.7252903000000002e-09 0.63303076999999996 1.37287289999999995 3.7252903000000002e-09 0.44982182999999998 1.36787750000000008 3.7252903000000002e-09 0.21896507000000001 1.36157930000000005 3.7252903000000002e-09 -0.036941845000000001 1.35460019999999992 -1.1175870999999999e-08 -0.29285150999999998 1.34762080000000006 0 -0.52370905999999995 1.34132420000000008 2.2351741999999998e-08 -0.28014928 -2.05022789999999988 -7.4505806000000003e-09 -0.33916137000000002 -2.05183740000000014 0 -0.35949486000000003 -2.05239130000000003 7.4505806000000003e-09 -0.33916146000000003 -2.0518377000000001 7.4505806000000003e-09 -0.28014934000000002 -2.0502281 7.4505806000000003e-09 -0.18823634 -2.04772160000000003 -1.4901161000000001e-08 -0.072418958000000005 -2.04456330000000008 2.2351741999999998e-08 0.055966288000000003 -2.04106159999999992 7.450580"
-		+ "6000000003e-09 0.18435173999999999 -2.03755949999999997 1.4901161000000001e-08 0.30016977 -2.03440090000000007 -2.2351741999999998e-08 0.39208248000000001 -2.03189330000000012 7.4505806000000003e-09 0.45109406000000002 -2.03028459999999988 0 0.47142756000000002 -2.02972980000000014 -1.4901161000000001e-08 0.451094 -2.03028420000000009 1.4901161000000001e-08 0.39208229999999999 -2.03189330000000012 0 0.30016990999999998 -2.03440019999999988 -2.2351741999999998e-08 0.18435173999999999 -2.03755970000000008 -1.4901161000000001e-08 0.055966225000000001 -2.04106189999999987 -1.4901161000000001e-08 -0.072418927999999994 -2.04456330000000008 1.4901161000000001e-08 -0.1882364 -2.04772189999999998 0 -0.27232704000000002 -2.33705 -2.9802322000000001e-08 -0.33133864000000002 -2.33865880000000015 2.9802322000000001e-08 0.063788854000000006 -2.32788089999999981 -1.4901161000000001e-08 -0.35167289000000002 -2.33921359999999989 -4.4703483999999995e-08 -0.33133869999999999 -2.33865930000000022 -2.9802322000000001e-08 -0.27232"
-		+ "704000000002 -2.33705069999999981 2.9802322000000001e-08 -0.18041325 -2.33454279999999992 -2.2351741999999998e-08 -0.064595244999999996 -2.33138319999999988 7.4505806000000003e-09 0.063789426999999996 -2.32788109999999993 2.9802322000000001e-08 0.1921746 -2.32438160000000016 -2.2351741999999998e-08 0.30799130000000002 -2.32122250000000019 0 0.39990442999999998 -2.31871559999999999 -7.4505806000000003e-09 0.45891511000000001 -2.317106 1.4901161000000001e-08 0.47924978000000001 -2.31655170000000021 -2.2351741999999998e-08 0.45891493999999999 -2.3171062 -2.2351741999999998e-08 0.39990463999999998 -2.31871509999999992 0 0.30799130000000002 -2.32122250000000019 -1.4901161000000001e-08 0.19217476 -2.32438089999999997 -1.4901161000000001e-08 0.063789204000000002 -2.32788180000000011 0 -0.064595342 -2.33138390000000006 2.2351741999999998e-08 -0.18041325999999999 -2.33454229999999985"
-		)
-		3 "|StageLight4:Stage_light|StageLight4:Stage_lightShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
-		5 3 "StageLightRN4" "|StageLight4:Stage_light|StageLight4:Stage_lightShape.instObjGroups" 
-		"StageLightRN4.placeHolderList[1]" ":initialShadingGroup.dsm";
-lockNode -l 1 ;
-createNode reference -n "StageLightRN5";
-	rename -uid "525553DD-4D3E-1DF2-6157-D4B301D38ABA";
-	setAttr ".phl[1]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"StageLightRN5"
-		"StageLightRN5" 0
-		"StageLightRN5" 7
-		2 "|StageLight5:Stage_light" "translate" " -type \"double3\" 4.30864608807051219 27.09789678053583373 -6.68575999751326577"
-		
-		2 "|StageLight5:Stage_light" "rotate" " -type \"double3\" 0 -7.49716023727121161 0"
-		
-		2 "|StageLight5:Stage_light" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		
-		2 "|StageLight5:Stage_light|StageLight5:Stage_lightShape" "uvPivot" " -type \"double2\" 0.3607771135866642 0.49918940663337708"
-		
-		2 "|StageLight5:Stage_light|StageLight5:Stage_lightShape" "pt[84:205]" (" -s 122 0 -0.61043638 1.15295710000000007 0 -0.79709070999999998 1.09128570000000003 0 -0.94521993000000004 1.04234369999999998 0 -1.04032440000000004 1.01092120000000008 0 -1.07309530000000009 1.00009360000000003 0 -1.04032440000000004 1.01092120000000008 0 -0.94521993000000004 1.04234369999999998 0 -0.79709070999999998 1.09128570000000003 0 -0.61043638 1.15295710000000007 0 -0.40352832999999999 1.22132039999999997 0 -0.19662103 1.28968410000000011 0 -0.0099669601999999996 1.35135559999999999 0 0.13816213999999999 1.40029739999999991 0 0.23326675999999999 1.43172039999999989 0 0.26603823999999998 1.442548 0 0.23326675999999999 1.43172039999999989 0 0.13816213999999999 1.40029739999999991 0 -0.0099669601999999996 1.35135559999999999 0 -0.19662103 1.28968410000000011 0 -0.40352832999999999 1.22132039999999997 0 0.19662110999999999 -1.28968419999999995 0 0.0099669927999999994 -1.35135559999999999 0 -0.13816215000000001 -1.40029749999999997 0 -0.23326753 -1.43172 0 -0.26603818000000001 -1.442548 0 -0.23326753 -1"
-		+ ".43172 0 -0.13816215000000001 -1.40029749999999997 0 0.0099669927999999994 -1.35135559999999999 0 0.19662110999999999 -1.28968419999999995 0 0.40352844999999998 -1.22132039999999997 0 0.61043643999999997 -1.15295710000000007 0 0.79709076999999995 -1.09128570000000003 0 0.94522004999999998 -1.0423439000000001 0 1.04032440000000004 -1.01092120000000008 0 1.07309539999999992 -1.00009360000000003 0 1.04032440000000004 -1.01092120000000008 0 0.94522004999999998 -1.0423439000000001 0 0.79709076999999995 -1.09128570000000003 0 0.61043643999999997 -1.15295710000000007 0 0.40352844999999998 -1.22132039999999997 0 -0.83610028000000003 1.07839689999999999 0 -0.91204708999999995 1.05330419999999991 0 -0.93821668999999996 1.04465779999999997 0 -0.91204708999999995 1.05330419999999991 0 -0.83610028000000003 1.07839689999999999 0 -0.71781063000000001 1.11748029999999998 0 -0.56875664000000004 1.16672859999999989 0 -0.40352827000000002 1.22132060000000009 0 -0.23830064000000001 1.27591319999999997 0 -0.089246511000000001 1.3"
-		+ "2516089999999997 0 0.029043352000000001 1.364244 0 0.1049899 1.38933679999999993 0 0.13115972000000001 1.39798339999999999 0 0.1049899 1.38933679999999993 0 0.029043352000000001 1.364244 0 -0.089246511000000001 1.32516089999999997 0 -0.23830064000000001 1.27591319999999997 0 -0.40352827000000002 1.22132060000000009 0 -0.56875664000000004 1.16672859999999989 0 -0.71781063000000001 1.11748029999999998 0 -0.72154432999999996 0.73168003999999998 0 -0.79749095000000003 0.70658726000000005 0 -0.28897169 0.87460380999999998 0 -0.82366061000000002 0.69794089000000004 0 -0.79749088999999995 0.70658737000000005 0 -0.72154432999999996 0.73168003999999998 0 -0.60325395999999998 0.77076328000000005 0 -0.45419960999999998 0.82001184999999999 0 -0.28897113000000002 0.87460393000000003 0 -0.12374332 0.92919647999999999 0 0.02531011 0.97844428000000006 0 0.14359978000000001 1.01752730000000002 0 0.21954639000000001 1.0426202 0 0.24571614999999999 1.05126680000000006 0 0.21954639000000001 1.0426202 0 0.14359980999999999 1.0175"
-		+ "2749999999992 0 0.025310095000000001 0.97844428000000006 0 -0.12374341 0.92919642000000002 0 -0.28897095 0.87460404999999997 0 -0.45419960999999998 0.82001184999999999 0 -0.60325408000000003 0.77076339999999999 0 0.21859360999999999 -1.38946370000000008 0 0.18049208999999999 -1.40205240000000009 0 0.16736340999999999 -1.40639040000000004 0 0.18049208999999999 -1.40205240000000009 0 0.21859360999999999 -1.38946370000000008 0 0.27793792 -1.36985669999999993 0 0.35271594000000001 -1.3451495 0 0.43560809 -1.31776110000000002 0 0.51850068999999999 -1.29037320000000011 0 0.59327859000000005 -1.265666 0 0.652623 -1.24605879999999991 0 0.69072389999999995 -1.2334700999999999 0 0.70385288999999995 -1.22913270000000008 0 0.69072389999999995 -1.2334700999999999 0 0.652623 -1.24605879999999991 0 0.59327859000000005 -1.265666 0 0.51850068999999999 -1.29037320000000011 0 0.43560809 -1.31776110000000002 0 0.35271594000000001 -1.3451495 0 0.27793792 -1.36985669999999993 0 0.27978008999999998 -1.57465140000000003 0 0.24167860"
-		+ "999999999 -1.58723989999999993 0 0.49679476 -1.50294890000000003 0 0.22855021 -1.59157729999999997 0 0.24167860999999999 -1.58723989999999993 0 0.27978020999999997 -1.57465140000000003 0 0.33912471 -1.55504409999999993 0 0.413903 -1.53033670000000011 0 0.49679536000000002 -1.50294890000000003 0 0.57968664000000003 -1.47556109999999996 0 0.65446543999999995 -1.45085470000000005 0 0.71380913000000001 -1.4312457999999999 0 0.75191021000000002 -1.41865789999999992 0 0.76503902999999995 -1.41432029999999997 0 0.75191021000000002 -1.41865789999999992 0 0.71380913000000001 -1.43124570000000007 0 0.65446543999999995 -1.45085449999999994 0 0.57968664000000003 -1.47556109999999996 0 0.49679536000000002 -1.50294890000000003 0 0.413903 -1.53033670000000011 0 0.33912456000000002 -1.55504409999999993"
-		)
-		3 "|StageLight5:Stage_light|StageLight5:Stage_lightShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
-		5 3 "StageLightRN5" "|StageLight5:Stage_light|StageLight5:Stage_lightShape.instObjGroups" 
-		"StageLightRN5.placeHolderList[1]" ":initialShadingGroup.dsm";
-lockNode -l 1 ;
-createNode reference -n "BackWallScene2RN";
-	rename -uid "A30075B4-4A0F-241B-F9CA-18BE2A9D05B9";
-	setAttr ".phl[1]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"BackWallScene2RN"
-		"BackWallScene2RN" 0
-		"BackWallScene2RN" 2
-		3 "|BackWallScene2:Floor|BackWallScene2:FloorShape.instObjGroups" "BackWallScene2:standardSurface2SG.dagSetMembers" 
-		"-na"
-		5 3 "BackWallScene2RN" "|BackWallScene2:Floor|BackWallScene2:FloorShape.instObjGroups" 
-		"BackWallScene2RN.placeHolderList[1]" "BackWallScene2:standardSurface2SG.dsm";
-	setAttr ".ptag" -type "string" "";
+		);
 lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
@@ -3497,22 +3414,21 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
-	setAttr ".msaa" yes;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 10 ".st";
+	setAttr -s 9 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 13 ".s";
+	setAttr -s 12 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 4 ".u";
+	setAttr -s 6 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 14 ".r";
+	setAttr -s 12 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 2 ".tx";
+	setAttr -s 3 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -3747,12 +3663,10 @@ connectAttr "LightingTrussRN1.phl[93]" "standardSurface2SG.dsm" -na;
 connectAttr "LightingTrussRN1.phl[94]" "standardSurface2SG.dsm" -na;
 connectAttr "TableScene2RN.phl[1]" "standardSurface2SG.dsm" -na;
 connectAttr "StageLightRN.phl[1]" "standardSurface2SG.dsm" -na;
+connectAttr "BackWallScene2RN.phl[1]" "standardSurface2SG.dsm" -na;
+connectAttr "BackWallScene2RN.phl[2]" "standardSurface2SG.dsm" -na;
 connectAttr "StageLightRN1.phl[1]" "standardSurface2SG.dsm" -na;
 connectAttr "StageLightRN2.phl[1]" "standardSurface2SG.dsm" -na;
-connectAttr "StageLightRN3.phl[1]" "standardSurface2SG.dsm" -na;
-connectAttr "StageLightRN4.phl[1]" "standardSurface2SG.dsm" -na;
-connectAttr "StageLightRN5.phl[1]" "standardSurface2SG.dsm" -na;
-connectAttr "BackWallScene2RN.phl[1]" "standardSurface2SG.dsm" -na;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "standardSurface2SG.message" ":defaultLightSet.message";
@@ -3763,11 +3677,6 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
-connectAttr "sharedReferenceNode.sr" "GuitarCaseRN.sr";
 connectAttr "tripleShadingSwitch1.out" "Scene2_MAT.bc";
 connectAttr "FloorShape.iog" "standardSurface2SG.dsm" -na;
 connectAttr "BackWallShape.iog" "standardSurface2SG.dsm" -na;
@@ -3803,10 +3712,11 @@ connectAttr "place2dTexture1.vt3" "file1.vt3";
 connectAttr "place2dTexture1.vc1" "file1.vc1";
 connectAttr "place2dTexture1.o" "file1.uv";
 connectAttr "place2dTexture1.ofs" "file1.fs";
+connectAttr "sharedReferenceNode.sr" "GuitarCaseRN.sr";
 connectAttr "standardSurface2SG.pa" ":renderPartition.st" -na;
 connectAttr "Scene2_MAT.msg" ":defaultShaderList1.s" -na;
 connectAttr "tripleShadingSwitch1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
-// End of Scene 2.ma
+// End of Scene 2.0012.ma
