@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Scene 2.ma
-//Last modified: Tue, Aug 04, 2026 06:01:24 PM
+//Name: Scene 2.0013.ma
+//Last modified: Mon, Aug 03, 2026 10:41:21 AM
 //Codeset: 1252
 file -rdi 1 -ns "GuitarCase1" -rfn "GuitarCaseRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/GuitarCase.ma";
@@ -54,35 +54,36 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202505300603-a12e894a3d";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "3F115910-44DC-4A18-16D0-AE952259616F";
+fileInfo "UUID" "86990F11-493D-12F1-BE3B-33B7A4B0632A";
+fileInfo "exportedFrom" "C:/GitHub/Essentials/DAGV1100and1200/Maya/scenes/Scene 2.ma";
 createNode transform -s -n "persp";
 	rename -uid "9F8A7154-49EE-BF5C-D47A-4F861ED4971A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.598741017838435 43.178689464083483 48.831967329279784 ;
-	setAttr ".r" -type "double3" -39.938352712489234 -714.59999999967727 3.9934162746128813e-16 ;
+	setAttr ".t" -type "double3" 19.307689283677419 26.443206064951525 53.537928349718847 ;
+	setAttr ".r" -type "double3" -14.13835271242373 -703.39999999999009 0 ;
 	setAttr ".rp" -type "double3" 5.3290705182007514e-15 2.1316282072803006e-14 0 ;
 	setAttr ".rpt" -type "double3" -6.5861845220034293e-16 -7.0135523392727074e-16 -5.9995452262861205e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5566EBBA-4332-08A4-4709-04A07AF692EB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 45.556511469841844;
+	setAttr ".coi" 71.786940666833686;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 11.985334816623162 2.6014393688876427 7.6964015165803588 ;
+	setAttr ".tp" -type "double3" 4.3794010984437879 26.795386171958121 -6.6857599975132658 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "D7C8D588-4DC2-2242-03E4-3D860C4E2C57";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.48648648648648507 1000.1 -5.135135135135136 ;
+	setAttr ".t" -type "double3" 0 1000.1 0 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "D8FFBE01-49DE-C91D-B8BB-0D9446536C80";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 52.205180814793067;
+	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -543,54 +544,27 @@ createNode mesh -n "BackWallShape" -p "BackWall";
 		154 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
-createNode transform -n "spotLight1";
-	rename -uid "9BB645DB-463F-977D-7C35-DBAFBC4F0CBF";
-	setAttr ".t" -type "double3" 0.80684336115062472 21.430978604516621 9.018692790738255 ;
-	setAttr ".r" -type "double3" -50.569372505684726 5.8008493710302851 -7.0071869240456701 ;
-createNode spotLight -n "spotLightShape1" -p "spotLight1";
-	rename -uid "E030E80B-47C0-6F96-730A-C3A3C14A52D3";
-	setAttr -k off ".v";
-	setAttr ".in" 10;
-	setAttr ".ca" 136.15090792593546;
-	setAttr ".ai_exposure" 5;
-	setAttr ".ai_radius" 1.8831168413162231;
-createNode transform -n "spotLight2";
-	rename -uid "18CEDA84-4AC1-55EA-4E2B-1B93629EB6B6";
-	setAttr ".t" -type "double3" 10.064232235130747 20.478437372533314 8.3388269368353409 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" -78.570067802009461 21.690447590697442 6.8458341014637664e-15 ;
-createNode spotLight -n "spotLightShape2" -p "spotLight2";
-	rename -uid "FBD9A787-4740-89BB-8509-439B8FDABBBC";
-	setAttr -k off ".v";
-	setAttr ".in" 7.5641026496887207;
-	setAttr ".ca" 36.926455952225162;
-	setAttr ".pa" 3.8461538475866508;
-	setAttr ".ai_exposure" 5;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "15147C29-4577-8C17-5358-FE81D06D9250";
-	setAttr -s 12 ".lnk";
-	setAttr -s 12 ".slnk";
+	rename -uid "335DED3C-4A99-B377-5B2D-7EA7C5213E13";
+	setAttr -s 11 ".lnk";
+	setAttr -s 11 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F5EBEC88-480B-E1F1-4CB9-2AA761C73466";
+	rename -uid "B3696C51-4E71-B616-85D5-4C94FF663351";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F4C822D9-4AED-A9C8-A835-4E9B0FFFBDDD";
+	rename -uid "27B8F71C-45F7-C623-3A09-15BEBCFDDB18";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "BABA900E-4736-EA5D-8E76-438754DC5DA4";
+	rename -uid "E169DFBD-4994-5E25-1D3A-F7A826F634CE";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "4EFAD5FF-4084-34C7-A0DF-9884B0C7CC38";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9C52433E-4A80-00C2-0809-9CAD256D0EB9";
+	rename -uid "B7EFF41A-44DC-2D55-7364-D0B76B0F1F2F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "36AA6135-4C31-6AB5-3627-B28C72812EFE";
 	setAttr ".g" yes;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "9EBE1B03-4874-AD2C-C4EB-0CA3CA58E272";
-	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
 	setAttr ".version" -type "string" "5.4.8.2";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1 1;Background.Offset=0 0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1 1;Foreground.Offset=0 0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "2BE6CB7B-43B0-94AD-43DD-7A90DC574380";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -609,17 +583,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 330\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1117\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 719\n            -height 794\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"{};\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n"
@@ -646,14 +620,74 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n"
 		+ "            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 719\\n    -height 794\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 719\\n    -height 794\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "65A66127-43BE-AAE2-87AF-F0934DE0F038";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 700 -ast 1 -aet 700 ";
 	setAttr ".st" 6;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "70AE00D2-48BA-5C2B-EEC8-88A09C80BE29";
+createNode reference -n "sharedReferenceNode";
+	rename -uid "CC1B15F2-4989-ED25-3B89-ADB4232B76D6";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
+createNode brush -n "art3dPaintLastPaintBrush";
+	rename -uid "46F888D2-4F68-A859-97EA-1B8A13B22EC7";
+	setAttr ".lcl[0]"  0 0.5 1;
+	setAttr ".pcl[0]"  0 0.5 1;
+	setAttr ".wsc[0]"  0 1 1;
+	setAttr ".lws[0]"  0 1 1;
+	setAttr ".pws[0]"  0 1 1;
+	setAttr ".tls[0]"  0 1 1;
+	setAttr -s 3 ".env";
+	setAttr ".env[0].envp" 0.20000000298023224;
+	setAttr ".env[0].envc" -type "float3" 0 0 0.15000001 ;
+	setAttr ".env[0].envi" 2;
+	setAttr ".env[1].envp" 0.5;
+	setAttr ".env[1].envc" -type "float3" 0.47999999 0.55000001 0.69999999 ;
+	setAttr ".env[1].envi" 2;
+	setAttr ".env[2].envp" 1;
+	setAttr ".env[2].envc" -type "float3" 0 0.1 0.44999999 ;
+	setAttr ".env[2].envi" 2;
+	setAttr ".rro[0]"  0 1 1;
+createNode tripleShadingSwitch -n "tripleShadingSwitch1";
+	rename -uid "9EAE5454-4473-2F9F-946A-01A86F89A3A8";
+createNode file -n "file1";
+	rename -uid "040BABE5-4CC3-AC31-CC54-5DB6A58D4166";
+	setAttr ".ftn" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//sourceimages/3dPaintTextures/Scene 2/FloorShape_baseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture1";
+	rename -uid "E6D7BB8C-4C88-2287-FC5D-6683A2857A00";
+createNode standardSurface -n "Scene2_MAT";
+	rename -uid "3B73D78D-4424-92AC-295D-E294F63F45A5";
+createNode shadingEngine -n "standardSurface3SG";
+	rename -uid "F8FC6523-4AE7-8B56-F248-DF935563F2D2";
+	setAttr ".ihi" 0;
+	setAttr -s 216 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+	rename -uid "BEDFC72F-41F4-9B30-CDBD-129D1E2D4A59";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "EC5923AD-483C-E538-1C48-42AB5D0C2BE1";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -576.3920661899391 -809.72899048171087 ;
+	setAttr ".tgi[0].vh" -type "double2" 1190.4593420963176 420.45049212536389 ;
+	setAttr -s 2 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -377.14285278320312;
+	setAttr ".tgi[0].ni[0].y" 152.85714721679688;
+	setAttr ".tgi[0].ni[0].nvs" 2387;
+	setAttr ".tgi[0].ni[1].x" -28.571428298950195;
+	setAttr ".tgi[0].ni[1].y" 152.85714721679688;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+createNode file -n "file2";
+	rename -uid "B164EDA3-4078-AD5E-32B3-05A0A1C95857";
+	setAttr ".ftn" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//sourceimages/DAGV 1200 color swatchv3.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture2";
+	rename -uid "0B83FB0B-4135-2A18-E878-82A5AF66E016";
 createNode reference -n "GuitarCaseRN";
 	rename -uid "6FAD8325-443B-E4DE-0599-2F949FDCC25B";
 	setAttr ".fn[0]" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/GuitarCase.ma";
@@ -665,12 +699,8 @@ createNode reference -n "GuitarCaseRN";
 	setAttr ".phl[5]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"GuitarCaseRN"
-		"GuitarCaseRN" 2
-		3 "GuitarCase1:groupId19.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "GuitarCase1:groupId18.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		"GuitarCaseRN" 46
+		"GuitarCaseRN" 0
+		"GuitarCaseRN" 38
 		2 "|GuitarCase1:GuitarCase" "translate" " -type \"double3\" 12.03836418428531907 2.61147260983227891 7.75347906467695136"
 		
 		2 "|GuitarCase1:GuitarCase" "rotate" " -type \"double3\" -30.60947549286951741 42.66213204985249519 -2.22507798708902138"
@@ -718,12 +748,8 @@ createNode reference -n "GuitarCaseRN";
 		+ " 0.064813748000000004 0.9242186 0.064812898999999993 0.88190334999999997 0.064815283000000001 0.93256139999999998 0.12871920000000001 0.94582188 0.12871010999999999 0.88190972999999995 0.16579305 0.88192588000000005 0.15637060999999999 0.88191580999999997 0.14348406 0.98154944 0.156578 0.88191348000000003 0.14066169000000001 0.88190573000000005 0.13157742 0.98154925999999998 0.16826995 0.88190334999999997 0.12875475 0.88190745999999998 0.17868145999999999 0.88190924999999998 0.17068052 0.88192212999999997 0.15148407 0.95553796999999996 0.13345118 0.94673848000000005 0.15017285999999999 0.94613515999999998 0.15699436999999999 0.94896095999999996 0.13345139 0.97792124999999996 0.13345079000000001 0.99204146999999998 0.13345003 0.96601439 0.13160704000000001 0.96460307000000001 0.13214709999999999 0.94866943000000004 0.13945809000000001 0.98068767999999995 0.13345079000000001 0.94807403999999995 0.14221299000000001 0.97946840999999996 0.15638 0.98557335000000001 0.064812421999999995 0.94606435 0.0648133159999999"
 		+ "96 0.98624456000000005 0.15555127999999999 0.95264143000000001 0.064813167000000005 0.96857148000000004 0.15674365000000001 0.97509705999999996 0.066656590000000002 0.96460151999999999 0.06611678 0.98559213000000001 0.068481400999999997 0.9631902 0.064812898999999993 0.96042377000000001 0.064812958000000004 0.97140168999999998 0.15676166 0.95008939999999997 0.13917165000000001 0.95091539999999997 0.13800804 0.97976571000000001 0.13358375 0.96033763999999999 0.15554470000000001 0.96062386 0.14944874999999999 0.96511709999999995 0.15542489000000001 0.96240943999999995 0.14579839 0.97069006999999996 0.16300708 0.94739085000000001 0.16544006999999999 0.94608152000000001 0.16486973999999999 0.99518620999999996 0.13616365 0.99422776999999996 0.15267443999999999 0.99392581000000002 0.15407148000000001 0.98832178000000004 0.065294645999999998 0.98571085999999997 0.080693893000000003 0.96799511000000005 0.15541661000000001"
 		)
-		2 "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape" "uvPivot" 
-		" -type \"double2\" 0.68706309408291777 0.12564759433659076"
 		2 "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape" "displayFacesWithGroupId" 
 		" 0"
-		2 "|GuitarCase1:GuitarCase|GuitarCase1:Latch2|GuitarCase1:Latch2Shape" "uvPivot" 
-		" -type \"double2\" 0.69557529437816135 0.24625515551154128"
 		2 "|GuitarCase1:GuitarCase|GuitarCase1:Latch2|GuitarCase1:Latch2Shape" "displayFacesWithGroupId" 
 		" 0"
 		2 "|GuitarCase1:GuitarCase|GuitarCase1:Shell" "translate" " -type \"double3\" 0 0 0"
@@ -765,81 +791,33 @@ createNode reference -n "GuitarCaseRN";
 		+ "0.96131957000000001 0.45245457 0.95977539000000001 0.50655620999999995 0.95982891000000004 0.49716252 0.95973545000000005 0.51204806999999997 0.96138471000000003 0.45814663 0.95979506000000003 0.65588778000000003 0.95952433000000004 0.54936766999999997 0.96151792999999997 0.49633515 0.96135258999999995 0.60552335000000002 0.96149331000000005 0.48050195000000001 0.95963633000000004 0.53391188000000001 0.95961744000000004 0.54166937000000004 0.96147305000000005 0.48841374999999998 0.95976090000000003 0.43606054999999999 0.95975834000000004 0.41962695 0.95971793000000005 0.45267575999999998 0.95974075999999997 0.46514719999999998 0.95977402000000001 0.47862691000000002 0.95983260999999997 0.48662388000000001 0.95976514000000002 0.66211385 0.96089785999999999 0.64577203999999999 0.96110302000000003 0.62035834999999995 0.96122551000000001 0.61237341000000001 0.63942569000000005 0.38746142 0.96125667999999997 0.43203384 0.96131562999999998 0.42383724 0.96134883000000004 0.41002089000000003 0.96137220000000001 0.397"
 		+ "23807999999999 0.96132969999999995 0.38020789999999999 0.96133316000000002 0.36336397999999998 0.96133858000000005 0.35151273 0.63015652 0.32857441999999998 0.95975326999999999 0.40806441999999998 0.69750707999999995 0.35162937999999999 0.65724974999999997 0.66603040999999996 0.64144212 0.32675694999999999 0.68252712000000004 0.32857441999999998"
 		)
-		2 "GuitarCase1:polyTweakUV20" "uvTweak" " -s 555"
-		2 "GuitarCase1:polyTweakUV20" "uvtk[0:249]" (" -type \"float2\" 0.38187264999999998 -0.56292176000000005 0.39016610000000002 -0.55188464999999998 0.3790229 -0.11041605 0.36886852999999997 -0.10104346 1.08496761300000011 -0.13457817 1.09863507699999996 -0.13965785999999999 1.043399572 -0.54953110000000005 1.05125498799999995 -0.56097984000000001 0.88162214000000005 0.35102098999999998 -0.77190590000000003 0.28753877 -0.77190225999999995 0.20252766999999999 0.55402481999999997 0.19626555000000001 0.98185027000000002 -0.079528950000000001 1.0213251109999999 -0.079525477999999997 -0.50432675999999999 -0.074262567000000002 0.98181026999999998 0.37739234999999999 1.32477665 0.51124519000000002 1.45008336999999998 0.39727678999999999 1.33909546999999995 0.39373480999999999 1.37929057999999993 0.3727029 0.75402880000000005 1.05939030600000006 1.16100073000000004 0.57389950999999995 0.69890070000000004 0.57386183999999996 0.69890392000000001 0.53393959999999996 0.79134780000000005 0.40329269000000001 -0.50432712000000002 0.67852193000000005 0.75396704999999997 0.52"
-		+ "946674999999999 0.62874472000000003 0.57385825999999995 0.98185694000000001 -0.14890137000000001 1.08653509599999998 0.40325846999999998 -0.77189874999999997 0.12516305 -0.50433379 -0.45438293000000002 -0.45693356000000002 -0.54863994999999999 0.15547744999999999 -0.22480047 -0.45692222999999998 0.58426725999999995 0.059650361999999998 -0.47728994000000002 1.02128386500000001 0.39680739999999998 -0.45692413999999998 -0.060242832000000003 -0.45691936999999999 0.19315183 1.14425098999999997 0.44460802999999999 -0.45692115999999999 0.53416342000000006 -0.45691925 0.20414779999999999 0.19514535 -0.29334894 0.19513257000000001 -0.38037553000000002 -0.45145971000000001 -0.066045604999999993 -0.45693022 -0.40427908000000001 1.3420741599999999 0.46318137999999998 1.36378895999999994 0.41259286000000001 1.3432490800000001 0.48445930999999998 1.17640280999999991 0.53397941999999998 1.28971027999999999 0.48446595999999997 1.32608711999999995 0.41259727000000002 1.3378400800000001 0.50339878000000005 1.35997677000000006 "
-		+ "0.39925659000000002 1.32989632999999996 0.39926012999999999 1.29512405000000008 0.50340408000000003 0.98185193999999998 -0.094974934999999996 0.75397336000000004 0.58384502000000005 -0.50433296000000005 -0.41543412000000002 0.018365208000000001 -0.47728391999999997 -0.45692127999999999 0.54531837000000005 0.68328243 0.57386075999999997 0.68664747000000004 0.53691089000000003 1.12059832000000004 0.58676708 0.98478949000000005 -0.082855098000000002 0.75732725999999995 0.59567594999999995 0.69553792000000003 0.57460116999999999 -0.50379562 0.54291564000000003 0.01615509 -0.19893469 -0.45904368000000001 0.53656541999999996 -0.45905274000000001 -0.41303262000000002 0.0093830638000000008 -0.47473665999999998 -0.50380462000000004 -0.40668072999999999 1.02205741400000005 -0.091644868000000004 1.12400746000000007 1.06450486199999994 1.02128386500000001 0.38861828999999998 1.16811990999999993 0.53397804000000004 -0.50432186999999995 0.19906735 -0.45577162999999998 0.19895391000000001 -0.45692413999999998 -0.06615792199"
-		+ "9999994 1.12025237 1.060024619 -0.50401198999999997 -0.071572095000000002 -0.50401198999999997 -0.068847537 1.12025284999999997 1.06382858800000002 1.16265440000000009 0.53464281999999996 1.16646957000000007 0.53464310999999998 -0.50400710000000004 0.20024507 -0.50400710000000004 0.20296976 -0.45225078000000002 0.19777954 -0.45497543000000001 0.19777963000000001 -0.45771425999999998 -0.071572944999999999 -0.45771425999999998 -0.068848372000000005 0.0041735992000000001 -0.93090307999999999 0.019644289999999998 -0.92479836999999998 0.0017153203999999999 -0.90097541000000003 -0.49464518000000002 -0.68366528000000004 0.021842331 -0.91780001 -0.38056522999999998 -0.68367593999999998 0.033169328999999997 -0.90178108000000001 -0.39336699000000003 -0.68367593999999998 0.040152721000000002 -0.89875906999999999 -0.39975982999999998 -0.68367593999999998 0.037165931999999999 -0.88031839999999995 0.0039854794999999998 -0.87264531999999995 0.0058724498000000003 -0.77713823000000004 -0.062283090999999999 -0.8099691300000000"
-		+ "4 -0.027745224999999998 -0.80877083999999999 0.0058041428999999999 -0.81006794999999998 -0.062287979 -0.87635255000000001 0.076011270000000006 -0.92958534000000004 -0.43760495999999999 -0.68367314000000001 -0.030131735 -0.87073641999999996 0.073603705000000005 -0.93738054999999998 -0.44399815999999998 -0.68367219000000001 0.063175811999999998 -0.95003134 -0.45679956999999999 -0.68367022 0.055974729000000001 -0.95385730000000002 -0.46319370999999998 -0.68366914999999995 0.048197566999999997 -0.95148772000000004 -0.46958583999999998 -0.68366819999999995 -0.49465448000000001 -0.78652918000000005 -0.50104742999999996 -0.78652858999999997 -0.37419015 -0.91696392999999998 -0.49466317999999998 -0.91695141999999996 -0.38057344999999998 -0.78654033000000001 -0.38058238999999999 -0.91696405000000003 -0.39337522000000003 -0.78654093000000003 -0.39338522999999997 -0.91696465000000005 -0.39976877 -0.78654122000000004 -0.39977985999999999 -0.91696489000000003 -0.40616089 -0.78654099 -0.40617257000000001 -0.9169646500000000"
-		+ "5 -0.43121988 -0.78653896000000001 -0.43123036999999997 -0.91696221 -0.437612 -0.78653806000000004 -0.43762236999999998 -0.91696118999999998 -0.44400542999999998 -0.78653680999999998 -0.44401747000000003 -0.91696 -0.45680707999999998 -0.78653424999999999 -0.45681936000000001 -0.91695702000000001 -0.46320242 -0.78653287999999999 -0.46321219000000002 -0.91695541000000003 -0.46959525000000002 -0.78653192999999999 -0.46960527000000002 -0.91695428000000001 -0.37422305 -1.0434501169999999 -0.494654 -1.04342865899999993 -0.38061243 -1.04345214399999997 -0.39341384000000001 -1.04345750799999992 -0.39980464999999998 -1.0434591769999999 -0.40619569999999999 -1.04345977299999992 -0.43124383999999999 -1.04345834299999995 -0.43763393 -1.04345679300000005 -0.44402319000000001 -1.04345369300000002 -0.45681924000000002 -1.04344606400000006 -0.46320741999999998 -1.043442011 -0.46959870999999997 -1.04343879199999989 -0.37432032999999998 -1.17337965999999994 -0.49462432000000001 -1.17329144000000007 -0.38071256999999997 -1.1734"
-		+ "0957999999995 -0.39350503999999997 -1.17347180999999989 -0.39988309 -1.1734976800000001 -0.40625948000000001 -1.17351567999999995 -0.43124311999999998 -1.1735411899999999 -0.43761927 -1.17352151999999998 -0.44399375000000002 -1.17349374000000006 -0.45677155000000003 -1.17343020000000009 -0.46316093000000003 -1.17339777999999995 -0.46955520000000001 -1.17337059999999993 -0.37409084999999997 -1.29853438999999993 -0.49479656999999999 -1.29838848000000007 -0.38046795 -1.29883741999999991 -0.39326351999999998 -1.29949092999999993 -0.39966755999999998 -1.29979587000000008 -0.40609473000000001 -1.29992150999999989 -0.43131763000000001 -1.29986738999999996 -0.43774730000000001 -1.29974531999999998 -0.44415587000000001 -1.29944371999999997 -0.45697086999999997 -1.29879439000000008 -0.46335464999999998 -1.29849458000000006 -0.46974653 -1.29837238999999993 0.67677063000000004 -1.06557953400000005 0.75392627999999995 -1.12443161000000003 0.56105017999999995 -1.12432957 0.48327881 -1.0651220079999999 0.75218116999999995 -"
-		+ "1.1167019600000001 0.56096888 -1.11720467000000001 0.74840700999999998 -1.1015151700000001 0.56078022999999999 -1.10294628000000006 0.74667329000000005 -1.09396743799999996 0.56068443999999995 -1.09569609200000007 0.74583142999999996 -1.08632290399999998 0.56060182999999997 -1.08793997800000009 0.74515485999999997 -1.056283474 0.56066722000000002 -1.05716466900000006 0.74578350999999998 -1.04862558799999994 0.56067096999999999 -1.04942774800000005 0.67019773000000005 -1.12756908 0.48320787999999998 -1.12397312999999999 0.67392271999999998 -1.11242485000000002 0.48339522000000001 -1.10970437999999993 0.67564362 -1.10471761000000002 0.48347585999999998 -1.10257184999999991 0.67647104999999996 -1.09681439399999991 0.48353517000000001 -1.09501373800000001 0.37875031999999997 -1.1247258200000001 0.30082238 -1.06569349799999991 0.37936574000000001 -1.11717463000000006 0.38074148000000002 -1.10215913999999993 0.38135998999999998 -1.0946190360000001 0.38161790000000001 -1.08689868499999998 0.38161778000000002 -1.0564"
-		+ "8326899999989 0.38137418000000001 -1.0487580299999999 0.30316674999999998 -1.12640786000000004 0.30175257 -1.11141216999999992 0.30112063999999999 -1.10387265999999995 0.3008458 -1.09614479500000006 0.2182567 -1.12479627000000004 0.14079407999999999 -1.06585550300000009 0.21818303 -1.11705005000000002 0.21805321 -1.10174620000000001 0.21800296 -1.09411048899999996 0.21795790000000001 -1.08643829800000002 0.21771567 -1.05629169899999997 0.21772240000000001 -1.04859530899999998 0.14034735000000001 -1.12759161000000008 0.14047872 -1.11226094000000009 0.14055233 -1.104509 0.14061265000000001 -1.09667622999999992 0.065705850999999996 -1.12462115000000007 -0.011526199000000001 -1.0653756860000001 0.065100089 -1.11750876999999993 0.063723220999999997 -1.10321760000000002 0.063097015000000006 -1.09592986099999989 0.062930837000000003 -1.08813881900000009 0.063447133000000003 -1.05722785000000008 0.063708856999999994 -1.0494649410000001 -0.013477843 -1.12396479000000005 -0.012035828 -1.10967730999999992 -0.01139715500"
-		+ "0000001 -1.10256255000000003 -0.011200699999999999 -1.09504735499999994 -0.023585245000000001 -0.2013846 -0.017075336999999999 -0.20110084 -0.017634489 -0.066580056999999998 -0.023937508 -0.066877364999999994 -0.010593870999999999 -0.20053404999999999 -0.011400977 -0.065858400999999997 0.0023394506000000001 -0.19928715 0.0011022333000000001 -0.064277164999999997 0.0087549537 -0.19868748999999999 0.0073901117000000002 -0.063535005000000006"
-		)
-		2 "GuitarCase1:polyTweakUV20" "uvtk[250:499]" (" 0.01516901 -0.19836354 0.01377462 -0.063228935 -0.087876528999999995 -0.19831710999999999 -0.086410046000000004 -0.063378169999999998 -0.081466272000000006 -0.198627 -0.080021515000000001 -0.063680849999999997 -0.075054407000000004 -0.19921167000000001 -0.073728858999999994 -0.064420633000000005 -0.062127195000000003 -0.20042449000000001 -0.061219363999999998 -0.066002406 -0.055647463000000001 -0.20097323 -0.054982081000000002 -0.066725269000000004 -0.049139395000000002 -0.20123866000000001 -0.048677093999999997 -0.067025243999999998 -0.017418362 0.081556574000000007 -0.023852870000000002 0.081637426999999999 -0.010993281000000001 0.081397078999999997 0.0018452112999999999 0.081051840999999999 0.0082521885999999999 0.080889106000000002 0.014657722999999999 0.080791905999999997 -0.087588399999999997 0.080763951 -0.081182376000000001 0.080869377000000006 -0.074776351000000005 0.081041067999999994 -0.061942957 0.081406295000000004 -0.05551967 0.081575661999999993 -0.049086004000000003 0.081666588999999998 -0.01"
-		+ "7440535 0.23266622000000001 -0.02385895 0.23266735999999999 -0.011024693 0.23266577999999999 0.0018183296 0.23266101 0.0082326381999999997 0.23265822 0.014643178999999999 0.23265343999999999 -0.087523489999999995 0.23266745 -0.081114247 0.23267226999999999 -0.074700295999999999 0.23267483999999999 -0.061855458000000002 0.23267765000000001 -0.055438608 0.23267773 -0.049021154999999997 0.23267841 -0.017461873999999999 0.38088167000000001 -0.023870394 0.38088042 -0.011050561 0.38088350999999998 0.0017811363000000001 0.38088738999999999 0.0081899612999999996 0.38088929999999999 0.014598893 0.38089052000000001 -0.087457538000000001 0.3808898 -0.081049575999999998 0.38088864 -0.074640512000000006 0.38088675999999999 -0.061808429999999998 0.38088295 -0.055397540000000002 0.38088101000000002 -0.048989311000000001 0.38087960999999998 -0.017466642000000001 0.53461987 -0.023874803999999999 0.53461908999999996 -0.011062363 0.534621 0.0017714810000000001 0.53462361999999997 0.0081787556000000004 0.53462493 0.01458721 0.53"
-		+ "462582999999997 -0.087453127000000005 0.53462279000000001 -0.081044390999999993 0.53462224999999997 -0.074637353000000004 0.53462136000000005 -0.061803900000000002 0.53461945 -0.055399805000000003 0.53461862000000004 -0.048991576000000002 0.53461826000000001 -0.017471886999999998 0.65569115 0.037664047999999999 0.053302385000000001 0.042150161999999998 0.064182586999999999 0.051706843000000002 0.071481860999999994 0.058999836 0.073392137999999996 0.068564667999999995 0.071789837999999995 0.082065895 0.036136559999999998 0.077173485999999999 0.030041128 0.069014981000000003 0.026772470999999999 0.054298982000000003 0.024749311 0.047779932999999997 0.026771894000000001 0.043891564000000001 0.032140627999999997 -0.37452203000000001 -1.45369159999999997 -0.49456697999999999 -1.45394135000000002 0.019986555 -0.070322311999999998 0.010982067999999999 0.079371616000000006 0.026158996 0.096058301999999998 0.045166141999999999 -0.076510600999999998 -0.38090365999999998 -1.45343076999999998 -0.39364964000000002 -1.4528"
-		+ "7991000000005 0.036137216 -0.0045990943999999999 0.032099537999999997 -0.021029592999999999 0.057279169999999997 -0.027217753000000001 0.061319067999999997 -0.010787666 0.035307816999999998 0.10216433 0.044128782999999998 0.10712133 0.085962728000000002 -0.008045923 0.073944001999999995 -0.010040317 0.014282797999999999 0.0098621473000000005 0.024535831000000001 0.0017833859000000001 0.0035556238000000002 -0.066284649000000001 0.0063469735999999999 0.068469472000000003 0.12209941000000001 0.092309034999999998 0.13564883 0.055761895999999998 0.14536843999999999 0.010681257 0.10020904 0.13419937000000001 1.08283185999999998 -0.1200837 1.05247831299999994 -0.98260999000000004 0.38309579999999999 -0.98455179000000004 1.16646516 0.57434076000000001 1.16264987000000009 0.57434028000000004 -0.50432186999999995 0.20414750000000001 1.16811441999999999 0.57390034000000001 1.0217201709999999 0.38112095000000001 1.02171993299999997 0.38489318 -0.50432664000000005 -0.066156990999999998 1.0212848189999999 0.377395719999999"
-		+ "99 -0.50432359999999998 0.53416317999999996 -0.50432652 -0.060242362000000001 -0.50380462000000004 -0.41303163999999998 1.02132654199999995 -0.094971284000000003 -0.50433271999999996 -0.40427818999999998 1.0220565800000001 -0.082851753 0.68664515000000004 0.57460058000000003 -0.50432407999999995 0.54531722999999999 -0.50379549999999995 0.53656477000000002 -0.50432478999999997 0.58426613000000005 1.02133142899999996 -0.14889770999999999 -0.50432186999999995 0.19315230999999999 0.55395322999999996 0.15638115999999999 0.65847522000000003 0.15619309000000001 0.49676420999999998 0.57385218000000005 0.43910038000000001 0.15658828999999999 1.1442475299999999 0.42002535000000002 0.98180884000000002 0.39680611999999998 1.17639673 0.57390189000000003 1.68513881999999993 0.44453722000000001 1.23360395 0.40309783999999999 1.31486988000000005 0.38160877999999998 1.30818915000000002 0.51124727999999997 1.5145034799999999 0.38158289000000001 1.59577477000000001 0.40305087000000001 1.45007992000000008 0.37269393000000001 1.2"
-		+ "9087996000000005 0.46318772000000002 1.68513548000000002 0.41995444999999998 1.31487298000000008 0.40619065999999998 1.23360728999999991 0.42768043 1.37929392000000006 0.39728579000000003 1.59577798999999998 0.42763337000000001 1.51450657999999994 0.40616474000000002 1.35077631000000009 0.39373343999999999 1.32691454999999991 0.42758121999999998 1.36296535000000008 0.42757693000000002 0.75566887999999999 1.06006741500000001 0.75566940999999999 1.06387126400000009 0.75402939000000002 1.06454861200000006 1.16100383000000007 0.53397720999999998 0.98246705999999995 0.38489071000000002 0.98246734999999996 0.38111821000000001 0.98180955999999997 0.38861656 1.1240068700000001 1.0593472719999999 1.12395310000000004 0.59859794 0.76213092000000005 1.0661503080000001 1.12059950999999991 0.59563379999999999 0.75397502999999999 0.59864103999999996 0.69554031000000005 0.53691149000000005 0.75732630000000001 0.58680916000000005 0.68328427999999997 0.53393858999999999 1.12395143999999991 0.58380215999999996 0.984790330000000"
-		+ "05 -0.091648227999999998 0.62874662999999997 0.53393608000000004 1.12394511999999991 0.52942394999999998 0.98186934000000003 -0.27940291 0.99624800999999996 0.35100769999999998 0.33465064 0.19666069999999999 0.43917256999999998 0.19647223999999999 1.11590623999999994 1.06610834600000004 0.65854734000000004 0.19607705 1.021343946 -0.27939931000000001 0.49676594000000002 0.53393024 0.33457845000000003 0.15677675999999999 -0.45225578999999999 -0.063356876000000006 -0.45498031 -0.063356816999999996 -0.45577626999999998 -0.066045508000000003 -0.45692426000000003 -0.074263401000000007 -0.45770937 0.20024471999999999 -0.45770937 0.20296945999999999 -0.45691936999999999 0.19906636999999999 -0.34263724000000001 -0.19633687 0.0071731247000000001 -0.19638807 0.0071319379000000004 -0.47728231999999998 -0.45905262000000002 -0.40668166 0.016114946000000002 -0.47473773000000002 -0.45693033999999999 -0.41543521999999999 0.0094233862999999994 -0.19893369 -0.4590438 0.54291635999999999 0.018406118999999999 -0.19638973000000001"
-		+ " 0.059691131000000001 -0.19639570000000001 -0.45693117 -0.45438402999999999 -0.82098453999999998 0.20252538 0.15544499000000001 -0.44891261999999998 -0.820988 0.28753658999999998 -0.45692450000000001 0.67852305999999996 -0.45145469999999999 0.19895382 -0.34267800999999998 -0.47723112000000001 -0.82098108999999997 0.12516083 -0.50433612000000005 -0.54863881999999997 -0.82099140000000004 0.36490113000000002 -0.77190924000000005 0.36490329999999999 0.013494641999999999 -0.92515892 0.67592275000000002 -1.05766951999999992 0.48321818999999999 -1.05756747700000009 0.30108057999999999 -1.05796313299999989 0.14072994999999999 -1.05803346599999992 -0.011685522 -1.05785870599999998 -0.17688005000000001 -1.0574470760000001 0.0017153203999999999 -0.90097541000000003 0.74730026999999999 -1.0410523410000001 0.56069762000000001 -1.04221415499999992 -0.40000754999999999 -1.45262742 -0.40636234999999998 -1.45250666000000006 -0.43127114 -1.45256245000000006 -0.43762582999999999 -1.45268035000000006 -0.44398206000000001 -1.4529"
-		+ "3069000000008 -0.45672697000000001 -1.45347666999999992 -0.46310729 -1.45373606999999994 -0.46949869 -1.4538641000000001 0.030348066 -0.92334985999999997 0.041016571000000002 -0.90979725 0.054992378000000001 -0.94327300999999997 0.065433577000000007 -0.93057274999999995 -0.099636062999999997 -1.12420917000000009 -0.17797420999999999 -1.06536638700000008 -0.097386165999999996 -1.11657453000000007 -0.092523381000000002 -1.10162234000000003 -0.090283528000000002 -1.09418547199999994 -0.089180260999999997 -1.0865654950000001 -0.088964908999999995 -1.056569219 -0.089778795999999994 -1.04893803600000002 -0.17029177000000001 -1.12713956999999998 -0.1751229 -1.11225127999999995 -0.17735766 -1.1046457300000001 -0.17843680000000001 -1.09673750400000003 0.0053677708000000003 -0.89727831000000002 -0.50103777999999999 -0.68366461999999995 0.0081928074 -0.88665974000000003 0.0076294839000000001 -0.87989901999999998 -0.4061535 -0.68367559 -0.43121165 -0.68367392000000005 -0.033949002999999998 -0.87836813999999996 -0.0350406"
-		+ "64999999999 -0.88588469999999997 -0.032432414999999999 -0.89830089000000002 -0.029179551000000001 -0.90315962000000005 -0.024013504000000001 -0.90518171000000003 -0.0035348357999999999 -0.90199220000000002 -0.37417191 -0.68367582999999998 -0.37417762999999998 -0.78653996999999998 -0.50118547999999996 -1.29851055000000004"
-		)
-		2 "GuitarCase1:polyTweakUV20" "uvtk[500:554]" (" -0.50095957999999996 -1.45386266999999991 -0.50102084999999996 -1.17328130999999991 -0.50104671999999995 -1.04342687100000009 -0.50105661000000001 -0.91695130000000002 0.039469056000000002 -0.81355261999999995 0.071529104999999996 -0.81580554999999999 -0.026535726999999999 -0.77629864000000004 0.072223559000000007 -0.92236375999999998 0.068739607999999994 -0.88183336999999995 -0.035777137000000001 -0.92818677000000005 0.023543815999999999 -0.93159848000000001 -0.044896274999999999 -0.92220252999999996 -0.052396610000000003 -0.91460388999999997 -0.060312219 -0.89562355999999999 -0.061719768000000001 -0.88566297000000005 0.047815442 -0.90155410999999996 0.035848736999999999 -0.89102906000000004 0.013494641999999999 -0.92515892 0.064432874000000001 -1.04222917599999998 -0.091740086999999998 -1.04147362700000001 0.21772848 -1.0409225230000001 0.38077246999999997 -1.04120659800000004 -0.011063554999999999 0.65569186000000002 0.039060891 0.059407420000000002 0.0017675471 0.65569341000000003 0.0081747025000000004 0"
-		+ ".65569418999999995 0.014581488 0.65569478000000003 -0.087456464999999997 0.65569049000000001 -0.081049219000000006 0.65569036999999997 -0.074642300999999994 0.65569001000000005 -0.061811290999999997 0.65568948000000005 -0.055403262000000002 0.65568923999999995 -0.048995569000000003 0.65568923999999995 -0.023879688 0.65569060999999995 0.039704627999999999 0.53462821000000005 0.039699204000000002 0.65569686999999999 0.039716667999999997 0.38089385999999997 0.039762981000000003 0.23262995 0.039779610999999999 0.080604075999999997 0.038888237999999999 -0.063211448000000003 0.040271699000000001 -0.197926 0.15483694000000001 -0.02473289 0.16292365 0.10720631 0.17619456 0.072691269000000003 0.061594917999999999 -0.080547414999999997 0.096166283000000005 -0.042415886999999999 0.0035195033999999999 0.056501068000000002 0.015668660000000001 -0.016991839000000002 0.023335750999999998 -0.0065571963999999996 0.071750432000000003 -0.018454120000000001 0.073707908000000003 -0.031254603999999998 0.053927823999999999 -0.09098"
-		+ "3190000000005 0.041130736000000001 -0.092941186999999995 0.015948743000000001 -0.086752153999999998 0.0055131605000000002 -0.079086259000000006"
-		)
-		2 "GuitarCase1:polyTweakUV32" "uvTweak" " -s 546"
-		2 "GuitarCase1:polyTweakUV32" "uvtk[0:249]" (" -type \"float2\" 0.12892464000000001 0.80216849000000001 0.13645737999999999 0.81163609000000003 0.12947824999999999 1.19574796999999999 0.12040175 1.20402955999999994 0.76554798999999996 1.16758107999999994 0.77775097000000004 1.16278802999999997 0.72195505999999998 0.79741865000000001 0.72882824999999996 0.78699653999999997 0.22018641 -0.75725286999999997 0.93266654000000004 -0.57793002999999998 1.01502835799999991 -0.57888258000000004 0.061549429000000003 -0.63939756000000003 0.28931287 -0.63938302000000002 0.28931691999999998 -0.669025 1.19997858999999996 -0.55025542000000005 0.63241296999999996 -0.63933629000000003 1.11835240999999996 0.098004862999999998 0.53215140000000005 0.41772144999999999 0.80085432999999995 -0.025644176000000001 0.61512416999999997 0.44652206 0.12507993000000001 -0.22977750999999999 -0.59466874999999997 -0.66907983999999998 -0.25156846999999999 -0.66905837999999995 -0.25157048999999998 -0.63941692999999999 0.15295645999999999 -0.71834045999999996 0.96643060000000003 -0.431510390000"
-		+ "00002 0.12510397000000001 -0.62438905 -0.19947788 -0.66905515999999998 0.23722225 -0.63938695000000001 0.37276945 -0.71832686999999995 1.0899829860000001 -0.57974923 1.19991588999999998 -0.93263834999999995 1.24758589000000009 -1.02746248200000001 1.57372653000000007 0.58070701000000002 1.05776906000000004 -0.38557534999999998 1.47849143000000005 0.32972415999999999 0.64699554000000004 -0.66897552999999998 1.24766576000000007 -0.53615785000000005 1.59457110999999996 -0.46426501999999997 0.89060342000000003 0.36224075999999999 1.10632122000000011 -0.38557529000000001 1.42612219000000007 -0.38556870999999998 1.6131612099999999 0.51257271000000004 1.61315501000000006 0.42606828000000002 1.5996776800000001 -0.70541328000000003 1.24760794999999991 -0.88224214000000001 1.21091210999999999 -0.15907642 0.63188171000000004 -0.16119778000000001 1.2171813199999999 -0.045259516999999999 -0.60610217 -0.63943892999999996 0.93080109 -0.045262615999999999 0.89584403999999995 -0.15624170000000001 1.18823433000000001 0.0560439"
-		+ "85999999997 0.66034895000000005 -0.068912938000000007 0.86408728000000001 -0.062783725999999998 0.95974499000000002 0.056041556999999999 0.27771541 -0.63938408999999996 0.12510145 -0.58389597999999998 1.19992173000000002 -0.89345783000000001 1.43745399000000007 0.3297272 1.09551227100000004 -0.38557541000000001 -0.23997104 -0.66905767000000005 -0.24247005999999999 -0.64162332 0.39811047999999999 -0.58167142000000005 0.28681572999999999 -0.64158994000000003 0.12759762999999999 -0.57508534 -0.24907114999999999 -0.66960763999999995 1.09784007100000003 -0.43099871000000001 1.43523693000000008 0.60640866000000004 1.10399401000000008 -0.38763239999999999 1.245471 -0.89104753999999997 1.4285252100000001 0.33225866999999998 1.20045387999999997 -0.88465183999999997 0.28021583 -0.66957462000000001 0.40058574000000002 -0.22591950999999999 0.64084613000000001 -0.66897695999999995 -0.59995275999999997 -0.63943868999999998 1.43104707999999992 -0.43150395000000002 1.59563816000000003 -0.45886648000000002 1.24766445000000004"
-		+ " -0.542108 0.39779034000000002 -0.22925672 1.20029509000000001 -0.54754787999999999 1.20029556999999998 -0.54480708 0.39779016 -0.22642393 -0.59589528999999997 -0.63993222000000005 -0.59872787999999999 -0.63993233000000005 1.42990529999999993 -0.43119878 1.42726481000000005 -0.43119884000000003 1.59891402999999999 -0.45995881999999999 1.59637915999999991 -0.45995905999999998 1.24686873000000009 -0.54755591999999997 1.24686921000000006 -0.54481517999999995 0.39755180000000001 -0.051035438000000002 0.3966172 -0.049509409999999997 0.38881316999999999 -0.049935582999999999 0.019255900999999999 0.11668273999999999 0.39634648 -0.047857287999999998 0.074333169000000004 0.11669981 0.39660891999999998 -0.044506464000000003 0.068152972000000006 0.11669723999999999 0.39708701000000002 -0.042886604000000002 0.065066553999999999 0.11669604 0.39829346999999998 -0.041398923999999997 0.3902292 -0.039843957999999999 0.40024456000000003 -0.025690353999999999 0.37703022000000003 -0.022209844999999999 0.38487287999999997 -0.0233"
-		+ "77307 0.39251860999999999 -0.024554603000000001 0.37475028999999999 -0.037630957 0.40802350999999998 -0.043119136000000002 0.046794835 0.11668998 0.38259163000000002 -0.038774232999999998 0.40868529999999997 -0.045038316000000002 0.043708030000000002 0.11668919 0.40841665999999999 -0.049147668999999998 0.037528038 0.11668776 0.40747412999999999 -0.050939503999999997 0.034440547000000002 0.11668700999999999 0.40554431000000002 -0.051540975000000003 0.031354181000000002 0.11668618 0.080523834000000002 0.067039236000000002 0.077437146999999998 0.067038 0.077456876999999993 0.0040689706999999997 0.080543562999999999 0.0040701627999999998 0.074350006999999996 0.067036553999999998 0.074370331999999997 0.0040676743 0.068168797000000003 0.067033798000000006 0.068189747999999994 0.0040649027000000003 0.065082259000000003 0.067032440999999998 0.065102167000000002 0.0040636062999999997 0.061996273999999997 0.067031249000000001 0.062015704999999997 0.0040625482999999997 0.049897379999999998 0.067027390000000006 0.0499178"
-		+ "84000000003 0.0040588676999999997 0.046811584000000003 0.067026540999999995 0.046831731000000001 0.0040580928000000004 0.043724719000000002 0.067025899999999999 0.043743852999999999 0.0040575265999999999 0.037544428999999997 0.067024738 0.037563443000000002 0.0040564388000000002 0.034456551000000002 0.067024141999999995 0.034477322999999997 0.0040558577000000002 0.031370334 0.067023321999999996 0.031391107000000001 0.0040551870999999996 0.077462955999999999 -0.057000224000000002 0.080549642000000005 -0.056998525000000001 0.074377454999999995 -0.057002458999999998 0.068198181999999996 -0.057007078000000003 0.065113283999999994 -0.057008956 0.062028460000000001 -0.057009939000000003 0.049937136 -0.057013247000000003 0.046852472999999999 -0.057013783999999998 0.043768111999999998 -0.057013366000000003 0.037590861000000003 -0.057011726999999998 0.034506828000000003 -0.057010774 0.031421296000000001 -0.057010207 0.077412232999999997 -0.11973572 0.080499276999999994 -0.11972194999999999 0.074327268000000002 -0.1197"
-		+ "5175 0.068155564000000002 -0.1197845 0.065078980999999994 -0.1197978 0.062003336999999999 -0.11980656000000001 0.049954898999999997 -0.11982068 0.046880606999999998 -0.11981139 0.043806734999999999 -0.11979756 0.037644595000000003 -0.11976439 0.034562528000000002 -0.11974704 0.031477980000000003 -0.11973187 0.077418134 -0.18012431000000001 0.080503865999999993 -0.18004289000000001 0.074339664999999999 -0.18029096999999999 0.068172551999999997 -0.18064767000000001 0.065094746999999994 -0.18081269 0.062009863999999998 -0.18088784999999999 0.049914606 -0.18088725 0.046828809999999998 -0.18080989 0.043747785999999997 -0.18064284 0.037570595999999998 -0.18028158 0.034489453000000003 -0.18011426999999999 0.031401656999999999 -0.18003240000000001 0.077414617000000005 -0.25428151999999998 0.080495521 -0.25420046000000002 0.074360438000000001 -0.25451975999999998 0.068244136999999996 -0.25505023999999998 0.065166927999999999 -0.25529474000000002 0.062054418 -0.25538892000000002 0.049811371 -0.25533789000000001 0.04669"
-		+ "8156999999997 -0.25524460999999998 0.043621961000000001 -0.25500095 0.037503421000000002 -0.25447065000000002 0.034448177000000003 -0.25423211000000001 0.031365088999999999 -0.25415057000000002 -0.21547082000000001 -0.045892421000000003 -0.16726089 -0.046578411 -0.21297981999999999 -0.044906693999999997 -0.2080774 -0.042781483000000002 -0.20562258 -0.041797201999999999 -0.20303789 -0.041365753999999998 -0.19282904000000001 -0.041281413000000003 -0.19024463999999999 -0.041725796000000002 -0.18778971 -0.042718034000000002 -0.18288674999999999 -0.044854659999999998 -0.18039611 -0.045848284000000003 -0.17775556000000001 -0.046306554 -0.21655216999999999 0.020128391999999998 -0.16637051 0.019911073000000001 -0.21394244000000001 0.019946538 -0.20870533999999999 0.019528258999999999 -0.20606419000000001 0.019341576999999999 -0.20335716000000001 0.019272674 -0.19268294999999999 0.019165295999999998 -0.18997618999999999 0.019225257999999999 -0.18733588000000001 0.019401807 -0.18210145999999999 0.019794885000000002 -0."
-		+ "17949238000000001 0.019963122999999999 -0.17683139 0.020006038 -0.2160193 0.075359478999999993 -0.16650772 0.075239629000000002 -0.21337959000000001 0.075386852000000004 -0.20816805999999999 0.075426430000000003 -0.20556948 0.075437292000000003 -0.20296004000000001 0.075444742999999995 -0.19272824999999999 0.075528025999999998 -0.19011876 0.075505300999999997 -0.18752018000000001 0.075481191000000003 -0.18230995999999999 0.075420886000000006 -0.17967173 0.075385525999999994 -0.17700526 0.075352251999999995 -0.21622839999999999 0.1277886 -0.16638744 0.12778690000000001 -0.21372732999999999 0.12800147000000001 -0.20869204 0.12849337999999999 -0.20611980999999999 0.12872233999999999 -0.20336676000000001 0.12879619 -0.19241037999999999 0.12863664 -0.18965361 0.12858559 -0.18707493 0.12837081 -0.18201956 0.12790222000000001 -0.17950615 0.12769728999999999 -0.17685345 0.12765019 -0.078806906999999995 0.25437285999999998 -0.079031615999999999 0.19698545000000001 -0.078528792 0.25130936999999998 -0.077934354999999997"
-		+ " 0.24520202999999999 -0.077661364999999996 0.24217421 -0.077524036000000004 0.23914990999999999 -0.077437907 0.22732015999999999 -0.077575296000000002 0.22429805999999999 -0.077847391000000002 0.22127374999999999 -0.078438908000000002 0.21517592999999999"
-		)
-		2 "GuitarCase1:polyTweakUV32" "uvtk[250:499]" (" -0.078713089 0.21211851000000001 -0.078856140000000005 0.20904845 -0.014286784 0.25475421999999998 -0.014445154 0.19678423 -0.013928441 0.25172119999999998 -0.01314893 0.24563476000000001 -0.012783612999999999 0.24257223 -0.012629177 0.23946063000000001 -0.012675788 0.22721570999999999 -0.012819077999999999 0.22410252999999999 -0.013174201999999999 0.22103706000000001 -0.013932673 0.21494249000000001 -0.014282194999999999 0.21190402 -0.014428524 0.20883334000000001 0.056805163999999998 0.25467121999999998 0.056924134000000001 0.19686258000000001 0.056732088 0.25159918999999997 0.056582599999999997 0.24546166999999999 0.056516439000000002 0.24239862000000001 0.056484251999999999 0.23933657999999999 0.056512623999999997 0.22733471 0.056548029 0.22427306 0.056617766999999999 0.22121072 0.056772619000000003 0.2150746 0.056849688000000002 0.21200287000000001 0.056891531000000002 0.20892698000000001 0.12939358000000001 0.25473817999999998 0.12941551000000001 0.19681334 0.12939376 0.25166377000000001 0.12939501 0.2"
-		+ "4550873000000001 0.12939602 0.24243555999999999 0.12939661999999999 0.23936331 0.12940270000000001 0.22732242999999999 0.12940329 0.22425026000000001 0.12940335 0.22117627000000001 0.12940449000000001 0.21502003 0.12940508000000001 0.21194571000000001 0.12940662999999999 0.20887041000000001 0.20055106 0.254776 0.20055917000000001 0.19680732000000001 0.20055237000000001 0.25169891 0.20055524 0.24553955 0.20055655 0.24246309999999999 0.20055767999999999 0.23938698 0.20055929 0.22732943 0.20055923000000001 0.22425333 0.20055881 0.22117667999999999 0.20055816000000001 0.21501765 0.20055774000000001 0.21194025999999999 0.20055774000000001 0.20886420999999999 0.27435425000000002 0.25478624999999999 0.2743623 0.19681858999999999 0.27435532000000001 0.25171160999999997 0.27435723000000001 0.24555083999999999 0.27435806000000001 0.24247488 0.27435872 0.23939803000000001 0.27436039000000001 0.22733986 0.27436057000000003 0.22426343000000001 0.27436057000000003 0.22118747 0.27436057000000003 0.21502697000000001 0.274360"
-		+ "57000000003 0.21195275 0.27436069000000002 0.20887660999999999 0.33247526999999999 0.25479528000000001 0.41386541999999998 0.20290905000000001 0.38011761999999999 0.22478851999999999 0.38074920000000001 0.22161795000000001 0.38112470999999998 0.22024161 0.38144830000000002 0.21900058 0.39979330000000002 0.20592464999999999 0.40066156000000003 0.20611536999999999 0.401831 0.20582618999999999 0.40462962000000002 0.20523113000000001 0.40610495000000002 0.20484303000000001 0.40762511000000001 0.20445253999999999 0.39850100999999999 -0.048338386999999997 0.39878657000000001 -0.044251744000000003 0.40181603999999999 0.222139 0.38820174000000002 0.22561065999999999 0.38891426000000001 0.22195878999999999 0.39859023999999998 0.22213767000000001 0.40586844 -0.048954431 0.40612557999999999 -0.044824245999999998 0.40509430000000002 0.21296851 0.40266754999999999 0.21623912000000001 0.39916262000000002 0.21508711999999999 0.40098682000000002 0.21319276000000001 0.38915786000000002 0.21992155999999999 0.38923301999999999 "
-		+ "0.21772236 0.396557 0.21431649 0.39878627999999999 0.2137088 0.40892847999999998 0.21248597 0.40703805999999998 0.21274970000000001 0.40403113000000002 0.22267592 0.41749914999999999 0.20990655999999999 0.37732782999999998 0.20953791999999999 0.39440784000000001 0.2002784 0.38996086000000002 0.20442326 0.38465735000000001 0.20594577 -0.48563298999999999 0.78705126000000003 0.76386350000000003 1.18064426999999994 -0.49796435 1.17759287000000001 -0.59872645000000002 -0.66940748999999999 -0.59589367999999998 -0.66940743000000003 1.42612301999999991 -0.43150400999999999 -0.59995156999999999 -0.66908020000000001 0.63521534000000002 -0.66930473000000001 0.63804786999999996 -0.66930413 1.19997989999999999 -0.54209942 0.63241702 -0.66897845 1.10632229000000004 -0.43151065999999999 1.55049097999999996 -0.70001954 1.20045292000000003 -0.89104044000000004 0.27771743999999998 -0.66902620000000002 1.19992340000000008 -0.88223428000000004 0.28681853000000002 -0.66957396000000002 -0.24246827000000001 -0.66960721999999995 1."
-		+ "09551227100000004 -0.43151077999999998 1.10399449000000005 -0.43099859000000001 1.05776894099999996 -0.43151065999999999 0.23722422000000001 -0.66902905999999995 1.43677889999999997 -0.43150382999999998 0.061550978999999999 -0.66903924999999997 0.13923118000000001 -0.66903447999999999 -0.10148496999999999 -0.66904944 -0.023805803 -0.66904432000000003 0.63804316999999999 -0.63982939999999999 0.63521033999999998 -0.63982987000000002 0.64084028999999998 -0.63933492000000003 0.40058586000000002 -0.22976081000000001 0.40060666 -0.57286095999999997 0.39811005999999999 -0.57506877000000001 0.40060738000000001 -0.58387882000000002 0.28021309 -0.64159060000000001 0.40060987999999997 -0.62437195000000001 0.45664730999999997 0.43611645999999998 0.36139241 0.41095471 0.25665641 0.39114237000000002 0.13922941999999999 -0.63939321000000005 0.12630045000000001 -0.22927344999999999 0.12630027999999999 -0.22644085 0.12507977000000001 -0.22593699 -0.59467064999999997 -0.63943844999999999 0.93707298999999999 -0.1590794600000000"
-		+ "1 0.12510075000000001 -0.57287770999999998 -0.24907276 -0.64162368000000003 0.12759804999999999 -0.58168799000000004 -0.23997294999999999 -0.63941627999999995 -0.19947978999999999 -0.63941371000000002 0.78587728999999995 0.41089487000000002 0.69062959999999995 0.43608350000000001 -0.10148676 -0.63940805000000001 1.02962672699999991 0.098003849000000004 0.53215522000000004 0.44653407000000001 0.89060771000000005 0.39105308 0.13111210000000001 -0.22474319000000001 0.64698887000000005 -0.63933408000000003 0.39455393 -0.22472659 -0.60610074000000003 -0.66908056000000005 0.25665252999999999 0.36233019999999999 1.59893692000000009 -0.70291119999999996 1.59640193000000008 -0.70291137999999997 1.59566151999999994 -0.70541357999999998 1.24766302000000007 -0.55026335000000004 1.4262872900000001 0.32972804 1.24547194999999999 -0.88465886999999999 1.43521655000000004 0.33225819000000001 1.24760615999999991 -0.89346492 1.24760019999999994 -0.93264537999999997 1.57370995999999996 0.35793889000000001 1.42990458000000009 -0."
-		+ "38633430000000002 1.42726408999999999 -0.38633435999999999 1.43104661000000011 -0.38556865000000001 1.07859528099999991 0.60896510000000004 1.42630827000000004 0.60893898999999996 1.42854558999999992 0.60640912999999996 1.09783959400000009 -0.38763239999999999 1.43747472999999992 0.60893816000000001 1.4785121699999999 0.60893505999999997 0.96643053999999995 -0.38557506000000002 0.93211657000000003 -0.62548298000000002 1.01447856400000003 -0.62643534000000001 0.079351596999999996 -0.33376977000000002 0.032395030999999998 -0.33384060999999998 0.035443126999999998 -0.33335062999999998 0.038333236999999999 -0.33226275 0.044039372 -0.32991823999999997 0.046905462000000002 -0.32883131999999998 0.049918719 -0.32836272999999999 0.061830959999999997 -0.32829281999999999 0.064843602 -0.32876204999999997 0.067709483000000001 -0.32984786999999999 0.073413558000000004 -0.33219187999999999 0.076301962000000001 -0.33327987999999997 -0.16721749 0.18560164000000001 -0.17770657000000001 0.18525111999999999 -0.18034902 0.184827"
-		+ "24 -0.18288769999999999 0.18401618 -0.18784675000000001 0.18232725999999999 -0.19030920000000001 0.18154935999999999 -0.19283006 0.18116635 -0.20274397999999999 0.18088444000000001 -0.20526716 0.18125477000000001 -0.20773289 0.18201706000000001 -0.21270463000000001 0.18367523999999999 -0.215251 0.18447258999999999 0.33248332000000003 0.19374973000000001 0.080507263999999995 0.11670229 0.27436276999999998 0.19374225 0.20055977 0.19373082999999999 0.12941778000000001 0.19373733000000001 0.056904643999999997 0.19378611000000001 -0.014316706 0.19371675999999999 -0.16455661999999999 0.18538560000000001 -0.078970401999999995 0.19390695999999999 -0.16374480999999999 0.12788053999999999 -0.16383958000000001 0.075222849999999994 -0.16371243999999999 0.019812885999999998 -0.16460520000000001 -0.046249811000000002 0.020306582 -0.33406952000000001 0.019263112999999998 -0.25423544999999997 0.019296909000000001 -0.17995407999999999 0.019381577000000001 -0.11968442999999999 0.019325996000000002 -0.057009939000000003 0.01929"
-		+ "2468 0.0040516852999999999 0.019271309 0.067019910000000002 0.30554333 -0.75724775 -0.02380765 -0.63940286999999996 1.59965456000000006 -0.45886611999999999 1.0785743000000001 0.32975410999999999 0.69062519 0.40727176999999998 0.785873 0.3820827 0.61512023000000005 0.41770971000000001 0.36138852999999999 0.38214257000000001 0.45664378999999999 0.40730529999999998 0.72061615999999995 -0.028256244999999999 0.89948106000000005 -0.26434687000000001 0.63029491999999998 -0.26434426999999999 0.33247610999999999 0.25171905999999999 0.41550662999999999 0.20261854000000001 0.38000592999999999 0.22653586000000001 0.33247736 0.24555937999999999 0.33247808000000001 0.24248333 0.33247866999999998 0.23940665 0.33248021999999999 0.22734863 0.33248058000000003 0.22427264 0.33248082000000001 0.22119612 0.33248112000000002 0.21503663000000001 0.33248135000000001 0.21196008 0.33248165000000002 0.20888387999999999 0.33248290000000003 0.19682591999999999"
-		)
-		2 "GuitarCase1:polyTweakUV32" "uvtk[500:545]" (" 0.38871059000000002 -0.047829035999999998 0.077420160000000002 0.11670107 0.38921842000000001 -0.043658006999999999 0.38971451000000001 -0.041660529000000002 0.061979703999999997 0.11669493 0.049882061999999998 0.11669085999999999 0.38230463999999997 -0.040726285000000001 0.38201752 -0.042677346999999997 0.38144298999999998 -0.046581928000000002 0.38115594000000003 -0.048532221 0.380869 -0.0504818 0.38904843 -0.052000734999999999 0.37974437999999999 -0.058123241999999999 0.40100165999999998 -0.017809827 0.40868029 -0.018564957999999999 0.40790381999999997 -0.026462249 0.37302723999999998 -0.049328033 0.37190237999999998 -0.056969415000000002 0.37331423000000002 -0.047378663000000001 0.37360141000000002 -0.045428696999999997 0.37417646999999998 -0.041525672999999999 0.37446341 -0.039578031999999999 0.40619560999999998 -0.042202625000000001 0.37934901999999998 0.20037569 0.37377748 0.20495289999999999 0.37516751999999998 0.22151694999999999 0.37096813000000001 0.21204026000000001 0.41586611000000001 0.21066225"
-		+ "999999999 0.40462521000000001 0.21728331000000001 0.40497968000000001 0.21633483000000001 0.40414986000000003 0.21512902 0.40076276999999999 0.21324572999999999 0.39665958000000001 0.22290473999999999 0.39798739999999999 0.22424679 0.39938523999999997 0.22437151999999999 0.40193292000000003 0.22416869 0.40325758 0.22393757 0.38766232 0.22724005999999999 1.19998084999999999 -0.53614938000000001 1.59459292999999991 -0.70001524999999998 1.43677842999999994 -0.38556853000000002 1.55046927999999995 -0.46426909999999999 1.08943283600000007 -0.62730235000000001 1.1999012200000001 -1.02745521099999992 0.85716289000000001 -0.62461668000000004 0.85771286000000002 -0.57706380000000002"
-		)
-		3 "GuitarCase1:groupId20.groupId" "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "GuitarCase1:groupId18.groupId" "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "|GuitarCase1:GuitarCase|GuitarCase1:Latch1|GuitarCase1:Latch1Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "GuitarCase1:groupId17.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "GuitarCase1:groupId19.groupId" "|GuitarCase1:GuitarCase|GuitarCase1:Latch2|GuitarCase1:Latch2Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|GuitarCase1:GuitarCase|GuitarCase1:Latch2|GuitarCase1:Latch2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|GuitarCase1:GuitarCase|GuitarCase1:Latch2|GuitarCase1:Latch2Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "GuitarCase1:groupId19.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "GuitarCase1:groupId18.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|GuitarCase1:GuitarCase|GuitarCase1:Handle|GuitarCase1:HandleShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|GuitarCase1:GuitarCase|GuitarCase1:Shell|GuitarCase1:ShellShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "GuitarCase1:groupId17.groupId" "|GuitarCase1:GuitarCase|GuitarCase1:Latch|GuitarCase1:LatchShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|GuitarCase1:GuitarCase|GuitarCase1:Latch|GuitarCase1:LatchShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "|GuitarCase1:GuitarCase|GuitarCase1:Latch|GuitarCase1:LatchShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "GuitarCase1:groupId17.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|GuitarCase1:GuitarCase|GuitarCase1:Shell|GuitarCase1:ShellShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "GuitarCase1:groupId21.groupId" "|GuitarCase1:GuitarCase|GuitarCase1:Latch2|GuitarCase1:Latch2Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|GuitarCase1:GuitarCase|GuitarCase1:Latch2|GuitarCase1:Latch2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|GuitarCase1:GuitarCase|GuitarCase1:Latch2|GuitarCase1:Latch2Shape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|GuitarCase1:GuitarCase|GuitarCase1:Handle|GuitarCase1:HandleShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "GuitarCaseRN" "|GuitarCase1:GuitarCase|GuitarCase1:Latch|GuitarCase1:LatchShape.instObjGroups" 
 		"GuitarCaseRN.placeHolderList[1]" ""
@@ -853,8 +831,6 @@ createNode reference -n "GuitarCaseRN";
 		"GuitarCaseRN.placeHolderList[5]" ":initialShadingGroup.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode materialInfo -n "materialInfo1";
-	rename -uid "70AE00D2-48BA-5C2B-EEC8-88A09C80BE29";
 createNode reference -n "TVScene2RN";
 	rename -uid "995EBBA9-497D-961F-CA85-2F972730F6A6";
 	setAttr -s 2 ".phl";
@@ -863,33 +839,31 @@ createNode reference -n "TVScene2RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"TVScene2RN"
 		"TVScene2RN" 0
-		"TVScene2RN" 15
+		"TVScene2RN" 14
 		2 "|TVScene2:TV" "translate" " -type \"double3\" -3.20487959340963968 7.15700113979929586 -4.58283278767395252"
 		
 		2 "|TVScene2:TV" "rotate" " -type \"double3\" 0 8.79919164358165595 0"
-		2 "|TVScene2:TV|TVScene2:TVRing" "translate" " -type \"double3\" 0.023809638884593233 0 -0.15381526430252562"
-		
-		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvPivot" " -type \"double2\" 0.9341762363910675 0.87028211355209351"
+		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvPivot" " -type \"double2\" 0.95434703907340102 0.8513730938528099"
 		
 		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "uvst[0].uvsp[0:67]" 
-		(" -s 68 -type \"float2\" 0.96489108000000001 0.81876802000000004 0.95347667000000003 0.81890439999999998 0.94550192 0.82707213999999996 0.94563830000000004 0.83848655000000005 0.95380591999999997 0.84646129999999997 0.96522032999999996 0.84632485999999996 0.97319513999999996 0.83815724000000003 0.97305876000000002 0.82674276999999996 0.92872882000000001 0.88343548999999999 0.92102348999999994 0.87573104999999996 0.92102289000000004 0.86483473 0.92872732999999996 0.85712933999999996 0.93962371 0.85712873999999994 0.94732897999999999 0.86483317999999998 0.94732963999999997 0.87572961999999999 0.93962520000000005 0.88343495000000005 0.99630302000000004 0.86176257999999994 0.99630373999999999 0.85538667000000002 0.99010902999999995 0.85538601999999997 0.99010830999999999 0.86176187000000004 0.99630445000000001 0.84901077000000003 0.99010973999999996 0.84901011000000004 0.99630516999999996 0.84263491999999995 0.99011046000000003 0.8426342 0.99630587999999998 0.83625901000000002 0.99011110999999996 0.83625828999999996"
-		+ " 0.99630660000000004 0.82988309999999998 0.99011188999999999 0.82988238000000003 0.99630724999999998 0.82350718999999994 0.99011260000000001 0.82350646999999999 0.99630803000000001 0.81713128000000002 0.99011326 0.81713057 0.99630874000000003 0.81075536999999998 0.99011397000000001 0.81075465999999996 0.98258972 0.81067312000000002 0.95030797 0.81150579 0.98877930999999997 0.85550331999999996 0.92578912000000002 0.89053375000000001 0.93802965000000005 0.82408106000000003 0.98878001999999998 0.84909904000000003 0.93823962999999999 0.84165524999999997 0.98878074000000005 0.84269475999999999 0.95081490000000002 0.85393357000000003 0.98878144999999995 0.83629047999999995 0.96838908999999995 0.85372353000000001 0.98878222999999998 0.82988620000000002 0.98066741000000002 0.84114825999999998 0.98878294 0.82348191999999998 0.98045742999999996 0.82357407000000005 0.98878372000000003 0.81707770000000002 0.94256567999999996 0.89053272999999999 0.98877853000000004 0.8619076 0.95442784000000003 0.87866926000000001 0.95442"
-		+ "693999999995 0.86189263999999999 0.94256335000000002 0.85003048000000003 0.92578678999999997 0.85003143999999997 0.91392463000000002 0.86189497000000004 0.91392552999999999 0.87867158999999995 0.98258895000000002 0.81707739999999995 0.96788209999999997 0.81129574999999998 0.98258822999999995 0.82348167999999999 0.98258752000000005 0.82988596000000003 0.98258679999999998 0.83629017999999999 0.98258603 0.84269446000000003 0.98258531000000005 0.84909873999999996 0.98258453999999995 0.85550302 0.98258382 0.86190723999999996 0.98878443000000005 0.81067341999999998"
+		(" -s 68 -type \"float2\" 0.96489108000000001 0.81876802000000004 0.95347667000000003 0.81890439999999998 0.94550192 0.82707213999999996 0.94563830000000004 0.83848655000000005 0.95380591999999997 0.84646129999999997 0.96522032999999996 0.84632485999999996 0.97319513999999996 0.83815724000000003 0.97305876000000002 0.82674276999999996 0.92831474999999997 0.88443530000000004 0.92002373999999998 0.87614524000000005 0.92002307999999999 0.86442065000000001 0.92831313999999998 0.85612959 0.94003778999999998 0.85612893000000001 0.94832872999999995 0.86441897999999995 0.94832945000000002 0.87614369000000003 0.94003939999999997 0.88443470000000002 0.99630302000000004 0.86176257999999994 0.99630373999999999 0.85538667000000002 0.99010902999999995 0.85538601999999997 0.99010830999999999 0.86176187000000004 0.99630445000000001 0.84901077000000003 0.99010973999999996 0.84901011000000004 0.99630516999999996 0.84263491999999995 0.99011046000000003 0.8426342 0.99630587999999998 0.83625901000000002 0.99011110999999996 0.83625828"
+		+ "999999996 0.99630660000000004 0.82988309999999998 0.99011188999999999 0.82988238000000003 0.99630724999999998 0.82350718999999994 0.99011260000000001 0.82350646999999999 0.99630803000000001 0.81713128000000002 0.99011326 0.81713057 0.99630874000000003 0.81075536999999998 0.99011397000000001 0.81075465999999996 0.98258972 0.81067312000000002 0.95030797 0.81150579 0.98877930999999997 0.85550331999999996 0.92515159000000002 0.89207303999999998 0.93802965000000005 0.82408106000000003 0.98878001999999998 0.84909904000000003 0.93823962999999999 0.84165524999999997 0.98878074000000005 0.84269475999999999 0.95081490000000002 0.85393357000000003 0.98878144999999995 0.83629047999999995 0.96838908999999995 0.85372353000000001 0.98878222999999998 0.82988620000000002 0.98066741000000002 0.84114825999999998 0.98878294 0.82348191999999998 0.98045742999999996 0.82357407000000005 0.98878372000000003 0.81707770000000002 0.94320338999999997 0.89207196 0.98877853000000004 0.8619076 0.95596713 0.87930679 0.95596616999999995 0.861"
+		+ "25499000000005 0.94320088999999996 0.84849118999999995 0.92514914000000004 0.84849220999999997 0.91238534000000004 0.86125748999999996 0.91238629999999998 0.87930929999999996 0.98258895000000002 0.81707739999999995 0.96788209999999997 0.81129574999999998 0.98258822999999995 0.82348167999999999 0.98258752000000005 0.82988596000000003 0.98258679999999998 0.83629017999999999 0.98258603 0.84269446000000003 0.98258531000000005 0.84909873999999996 0.98258453999999995 0.85550302 0.98258382 0.86190723999999996 0.98878443000000005 0.81067341999999998"
 		)
 		2 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape" "displayFacesWithGroupId" 
 		" 104"
-		2 "|TVScene2:TV|TVScene2:TVBase" "translate" " -type \"double3\" 0.39151108203567059 0 -0.18014983534722825"
+		2 "|TVScene2:TV|TVScene2:TVBase" "translate" " -type \"double3\" 0.4676287954824177 0 -0.67188623961043792"
 		
 		2 "|TVScene2:TV|TVScene2:TVBase" "rotate" " -type \"double3\" 0 0 0"
 		2 "|TVScene2:TV|TVScene2:TVBase" "scale" " -type \"double3\" 1.01106498652176846 1.01106498652176846 0.95503574090061238"
 		
-		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvPivot" " -type \"double2\" 0.98268556594848633 0.95640802383422852"
+		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvPivot" " -type \"double2\" 0.96781766414642334 0.92353910207748413"
 		
 		2 "|TVScene2:TV|TVScene2:TVBase|TVScene2:TVBaseShape" "uvst[0].uvsp[0:91]" 
-		(" -s 92 -type \"float2\" 0.74238789000000005 0.84522635000000002 0.89172196000000004 0.84521341000000005 0.89172989000000003 0.93719476000000002 0.74239582000000004 0.93720769999999998 0.94302684000000003 0.90803902999999997 0.99272227000000002 0.90804510999999999 0.99180895000000002 0.90861875000000003 0.94385403000000001 0.90859181 0.99261575999999996 0.93848407 0.99178933999999996 0.93813205 0.94291305999999997 0.93903917000000003 0.94388121000000003 0.93812454000000001 0.96548515999999995 0.99486065000000001 0.90872246000000001 0.99496983999999999 0.90897523999999996 0.99466228000000001 0.96520209000000001 0.99455570999999998 0.96047020000000005 0.99175279999999999 0.91174018000000001 0.99174684000000002 0.91199039999999998 0.99144381000000004 0.96020514000000001 0.99146420000000002 0.90870755999999997 0.95984048 0.90898937000000002 0.96014600999999999 0.96046966 0.96142673000000001 0.9602195 0.96172975999999999 0.96559298000000005 0.95904951999999999 0.96524160999999997 0.95948045999999998 0.911739769999999"
-		+ "95 0.96142083 0.91200477000000002 0.96170937999999995 0.90047454999999998 0.93946390999999996 0.90038830000000003 0.84459954999999998 0.74004119999999995 0.83119315000000005 0.73416477000000002 0.84281837999999998 0.73412895 0.93930632000000003 0.98372965999999995 0.94201285000000001 0.98740834 0.99100149000000004 0.98680573999999999 0.94090468000000005 0.89458627000000002 0.94714056999999996 0.98378003000000003 0.97245877999999997 0.72440081999999995 0.94178092000000002 0.74014108999999995 0.71047360000000004 0.90577030000000003 0.84455824000000002 0.89459264000000005 0.83118515999999998 0.98736398999999997 0.94145118999999999 0.98644555 0.97189879000000001 0.90639835999999996 0.93942004000000001 0.74015582000000002 0.95191239999999999 0.89443052000000001 0.83121025999999998 0.72825229000000002 0.84527945999999998 0.72839480999999995 0.81712412999999995 0.72440081999999995 0.72062820000000005 0.89457834000000003 0.71502197000000001 0.90640175000000001 0.72272515000000004 0.90591359000000005 0.817587489999999"
-		+ "97 0.74020427 0.83119315000000005 0.90294593999999995 0.94364135999999998 0.98378003000000003 0.97420894999999996 0.99002641000000002 0.99487221000000003 0.72902489000000004 0.94735007999999998 0.98967349999999998 0.93851686000000001 0.98680586000000003 0.93858147000000003 0.90242612 0.83448756000000002 0.98736911999999999 0.99377459000000001 0.98945605999999997 0.99380409999999997 0.98372972000000003 0.93860710000000003 0.73168129000000004 0.83469212000000004 0.98736435 0.93854265999999997 0.98644531000000002 0.97547054 0.98955327000000004 0.93854296000000004 0.89462262000000004 0.81780344000000005 0.74023563000000003 0.81715906000000005 0.74011802999999998 0.72066319000000001 0.89456093000000003 0.72269844999999999 0.98425644999999995 0.97547035999999998 0.98425662999999997 0.97189862000000005 0.98164253999999995 0.93860710000000003 0.98164247999999998 0.94201285000000001 0.98390043000000005 0.93858134999999998 0.99257892000000003 0.93851709000000005 0.99257863000000002 0.94237791999999998 0.983900250000000"
-		+ "03 0.94090450000000003 0.99221534 0.99487239000000005 0.98159110999999999 0.97420888999999999 0.98159116999999996 0.97245872 0.99221557000000005 0.99196386000000003 0.73183929999999997 0.82770633999999998 0.98955285999999998 0.94145148999999995 0.98949682999999999 0.99100149000000004 0.90258413999999998 0.82766311999999997 0.98967313999999995 0.94237769000000005 0.72901684 0.71505224999999994 0.90294313000000004 0.71850895999999997 0.99002665000000001 0.99196362000000005"
+		(" -s 92 -type \"float2\" 0.74238789000000005 0.84522635000000002 0.89172196000000004 0.84521341000000005 0.89172989000000003 0.93719476000000002 0.74239582000000004 0.93720769999999998 0.94302684000000003 0.90803902999999997 0.99272227000000002 0.90804510999999999 0.99180895000000002 0.90861875000000003 0.94385403000000001 0.90859181 0.99261575999999996 0.93848407 0.99178933999999996 0.93813205 0.94291305999999997 0.93903917000000003 0.94388121000000003 0.93812454000000001 0.96164864000000005 0.99239480000000002 0.91116244000000002 0.99239748999999999 0.91140085000000004 0.99210845999999997 0.96138274999999995 0.99210739000000003 0.96047020000000005 0.99175279999999999 0.91174018000000001 0.99174684000000002 0.91199039999999998 0.99144381000000004 0.96020514000000001 0.99146420000000002 0.91120327000000001 0.96113557000000005 0.91146797000000002 0.96142351999999998 0.96046966 0.96142673000000001 0.9602195 0.96172975999999999 0.96180575999999995 0.96052079999999995 0.9614743 0.96092588000000001 0.9117397699999999"
+		+ "5 0.96142083 0.91200477000000002 0.96170937999999995 0.89474308000000002 0.93946390999999996 0.89465684000000001 0.84459954999999998 0.74004119999999995 0.83119315000000005 0.73990761999999999 0.84523641999999999 0.73987179999999997 0.94172436000000004 0.98372965999999995 0.94201285000000001 0.98740834 0.99100149000000004 0.98680573999999999 0.94090468000000005 0.89458627000000002 0.94714056999999996 0.98378003000000003 0.97245877999999997 0.72440081999999995 0.94178092000000002 0.74014108999999995 0.71047360000000004 0.90577030000000003 0.84455824000000002 0.89459264000000005 0.83118515999999998 0.98736398999999997 0.94145118999999999 0.98644555 0.97189879000000001 0.90639835999999996 0.93942004000000001 0.74015582000000002 0.95191239999999999 0.89443052000000001 0.83121025999999998 0.72825229000000002 0.84527945999999998 0.72839480999999995 0.81712412999999995 0.72440081999999995 0.72062820000000005 0.89457834000000003 0.71502197000000001 0.90640175000000001 0.72272515000000004 0.90591359000000005 0.8175874"
+		+ "8999999997 0.74020427 0.83119315000000005 0.90294593999999995 0.94364135999999998 0.98378003000000003 0.97420894999999996 0.99002641000000002 0.99487221000000003 0.72902489000000004 0.94735007999999998 0.98967349999999998 0.93851686000000001 0.98680586000000003 0.93858147000000003 0.90242612 0.83448756000000002 0.98736911999999999 0.99377459000000001 0.98945605999999997 0.99380409999999997 0.98372972000000003 0.93860710000000003 0.73168129000000004 0.83469212000000004 0.98736435 0.93854265999999997 0.98644531000000002 0.97547054 0.98955327000000004 0.93854296000000004 0.89462262000000004 0.81780344000000005 0.74023563000000003 0.81715906000000005 0.74011802999999998 0.72066319000000001 0.89456093000000003 0.72269844999999999 0.98425644999999995 0.97547035999999998 0.98425662999999997 0.97189862000000005 0.98164253999999995 0.93860710000000003 0.98164247999999998 0.94201285000000001 0.98390043000000005 0.93858134999999998 0.99257892000000003 0.93851709000000005 0.99257863000000002 0.94237791999999998 0.9839002"
+		+ "5000000003 0.94090450000000003 0.99221534 0.99487239000000005 0.98159110999999999 0.97420888999999999 0.98159116999999996 0.97245872 0.99221557000000005 0.99196386000000003 0.73183929999999997 0.82770633999999998 0.98955285999999998 0.94145148999999995 0.98949682999999999 0.99100149000000004 0.90258413999999998 0.82766311999999997 0.98967313999999995 0.94237769000000005 0.72901684 0.71505224999999994 0.90294313000000004 0.71850895999999997 0.99002665000000001 0.99196362000000005"
 		)
 		3 "|TVScene2:TV|TVScene2:TVRing|TVScene2:TVRingShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
 		"-na"
@@ -901,10 +875,6 @@ createNode reference -n "TVScene2RN";
 		"TVScene2RN.placeHolderList[2]" ":initialShadingGroup.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "sharedReferenceNode";
-	rename -uid "CC1B15F2-4989-ED25-3B89-ADB4232B76D6";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"sharedReferenceNode";
 createNode reference -n "NewChairScene2RN";
 	rename -uid "A6DE05CB-45AA-2C92-9468-35828995E667";
 	setAttr -s 6 ".phl";
@@ -917,7 +887,7 @@ createNode reference -n "NewChairScene2RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"NewChairScene2RN"
 		"NewChairScene2RN" 0
-		"NewChairScene2RN" 25
+		"NewChairScene2RN" 24
 		2 "|NewChairScene2:ChairGRP" "translate" " -type \"double3\" 9.63724501434981917 1.96154465204206385 5.69761126586459987"
 		
 		2 "|NewChairScene2:ChairGRP" "rotate" " -type \"double3\" 0 -46.06481608998205957 0"
@@ -925,7 +895,7 @@ createNode reference -n "NewChairScene2RN";
 		2 "|NewChairScene2:ChairGRP" "scale" " -type \"double3\" 1.15207821356897466 1.15207821356897466 1.15207821356897466"
 		
 		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
-		"uvPivot" " -type \"double2\" 0.42318139516359909 0.97156459531363315"
+		"uvPivot" " -type \"double2\" 0.55589683353900909 0.8370887130304101"
 		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
 		"uvSet[0].uvSetPoints" " -s 473"
 		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
@@ -935,21 +905,21 @@ createNode reference -n "NewChairScene2RN";
 		+ " 0.76973610999999997 0.64544712999999998 0.80624711999999998 0.58529960999999997 0.84901190000000004 0.58530479999999996 0.88507897000000002 0.52368420000000004 0.94866437000000003 0.55068046000000004 0.94280987999999999 0.48399869000000001 0.93707812000000001 0.50999594000000004 0.95386928000000004 0.51424718000000003 0.950867 0.57254231 0.81431001000000003 0.48975781000000002 0.93656296000000006 0.57788121999999997 0.81316811 0.42176878000000001 0.73922330000000003 0.50716066000000004 0.93152511000000005 0.54878062000000005 0.93046587999999997 0.52129274999999997 0.93171464999999998 0.41801178 0.72933274999999997 0.50979352 0.93791813000000002 0.54919678000000005 0.93399 0.52186750999999998 0.93620121000000001 0.41892815 0.73286074000000001 0.42176871999999999 0.69332724999999995 0.57775222999999998 0.84644145000000004 0.57958960999999998 0.85012215000000002 0.41205733999999999 0.85328358000000004 0.42621978999999999 0.69309622000000004 0.58236151999999997 0.84314418000000002 0.41269814999999999 0.847204689"
 		+ "99999998 0.58330572000000003 0.84472877000000002 0.40111439999999998 0.81713294999999997 0.41121500999999999 0.84214973000000004 0.40597332000000003 0.78500532999999995 0.43227684 0.73323797999999996 0.44535550000000002 0.84172601000000002 0.41351849000000002 0.84219670000000002 0.41440653999999999 0.82983278999999999 0.44535511999999999 0.82999431999999995 0.44535476000000002 0.81828981999999995 0.41539483999999999 0.81852614999999995 0.41552168 0.78578550000000003 0.44535374999999999 0.78566705999999997 0.43402784999999999 0.72597741999999998 0.59947680999999997 0.84901017000000001 0.41079073999999999 0.78553563000000004 0.43266969999999999 0.72939467000000002 0.40947250000000002 0.81817596999999997 0.58447057000000002 0.84296399 0.41311097000000002 0.84470087000000005 0.40936428000000002 0.82808965000000001 0.44535559000000002 0.84427618999999998 0.44535609999999998 0.85965239999999998 0.44535585999999999 0.85331511000000004 0.44535567999999998 0.84682672999999997 0.67744696000000004 0.75063007999999998 0."
 		+ "69649892999999996 0.87800317999999999 0.69091146999999997 0.8780036 0.67192489 0.74876456999999996 0.69603324 0.91402941999999998 0.40515736000000002 0.68761784000000004 0.67298466000000001 0.86909550000000002 0.67107539999999999 0.87606043 0.69578362000000005 0.96193879999999998 0.667 0.86651301000000003 0.41202991999999999 0.69656348000000001 0.66487688 0.83695626000000001 0.69244921000000004 0.96770619999999996 0.69023990999999996 0.9621883 0.48303747000000002 0.89663731999999996 0.66815007000000004 0.74606854 0.66088723999999999 0.70204389 0.51904850999999996 0.92364274999999996 0.49016177999999999 0.92365032000000002 0.48380178000000001 0.85903006999999998 0.68869256999999995 0.95910823000000001 0.68089557000000001 0.75001293000000002 0.68837017 0.7864911 0.68853450000000005 0.82324249000000005 0.64274715999999998 0.69670754999999995 0.68341607000000004 0.84769368 0.69169581000000002 0.97178262000000004 0.67701542000000003 0.84074753999999996 0.68150347 0.74422692999999995 0.69391274000000003 0.786490620"
-		+ "00000003 0.64904147000000001 0.68701977000000003 0.67913067000000005 0.73802656 0.63091898000000002 0.92242080000000004 0.40169209 0.96733665000000002 0.67921346000000005 0.73387097999999995 0.63485479 0.92242044000000001 0.40561318000000002 0.96769391999999999 0.68067765000000002 0.70629006999999999 0.47926855000000002 0.75884848999999999 0.44271319999999997 0.75885928000000002 0.66231256999999999 0.92242080000000004 0.40618359999999998 0.75946455999999996 0.43302673000000003 0.96923077000000002 0.47777045000000001 0.89662998999999999 0.66519231000000001 0.74145894999999995 0.65989964999999995 0.69687365999999995 0.47276044 0.89664083999999999 0.66381055 0.73636919000000001 0.66014963000000004 0.69207025 0.46755415 0.89664166999999995 0.66302395000000003 0.73103302999999997 0.66088396000000005 0.68701230999999996 0.44027597000000002 0.89663190000000004 0.66763483999999995 0.70400434999999995 0.44030678000000001 0.92731768000000003 0.44154057000000002 0.76812124000000004 0.47837143999999998 0.7683347499999999"
+		+ "00000003 0.64904147000000001 0.68701977000000003 0.67913067000000005 0.73802656 0.63091898000000002 0.92242080000000004 0.40671098 0.96863781999999998 0.67921346000000005 0.73387097999999995 0.63485479 0.92242044000000001 0.41063207000000002 0.96899508999999995 0.68067765000000002 0.70629006999999999 0.47926855000000002 0.75884848999999999 0.44271319999999997 0.75885928000000002 0.66231256999999999 0.92242080000000004 0.40618359999999998 0.75946455999999996 0.43804562000000002 0.97053193999999998 0.47777045000000001 0.89662998999999999 0.66519231000000001 0.74145894999999995 0.65989964999999995 0.69687365999999995 0.47276044 0.89664083999999999 0.66381055 0.73636919000000001 0.66014963000000004 0.69207025 0.46755415 0.89664166999999995 0.66302395000000003 0.73103302999999997 0.66088396000000005 0.68701230999999996 0.44027597000000002 0.89663190000000004 0.66763483999999995 0.70400434999999995 0.44030678000000001 0.92731768000000003 0.44154057000000002 0.76812124000000004 0.47837143999999998 0.7683347499999999"
 		+ "6 0.41414863000000002 0.74496412000000001 0.67221987000000005 0.74522584999999997 0.67708003999999999 0.74711525000000001 0.67070030999999997 0.74039315999999999 0.67552047999999998 0.74187952000000001 0.66947513999999997 0.73568504999999995 0.67374301000000003 0.73685038000000003 0.67228842 0.70486641000000005 0.48092937000000002 0.76562881000000005 0.48095036000000002 0.76123028999999998 0.67671323000000005 0.70572382 0.66963452000000001 0.73210436000000001 0.67419302000000003 0.73307538000000005 0.69116228999999996 0.97517103000000005 0.57576925000000001 0.73260760000000003 0.60291152999999997 0.73242205000000005 0.61760347999999998 0.73227858999999995 0.64543885000000001 0.73322498999999997 0.40280521000000002 0.73037236999999999 0.67393577000000005 0.76898617000000002 0.66887574999999999 0.79595715 0.64681166000000001 0.69657206999999999 0.67935431000000002 0.83567053000000002 0.66639267999999996 0.80519717999999996 0.68585598000000003 0.84441107999999998 0.68000919000000004 0.82993525000000001 0.6875578"
 		+ "7999999995 0.83914977000000002 0.41604826 0.73306804999999997 0.68554658000000002 0.81263202000000001 0.68636571999999996 0.77057808999999999 0.61787974999999995 0.72882307000000002 0.40615714000000003 0.72931248000000004 0.67922890000000002 0.80987047999999995 0.68283086999999998 0.77024214999999996 0.68121891999999995 0.79776495999999997 0.40968522000000002 0.73022841999999999 0.52146970999999998 0.91881632999999996 0.49269855000000001 0.91936070000000003 0.47865447 0.85328143999999995 0.48169868999999998 0.85318190000000005 0.52396898999999997 0.9152 0.49599915999999999 0.91473234000000003 0.47801322000000002 0.84720266 0.47965269999999999 0.84689897000000003 0.48959509000000001 0.81713015 0.49885817999999998 0.91211772000000002 0.48473409000000001 0.78500294999999998 0.41006442999999998 0.743577 0.4763037 0.82983088000000005 0.47719257999999998 0.84219467999999997 0.47518580999999999 0.78578371000000002 0.47531474000000001 0.81852424000000001 0.59897602000000005 0.81899016999999996 0.47991672000000002 0.7"
 		+ "8553337000000001 0.40622114999999998 0.74397033000000001 0.48123705 0.81817364999999997 0.47760027999999999 0.84469885 0.47910671999999999 0.84483445000000001 0.48134582999999997 0.82808738999999998"
 		)
 		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
 		"uvst[0].uvsp[250:472]" (" 0.47904386999999998 0.76121879000000003 0.44244254 0.76099687999999999 0.56649214000000003 0.90547073 0.52971577999999997 0.90543817999999998 0.4294731 0.73716395999999995 0.58872241000000003 0.81413053999999996 0.58899992999999995 0.84901141999999996 0.58873087000000002 0.88389236000000004 0.40841031 0.76150298000000005 0.41548162999999999 0.73592352999999999 0.47862708999999998 0.76563137999999997 0.44185054000000001 0.76567297999999995 0.41125685000000001 0.73376954000000005 0.56691009000000003 0.90988325999999997 0.53030896000000005 0.91011416999999994 0.42897570000000002 0.74175577999999998 0.40686971 0.73363650000000002 0.42462420000000001 0.73865634000000002 0.59399122000000004 0.88329864000000002 0.42765111 0.73179453999999999 0.42233586000000001 0.73004477999999995 0.41398990000000002 0.7407726 0.42246961999999999 0.73443179999999997 0.40862018 0.73895144000000001 0.40469002999999998 0.73903750999999995 0.59439706999999997 0.84901077000000003 0.47931235999999999 0.85984808000000001 0.654487069999999"
-		+ "95 0.95907967999999999 0.49618300999999998 0.91261767999999999 0.47949608999999999 0.84214758999999995 0.48258179000000001 0.76812415999999994 0.47874030000000001 0.76835023999999996 0.49441354999999998 0.91378789999999999 0.47509298 0.76844232999999995 0.44535318000000002 0.76851921999999995 0.42313188000000002 0.92731881000000005 0.48901317 0.91752023000000005 0.69332647000000003 0.95868933000000001 0.66133428000000005 0.87133687999999998 0.48391166000000002 0.92106259000000001 0.60405171000000002 0.72708463999999995 0.68570315999999998 0.79831808999999998 0.45007872999999998 0.97578472000000005 0.68394208000000001 0.75316435000000004 0.68755829000000002 0.75363195000000005 0.66251791000000004 0.73025119000000005 0.66241050000000001 0.73376006000000005 0.64557761000000002 0.72960572999999995 0.57787131999999997 0.72631931000000005 0.67969668000000005 0.95895368000000003 0.45026728999999999 0.97022419999999998 0.69968385 0.97551971999999998 0.6743595 0.87775338000000003 0.70002443000000003 0.9714148599999999"
+		+ "95 0.95907967999999999 0.49618300999999998 0.91261767999999999 0.47949608999999999 0.84214758999999995 0.48258179000000001 0.76812415999999994 0.47874030000000001 0.76835023999999996 0.49441354999999998 0.91378789999999999 0.47509298 0.76844232999999995 0.44535318000000002 0.76851921999999995 0.42313188000000002 0.92731881000000005 0.48901317 0.91752023000000005 0.69332647000000003 0.95868933000000001 0.66133428000000005 0.87133687999999998 0.48391166000000002 0.92106259000000001 0.60405171000000002 0.72708463999999995 0.68570315999999998 0.79831808999999998 0.45509761999999998 0.97708589000000001 0.68394208000000001 0.75316435000000004 0.68755829000000002 0.75363195000000005 0.66251791000000004 0.73025119000000005 0.66241050000000001 0.73376006000000005 0.64557761000000002 0.72960572999999995 0.57787131999999997 0.72631931000000005 0.67969668000000005 0.95895368000000003 0.45528617999999998 0.97152537000000005 0.69968385 0.97551971999999998 0.6743595 0.87775338000000003 0.70002443000000003 0.9714148599999999"
 		+ "9 0.66235805000000003 0.76973413999999996 0.68150597999999996 0.68901586999999997 0.67969930000000001 0.88586801000000004 0.67861813000000004 0.68859356999999999 0.42310189999999998 0.85978204000000003 0.67064172 0.68701612999999995 0.67429119000000004 0.68776875999999998 0.63497221000000004 0.95908504999999999 0.66242778000000002 0.95900565000000004 0.63497329000000002 0.88573371999999995 0.66243010999999996 0.88581496000000004 0.42308104000000002 0.89662724999999999 0.44033322000000003 0.85980098999999999 0.46762499000000002 0.92727946999999999 0.4676342 0.85983419000000005 0.47283730000000002 0.92726755000000005 0.47284722000000001 0.85984813999999998 0.47778752000000002 0.92717742999999997 0.477862 0.85986185000000004 0.40111439999999998 0.68701785999999998 0.48312944000000002 0.92723255999999998 0.48313734000000003 0.85987895999999997 0.68668604 0.84220492999999996 0.67958194000000005 0.92242115999999996 0.63103509000000002 0.95910256999999999 0.70041262999999998 0.74977338000000004 0.69407666000000001 0"
 		+ ".82321571999999998 0.69407724999999998 0.74974304000000003 0.69937824999999998 0.91479164000000002 0.41400938999999998 0.68701959000000001 0.64354897 0.68776362999999996 0.69986892000000001 0.84125101999999996 0.68853514999999998 0.7497161 0.67680013000000006 0.86867689999999997 0.41602941999999998 0.69556850000000003 0.69945318000000001 0.96773498999999996 0.69986205999999995 0.87803489000000001 0.69650542999999998 0.84125035999999997 0.66490780999999999 0.87319016000000005 0.66350257000000001 0.86483330000000003 0.66133976000000005 0.83597266999999997 0.68668043999999995 0.87896054999999995 0.69091760999999996 0.84124935000000001 0.41160451999999997 0.84483659 0.41105862999999998 0.84690124 0.41196614999999998 0.76835239 0.41561346999999998 0.76844424 0.63007866999999995 0.95748633000000005 0.63008231000000003 0.95319801999999998 0.40901303 0.85318422000000005 0.71067928999999996 0.95647364999999995 0.61564772999999995 0.95869762000000003 0.40691036000000003 0.85903251000000003 0.60406137000000004 0.8123968"
 		+ "2000000002 0.61788905000000005 0.81065536000000005 0.56747656999999996 0.93924445000000001 0.56623721000000005 0.93239528000000005 0.66252690999999997 0.80921710000000002 0.56567425000000005 0.92879480000000003 0.64558673 0.80986643000000003 0.48073566000000001 0.92877692000000001 0.66241859999999997 0.80570828999999999 0.56874387999999998 0.94465935000000001 0.60050367999999998 0.88557529000000001 0.47542952999999999 0.930345 0.69803177999999999 0.96356487000000002 0.47208345000000002 0.93269974 0.60050696000000003 0.81250690999999997 0.68161117999999998 0.68901884999999996 0.68449914000000001 0.68859649000000001 0.69247555999999999 0.68701922999999998 0.63012623999999995 0.88567865000000001 0.68882602000000004 0.68777186000000001 0.61777157000000005 0.88563448 0.61777519999999997 0.81244950999999999 0.63014345999999999 0.92252535000000002 0.61289411999999999 0.88569593000000002 0.58559209000000001 0.88572645000000005 0.58038223 0.95316190000000001 0.58037888999999998 0.88573992000000001 0.57543188000000001 "
 		+ "0.95307129999999995 0.57536392999999997 0.88575309999999996 0.41385158999999999 0.92813235999999999 0.71066773000000005 0.91512972000000004 0.41866242999999997 0.68701553000000004 0.41430013999999998 0.86078262000000005 0.57008833000000003 0.88576966999999995 0.60064214000000005 0.84905154000000005 0.64522046 0.88572662999999996 0.64522480999999998 0.81235992999999995 0.64915562000000004 0.88574945999999999 0.64915681000000003 0.81233816999999997 0.65549104999999996 0.88577985999999997 0.65549219000000003 0.81230795 0.69787025000000003 0.91458731999999998 0.40158813999999998 0.93336593999999995 0.66103308999999999 0.88580680000000001 0.66103434999999999 0.81228113000000002 0.40111743999999999 0.85982513000000005 0.69512903999999998 0.95463096999999997 0.69550471999999997 0.92298632999999997 0.70121979999999995 0.96169782000000004 0.40111439999999998 0.89660907000000001 0.40493339 0.93260460999999995 0.40448093000000002 0.85982537000000003 0.70721334000000002 0.95850736000000003 0.40995079000000001 0.92934644 "
-		+ "0.41006881000000001 0.85982590999999997 0.62028170000000005 0.95911550999999995 0.70816051999999996 0.95010340000000004 0.70893711000000004 0.92132329999999996 0.41429579 0.89753824000000004 0.41088205999999999 0.68846046999999999 0.69101679000000005 0.91076988000000003 0.68711621000000001 0.90955483999999998 0.65497910999999998 0.69077474000000005 0.65480638000000002 0.69448668000000002 0.65457529000000003 0.69893782999999998 0.40259019000000001 0.69332152999999996 0.65497570999999999 0.70438445000000005 0.43292394000000001 0.97554337999999996 0.67705219999999999 0.75210982999999998 0.39609550999999998 0.97579258999999996 0.40550733 0.97505885000000003 0.66307616000000003 0.80917954000000003 0.67465054999999996 0.83691788 0.66133428000000005 0.81288521999999996 0.67085813999999999 0.83850705999999997 0.40609877999999999 0.69447338999999997 0.65193259999999997 0.69655674999999995 0.70041215000000001 0.82318544000000005 0.65537983 0.68702048000000004 0.70025349000000003 0.78649055999999995 0.63103914000000005 "
-		+ "0.88571686000000005 0.40280413999999998 0.74532907999999998 0.59398287999999999 0.81472296 0.40698221000000001 0.76589417000000004 0.41858169000000001 0.74027461000000006 0.41953030000000002 0.73740815999999998 0.40310531999999999 0.73398589999999997 0.41087356000000003 0.76746040999999998 0.58529598000000005 0.81294482999999995 0.59898335000000003 0.87903034999999996 0.42773661000000002 0.72786426999999998 0.49484864000000001 0.90522407999999999 0.49627641 0.90961528000000003 0.49405006000000001 0.91165441000000003 0.42268475999999999 0.72628026999999995 0.43366462 0.73732191000000002 0.41907119999999998 0.72598070000000003 0.52605933000000005 0.91218345999999995 0.44027286999999998 0.93134832000000001 0.42314571000000001 0.93163222000000001 0.47311144999999999 0.93150138999999998 0.61294424999999997 0.95727693999999997 0.40812457000000002 0.76812654999999996 0.58001672999999998 0.95733886999999995 0.58496623999999997 0.84029180000000003 0.58191632999999998 0.81509100999999995 0.58495814000000002 0.812986309"
-		+ "99999999 0.57828151999999999 0.81763487999999995 0.57347322000000001 0.82017130000000005 0.43369394999999999 0.68701833000000001 0.42993173000000001 0.69292330999999996 0.57008833000000003 0.73323457999999997 0.57253217999999995 0.72517860000000001 0.57016920999999998 0.76974458000000001 0.61781538000000003 0.97517878000000002 0.60929387999999995 0.97552925000000001"
+		+ "0.41006881000000001 0.85982590999999997 0.62028170000000005 0.95911550999999995 0.70816051999999996 0.95010340000000004 0.70893711000000004 0.92132329999999996 0.41429579 0.89753824000000004 0.41088205999999999 0.68846046999999999 0.69101679000000005 0.91076988000000003 0.68711621000000001 0.90955483999999998 0.65497910999999998 0.69077474000000005 0.65480638000000002 0.69448668000000002 0.65457529000000003 0.69893782999999998 0.40259019000000001 0.69332152999999996 0.65497570999999999 0.70438445000000005 0.43794283000000001 0.97684455000000003 0.67705219999999999 0.75210982999999998 0.40111439999999998 0.97709376000000003 0.41052622 0.97636002 0.66307616000000003 0.80917954000000003 0.67465054999999996 0.83691788 0.66133428000000005 0.81288521999999996 0.67085813999999999 0.83850705999999997 0.40609877999999999 0.69447338999999997 0.65193259999999997 0.69655674999999995 0.70041215000000001 0.82318544000000005 0.65537983 0.68702048000000004 0.70025349000000003 0.78649055999999995 0.63103914000000005 0.8857168"
+		+ "6000000005 0.40280413999999998 0.74532907999999998 0.59398287999999999 0.81472296 0.40698221000000001 0.76589417000000004 0.41858169000000001 0.74027461000000006 0.41953030000000002 0.73740815999999998 0.40310531999999999 0.73398589999999997 0.41087356000000003 0.76746040999999998 0.58529598000000005 0.81294482999999995 0.59898335000000003 0.87903034999999996 0.42773661000000002 0.72786426999999998 0.49484864000000001 0.90522407999999999 0.49627641 0.90961528000000003 0.49405006000000001 0.91165441000000003 0.42268475999999999 0.72628026999999995 0.43366462 0.73732191000000002 0.41907119999999998 0.72598070000000003 0.52605933000000005 0.91218345999999995 0.44027286999999998 0.93134832000000001 0.42314571000000001 0.93163222000000001 0.47311144999999999 0.93150138999999998 0.61294424999999997 0.95727693999999997 0.40812457000000002 0.76812654999999996 0.58001672999999998 0.95733886999999995 0.58496623999999997 0.84029180000000003 0.58191632999999998 0.81509100999999995 0.58495814000000002 0.81298630999999999 "
+		+ "0.57828151999999999 0.81763487999999995 0.57347322000000001 0.82017130000000005 0.43369394999999999 0.68701833000000001 0.42993173000000001 0.69292330999999996 0.57008833000000003 0.73323457999999997 0.57253217999999995 0.72517860000000001 0.57016920999999998 0.76974458000000001 0.61781538000000003 0.97517878000000002 0.60929387999999995 0.97552925000000001"
 		)
 		2 "|NewChairScene2:ChairGRP|NewChairScene2:Chair|NewChairScene2:ChairShape" 
 		"dispResolution" " 3"
@@ -963,10 +933,8 @@ createNode reference -n "NewChairScene2RN";
 		+ "99995 0.71694904999999998 0.52771467000000005 0.89427577999999996 0.56090777999999997 0.89377998999999997 0.49452194999999999 0.89375788 0.52773338999999997 0.83705527000000002 0.55827808000000001 0.83725941000000004 0.49718880999999998 0.83723848999999995 0.56418829999999998 0.78687644000000001 0.52774852999999999 0.78711598999999999 0.49135599000000002 0.78684138999999997 0.56784075000000001 0.71845663000000004 0.48776245000000001 0.71841425000000003 0.65456241000000004 0.69810097999999998 0.56694924999999996 0.82914072000000005 0.48852300999999998 0.82911407999999998 0.48808372 0.79269159 0.40323037 0.72969216000000003 0.65238344999999998 0.72982407000000005 0.40111439999999998 0.69800419000000002 0.64213436999999995 0.72091042999999999 0.55630672000000003 0.80347239999999998 0.65305895000000003 0.72179472 0.52774394000000002 0.80362475 0.499183 0.80344855999999998 0.40261828999999999 0.72166490999999999 0.41361529000000002 0.72080772999999998 0.56628769999999995 0.72228627999999995 0.56698101999999995 0.7"
 		+ "8698659000000004 0.56609803000000003 0.72036666000000005 0.56613594 0.79046464000000005 0.56280613000000002 0.79109507999999995 0.52774726999999999 0.79137151999999999 0.49271273999999998 0.79106211999999998 0.48957285 0.78999101999999999 0.48854368999999997 0.78694648 0.48932719000000002 0.72227549999999996 0.48960482999999999 0.72023152999999995 0.49161679000000003 0.72009628999999997 0.52780110000000002 0.71983123000000004 0.56401007999999997 0.72021478000000005"
 		)
-		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvPivot" 
-		" -type \"double2\" 0.47519960989620513 0.96831799342351799"
 		2 "|NewChairScene2:ChairGRP|NewChairScene2:Leg|NewChairScene2:LegShape" "uvst[0].uvsp[0:23]" 
-		" -s 24 -type \"float2\" 0.45226823999999999 0.9660725 0.45875943000000002 0.98040472999999995 0.49271696999999998 0.95268607000000005 0.48940634999999999 0.97618495999999999 0.48447835 0.95810008000000002 0.48989242 0.96633868999999994 0.49758019999999997 0.98352413999999999 0.49761253999999999 0.97666925000000004 0.50447607000000005 0.98357934000000002 0.50447553000000001 0.97666489999999995 0.45903348999999999 0.97485339999999998 0.45598107999999998 0.97020852999999996 0.50616550000000005 0.98254573000000001 0.49910861000000001 0.97820514000000003 0.50330770000000002 0.97826188999999997 0.50326651 0.98238616999999995 0.50616556000000001 0.97838259000000005 0.45772845000000001 0.98586631000000002 0.47789288000000002 0.95076393999999997 0.48757761999999999 0.98587208999999998 0.49813098 0.96092469000000003 0.51032871000000002 0.97838270999999999 0.49914575 0.98239505000000005 0.51032865000000005 0.98254585000000005"
+		" -s 24 -type \"float2\" 0.45349631000000001 0.96569740999999998 0.46053439000000002 0.98123711000000002 0.49735284000000002 0.95118314000000004 0.49376330000000002 0.97666185999999999 0.48842015999999999 0.9570533 0.49429032000000001 0.96598600999999995 0.49758019999999997 0.98352413999999999 0.49761253999999999 0.97666925000000004 0.50447607000000005 0.98357934000000002 0.50447553000000001 0.97666489999999995 0.46083151999999999 0.97521811999999997 0.45752197999999999 0.97018188000000005 0.50616550000000005 0.98254573000000001 0.49910861000000001 0.97820514000000003 0.50330770000000002 0.97826188999999997 0.50326651 0.98238616999999995 0.50616556000000001 0.97838259000000005 0.45941653999999998 0.98715883000000004 0.48127985000000001 0.94909905999999999 0.49178052 0.98716515000000005 0.503223 0.96011584999999999 0.51032871000000002 0.97838270999999999 0.49914575 0.98239505000000005 0.51032865000000005 0.98254585000000005"
 		
 		3 "|NewChairScene2:ChairGRP|NewChairScene2:Leg4|NewChairScene2:LegShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
@@ -1006,7 +974,7 @@ createNode reference -n "NewChairScene2RN1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"NewChairScene2RN1"
 		"NewChairScene2RN1" 0
-		"NewChairScene2RN1" 29
+		"NewChairScene2RN1" 21
 		2 "|NewChairScene3:ChairGRP" "translate" " -type \"double3\" 6.27080887263581843 1.96154465204206385 2.06304377171662434"
 		
 		2 "|NewChairScene3:ChairGRP" "rotate" " -type \"double3\" 0 -49.33845387703595975 0"
@@ -1014,57 +982,39 @@ createNode reference -n "NewChairScene2RN1";
 		2 "|NewChairScene3:ChairGRP" "scale" " -type \"double3\" 1.152 1.152 1.152"
 		
 		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
-		"uvPivot" " -type \"double2\" 0.19170428812503815 0.93683996796607971"
+		"uvPivot" " -type \"double2\" 0.22665189002351521 0.82972937822341919"
 		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
 		"uvSet[0].uvSetPoints" " -s 473"
 		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
-		"uvst[0].uvsp[0:249]" (" -type \"float2\" 0.35446545000000002 0.74457848000000004 0.35990408000000002 0.74274141000000005 0.083021119000000004 0.88832277000000004 0.077517985999999997 0.88832098000000004 0.37511011999999999 0.90701085000000004 0.36947939000000002 0.90759659000000004 0.36754265000000003 0.94570178000000005 0.37326986000000001 0.94285439999999998 0.28308147 0.95270370999999998 0.27946853999999999 0.95841312000000001 0.37390490999999998 0.91367275000000003 0.36802067999999999 0.91546923000000002 0.28854152999999999 0.95294827000000004 0.28636682000000002 0.95838332000000004 0.32375442999999998 0.95291090000000001 0.32375505999999998 0.95836544000000001 0.36362203999999998 0.74008602000000001 0.24072407000000001 0.91388064999999996 0.24063051999999999 0.94401526000000002 0.089183778000000005 0.68774360000000001 0.24395770999999999 0.84143466 0.24650291999999999 0.84758412999999999 0.084335833999999998 0.85214727999999995 0.33036410999999999 0.84151578000000005 0.35106884999999999 0.74397057 0.18427525 0.95109385000000002 "
-		+ "0.17993761999999999 0.94498353999999996 0.28710970000000002 0.96239799000000004 0.27890663999999998 0.96203749999999999 0.15699315 0.93136655999999995 0.32375546999999999 0.96242081999999995 0.32490519000000001 0.84151524 0.35047026999999997 0.73827195000000001 0.18857151 0.94921708000000005 0.31866011 0.84151494999999998 0.35280737000000001 0.73216515999999998 0.19303340999999999 0.94640416000000005 0.31478172999999998 0.84151410999999998 0.35272583000000002 0.72807246000000003 0.19599791 0.94522929 0.35128438000000001 0.70090770999999996 0.28773156 0.84151262000000004 0.20171734999999999 0.90375793000000004 0.23772082999999999 0.9037596 0.21810352999999999 0.93944234000000004 0.098823383000000001 0.73677002999999996 0.24591178999999999 0.91387390999999996 0.36653521999999999 0.73554617 0.096581027 0.68289363000000003 0.36789625999999997 0.73053330000000005 0.25084635999999999 0.91388506000000003 0.10131195 0.68264747000000003 0.36867096999999999 0.72527748000000003 0.25597426000000001 0.91388630999999998 0."
-		+ "25590402000000001 0.94405048999999996 0.36413029000000002 0.69865679999999997 0.28284179999999998 0.91387927999999996 0.28281084000000001 0.94411915999999996 0.23683488 0.89441674999999998 0.20056014999999999 0.89463598 0.17035684000000001 0.895293 0.3548269 0.74111687999999998 0.35961363000000002 0.73925602000000001 0.35636290999999998 0.73596013000000005 0.36111039 0.73449629999999999 0.35811365000000001 0.73100686000000004 0.36231717000000002 0.72985929000000005 0.35954692999999999 0.69950581000000001 0.35518896999999999 0.70035016999999999 0.23937655999999999 0.90141325999999999 0.23935488999999999 0.89708120000000002 0.35767051999999999 0.72728877999999997 0.36216024000000002 0.72633265999999996 0.32375579999999998 0.96575820000000001 0.24063738000000001 0.79936074999999995 0.24630629000000001 0.76340096999999996 0.24623266999999999 0.799977 0.27291140000000003 0.76339798999999997 0.27296534 0.80015360999999996 0.28715929000000001 0.76339643999999995 0.28743547000000003 0.80029154000000002 0.314599720000"
-		+ "00003 0.76339327999999995 0.31485059999999998 0.79935330000000004 0.25561087999999998 0.84147256999999998 0.25561601 0.87699521000000003 0.19443627999999999 0.93919861000000004 0.21698685000000001 0.93430811000000002 0.16128606000000001 0.92952031000000002 0.18300211 0.94354634999999998 0.18655330000000001 0.94103848999999995 0.24304608999999999 0.80729448999999998 0.16609676000000001 0.92909001999999996 0.24830437999999999 0.80616986999999996 0.094548284999999996 0.73334104 0.18063381000000001 0.92488170000000003 0.21539986 0.92399697999999997 0.19243864999999999 0.92504006999999999 0.090847998999999999 0.72359978999999996 0.18283305999999999 0.93022203000000003 0.21574751 0.92694074000000004 0.19291873000000001 0.92878782999999998 0.091750592000000006 0.72707449999999996 0.094548254999999998 0.68813776999999998 0.24817742000000001 0.83894091999999998 0.24998708 0.84256600999999998 0.084983394000000004 0.84567981999999997 0.098932101999999994 0.68791020000000003 0.25271711000000002 0.83569347999999999 0.0856"
-		+ "14546999999999 0.83969265000000004 0.25364705999999998 0.83725411000000005 0.074205637000000005 0.81007474999999995 0.084153785999999994 0.834714 0.078991248999999999 0.77843213 0.10489772 0.72744613999999996 0.11777903000000001 0.83429664000000003 0.086422548000000002 0.83476024999999998 0.087297185999999999 0.82258290000000001 0.11777863 0.82274199000000003 0.11777835 0.81121409 0.088270559999999998 0.81144691000000002 0.088395447000000002 0.77920049000000002 0.11777724000000001 0.77908379000000005 0.10662234 0.72029507000000004 0.26957414000000002 0.84147077999999997 0.083735973000000005 0.77895426999999995 0.10528466 0.72366070999999998 0.082437590000000005 0.81110209 0.25479436 0.83551591999999997 0.086021155000000002 0.83722662999999997 0.082331017000000006 0.82086605000000001 0.11777911000000001 0.83680838000000002 0.1177796 0.85195242999999998 0.11777939 0.84571074999999996 0.11777917 0.83932041999999996 0.34636736000000001 0.74457561999999999 0.36513182999999999 0.87002628999999998 0.3596287100000000"
-		+ "2 0.87002665000000001 0.34092876 0.74273836999999998 0.36467311000000002 0.90550876000000002 0.078187555000000006 0.68251448999999997 0.34197250000000001 0.86125302000000004 0.340092 0.86811285999999999 0.36442739000000002 0.95269501000000001 0.33607822999999998 0.85870950999999995 0.084956422000000004 0.69132501000000002 0.33398708999999999 0.82959883999999995 0.36114322999999998 0.95837532999999997 0.35896732999999997 0.95294082000000002 0.15489225000000001 0.88837909999999998 0.33721088999999999 0.74008297999999995 0.33005764999999998 0.69672274999999995 0.19035973 0.91497700999999998 0.16190900999999999 0.91498440999999997 0.15564501 0.85133952000000002 0.35744330000000002 0.94990711999999999 0.34976402000000001 0.74396777000000003 0.35712572999999997 0.77989547999999997 0.35728768 0.81609206999999995 0.31219133999999998 0.69146693000000004 0.35224643 0.84017425999999995 0.36040121000000003 0.96239023999999995 0.34594237999999999 0.83333296000000001 0.35036272000000002 0.73826908999999996 0.36258467999999"
-		+ "999 0.77989489000000001 0.31839073000000001 0.68192547999999997 0.34802568 0.73216236000000001 0.30054173000000001 0.91377354 0.073341295000000001 0.95593684999999995 0.34810728000000002 0.72806954000000002 0.30441808999999997 0.91377306000000003 0.077203183999999994 0.95628869999999999 0.34954932 0.70090485000000002 0.15118022 0.75266999000000001 0.11517659 0.75268060000000003 0.33146149000000003 0.91377354 0.079198330999999997 0.75327681999999996 0.10420299 0.95780246999999996 0.14970470999999999 0.88837193999999997 0.33429777999999999 0.73554301 0.32908502000000001 0.69163065999999995 0.14477034 0.88838254999999999 0.33293687999999999 0.73053002 0.32933119 0.68689966000000002 0.13964261 0.88838344999999996 0.33216216999999998 0.72527438 0.33005443000000001 0.68191807999999998 0.11277615000000001 0.88837379000000005 0.33670345000000002 0.69865358 0.11280651 0.91859645000000001 0.11402166 0.76180291 0.15029662999999999 0.76201319999999995 0.087043135999999993 0.73899519000000002 0.34121921999999999 0.7392529"
-		+ "7999999995 0.34600607 0.74111395999999996 0.33972266000000001 0.73449326000000004 0.34447001999999999 0.73595725999999995 0.33851587999999999 0.72985624999999998 0.34271941 0.73100388000000005 0.34128683999999998 0.69950265 0.15281597 0.75934798000000003 0.15283662000000001 0.75501591000000001 0.34564474000000001 0.70034706999999996 0.33867297000000002 0.72632956999999998 0.34316257 0.72728585999999995 0.35987571000000002 0.96572756999999998 0.24622438999999999 0.72682517999999996 0.27295705999999997 0.72664242999999995 0.28742709999999999 0.72650110999999995 0.31484245999999999 0.72743325999999997 0.075870931000000003 0.72462373999999996 0.34290915999999999 0.76265472000000001 0.33792558 0.78921854000000002 0.31619447000000001 0.69133341000000004 0.34824603999999998 0.82833259999999997 0.33547997000000002 0.79831927999999996 0.35464948000000002 0.83694117999999995 0.34889099000000001 0.82268381000000002 0.35632577999999998 0.83175933000000002 0.088914081000000006 0.72727870999999999 0.35434473 0.80564183 0.3"
-		+ "5515155999999998 0.76422256 0.28769930999999999 0.72309774000000004 0.079172223999999999 0.72357976000000002 0.34812253999999998 0.80292189000000003 0.35167 0.76389169999999995 0.35008243 0.79099905000000004 0.082647084999999995 0.72448193999999999 0.19274433999999999 0.91022342000000001 0.16440747999999999 0.91075956999999996 0.15057536999999999 0.84567773000000002 0.15357367999999999 0.84557961999999998 0.19520593999999999 0.90666163 0.16765831 0.90620106 0.14994383999999999 0.83969062999999999 0.15155858 0.83939153 0.16135089 0.810072 0.17047417000000001 0.90362591000000003 0.15656323999999999 0.77842975000000003 0.083020612999999993 0.73762894000000001 0.14826012 0.82258098999999996 0.14913554000000001 0.83475827999999996 0.14715909999999999 0.77919864999999999 0.14728606999999999 0.81144512000000002 0.26908088000000002 0.81190388999999996 0.15181859 0.77895217999999999 0.079235315000000001 0.73801649000000002 0.15311896999999999 0.81109982999999997 0.14953706 0.83722465999999995 0.15102082 0.837358119999"
-		+ "99998 0.15322616999999999 0.82086384000000001")
+		"uvst[0].uvsp[0:249]" (" -type \"float2\" 0.35446545000000002 0.74457848000000004 0.35990408000000002 0.74274141000000005 0.083021119000000004 0.88832277000000004 0.077517985999999997 0.88832098000000004 0.37511011999999999 0.90701085000000004 0.36947939000000002 0.90759659000000004 0.36754265000000003 0.94570178000000005 0.37326986000000001 0.94285439999999998 0.28308147 0.95270370999999998 0.27946853999999999 0.95841312000000001 0.37390490999999998 0.91367275000000003 0.36802067999999999 0.91546923000000002 0.28854152999999999 0.95294827000000004 0.28636682000000002 0.95838332000000004 0.32375442999999998 0.95291090000000001 0.32375505999999998 0.95836544000000001 0.36362203999999998 0.74008602000000001 0.24072407000000001 0.91388064999999996 0.24063051999999999 0.94401526000000002 0.089183778000000005 0.68774360000000001 0.24395770999999999 0.84143466 0.24650291999999999 0.84758412999999999 0.084335833999999998 0.85214727999999995 0.33036410999999999 0.84151578000000005 0.35106884999999999 0.74397057 0.18294490999999999 0.953646360"
+		+ "00000003 0.17783051999999999 0.94644183000000004 0.28710970000000002 0.96239799000000004 0.27890663999999998 0.96203749999999999 0.15077731 0.93038642000000005 0.32375546999999999 0.96242081999999995 0.32490519000000001 0.84151524 0.35047026999999997 0.73827195000000001 0.18801050999999999 0.95143348000000005 0.31866011 0.84151494999999998 0.35280737000000001 0.73216515999999998 0.19327142999999999 0.94811683999999996 0.31478172999999998 0.84151410999999998 0.35272583000000002 0.72807246000000003 0.19676678 0.94673156999999997 0.35128438000000001 0.70090770999999996 0.28773156 0.84151262000000004 0.20171734999999999 0.90375793000000004 0.23772082999999999 0.9037596 0.22283091999999999 0.93990832999999996 0.098823383000000001 0.73677002999999996 0.24591178999999999 0.91387390999999996 0.36653521999999999 0.73554617 0.096581027 0.68289363000000003 0.36789625999999997 0.73053330000000005 0.25084635999999999 0.91388506000000003 0.10131195 0.68264747000000003 0.36867096999999999 0.72527748000000003 0.2559742600000"
+		+ "0001 0.91388630999999998 0.25590402000000001 0.94405048999999996 0.36413029000000002 0.69865679999999997 0.28284179999999998 0.91387927999999996 0.28281084000000001 0.94411915999999996 0.23683488 0.89441674999999998 0.20056014999999999 0.89463598 0.17035684000000001 0.895293 0.3548269 0.74111687999999998 0.35961363000000002 0.73925602000000001 0.35636290999999998 0.73596013000000005 0.36111039 0.73449629999999999 0.35811365000000001 0.73100686000000004 0.36231717000000002 0.72985929000000005 0.35954692999999999 0.69950581000000001 0.35518896999999999 0.70035016999999999 0.23937655999999999 0.90141325999999999 0.23935488999999999 0.89708120000000002 0.35767051999999999 0.72728877999999997 0.36216024000000002 0.72633265999999996 0.32375579999999998 0.96575820000000001 0.24063738000000001 0.79936074999999995 0.24630629000000001 0.76340096999999996 0.24623266999999999 0.799977 0.27291140000000003 0.76339798999999997 0.27296534 0.80015360999999996 0.28715929000000001 0.76339643999999995 0.28743547000000003 0.80029"
+		+ "154000000002 0.31459972000000003 0.76339327999999995 0.31485059999999998 0.79935330000000004 0.25561087999999998 0.84147256999999998 0.25561601 0.87699521000000003 0.1949255 0.93962097 0.22151428000000001 0.93385476000000001 0.15583896999999999 0.92820954 0.18144378 0.94474733 0.18563088999999999 0.94179033999999995 0.24304608999999999 0.80729448999999998 0.16151114 0.92770218999999998 0.24830437999999999 0.80616986999999996 0.094548284999999996 0.73334104 0.17865138 0.92274027999999997 0.21964312 0.92169714000000003 0.19257015 0.92292702000000004 0.090847998999999999 0.72359978999999996 0.18124446 0.92903692000000004 0.220053 0.92516803999999997 0.19313622 0.92734592999999998 0.091750592000000006 0.72707449999999996 0.094548254999999998 0.68813776999999998 0.24817742000000001 0.83894091999999998 0.24998708 0.84256600999999998 0.084983394000000004 0.84567981999999997 0.098932101999999994 0.68791020000000003 0.25271711000000002 0.83569347999999999 0.085614546999999999 0.83969265000000004 0.25364705999999998 0."
+		+ "83725411000000005 0.074205637000000005 0.81007474999999995 0.084153785999999994 0.834714 0.078991248999999999 0.77843213 0.10489772 0.72744613999999996 0.11777903000000001 0.83429664000000003 0.086422548000000002 0.83476024999999998 0.087297185999999999 0.82258290000000001 0.11777863 0.82274199000000003 0.11777835 0.81121409 0.088270559999999998 0.81144691000000002 0.088395447000000002 0.77920049000000002 0.11777724000000001 0.77908379000000005 0.10662234 0.72029507000000004 0.26957414000000002 0.84147077999999997 0.083735973000000005 0.77895426999999995 0.10528466 0.72366070999999998 0.082437590000000005 0.81110209 0.25479436 0.83551591999999997 0.086021155000000002 0.83722662999999997 0.082331017000000006 0.82086605000000001 0.11777911000000001 0.83680838000000002 0.1177796 0.85195242999999998 0.11777939 0.84571074999999996 0.11777917 0.83932041999999996 0.34636736000000001 0.74457561999999999 0.36513182999999999 0.87002628999999998 0.35962871000000002 0.87002665000000001 0.34092876 0.74273836999999998 0.36"
+		+ "467311000000002 0.90550876000000002 0.078187555000000006 0.68251448999999997 0.34197250000000001 0.86125302000000004 0.340092 0.86811285999999999 0.36442739000000002 0.95269501000000001 0.33607822999999998 0.85870950999999995 0.084956422000000004 0.69132501000000002 0.33398708999999999 0.82959883999999995 0.36114322999999998 0.95837532999999997 0.35896732999999997 0.95294082000000002 0.15489225000000001 0.88837909999999998 0.33721088999999999 0.74008297999999995 0.33005764999999998 0.69672274999999995 0.19035973 0.91497700999999998 0.16190900999999999 0.91498440999999997 0.15564501 0.85133952000000002 0.35744330000000002 0.94990711999999999 0.34976402000000001 0.74396777000000003 0.35712572999999997 0.77989547999999997 0.35728768 0.81609206999999995 0.31219133999999998 0.69146693000000004 0.35224643 0.84017425999999995 0.36040121000000003 0.96239023999999995 0.34594237999999999 0.83333296000000001 0.35036272000000002 0.73826908999999996 0.36258467999999999 0.77989489000000001 0.31839073000000001 0.68192547999"
+		+ "999997 0.34802568 0.73216236000000001 0.30054173000000001 0.91377354 0.079717755000000001 0.95929288999999995 0.34810728000000002 0.72806954000000002 0.30441808999999997 0.91377306000000003 0.083579644999999994 0.95964472999999995 0.34954932 0.70090485000000002 0.15118022 0.75266999000000001 0.11517659 0.75268060000000003 0.33146149000000003 0.91377354 0.079198330999999997 0.75327681999999996 0.11057945 0.96115850999999997 0.14970470999999999 0.88837193999999997 0.33429777999999999 0.73554301 0.32908502000000001 0.69163065999999995 0.14477034 0.88838254999999999 0.33293687999999999 0.73053002 0.32933119 0.68689966000000002 0.13964261 0.88838344999999996 0.33216216999999998 0.72527438 0.33005443000000001 0.68191807999999998 0.11277615000000001 0.88837379000000005 0.33670345000000002 0.69865358 0.11280651 0.91859645000000001 0.11402166 0.76180291 0.15029662999999999 0.76201319999999995 0.087043135999999993 0.73899519000000002 0.34121921999999999 0.73925297999999995 0.34600607 0.74111395999999996 0.3397226600000"
+		+ "0001 0.73449326000000004 0.34447001999999999 0.73595725999999995 0.33851587999999999 0.72985624999999998 0.34271941 0.73100388000000005 0.34128683999999998 0.69950265 0.15281597 0.75934798000000003 0.15283662000000001 0.75501591000000001 0.34564474000000001 0.70034706999999996 0.33867297000000002 0.72632956999999998 0.34316257 0.72728585999999995 0.35987571000000002 0.96572756999999998 0.24622438999999999 0.72682517999999996 0.27295705999999997 0.72664242999999995 0.28742709999999999 0.72650110999999995 0.31484245999999999 0.72743325999999997 0.075870931000000003 0.72462373999999996 0.34290915999999999 0.76265472000000001 0.33792558 0.78921854000000002 0.31619447000000001 0.69133341000000004 0.34824603999999998 0.82833259999999997 0.33547997000000002 0.79831927999999996 0.35464948000000002 0.83694117999999995 0.34889099000000001 0.82268381000000002 0.35632577999999998 0.83175933000000002 0.088914081000000006 0.72727870999999999 0.35434473 0.80564183 0.35515155999999998 0.76422256 0.28769930999999999 0.7230977"
+		+ "4000000004 0.079172223999999999 0.72357976000000002 0.34812253999999998 0.80292189000000003 0.35167 0.76389169999999995 0.35008243 0.79099905000000004 0.082647084999999995 0.72448193999999999 0.19274433999999999 0.91022342000000001 0.16440747999999999 0.91075956999999996 0.15057536999999999 0.84567773000000002 0.15357367999999999 0.84557961999999998 0.19520593999999999 0.90666163 0.16765831 0.90620106 0.14994383999999999 0.83969062999999999 0.15155858 0.83939153 0.16135089 0.810072 0.17047417000000001 0.90362591000000003 0.15656323999999999 0.77842975000000003 0.083020612999999993 0.73762894000000001 0.14826012 0.82258098999999996 0.14913554000000001 0.83475827999999996 0.14715909999999999 0.77919864999999999 0.14728606999999999 0.81144512000000002 0.26908088000000002 0.81190388999999996 0.15181859 0.77895217999999999 0.079235315000000001 0.73801649000000002 0.15311896999999999 0.81109982999999997 0.14953706 0.83722465999999995 0.15102082 0.83735811999999998 0.15322616999999999 0.82086384000000001"
+		)
 		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
 		"uvst[0].uvsp[250:472]" (" 0.15095891 0.75500453000000001 0.11490999 0.75478595000000004 0.23708736999999999 0.89707917000000004 0.20086601000000001 0.89704728 0.10213627 0.73131268999999999 0.258982 0.80711763999999997 0.25925537999999998 0.84147209000000001 0.25899034999999998 0.87582647999999996 0.081391468999999994 0.75528448999999998 0.088356078000000005 0.73009109000000005 0.1505484 0.75935054000000002 0.11432694 0.75939155000000003 0.084195033000000002 0.72796952999999998 0.23749888 0.90142518000000005 0.20145024 0.90165262999999995 0.10164644 0.73583518999999997 0.079874082999999999 0.72783845999999996 0.097360611 0.73278259999999995 0.26417127000000001 0.87524175999999998 0.10034181 0.72602433 0.095106825000000006 0.72430097999999998 0.086886837999999994 0.73486691999999998 0.095238551000000005 0.72862190000000004 0.081598147999999995 0.73307328999999999 0.077727273 0.73315805000000001 0.26457101 0.84147143000000002 0.15122332999999999 0.85214513999999997 0.32375407 0.94987904999999995 0.16783931999999999 0.90411836000000001 "
-		+ "0.15140429 0.83471185000000003 0.15444343999999999 0.76180570999999997 0.15065992 0.76202833999999997 0.16609667 0.90527086999999995 0.14706764999999999 0.76211905000000002 0.11777671000000001 0.76219481 0.095890834999999994 0.91859758000000002 0.16077772000000001 0.90894693000000004 0.36200716999999999 0.94949472000000001 0.33049798000000002 0.86346065999999999 0.15575317999999999 0.91243571000000001 0.27407991999999998 0.72138566000000004 0.35449894999999998 0.79154384 0.12099762 0.96425748 0.35276452000000003 0.74707168000000002 0.35632609999999998 0.74753219000000004 0.33166375999999997 0.72450422999999997 0.33155790000000002 0.72796011000000005 0.31497916999999998 0.72386861000000002 0.24829470000000001 0.72063171999999998 0.34858318999999999 0.94975494999999999 0.12118335 0.95878083000000003 0.36826863999999998 0.96607089000000002 0.34332657 0.86978018000000001 0.36860415000000002 0.96202803000000003 0.33150622000000002 0.76339131999999998 0.35036528 0.68389148 0.34858575000000003 0.87777245000000004 0."
+		+ "0.15140429 0.83471185000000003 0.15444343999999999 0.76180570999999997 0.15065992 0.76202833999999997 0.16609667 0.90527086999999995 0.14706764999999999 0.76211905000000002 0.11777671000000001 0.76219481 0.095890834999999994 0.91859758000000002 0.16077772000000001 0.90894693000000004 0.36200716999999999 0.94949472000000001 0.33049798000000002 0.86346065999999999 0.15575317999999999 0.91243571000000001 0.27407991999999998 0.72138566000000004 0.35449894999999998 0.79154384 0.12737408 0.96761352 0.35276452000000003 0.74707168000000002 0.35632609999999998 0.74753219000000004 0.33166375999999997 0.72450422999999997 0.33155790000000002 0.72796011000000005 0.31497916999999998 0.72386861000000002 0.24829470000000001 0.72063171999999998 0.34858318999999999 0.94975494999999999 0.12755981 0.96213685999999998 0.36826863999999998 0.96607089000000002 0.34332657 0.86978018000000001 0.36860415000000002 0.96202803000000003 0.33150622000000002 0.76339131999999998 0.35036528 0.68389148 0.34858575000000003 0.87777245000000004 0."
 		+ "34752083 0.68347542999999999 0.095861225999999994 0.85208017000000003 0.33966490999999999 0.68192184 0.34325936000000001 0.68266313999999995 0.30453372000000001 0.94988435999999998 0.33157498000000002 0.94980609000000005 0.30453476000000002 0.87764012999999996 0.33157718000000003 0.87772017999999996 0.095840722000000003 0.88836919999999997 0.11283256 0.85209875999999996 0.13971238999999999 0.91855878000000002 0.13972142000000001 0.85213148999999999 0.14484605 0.91854703000000004 0.14485580000000001 0.85214524999999997 0.14972152999999999 0.91845834000000004 0.14979487999999999 0.85215878 0.074205637000000005 0.68192357000000003 0.15498277999999999 0.91851258000000002 0.15499056999999999 0.85217553000000001 0.35546705000000001 0.83476830000000002 0.34847011999999999 0.91377377999999998 0.30065610999999998 0.94990158000000002 0.36898651999999998 0.74373180000000005 0.36274612000000001 0.81606566999999997 0.36274668999999998 0.74370192999999996 0.36796772 0.90625953999999997 0.086905970999999999 0.68192523999999"
-		+ "999 0.31298113 0.68265801999999998 0.36845094 0.83382887000000006 0.35728823999999998 0.74367547000000001 0.34573039 0.86084068000000002 0.088895544000000007 0.69034516999999995 0.36804143 0.95840376999999999 0.3684442 0.87005745999999995 0.36513825999999999 0.83382820999999996 0.33401754 0.86528592999999998 0.33263344 0.85705513 0.33050330999999999 0.82863008999999999 0.35546150999999998 0.87096923999999998 0.35963478999999998 0.83382719999999999 0.084537417000000004 0.83736025999999997 0.083999813000000007 0.83939368000000003 0.084893569000000002 0.76203041999999999 0.088485866999999996 0.76212089999999999 0.29971406 0.94830972000000002 0.29971766 0.94408607 0.081985101000000005 0.84558182999999998 0.37909815000000002 0.94731240999999999 0.28550091 0.94950277000000005 0.079914107999999998 0.85134195999999995 0.27408946000000001 0.80541021000000002 0.28770843000000001 0.80369489999999999 0.23101706999999999 0.93132990999999998 0.22998173999999999 0.92560863000000004 0.33167257999999999 0.80227839999999995 0."
-		+ "22951147 0.92260109999999995 0.31498810999999999 0.80291789999999996 0.15856037000000001 0.92258607999999998 0.33156595 0.79882251999999998 0.23207559999999999 0.93585306000000001 0.27058545000000001 0.87748402000000003 0.15412802 0.92389595999999996 0.36664149000000001 0.95429659 0.15133297000000001 0.92586296999999995 0.27058873 0.80551863000000001 0.35046881000000002 0.68389434000000004 0.35331318 0.68347835999999995 0.36116918999999997 0.68192487999999996 0.29976090999999999 0.87758588999999998 0.35757473000000001 0.68266618000000001 0.28759279999999998 0.87754237999999996 0.28759632000000002 0.80546205999999998 0.29977789999999999 0.91387635 0.28278890000000001 0.87760282000000001 0.25589898 0.87763303999999998 0.25076777 0.94405066999999998 0.25076446000000002 0.87764626999999995 0.24589203000000001 0.94396137999999996 0.24582513 0.87765919999999997 0.086750596999999999 0.91939890000000002 0.37908676000000002 0.90659237000000004 0.091488822999999997 0.68192123999999998 0.087192371000000005 0.85306561000"
-		+ "000003 0.24062921000000001 0.87767552999999998 0.27072191000000001 0.84151167000000004 0.31462726000000002 0.87763314999999997 0.31463163999999999 0.80537384999999995 0.31850310999999998 0.87765557000000005 0.31850430000000002 0.80535226999999998 0.32474285000000003 0.87768566999999997 0.32474405000000001 0.80532258999999995 0.36648244000000002 0.90605824999999995 0.074672221999999996 0.92455339000000003 0.33020124000000001 0.87771213000000003 0.33020249000000002 0.80529618000000003 0.074208677000000001 0.85212266000000003 0.36378261000000001 0.94549757000000001 0.36415264000000003 0.91433047999999995 0.36978148999999999 0.95245767000000003 0.074205637000000005 0.88835132000000006 0.077966988000000001 0.92380357000000002 0.077521369000000007 0.85212284000000005 0.37568458999999998 0.94931542999999996 0.082908675000000001 0.92059462999999997 0.083024964000000007 0.85212332000000002 0.29006499000000002 0.94991428 0.37661746000000001 0.94103824999999997 0.37738228000000001 0.91269261000000002 0.08718808000000000"
-		+ "1 0.88926649000000002 0.083825900999999994 0.68334435999999998 0.35973239000000001 0.90229844999999997 0.35589071999999999 0.90110170999999994 0.32423869 0.68562376000000003 0.32406852000000003 0.68927961999999998 0.32384100999999998 0.69366348 0.075659140999999999 0.68813205 0.32423529000000001 0.69902807 0.10410173 0.96401977999999999 0.34597865 0.74603295000000003 0.067829177000000004 0.96426522999999997 0.077098966000000005 0.96354251999999996 0.33221358000000001 0.80224138 0.34361311999999999 0.82956110999999999 0.33049798000000002 0.80589122000000002 0.33987814 0.83112620999999998 0.079114853999999998 0.68926655999999997 0.32123806999999999 0.69131838999999995 0.36898600999999998 0.81603587 0.32463339000000002 0.68192613000000002 0.36882981999999997 0.77989489000000001 0.30065995000000001 0.8776235 0.075869887999999996 0.73935466999999999 0.26416305000000001 0.80770116999999997 0.079984902999999996 0.75960928000000005 0.091409280999999995 0.73437642999999997 0.092343598999999998 0.73155320000000001 0.07"
-		+ "6166496 0.72818267000000003 0.083817511999999997 0.76115191000000004 0.25560734000000002 0.80594975000000002 0.26908806000000002 0.87103783999999995 0.10042602 0.72215342999999999 0.16652517 0.89683634000000001 0.16793136 0.90116125000000002 0.16573863999999999 0.90316951000000001 0.095450415999999996 0.72059339 0.10626459000000001 0.73146844 0.091891423 0.72029823000000004 0.19726478 0.90369058000000002 0.11277308 0.92256623999999998 0.095904483999999998 0.92284584000000003 0.14511603000000001 0.92271703000000005 0.28283834000000002 0.94810342999999997 0.081110001000000001 0.76180804000000002 0.25040781000000001 0.94816451999999996 0.25528252000000001 0.83288412999999994 0.25227872000000001 0.80806363000000003 0.25527455999999998 0.80599069999999995 0.24869879 0.81056910999999998 0.24396296000000001 0.81306725999999996 0.10629348 0.68192405 0.10258804000000001 0.68773985000000004 0.24062921000000001 0.72744268000000001 0.24303617 0.71950835000000002 0.24070892999999999 0.76340169000000002 0.28763582999999998"
-		+ " 0.96573514000000005 0.27924302000000001 0.96608037000000002")
-		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
-		"dispResolution" " 3"
-		2 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape" 
-		"displaySmoothMesh" " 2"
+		+ "999 0.31298113 0.68265801999999998 0.36845094 0.83382887000000006 0.35728823999999998 0.74367547000000001 0.34573039 0.86084068000000002 0.088895544000000007 0.69034516999999995 0.36804143 0.95840376999999999 0.3684442 0.87005745999999995 0.36513825999999999 0.83382820999999996 0.33401754 0.86528592999999998 0.33263344 0.85705513 0.33050330999999999 0.82863008999999999 0.35546150999999998 0.87096923999999998 0.35963478999999998 0.83382719999999999 0.084537417000000004 0.83736025999999997 0.083999813000000007 0.83939368000000003 0.084893569000000002 0.76203041999999999 0.088485866999999996 0.76212089999999999 0.29971406 0.94830972000000002 0.29971766 0.94408607 0.081985101000000005 0.84558182999999998 0.37909815000000002 0.94731240999999999 0.28550091 0.94950277000000005 0.079914107999999998 0.85134195999999995 0.27408946000000001 0.80541021000000002 0.28770843000000001 0.80369489999999999 0.23805693999999999 0.93034320999999998 0.23683620999999999 0.92359740000000001 0.33167257999999999 0.80227839999999995 0."
+		+ "23628173999999999 0.92005128000000003 0.31498810999999999 0.80291789999999996 0.15262517 0.92003356999999997 0.33156595 0.79882251999999998 0.23930503 0.93567634 0.27058545000000001 0.87748402000000003 0.14739911 0.92157805000000004 0.36664149000000001 0.95429659 0.14410354 0.92389726999999999 0.27058873 0.80551863000000001 0.35046881000000002 0.68389434000000004 0.35331318 0.68347835999999995 0.36116918999999997 0.68192487999999996 0.29976090999999999 0.87758588999999998 0.35757473000000001 0.68266618000000001 0.28759279999999998 0.87754237999999996 0.28759632000000002 0.80546205999999998 0.29977789999999999 0.91387635 0.28278890000000001 0.87760282000000001 0.25589898 0.87763303999999998 0.25076777 0.94405066999999998 0.25076446000000002 0.87764626999999995 0.24589203000000001 0.94396137999999996 0.24582513 0.87765919999999997 0.086750596999999999 0.91939890000000002 0.37908676000000002 0.90659237000000004 0.091488822999999997 0.68192123999999998 0.087192371000000005 0.85306561000000003 0.24062921000000001 "
+		+ "0.87767552999999998 0.27072191000000001 0.84151167000000004 0.31462726000000002 0.87763314999999997 0.31463163999999999 0.80537384999999995 0.31850310999999998 0.87765557000000005 0.31850430000000002 0.80535226999999998 0.32474285000000003 0.87768566999999997 0.32474405000000001 0.80532258999999995 0.36648244000000002 0.90605824999999995 0.074672221999999996 0.92455339000000003 0.33020124000000001 0.87771213000000003 0.33020249000000002 0.80529618000000003 0.074208677000000001 0.85212266000000003 0.36378261000000001 0.94549757000000001 0.36415264000000003 0.91433047999999995 0.36978148999999999 0.95245767000000003 0.074205637000000005 0.88835132000000006 0.077966988000000001 0.92380357000000002 0.077521369000000007 0.85212284000000005 0.37568458999999998 0.94931542999999996 0.082908675000000001 0.92059462999999997 0.083024964000000007 0.85212332000000002 0.29006499000000002 0.94991428 0.37661746000000001 0.94103824999999997 0.37738228000000001 0.91269261000000002 0.087188080000000001 0.88926649000000002 0.083"
+		+ "825900999999994 0.68334435999999998 0.35973239000000001 0.90229844999999997 0.35589071999999999 0.90110170999999994 0.32423869 0.68562376000000003 0.32406852000000003 0.68927961999999998 0.32384100999999998 0.69366348 0.075659140999999999 0.68813205 0.32423529000000001 0.69902807 0.11047819 0.96737580999999995 0.34597865 0.74603295000000003 0.074205637000000005 0.96762126999999998 0.083475426000000005 0.96689855999999996 0.33221358000000001 0.80224138 0.34361311999999999 0.82956110999999999 0.33049798000000002 0.80589122000000002 0.33987814 0.83112620999999998 0.079114853999999998 0.68926655999999997 0.32123806999999999 0.69131838999999995 0.36898600999999998 0.81603587 0.32463339000000002 0.68192613000000002 0.36882981999999997 0.77989489000000001 0.30065995000000001 0.8776235 0.075869887999999996 0.73935466999999999 0.26416305000000001 0.80770116999999997 0.079984902999999996 0.75960928000000005 0.091409280999999995 0.73437642999999997 0.092343598999999998 0.73155320000000001 0.076166496 0.72818267000000003"
+		+ " 0.083817511999999997 0.76115191000000004 0.25560734000000002 0.80594975000000002 0.26908806000000002 0.87103783999999995 0.10042602 0.72215342999999999 0.16652517 0.89683634000000001 0.16793136 0.90116125000000002 0.16573863999999999 0.90316951000000001 0.095450415999999996 0.72059339 0.10626459000000001 0.73146844 0.091891423 0.72029823000000004 0.19726478 0.90369058000000002 0.11277308 0.92256623999999998 0.095904483999999998 0.92284584000000003 0.14511603000000001 0.92271703000000005 0.28283834000000002 0.94810342999999997 0.081110001000000001 0.76180804000000002 0.25040781000000001 0.94816451999999996 0.25528252000000001 0.83288412999999994 0.25227872000000001 0.80806363000000003 0.25527455999999998 0.80599069999999995 0.24869879 0.81056910999999998 0.24396296000000001 0.81306725999999996 0.10629348 0.68192405 0.10258804000000001 0.68773985000000004 0.24062921000000001 0.72744268000000001 0.24303617 0.71950835000000002 0.24070892999999999 0.76340169000000002 0.28763582999999998 0.96573514000000005 0.2792"
+		+ "4302000000001 0.96608037000000002")
 		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
 		"uvst[0].uvsp[0:92]" (" -s 93 -type \"float2\" 0.1713973 0.81987739000000004 0.22643663999999999 0.81989688000000005 0.23799793 0.78604048000000004 0.094440504999999994 0.71410739000000001 0.086879939000000003 0.72083282000000004 0.16254151 0.68240487999999999 0.15484782999999999 0.70810211000000001 0.15286419000000001 0.68312656999999999 0.23439783 0.70759331999999997 0.24512781 0.68314063999999997 0.24307443000000001 0.70816665999999995 0.30350568999999999 0.71418714999999999 0.19897796000000001 0.68192536000000004 0.19897740999999999 0.71644092000000004 0.17068037 0.78866236999999995 0.16338912999999999 0.71673058999999995 0.19898947 0.70713102999999999 0.23543221 0.68242418999999999 0.22717638000000001 0.78868811999999999 0.19892615 0.78887510000000005 0.23459899000000001 0.71674298999999997 0.15736169 0.88836532999999995 0.15737934000000001 0.82902907999999997 0.085474849000000006 0.69158816000000001 0.19891666999999999 0.81993824000000004 0.19889234 0.89442790000000005 0.163387 0.89440030000000004 0.23439771000000001 0.89442383"
 		+ "999999997 0.31253534999999999 0.69169164000000005 0.24044846 0.82905715999999996 0.24042696999999999 0.88839281000000003 0.093174592000000001 0.69049108000000003 0.30482610999999998 0.69057071000000003 0.31110641 0.72089915999999998 0.16356903 0.70757544000000006 0.15572168 0.71264826999999997 0.15877837 0.71657835999999997 0.15921172 0.70775688000000003 0.16331146999999999 0.71213530999999997 0.1989834 0.71179311999999995 0.15770081 0.68274604999999999 0.15912402 0.89263104999999998 0.23866187 0.89265746000000001 0.24027176 0.68277346999999999 0.23467118000000001 0.71217138000000002 0.23875256 0.70779334999999999 0.23917888000000001 0.71659123999999996 0.24220048 0.71268213000000002 0.15754539000000001 0.7804451 0.092645183000000006 0.72005993000000001 0.30530950000000001 0.72014356000000002 0.24031976999999999 0.78048806999999998 0.15945089000000001 0.71137302999999996 0.23850605999999999 0.71140300999999995 0.19889511000000001 0.88605325999999995 0.23158717000000001 0.88556491999999998 0.16620335999999999 "
 		+ "0.88554317000000005 0.19891355999999999 0.82969636000000002 0.22899728 0.82989745999999998 0.16882997999999999 0.82987683999999995 0.23481821999999999 0.78027499 0.19892845000000001 0.78051090000000001 0.16308516000000001 0.78024042000000005 0.23841555 0.71288781999999995 0.15954589999999999 0.71284603999999996 0.32382828000000002 0.69283938 0.23753748999999999 0.82190125999999997 0.16029498 0.82187498000000003 0.15986232 0.78600228000000005 0.076289728000000001 0.72395377999999999 0.32168224000000001 0.72408360000000005 0.074205637000000005 0.69274407999999998 0.31158786999999999 0.71530455000000004 0.22705560999999999 0.79662049000000001 0.32234754999999998 0.71617549999999996 0.19892396000000001 0.79677039000000005 0.17079406999999999 0.79659687999999995 0.075686842000000004 0.71604758999999996 0.086517885000000003 0.71520346000000001 0.23688593999999999 0.71665966999999997 0.23756886999999999 0.78038335000000003 0.23669909 0.71476894999999996 0.23673644999999999 0.78380901000000003 0.233457 0.784429970000"
 		+ "00003 0.19892719 0.78470211999999995 0.16442144 0.78439747999999998 0.16132894 0.78334254000000003 0.16031535999999999 0.78034382999999996 0.16108699000000001 0.716649 0.16136047000000001 0.71463597000000001 0.16334206000000001 0.71450274999999996 0.19898020999999999 0.71424162000000002 0.23464264000000001 0.71461945999999998"
 		)
-		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
-		"displayNormal" " 0"
-		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
-		"dispResolution" " 3"
-		2 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape" 
-		"displaySmoothMesh" " 2"
-		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvPivot" 
-		" -type \"double2\" 0.14776799696134557 0.96030510593863094"
 		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "uvst[0].uvsp[0:23]" 
-		" -s 24 -type \"float2\" 0.12820994999999999 0.95838981999999995 0.13374628 0.97061372000000001 0.16270842999999999 0.94697266999999996 0.15988483000000001 0.96701473000000004 0.15568177 0.9515903 0.16029939000000001 0.95861691000000004 0.16921549999999999 0.97395456000000002 0.16924729999999999 0.96720313999999996 0.17600726 0.97400898000000002 0.17600676000000001 0.96719885000000005 0.13397998999999999 0.96587902000000003 0.13137663999999999 0.96191740000000003 0.17767119000000001 0.97299099 0.17072079000000001 0.96871585000000004 0.17485650999999999 0.96877170000000001 0.17481596999999999 0.97283386999999999 0.17767127999999999 0.96889066999999995 0.13286692 0.97527182000000001 0.15006509000000001 0.94533330000000004 0.15832512000000001 0.97527688999999995 0.16732602999999999 0.95399928000000001 0.18177159000000001 0.96889073000000003 0.17075742999999999 0.97284245000000003 0.18177149000000001 0.97299099"
+		" -s 24 -type \"float2\" 0.12579693 0.95639682000000004 0.13272882 0.97170204000000004 0.16899154999999999 0.94210172000000003 0.16545619 0.96719586999999996 0.16019364999999999 0.94788331000000003 0.16597524 0.95668112999999999 0.16921549999999999 0.97395456000000002 0.16924729999999999 0.96720313999999996 0.17600726 0.97400898000000002 0.17600676000000001 0.96719885000000005 0.13302143999999999 0.96577387999999997 0.12976183999999999 0.96081364000000002 0.17767119000000001 0.97299099 0.17072079000000001 0.96871585000000004 0.17485650999999999 0.96877170000000001 0.17481596999999999 0.97283386999999999 0.17767127999999999 0.96889066999999995 0.13162779999999999 0.97753435 0.15316117000000001 0.94004911000000002 0.16350332000000001 0.97754067 0.17477311000000001 0.95089953999999999 0.18177159000000001 0.96889073000000003 0.17075742999999999 0.97284245000000003 0.18177149000000001 0.97299099"
 		
-		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "dispResolution" 
-		" 3"
-		2 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape" "displaySmoothMesh" 
-		" 2"
-		3 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|NewChairScene3:ChairGRP|NewChairScene3:Leg4|NewChairScene3:LegShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|NewChairScene3:ChairGRP|NewChairScene3:Leg3|NewChairScene3:LegShape.instObjGroups" 
@@ -1072,6 +1022,8 @@ createNode reference -n "NewChairScene2RN1";
 		3 "|NewChairScene3:ChairGRP|NewChairScene3:Leg2|NewChairScene3:LegShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|NewChairScene3:ChairGRP|NewChairScene3:Leg|NewChairScene3:LegShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NewChairScene3:ChairGRP|NewChairScene3:Seat|NewChairScene3:SeatShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|NewChairScene3:ChairGRP|NewChairScene3:Chair|NewChairScene3:ChairShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
@@ -1749,137 +1701,25 @@ createNode reference -n "LightingTrussRN";
 		+ "904999999995 0.23882458000000001 0.097427904999999995 0.24243297999999999 0.097427904999999995 0.24604142000000001 0.097427904999999995 0.24964981999999999 0.097427904999999995 0.25325826000000001 0.097427904999999995 0.25686666000000002 0.097427904999999995 0.26047503999999999 0.097427904999999995 0.26408345 0.097427904999999995 0.26769187999999999 0.097427904999999995 0.27130026000000002 0.097427904999999995 0.27490869000000001 0.097427904999999995 0.27851706999999998 0.097427904999999995 0.28212546999999999 0.097427904999999995 0.28573390999999998 0.097427904999999995 0.28934230999999999 0.097427904999999995 0.21717417 0.20568022 0.22078254999999999 0.20568022 0.22439095000000001 0.20568022 0.22799939 0.20568022 0.23160779000000001 0.20568022 0.23521623 0.20568022 0.23882458000000001 0.20568022 0.24243297999999999 0.20568022 0.24604142000000001 0.20568022 0.24964981999999999 0.20568022 0.25325826000000001 0.20568022 0.25686666000000002 0.20568022 0.26047503999999999 0.20568022 0.26408345 0.20568022 0.26769"
 		+ "187999999999 0.20568022 0.27130026000000002 0.20568022 0.27490869000000001 0.20568022 0.27851706999999998 0.20568022 0.28212546999999999 0.20568022 0.28573390999999998 0.20568022 0.28934230999999999 0.20568022 0.29615581000000002 0.23684716 0.28974912000000003 0.22427326 0.27977043000000001 0.21429454000000001 0.26719653999999998 0.20788783 0.25325826000000001 0.20568022 0.23932001 0.20788783 0.22674607999999999 0.2142946 0.21676743000000001 0.22427326 0.21036071000000001 0.23684716 0.20815310000000001 0.25078538 0.21036071000000001 0.26472369000000001 0.21676743000000001 0.27729756 0.22674614000000001 0.28727627 0.23932001 0.29368295999999999 0.25325826000000001 0.29589053999999998 0.26719651 0.29368295999999999 0.27977043000000001 0.28727627 0.28974908999999999 0.27729756 0.29615581000000002 0.26472369000000001 0.29836341999999999 0.25078538 0.25325826000000001 0.052322715999999998 0.25325826000000001 0.25078538"
 		)
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId12.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId13.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		""
-		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape.compInstObjGroups.compObjectGroups[1]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId11.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "LightingTruss:groupId21.message" ":initialShadingGroup.groupNodes" "-na"
 		
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId12.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId14.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId13.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder15|LightingTruss:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId18.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId19.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape.compInstObjGroups.compObjectGroups[4].compObjectGroupId" 
-		""
-		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape.compInstObjGroups.compObjectGroups[4]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId21.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "LightingTruss:groupId19.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId20.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId16.message" ":initialShadingGroup.groupNodes" "-na"
-		
 		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder4|LightingTruss:pCylinderShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
@@ -1889,13 +1729,19 @@ createNode reference -n "LightingTrussRN";
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder1|LightingTruss:pCylinderShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "LightingTruss:groupId20.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder14|LightingTruss:pCylinder14Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
@@ -1907,37 +1753,35 @@ createNode reference -n "LightingTrussRN";
 		""
 		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder14|LightingTruss:pCylinder14Shape.compInstObjGroups.compObjectGroups[5]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		3 "LightingTruss:groupId12.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder15|LightingTruss:pCylinderShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId16.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape.instObjGroups.objectGroups[0]" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId17.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape.compInstObjGroups.compObjectGroups[3].compObjectGroupId" 
-		""
-		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape.compInstObjGroups.compObjectGroups[3]" 
+		3 "LightingTruss:groupId20.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "LightingTruss:groupId18.message" ":initialShadingGroup.groupNodes" "-na"
 		
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "LightingTruss:groupId14.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder11|LightingTruss:pCylinder11Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
@@ -1949,23 +1793,159 @@ createNode reference -n "LightingTrussRN";
 		""
 		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder11|LightingTruss:pCylinder11Shape.compInstObjGroups.compObjectGroups[2]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
+		3 "LightingTruss:groupId11.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss:groupId16.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "LightingTruss:groupId14.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss:groupId12.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss:groupId13.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		""
+		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder10|LightingTruss:pCylinder10Shape.compInstObjGroups.compObjectGroups[1]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss:groupId17.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group2|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		3 "LightingTruss:groupId18.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss:groupId19.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape.compInstObjGroups.compObjectGroups[4].compObjectGroupId" 
+		""
+		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder13|LightingTruss:pCylinder13Shape.compInstObjGroups.compObjectGroups[4]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group3|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss:groupId16.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss:groupId17.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape.compInstObjGroups.compObjectGroups[3].compObjectGroupId" 
+		""
+		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder12|LightingTruss:pCylinder12Shape.compInstObjGroups.compObjectGroups[3]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss:groupId15.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder16|LightingTruss:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss:groupId19.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "LightingTruss:groupId13.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "LightingTruss:groupId11.groupId" "|LightingTruss:LightingTruss|LightingTruss:pCylinder9|LightingTruss:pCylinder9Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
@@ -1977,35 +1957,7 @@ createNode reference -n "LightingTrussRN";
 		""
 		3 "|LightingTruss:LightingTruss|LightingTruss:pCylinder9|LightingTruss:pCylinder9Shape.compInstObjGroups.compObjectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId15.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group3|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder18|LightingTruss:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group1|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group3|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group4|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss:groupId17.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group1|LightingTruss:pCylinder21|LightingTruss:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group4|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder17|LightingTruss:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group2|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group5|LightingTruss:group1|LightingTruss:pCylinder20|LightingTruss:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss:LightingTruss|LightingTruss:group6|LightingTruss:group4|LightingTruss:pCylinder19|LightingTruss:pCylinderShape19.instObjGroups" 
+		3 "|LightingTruss:LightingTruss|LightingTruss:group7|LightingTruss:group2|LightingTruss:pCylinder15|LightingTruss:pCylinderShape15.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "LightingTrussRN" "|LightingTruss:LightingTruss|LightingTruss:pCylinder1|LightingTruss:pCylinderShape1.instObjGroups" 
 		"LightingTrussRN.placeHolderList[1]" ":initialShadingGroup.dsm"
@@ -2297,7 +2249,7 @@ createNode reference -n "LightingTrussRN1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"LightingTrussRN1"
 		"LightingTrussRN1" 0
-		"LightingTrussRN1" 338
+		"LightingTrussRN1" 337
 		2 "|LightingTruss1:LightingTruss" "translate" " -type \"double3\" -0.24899679316339429 29.28076999878213371 -7.63023285914733318"
 		
 		2 "|LightingTruss1:LightingTruss" "rotate" " -type \"double3\" -0.75569558963783956 -8.12612985662671328 5.33104198869054358"
@@ -2317,41 +2269,39 @@ createNode reference -n "LightingTrussRN1";
 		+ "13000000002 0.12425435 0.0019920913000000002 0.12425422999999999 0.012750134 0.12320794 0.012750134 0.12204814 0.0019920913000000002 0.12204814 0.012750134 0.12088823 0.0019920913000000002 0.12088823 0.012750134 0.11984193 0.0019920913000000002 0.11984193 0.012750134 0.13889039 0.012750222 0.13784404 0.012750222 0.13784404 0.0019920617000000001 0.13889039 0.0019921210999999999 0.13668416 0.012750222 0.13668416 0.0019920617000000001 0.13552429999999999 0.012750222 0.13552429999999999 0.0019920617000000001 0.13447796000000001 0.012750222 0.13447796000000001 0.0019920617000000001 0.15450965999999999 0.012750252 0.15346324 0.012750252 0.15346324 0.0019922099999999999 0.15450965999999999 0.0019922099999999999 0.15230346 0.012750252 0.15230346 0.0019922099999999999 0.15114353999999999 0.012750252 0.15114353999999999 0.0019920913000000002 0.15009724999999999 0.012750252 0.15009724999999999 0.0019920913000000002"
 		)
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder9|LightingTruss1:pCylinder9Shape" 
-		"uvPivot" " -type \"double2\" 0.25165489315986633 0.15125167023122699"
+		"uvPivot" " -type \"double2\" 0.25165489508582173 0.15223279362392239"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder9|LightingTruss1:pCylinder9Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder9|LightingTruss1:pCylinder9Shape" 
-		"uvst[0].uvsp[0:249]" (" -type \"float2\" 0.29454627999999999 0.039079592000000003 0.28814047999999998 0.026507533999999999 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.21557602000000001 0.097378619 0.21918388999999999 0.097378619 0.22279177999999999 0.097378619 0.22639965000000001 0.097378619 0.23000756 0.097378619 0.23361544000000001 0.097378619 0.23722330999999999 0.097378619 0.24083120999999999 0.0973"
-		+ "78619 0.24443910999999999 0.097378619 0.24804698 0.097378619 0.25165489000000002 0.097378619 0.25526272999999999 0.097378619 0.25887065999999997 0.097378619 0.26247856000000003 0.097378619 0.26608642999999998 0.097378619 0.2696943 0.097378619 0.2733022 0.097378619 0.27691007000000001 0.097378619 0.28051794000000002 0.097378619 0.28412586000000001 0.097378619 0.28773376000000001 0.097378619 0.21557602000000001 0.20561528000000001 0.21918388999999999 0.20561528000000001 0.22279177999999999 0.20561528000000001 0.22639965000000001 0.20561528000000001 0.23000756 0.20561528000000001 0.23361544000000001 0.20561528000000001 0.23722330999999999 0.20561528000000001 0.24083120999999999 0.20561528000000001 0.24443910999999999 0.20561528000000001 0.24804698 0.20561528000000001 0.25165489000000002 0.20561528000000001 0.25526272999999999 0.20561528000000001 0.25887065999999997 0.20561528000000001 0.26247856000000003 0.20561528000000001 0.26608642999999998 0.20561528000000001 0.2696943 0.20561528000000001 0.2733022 0.2056152"
-		+ "8000000001 0.27691007000000001 0.20561528000000001 0.28051794000000002 0.20561528000000001 0.28412586000000001 0.20561528000000001 0.28773376000000001 0.20561528000000001 0.29454627999999999 0.23751349999999999 0.28814047999999998 0.22494144999999999 0.27816324999999997 0.21496418 0.26559114 0.2085584 0.25165492 0.20635112999999999 0.23771864000000001 0.2085584 0.22514658000000001 0.21496418 0.21516933999999999 0.22494144999999999 0.20876354999999999 0.23751349999999999 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.26538599000000002 0.21516933999999999 0.27795809999999999 0.22514661 0.28793531999999999 0.23771866999999999 0.29434109000000003 0.25165492 0.29654837000000001 0.26559114 0.29434109000000003 0.27816321999999999 0.28793531999999999 0.28814047999999998 0.27795809999999999 0.29454627999999999 0.26538599000000002 0.29675352999999999 0.25144976000000002 0.25165492 0.053015828000000001 0.25165492 0.25144976000000002 0.21557602000000001 0.097378619 0.21918388999999999 0.097378619 0.2191838"
-		+ "8999999999 0.20561528000000001 0.21557602000000001 0.20561528000000001 0.22279177999999999 0.097378619 0.22279177999999999 0.20561528000000001 0.22639965000000001 0.097378619 0.22639965000000001 0.20561528000000001 0.23000756 0.097378619 0.23000756 0.20561528000000001 0.23361544000000001 0.097378619 0.23361544000000001 0.20561528000000001 0.23722330999999999 0.097378619 0.23722330999999999 0.20561528000000001 0.24083120999999999 0.097378619 0.24083120999999999 0.20561528000000001 0.24443910999999999 0.097378619 0.24443910999999999 0.20561528000000001 0.24804698 0.097378619 0.24804698 0.20561528000000001 0.25165489000000002 0.097378619 0.25165489000000002 0.20561528000000001 0.25526272999999999 0.097378619 0.25526272999999999 0.20561528000000001 0.25887065999999997 0.097378619 0.25887065999999997 0.20561528000000001 0.26247856000000003 0.097378619 0.26247856000000003 0.20561528000000001 0.26608642999999998 0.097378619 0.26608642999999998 0.20561528000000001 0.2696943 0.097378619 0.2696943 0.20561528000000001 0"
-		+ ".2733022 0.097378619 0.2733022 0.20561528000000001 0.27691007000000001 0.097378619 0.27691007000000001 0.20561528000000001 0.28051794000000002 0.097378619 0.28051794000000002 0.20561528000000001 0.28412586000000001 0.097378619 0.28412586000000001 0.20561528000000001 0.28773376000000001 0.097378619 0.28773376000000001 0.20561528000000001 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.2881404"
-		+ "7999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002 0.21557602000000001 0.0976239 0.21918388999999999 0.0976239 0.21918388999999999 0.20586056999999999 0.21557602000000001 0.20586056999999999 0.22279177999999999 0."
-		+ "0976239 0.22279177999999999 0.20586056999999999 0.22639965000000001 0.0976239 0.22639965000000001 0.20586056999999999 0.23000756 0.0976239 0.23000756 0.20586056999999999 0.23361544000000001 0.0976239 0.23361544000000001 0.20586056999999999 0.23722330999999999 0.0976239 0.23722330999999999 0.20586056999999999 0.24083120999999999 0.0976239 0.24083120999999999 0.20586056999999999 0.24443910999999999 0.0976239 0.24443910999999999 0.20586056999999999 0.24804698 0.0976239 0.24804698 0.20586056999999999 0.25165489000000002 0.0976239 0.25165489000000002 0.20586056999999999 0.25526272999999999 0.0976239 0.25526272999999999 0.20586056999999999 0.25887065999999997 0.0976239 0.25887065999999997 0.20586056999999999 0.26247856000000003 0.0976239 0.26247856000000003 0.20586056999999999 0.26608642999999998 0.0976239 0.26608642999999998 0.20586056999999999 0.2696943 0.0976239 0.2696943 0.20586056999999999 0.2733022 0.0976239 0.2733022 0.20586056999999999 0.27691007000000001 0.0976239 0.27691007000000001 0.20586056999999999 0."
-		+ "28051794000000002 0.0976239 0.28051794000000002 0.20586056999999999 0.28412586000000001 0.0976239 0.28412586000000001 0.20586056999999999 0.28773376000000001 0.0976239 0.28773376000000001 0.20586056999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.294546279999999"
-		+ "99 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999"
+		"uvst[0].uvsp[0:249]" (" -type \"float2\" 0.29454627999999999 0.039079592000000003 0.28814047999999998 0.026507533999999999 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.21557602000000001 0.098114461 0.21918388999999999 0.098114461 0.22279177999999999 0.098114461 0.22639965000000001 0.098114461 0.23000756 0.098114461 0.23361544000000001 0.098114461 0.23722330999999999 0.098114461 0.24083120999999999 0.0981"
+		+ "14461 0.24443910999999999 0.098114461 0.24804698 0.098114461 0.25165489000000002 0.098114461 0.25526272999999999 0.098114461 0.25887065999999997 0.098114461 0.26247856000000003 0.098114461 0.26608642999999998 0.098114461 0.2696943 0.098114461 0.2733022 0.098114461 0.27691007000000001 0.098114461 0.28051794000000002 0.098114461 0.28412586000000001 0.098114461 0.28773376000000001 0.098114461 0.21557602000000001 0.20635112999999999 0.21918388999999999 0.20635112999999999 0.22279177999999999 0.20635112999999999 0.22639965000000001 0.20635112999999999 0.23000756 0.20635112999999999 0.23361544000000001 0.20635112999999999 0.23722330999999999 0.20635112999999999 0.24083120999999999 0.20635112999999999 0.24443910999999999 0.20635112999999999 0.24804698 0.20635112999999999 0.25165489000000002 0.20635112999999999 0.25526272999999999 0.20635112999999999 0.25887065999999997 0.20635112999999999 0.26247856000000003 0.20635112999999999 0.26608642999999998 0.20635112999999999 0.2696943 0.20635112999999999 0.2733022 0.2063511"
+		+ "2999999999 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.20635112999999999 0.29454627999999999 0.23751349999999999 0.28814047999999998 0.22494144999999999 0.27816324999999997 0.21496418 0.26559114 0.2085584 0.25165492 0.20635112999999999 0.23771864000000001 0.2085584 0.22514658000000001 0.21496418 0.21516933999999999 0.22494144999999999 0.20876354999999999 0.23751349999999999 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.26538599000000002 0.21516933999999999 0.27795809999999999 0.22514661 0.28793531999999999 0.23771866999999999 0.29434109000000003 0.25165492 0.29654837000000001 0.26559114 0.29434109000000003 0.27816321999999999 0.28793531999999999 0.28814047999999998 0.27795809999999999 0.29454627999999999 0.26538599000000002 0.29675352999999999 0.25144976000000002 0.25165492 0.053015828000000001 0.25165492 0.25144976000000002 0.21557602000000001 0.098114461 0.21918388999999999 0.098114461 0.2191838"
+		+ "8999999999 0.20635112999999999 0.21557602000000001 0.20635112999999999 0.22279177999999999 0.098114461 0.22279177999999999 0.20635112999999999 0.22639965000000001 0.098114461 0.22639965000000001 0.20635112999999999 0.23000756 0.098114461 0.23000756 0.20635112999999999 0.23361544000000001 0.098114461 0.23361544000000001 0.20635112999999999 0.23722330999999999 0.098114461 0.23722330999999999 0.20635112999999999 0.24083120999999999 0.098114461 0.24083120999999999 0.20635112999999999 0.24443910999999999 0.098114461 0.24443910999999999 0.20635112999999999 0.24804698 0.098114461 0.24804698 0.20635112999999999 0.25165489000000002 0.098114461 0.25165489000000002 0.20635112999999999 0.25526272999999999 0.098114461 0.25526272999999999 0.20635112999999999 0.25887065999999997 0.098114461 0.25887065999999997 0.20635112999999999 0.26247856000000003 0.098114461 0.26247856000000003 0.20635112999999999 0.26608642999999998 0.098114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0"
+		+ ".2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.2881404"
+		+ "7999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002 0.21557602000000001 0.098114461 0.21918388999999999 0.098114461 0.21918388999999999 0.20635112999999999 0.21557602000000001 0.20635112999999999 0.2227917799999999"
+		+ "9 0.098114461 0.22279177999999999 0.20635112999999999 0.22639965000000001 0.098114461 0.22639965000000001 0.20635112999999999 0.23000756 0.098114461 0.23000756 0.20635112999999999 0.23361544000000001 0.098114461 0.23361544000000001 0.20635112999999999 0.23722330999999999 0.098114461 0.23722330999999999 0.20635112999999999 0.24083120999999999 0.098114461 0.24083120999999999 0.20635112999999999 0.24443910999999999 0.098114461 0.24443910999999999 0.20635112999999999 0.24804698 0.098114461 0.24804698 0.20635112999999999 0.25165489000000002 0.098114461 0.25165489000000002 0.20635112999999999 0.25526272999999999 0.098114461 0.25526272999999999 0.20635112999999999 0.25887065999999997 0.098114461 0.25887065999999997 0.20635112999999999 0.26247856000000003 0.098114461 0.26247856000000003 0.20635112999999999 0.26608642999999998 0.098114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0.2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.2769"
+		+ "1007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999"
+		+ "999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999"
 		)
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder9|LightingTruss1:pCylinder9Shape" 
-		"uvst[0].uvsp[250:335]" (" 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002 0.21557602000000001 0.097133338 0.21918388999999999 0.097133338 0.21918388999999999 0.20537000999999999 0.21557602000000001 0.20537000999999999 0.22279177999999999 0.097133338 0.22279177999999999 0.20537000999999999 0.22639965000000001 0.097133338 0.22639965000000001 0.20537000999999999 0.23000756 0.097133338 0.23000756 0.20537000999999999 0.23361544000000001 0.097133338 0.23361544000000001 0.20537000999999999 0.23722330999999999 0.097133338 0.23722330999999999 0.20537000999999999 0.24083120999999999 0.097133338 0.24083120999999999 0.20537000999999999 0.24443910999999999 0.097133338 0.24443910999999999 0.20537000999999999 0.24804698 0.097133338 0.24804698 0.20537000999999999 0.25165489000000002 0.097133338 0.25165489000000002 0.20537000999999999 0.25526272999999999 0.097133338 0.25526272999999999 0.20537000999999999 0.25887065999999997 0.097133338 0.25887065999999997 0.20537000999999999 0.26247856000000003 0.097133338 0.262478560"
-		+ "00000003 0.20537000999999999 0.26608642999999998 0.097133338 0.26608642999999998 0.20537000999999999 0.2696943 0.097133338 0.2696943 0.20537000999999999 0.2733022 0.097133338 0.2733022 0.20537000999999999 0.27691007000000001 0.097133338 0.27691007000000001 0.20537000999999999 0.28051794000000002 0.097133338 0.28051794000000002 0.20537000999999999 0.28412586000000001 0.097133338 0.28412586000000001 0.20537000999999999 0.28773376000000001 0.097133338 0.28773376000000001 0.20537000999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.08950138800"
+		"uvst[0].uvsp[250:335]" (" 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002 0.21557602000000001 0.098114461 0.21918388999999999 0.098114461 0.21918388999999999 0.20635112999999999 0.21557602000000001 0.20635112999999999 0.22279177999999999 0.098114461 0.22279177999999999 0.20635112999999999 0.22639965000000001 0.098114461 0.22639965000000001 0.20635112999999999 0.23000756 0.098114461 0.23000756 0.20635112999999999 0.23361544000000001 0.098114461 0.23361544000000001 0.20635112999999999 0.23722330999999999 0.098114461 0.23722330999999999 0.20635112999999999 0.24083120999999999 0.098114461 0.24083120999999999 0.20635112999999999 0.24443910999999999 0.098114461 0.24443910999999999 0.20635112999999999 0.24804698 0.098114461 0.24804698 0.20635112999999999 0.25165489000000002 0.098114461 0.25165489000000002 0.20635112999999999 0.25526272999999999 0.098114461 0.25526272999999999 0.20635112999999999 0.25887065999999997 0.098114461 0.25887065999999997 0.20635112999999999 0.26247856000000003 0.098114461 0.262478560"
+		+ "00000003 0.20635112999999999 0.26608642999999998 0.098114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0.2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.08950138800"
 		+ "0000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002"
 		)
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder9|LightingTruss1:pCylinder9Shape" 
 		"displayFacesWithGroupId" " 0"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape" 
-		"uvPivot" " -type \"double2\" 0.25165489315986633 0.15132172499217239"
-		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape" 
 		"uvSet[0].uvSetPoints" " -s 336"
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape" 
-		"uvst[0].uvsp[0:249]" (" -type \"float2\" 0.29454627999999999 0.039079592000000003 0.28814047999999998 0.026507533999999999 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.21557602000000001 0.097690291999999998 0.21918388999999999 0.097690291999999998 0.22279177999999999 0.097690291999999998 0.22639965000000001 0.097690291999999998 0.23000756 0.097690291999999998 0.23361544000000001 0.097690291999999998 0.23"
-		+ "722330999999999 0.097690291999999998 0.24083120999999999 0.097690291999999998 0.24443910999999999 0.097690291999999998 0.24804698 0.097690291999999998 0.25165489000000002 0.097690291999999998 0.25526272999999999 0.097690291999999998 0.25887065999999997 0.097690291999999998 0.26247856000000003 0.097690291999999998 0.26608642999999998 0.097690291999999998 0.2696943 0.097690291999999998 0.2733022 0.097690291999999998 0.27691007000000001 0.097690291999999998 0.28051794000000002 0.097690291999999998 0.28412586000000001 0.097690291999999998 0.28773376000000001 0.097690291999999998 0.21557602000000001 0.20592695 0.21918388999999999 0.20592695 0.22279177999999999 0.20592695 0.22639965000000001 0.20592695 0.23000756 0.20592695 0.23361544000000001 0.20592695 0.23722330999999999 0.20592695 0.24083120999999999 0.20592695 0.24443910999999999 0.20592695 0.24804698 0.20592695 0.25165489000000002 0.20592695 0.25526272999999999 0.20592695 0.25887065999999997 0.20592695 0.26247856000000003 0.20592695 0.26608642999999998 0.2059"
-		+ "2695 0.2696943 0.20592695 0.2733022 0.20592695 0.27691007000000001 0.20592695 0.28051794000000002 0.20592695 0.28412586000000001 0.20592695 0.28773376000000001 0.20592695 0.29454627999999999 0.23751349999999999 0.28814047999999998 0.22494144999999999 0.27816324999999997 0.21496418 0.26559114 0.2085584 0.25165492 0.20635112999999999 0.23771864000000001 0.2085584 0.22514658000000001 0.21496418 0.21516933999999999 0.22494144999999999 0.20876354999999999 0.23751349999999999 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.26538599000000002 0.21516933999999999 0.27795809999999999 0.22514661 0.28793531999999999 0.23771866999999999 0.29434109000000003 0.25165492 0.29654837000000001 0.26559114 0.29434109000000003 0.27816321999999999 0.28793531999999999 0.28814047999999998 0.27795809999999999 0.29454627999999999 0.26538599000000002 0.29675352999999999 0.25144976000000002 0.25165492 0.053015828000000001 0.25165492 0.25144976000000002 0.21557602000000001 0.097203389000000001 0.21918388999999999 0.0972033890"
-		+ "00000001 0.21918388999999999 0.20544006000000001 0.21557602000000001 0.20544006000000001 0.22279177999999999 0.097203389000000001 0.22279177999999999 0.20544006000000001 0.22639965000000001 0.097203389000000001 0.22639965000000001 0.20544006000000001 0.23000756 0.097203389000000001 0.23000756 0.20544006000000001 0.23361544000000001 0.097203389000000001 0.23361544000000001 0.20544006000000001 0.23722330999999999 0.097203389000000001 0.23722330999999999 0.20544006000000001 0.24083120999999999 0.097203389000000001 0.24083120999999999 0.20544006000000001 0.24443910999999999 0.097203389000000001 0.24443910999999999 0.20544006000000001 0.24804698 0.097203389000000001 0.24804698 0.20544006000000001 0.25165489000000002 0.097203389000000001 0.25165489000000002 0.20544006000000001 0.25526272999999999 0.097203389000000001 0.25526272999999999 0.20544006000000001 0.25887065999999997 0.097203389000000001 0.25887065999999997 0.20544006000000001 0.26247856000000003 0.097203389000000001 0.26247856000000003 0.20544006000000001"
-		+ " 0.26608642999999998 0.097203389000000001 0.26608642999999998 0.20544006000000001 0.2696943 0.097203389000000001 0.2696943 0.20544006000000001 0.2733022 0.097203389000000001 0.2733022 0.20544006000000001 0.27691007000000001 0.097203389000000001 0.27691007000000001 0.20544006000000001 0.28051794000000002 0.097203389000000001 0.28051794000000002 0.20544006000000001 0.28412586000000001 0.097203389000000001 0.28412586000000001 0.20544006000000001 0.28773376000000001 0.097203389000000001 0.28773376000000001 0.20544006000000001 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.07952414"
-		+ "5000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999 0.29454627999999999 0.23751349999999999 0.29675352999"
-		+ "999999 0.25144976000000002 0.21557602000000001 0.098114461 0.21918388999999999 0.098114461 0.21918388999999999 0.20635112999999999 0.21557602000000001 0.20635112999999999 0.22279177999999999 0.098114461 0.22279177999999999 0.20635112999999999 0.22639965000000001 0.098114461 0.22639965000000001 0.20635112999999999 0.23000756 0.098114461 0.23000756 0.20635112999999999 0.23361544000000001 0.098114461 0.23361544000000001 0.20635112999999999 0.23722330999999999 0.098114461 0.23722330999999999 0.20635112999999999 0.24083120999999999 0.098114461 0.24083120999999999 0.20635112999999999 0.24443910999999999 0.098114461 0.24443910999999999 0.20635112999999999 0.24804698 0.098114461 0.24804698 0.20635112999999999 0.25165489000000002 0.098114461 0.25165489000000002 0.20635112999999999 0.25526272999999999 0.098114461 0.25526272999999999 0.20635112999999999 0.25887065999999997 0.098114461 0.25887065999999997 0.20635112999999999 0.26247856000000003 0.098114461 0.26247856000000003 0.20635112999999999 0.26608642999999998 0.098"
-		+ "114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0.2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.251"
-		+ "65492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999"
+		"uvst[0].uvsp[0:249]" (" -type \"float2\" 0.29454627999999999 0.039079592000000003 0.28814047999999998 0.026507533999999999 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.21557602000000001 0.098114461 0.21918388999999999 0.098114461 0.22279177999999999 0.098114461 0.22639965000000001 0.098114461 0.23000756 0.098114461 0.23361544000000001 0.098114461 0.23722330999999999 0.098114461 0.24083120999999999 0.0981"
+		+ "14461 0.24443910999999999 0.098114461 0.24804698 0.098114461 0.25165489000000002 0.098114461 0.25526272999999999 0.098114461 0.25887065999999997 0.098114461 0.26247856000000003 0.098114461 0.26608642999999998 0.098114461 0.2696943 0.098114461 0.2733022 0.098114461 0.27691007000000001 0.098114461 0.28051794000000002 0.098114461 0.28412586000000001 0.098114461 0.28773376000000001 0.098114461 0.21557602000000001 0.20635112999999999 0.21918388999999999 0.20635112999999999 0.22279177999999999 0.20635112999999999 0.22639965000000001 0.20635112999999999 0.23000756 0.20635112999999999 0.23361544000000001 0.20635112999999999 0.23722330999999999 0.20635112999999999 0.24083120999999999 0.20635112999999999 0.24443910999999999 0.20635112999999999 0.24804698 0.20635112999999999 0.25165489000000002 0.20635112999999999 0.25526272999999999 0.20635112999999999 0.25887065999999997 0.20635112999999999 0.26247856000000003 0.20635112999999999 0.26608642999999998 0.20635112999999999 0.2696943 0.20635112999999999 0.2733022 0.2063511"
+		+ "2999999999 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.20635112999999999 0.29454627999999999 0.23751349999999999 0.28814047999999998 0.22494144999999999 0.27816324999999997 0.21496418 0.26559114 0.2085584 0.25165492 0.20635112999999999 0.23771864000000001 0.2085584 0.22514658000000001 0.21496418 0.21516933999999999 0.22494144999999999 0.20876354999999999 0.23751349999999999 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.26538599000000002 0.21516933999999999 0.27795809999999999 0.22514661 0.28793531999999999 0.23771866999999999 0.29434109000000003 0.25165492 0.29654837000000001 0.26559114 0.29434109000000003 0.27816321999999999 0.28793531999999999 0.28814047999999998 0.27795809999999999 0.29454627999999999 0.26538599000000002 0.29675352999999999 0.25144976000000002 0.25165492 0.053015828000000001 0.25165492 0.25144976000000002 0.21557602000000001 0.098114461 0.21918388999999999 0.098114461 0.2191838"
+		+ "8999999999 0.20635112999999999 0.21557602000000001 0.20635112999999999 0.22279177999999999 0.098114461 0.22279177999999999 0.20635112999999999 0.22639965000000001 0.098114461 0.22639965000000001 0.20635112999999999 0.23000756 0.098114461 0.23000756 0.20635112999999999 0.23361544000000001 0.098114461 0.23361544000000001 0.20635112999999999 0.23722330999999999 0.098114461 0.23722330999999999 0.20635112999999999 0.24083120999999999 0.098114461 0.24083120999999999 0.20635112999999999 0.24443910999999999 0.098114461 0.24443910999999999 0.20635112999999999 0.24804698 0.098114461 0.24804698 0.20635112999999999 0.25165489000000002 0.098114461 0.25165489000000002 0.20635112999999999 0.25526272999999999 0.098114461 0.25526272999999999 0.20635112999999999 0.25887065999999997 0.098114461 0.25887065999999997 0.20635112999999999 0.26247856000000003 0.098114461 0.26247856000000003 0.20635112999999999 0.26608642999999998 0.098114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0"
+		+ ".2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.2881404"
+		+ "7999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002 0.21557602000000001 0.098114461 0.21918388999999999 0.098114461 0.21918388999999999 0.20635112999999999 0.21557602000000001 0.20635112999999999 0.2227917799999999"
+		+ "9 0.098114461 0.22279177999999999 0.20635112999999999 0.22639965000000001 0.098114461 0.22639965000000001 0.20635112999999999 0.23000756 0.098114461 0.23000756 0.20635112999999999 0.23361544000000001 0.098114461 0.23361544000000001 0.20635112999999999 0.23722330999999999 0.098114461 0.23722330999999999 0.20635112999999999 0.24083120999999999 0.098114461 0.24083120999999999 0.20635112999999999 0.24443910999999999 0.098114461 0.24443910999999999 0.20635112999999999 0.24804698 0.098114461 0.24804698 0.20635112999999999 0.25165489000000002 0.098114461 0.25165489000000002 0.20635112999999999 0.25526272999999999 0.098114461 0.25526272999999999 0.20635112999999999 0.25887065999999997 0.098114461 0.25887065999999997 0.20635112999999999 0.26247856000000003 0.098114461 0.26247856000000003 0.20635112999999999 0.26608642999999998 0.098114461 0.26608642999999998 0.20635112999999999 0.2696943 0.098114461 0.2696943 0.20635112999999999 0.2733022 0.098114461 0.2733022 0.20635112999999999 0.27691007000000001 0.098114461 0.2769"
+		+ "1007000000001 0.20635112999999999 0.28051794000000002 0.098114461 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.098114461 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.098114461 0.28773376000000001 0.20635112999999999 0.28814047999999998 0.026507533999999999 0.29454627999999999 0.039079592000000003 0.25165492 0.053015828000000001 0.27816324999999997 0.016530268000000001 0.26559114 0.010124482000000001 0.25165492 0.0079172179000000006 0.23771864000000001 0.010124482000000001 0.22514658000000001 0.016530268000000001 0.21516933999999999 0.026507533999999999 0.20876354999999999 0.039079592000000003 0.20655628000000001 0.053015828000000001 0.20876354999999999 0.066952065000000005 0.21516933999999999 0.079524145000000004 0.22514661 0.089501388000000001 0.23771866999999999 0.095907173999999998 0.25165492 0.098114461 0.26559114 0.095907173999999998 0.27816321999999999 0.089501388000000001 0.28814047999999998 0.079524145000000004 0.29454627999999999 0.066952065000000005 0.29675352999999"
+		+ "999 0.053015828000000001 0.29454627999999999 0.26538599000000002 0.28814047999999998 0.27795809999999999 0.25165492 0.25144976000000002 0.27816321999999999 0.28793531999999999 0.26559114 0.29434109000000003 0.25165492 0.29654837000000001 0.23771866999999999 0.29434109000000003 0.22514661 0.28793531999999999 0.21516933999999999 0.27795809999999999 0.20876354999999999 0.26538599000000002 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.23751349999999999 0.21516933999999999 0.22494144999999999 0.22514658000000001 0.21496418 0.23771864000000001 0.2085584 0.25165492 0.20635112999999999 0.26559114 0.2085584 0.27816324999999997 0.21496418 0.28814047999999998 0.22494144999999999"
 		)
 		2 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape" 
 		"uvst[0].uvsp[250:335]" (" 0.29454627999999999 0.23751349999999999 0.29675352999999999 0.25144976000000002 0.21557602000000001 0.098114461 0.21918388999999999 0.098114461 0.21918388999999999 0.20635112999999999 0.21557602000000001 0.20635112999999999 0.22279177999999999 0.098114461 0.22279177999999999 0.20635112999999999 0.22639965000000001 0.098114461 0.22639965000000001 0.20635112999999999 0.23000756 0.098114461 0.23000756 0.20635112999999999 0.23361544000000001 0.098114461 0.23361544000000001 0.20635112999999999 0.23722330999999999 0.098114461 0.23722330999999999 0.20635112999999999 0.24083120999999999 0.098114461 0.24083120999999999 0.20635112999999999 0.24443910999999999 0.098114461 0.24443910999999999 0.20635112999999999 0.24804698 0.098114461 0.24804698 0.20635112999999999 0.25165489000000002 0.098114461 0.25165489000000002 0.20635112999999999 0.25526272999999999 0.098114461 0.25526272999999999 0.20635112999999999 0.25887065999999997 0.098114461 0.25887065999999997 0.20635112999999999 0.26247856000000003 0.098114461 0.262478560"
@@ -2860,181 +2810,11 @@ createNode reference -n "LightingTrussRN1";
 		+ "0.098114461 0.24443910999999999 0.098114461 0.24804698 0.098114461 0.25165489000000002 0.098114461 0.25526272999999999 0.098114461 0.25887065999999997 0.098114461 0.26247856000000003 0.098114461 0.26608642999999998 0.098114461 0.2696943 0.098114461 0.2733022 0.098114461 0.27691007000000001 0.098114461 0.28051794000000002 0.098114461 0.28412586000000001 0.098114461 0.28773376000000001 0.098114461 0.21557602000000001 0.20635112999999999 0.21918388999999999 0.20635112999999999 0.22279177999999999 0.20635112999999999 0.22639965000000001 0.20635112999999999 0.23000756 0.20635112999999999 0.23361544000000001 0.20635112999999999 0.23722330999999999 0.20635112999999999 0.24083120999999999 0.20635112999999999 0.24443910999999999 0.20635112999999999 0.24804698 0.20635112999999999 0.25165489000000002 0.20635112999999999 0.25526272999999999 0.20635112999999999 0.25887065999999997 0.20635112999999999 0.26247856000000003 0.20635112999999999 0.26608642999999998 0.20635112999999999 0.2696943 0.20635112999999999 0.2733022 0.2"
 		+ "0635112999999999 0.27691007000000001 0.20635112999999999 0.28051794000000002 0.20635112999999999 0.28412586000000001 0.20635112999999999 0.28773376000000001 0.20635112999999999 0.29454627999999999 0.23751349999999999 0.28814047999999998 0.22494144999999999 0.27816324999999997 0.21496418 0.26559114 0.2085584 0.25165492 0.20635112999999999 0.23771864000000001 0.2085584 0.22514658000000001 0.21496418 0.21516933999999999 0.22494144999999999 0.20876354999999999 0.23751349999999999 0.20655628000000001 0.25144976000000002 0.20876354999999999 0.26538599000000002 0.21516933999999999 0.27795809999999999 0.22514661 0.28793531999999999 0.23771866999999999 0.29434109000000003 0.25165492 0.29654837000000001 0.26559114 0.29434109000000003 0.27816321999999999 0.28793531999999999 0.28814047999999998 0.27795809999999999 0.29454627999999999 0.26538599000000002 0.29675352999999999 0.25144976000000002 0.25165492 0.053015828000000001 0.25165492 0.25144976000000002"
 		)
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId19.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId14.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId15.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape.compInstObjGroups.compObjectGroups[2].compObjectGroupId" 
-		""
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape.compInstObjGroups.compObjectGroups[2]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId21.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "LightingTruss1:groupId12.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId13.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
-		""
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape.compInstObjGroups.compObjectGroups[1]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId20.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group2|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group2|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId14.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder4|LightingTruss1:pCylinderShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder3|LightingTruss1:pCylinderShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder2|LightingTruss1:pCylinderShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder1|LightingTruss1:pCylinderShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId18.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId19.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape.compInstObjGroups.compObjectGroups[4].compObjectGroupId" 
-		""
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape.compInstObjGroups.compObjectGroups[4]" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group2|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId17.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId18.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "LightingTruss1:groupId16.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder12|LightingTruss1:pCylinder12Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
@@ -3046,6 +2826,12 @@ createNode reference -n "LightingTrussRN1";
 		""
 		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder12|LightingTruss1:pCylinder12Shape.compInstObjGroups.compObjectGroups[3]" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "LightingTruss1:groupId11.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder9|LightingTruss1:pCylinder9Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder9|LightingTruss1:pCylinder9Shape.instObjGroups.objectGroups[0].objectGrpColor" 
@@ -3056,31 +2842,35 @@ createNode reference -n "LightingTrussRN1";
 		""
 		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder9|LightingTruss1:pCylinder9Shape.compInstObjGroups.compObjectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId13.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId16.message" ":initialShadingGroup.groupNodes" "-na"
 		
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId15.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId12.message" ":initialShadingGroup.groupNodes" "-na"
-		
 		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group2|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group2|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId11.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId21.message" ":initialShadingGroup.groupNodes" "-na"
 		
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		3 "LightingTruss1:groupId18.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape2.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "LightingTruss1:groupId20.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder14|LightingTruss1:pCylinder14Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
@@ -3092,31 +2882,191 @@ createNode reference -n "LightingTrussRN1";
 		""
 		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder14|LightingTruss1:pCylinder14Shape.compInstObjGroups.compObjectGroups[5]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group2|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder4|LightingTruss1:pCylinderShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder3|LightingTruss1:pCylinderShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder2|LightingTruss1:pCylinderShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder1|LightingTruss1:pCylinderShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId14.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId15.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape.compInstObjGroups.compObjectGroups[2].compObjectGroupId" 
+		""
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder11|LightingTruss1:pCylinder11Shape.compInstObjGroups.compObjectGroups[2]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId12.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId13.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape.compInstObjGroups.compObjectGroups[1].compObjectGroupId" 
+		""
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder10|LightingTruss1:pCylinder10Shape.compInstObjGroups.compObjectGroups[1]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId19.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId18.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId19.groupId" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape.compInstObjGroups.compObjectGroups[4].compObjectGroupId" 
+		""
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder13|LightingTruss1:pCylinder13Shape.compInstObjGroups.compObjectGroups[4]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId13.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group2|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group2|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId15.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId11.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group1|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId20.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		3 "LightingTruss1:groupId14.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group2|LightingTruss1:pCylinder15|LightingTruss1:pCylinderShape15.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group1|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group4|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group2|LightingTruss1:pCylinder21|LightingTruss1:pCylinderShape21.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "LightingTruss1:groupId16.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group2|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId12.message" ":initialShadingGroup.groupNodes" "-na"
 		
-		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group3|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group3|LightingTruss1:pCylinder16|LightingTruss1:pCylinderShape16.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "LightingTruss1:groupId17.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group4|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group3|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group5|LightingTruss1:group4|LightingTruss1:pCylinder19|LightingTruss1:pCylinderShape19.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder17|LightingTruss1:pCylinderShape17.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group1|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group7|LightingTruss1:group2|LightingTruss1:pCylinder18|LightingTruss1:pCylinderShape18.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|LightingTruss1:LightingTruss|LightingTruss1:group6|LightingTruss1:group2|LightingTruss1:pCylinder20|LightingTruss1:pCylinderShape20.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 3 "LightingTrussRN1" "|LightingTruss1:LightingTruss|LightingTruss1:pCylinder1|LightingTruss1:pCylinderShape1.instObjGroups" 
 		"LightingTrussRN1.placeHolderList[1]" ":initialShadingGroup.dsm"
@@ -3313,7 +3263,7 @@ createNode reference -n "TableScene2RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"TableScene2RN"
 		"TableScene2RN" 0
-		"TableScene2RN" 21
+		"TableScene2RN" 20
 		2 "|TableScene2:Desk" "translate" " -type \"double3\" -10.73081246179438075 1.72250441903632878 4.33964702343002529"
 		
 		2 "|TableScene2:Desk" "rotate" " -type \"double3\" 0 -158.75827699879658894 0"
@@ -3325,7 +3275,7 @@ createNode reference -n "TableScene2RN";
 		2 "|TableScene2:Desk" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|TableScene2:Desk" "scalePivot" " -type \"double3\" 0 -1.47293797558282602 -0.047713279724121094"
 		
-		2 "|TableScene2:Desk|TableScene2:DeskShape" "uvPivot" " -type \"double2\" 0.45160987973213196 0.18093582987785339"
+		2 "|TableScene2:Desk|TableScene2:DeskShape" "uvPivot" " -type \"double2\" 0.46648988127708435 0.15047788619995117"
 		
 		2 "|TableScene2:Desk|TableScene2:DeskShape" "uvSet[0].uvSetPoints" " -s 798"
 		
@@ -3362,9 +3312,9 @@ createNode reference -n "TableScene2RN";
 		2 "|TableScene2:Desk|TableScene2:DeskShape" "uvst[0].uvsp[750:797]" (" 0.4677521 0.26257813000000002 0.46775174000000003 0.26065421 0.46234744999999999 0.26065530999999997 0.46234786999999999 0.26257902 0.45640652999999998 0.26065639000000002 0.45640686000000003 0.26258009999999998 0.44868237 0.26065772999999998 0.44868267000000001 0.26258153000000001 0.61175519 0.25842091 0.61393845000000002 0.25842124 0.61393814999999996 0.26034507000000001 0.61175489000000005 0.26034465000000001 0.60599678999999995 0.26034367000000003 0.60599714999999998 0.25841993000000002 0.60122186 0.26034284000000002 0.60122215999999995 0.25841903999999999 0.59712052000000004 0.26034209000000003 0.59712094000000004 0.25841838 0.59671598999999997 0.27918546999999999 0.60084932999999996 0.28345274999999998 0.59900801999999997 0.28520399000000002 0.59552497000000004 0.28193760000000001 0.45675567 0.28196204000000002 0.45327382999999999 0.28522974000000001 0.45143180999999999 0.28347906 0.45556365999999998 0.27921042000000001 0.59194970000000002 0.27663815000000003 0.59195023999999996 0.27992718999999999 0.4"
 		+ "6032964999999998 0.27995035000000001 0.46032906000000001 0.2766614 0.45085101999999999 0.29045325999999999 0.44868141 0.29069697999999999 0.60360223000000002 0.29066974000000001 0.60143261999999997 0.29042667 0.46620882000000002 0.14427197999999999 0.56969552999999995 0.14426889000000001 0.56969588999999998 0.15343155999999999 0.46620905000000001 0.15343466 0.56969702 0.19408064999999999 0.46621031000000002 0.19408370999999999 0.56969738000000003 0.20324333 0.46621054000000001 0.20324647000000001 0.56969851000000005 0.24389242 0.46621173999999999 0.24389547 0.61034465000000004 0.14426769 0.61034495 0.15343037000000001 0.42555969999999999 0.14427318 0.42555994000000003 0.15343589999999999"
 		)
-		2 "|TableScene2:Desk|TableScene2:DeskShape" "pt[456:487]" " -s 32 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09 0 0 -7.4505806000000003e-09"
-		
 		2 "|TableScene2:Desk|TableScene2:DeskShape" "displayFacesWithGroupId" " 0"
+		
+		3 "TableScene2:groupId13.message" ":initialShadingGroup.groupNodes" "-na"
 		
 		3 "TableScene2:groupId13.groupId" "|TableScene2:Desk|TableScene2:DeskShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
@@ -3376,39 +3326,10 @@ createNode reference -n "TableScene2RN";
 		""
 		3 "|TableScene2:Desk|TableScene2:DeskShape.compInstObjGroups.compObjectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "TableScene2:groupId13.message" ":initialShadingGroup.groupNodes" "-na"
-		
 		5 3 "TableScene2RN" "|TableScene2:Desk|TableScene2:DeskShape.instObjGroups" 
 		"TableScene2RN.placeHolderList[1]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode brush -n "art3dPaintLastPaintBrush";
-	rename -uid "46F888D2-4F68-A859-97EA-1B8A13B22EC7";
-	setAttr ".lcl[0]"  0 0.5 1;
-	setAttr ".pcl[0]"  0 0.5 1;
-	setAttr ".wsc[0]"  0 1 1;
-	setAttr ".lws[0]"  0 1 1;
-	setAttr ".pws[0]"  0 1 1;
-	setAttr ".tls[0]"  0 1 1;
-	setAttr -s 3 ".env";
-	setAttr ".env[0].envp" 0.20000000298023224;
-	setAttr ".env[0].envc" -type "float3" 0 0 0.15000001 ;
-	setAttr ".env[0].envi" 2;
-	setAttr ".env[1].envp" 0.5;
-	setAttr ".env[1].envc" -type "float3" 0.47999999 0.55000001 0.69999999 ;
-	setAttr ".env[1].envi" 2;
-	setAttr ".env[2].envp" 1;
-	setAttr ".env[2].envc" -type "float3" 0 0.1 0.44999999 ;
-	setAttr ".env[2].envi" 2;
-	setAttr ".rro[0]"  0 1 1;
-createNode tripleShadingSwitch -n "tripleShadingSwitch1";
-	rename -uid "9EAE5454-4473-2F9F-946A-01A86F89A3A8";
-createNode file -n "file1";
-	rename -uid "040BABE5-4CC3-AC31-CC54-5DB6A58D4166";
-	setAttr ".ftn" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//sourceimages/3dPaintTextures/Scene 2/FloorShape_baseColor.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture1";
-	rename -uid "E6D7BB8C-4C88-2287-FC5D-6683A2857A00";
 createNode reference -n "StageLightRN";
 	rename -uid "A4C1C09D-4D56-B6E2-F028-D6AB100BA4B3";
 	setAttr ".phl[1]" 0;
@@ -3449,7 +3370,7 @@ createNode reference -n "StageLightRN1";
 		
 		2 "|StageLight1:Stage_light" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		
-		2 "|StageLight1:Stage_light|StageLight1:Stage_lightShape" "uvPivot" " -type \"double2\" 0.24515378847718239 0.59095677733421326"
+		2 "|StageLight1:Stage_light|StageLight1:Stage_lightShape" "uvPivot" " -type \"double2\" 0.3607771135866642 0.49918940663337708"
 		
 		2 "|StageLight1:Stage_light|StageLight1:Stage_lightShape" "pt[84:205]" (" -s 122 0 -0.19374738999999999 0.1520927 0 -0.22121958 0.12713647 0 -0.24302159000000001 0.10733115999999999 0 -0.25701933999999999 0.094615458999999999 0 -0.26184273000000002 0.090233907000000002 0 -0.25701933999999999 0.094615458999999999 0 -0.24302159000000001 0.10733115999999999 0 -0.22121958 0.12713647 0 -0.19374738999999999 0.1520927 0 -0.16329414 0.17975690999999999 0 -0.13284104999999999 0.20742118000000001 0 -0.1053689 0.23237745000000001 0 -0.083566851999999997 0.25218272000000003 0 -0.069569111000000003 0.26489838999999998 0 -0.064745747000000006 0.26927999000000002 0 -0.069569111000000003 0.26489838999999998 0 -0.083566851999999997 0.25218272000000003 0 -0.1053689 0.23237745000000001 0 -0.13284104999999999 0.20742118000000001 0 -0.16329414 0.17975690999999999 0 0.13284108 -0.20742118000000001 0 0.10536893 -0.23237745000000001 0 0.083566873999999999 -0.25218272000000003 0 0.069568947000000006 -0.26489838999999998 0 0.064745747000000006 -0.26927999000000002 0 0.069568947000000006 -0.2648983899999999"
 		+ "8 0 0.083566873999999999 -0.25218272000000003 0 0.10536893 -0.23237745000000001 0 0.13284108 -0.20742118000000001 0 0.16329416999999999 -0.17975691999999999 0 0.19374739999999999 -0.1520927 0 0.22121958 -0.12713647 0 0.24302164000000001 -0.10733115999999999 0 0.25701933999999999 -0.094615458999999999 0 0.26184276000000001 -0.090233907000000002 0 0.25701933999999999 -0.094615458999999999 0 0.24302164000000001 -0.10733115999999999 0 0.22121958 -0.12713647 0 0.19374739999999999 -0.1520927 0 0.16329416999999999 -0.17975691999999999 0 -0.22696111999999999 0.12192072 0 -0.23813918000000001 0.11176647000000001 0 -0.24199091 0.10826755 0 -0.23813918000000001 0.11176647000000001 0 -0.22696111999999999 0.12192072 0 -0.20955093 0.13773637999999999 0 -0.1876128 0.15766543 0 -0.16329411999999999 0.17975690999999999 0 -0.13897557999999999 0.20184846000000001 0 -0.11703744000000001 0.22177751000000001 0 -0.099627212000000007 0.23759316999999999 0 -0.088449202000000005 0.24774736 0 -0.084597467999999995 0.25124633000000002 0"
@@ -3580,11 +3501,7 @@ createNode reference -n "BackWallScene2RN";
 		"-na"
 		5 3 "BackWallScene2RN" "|BackWallScene2:Floor|BackWallScene2:FloorShape.instObjGroups" 
 		"BackWallScene2RN.placeHolderList[1]" "BackWallScene2:standardSurface2SG.dsm"
-		"BackWallScene2RN" 4
-		2 "|BackWallScene2:BackWall" "translate" " -type \"double3\" -0.23368478430972406 0 0"
-		
-		2 "|BackWallScene2:BackWall|BackWallScene2:BackWallShape" "uvPivot" " -type \"double2\" 0.18471801280975342 0.34368759393692017"
-		
+		"BackWallScene2RN" 2
 		3 "|BackWallScene2:BackWall|BackWallScene2:BackWallShape.instObjGroups" ":initialShadingGroup.dagSetMembers" 
 		"-na"
 		5 3 "BackWallScene2RN" "|BackWallScene2:BackWall|BackWallScene2:BackWallShape.instObjGroups" 
@@ -3604,59 +3521,6 @@ createNode reference -n "FloorScene2RN";
 		"FloorScene2RN.placeHolderList[1]" ":initialShadingGroup.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode standardSurface -n "Scene2_MAT";
-	rename -uid "3B73D78D-4424-92AC-295D-E294F63F45A5";
-createNode shadingEngine -n "standardSurface3SG";
-	rename -uid "F8FC6523-4AE7-8B56-F248-DF935563F2D2";
-	setAttr ".ihi" 0;
-	setAttr -s 216 ".dsm";
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo2";
-	rename -uid "BEDFC72F-41F4-9B30-CDBD-129D1E2D4A59";
-createNode file -n "file2";
-	rename -uid "B164EDA3-4078-AD5E-32B3-05A0A1C95857";
-	setAttr ".ftn" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//sourceimages/Scene2_colorswatch.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture2";
-	rename -uid "0B83FB0B-4135-2A18-E878-82A5AF66E016";
-createNode lambert -n "test_MAT";
-	rename -uid "E151DCB2-47B0-3B88-482A-96B3D2D9DD90";
-createNode shadingEngine -n "lambert2SG";
-	rename -uid "481C2B5B-48AF-509E-8E00-C8AC075EEAD4";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo3";
-	rename -uid "637E253B-4FAA-19CE-3717-89B6A3323BC3";
-createNode file -n "file3";
-	rename -uid "84FCD70E-4E67-97EC-A5A6-01B5A8C9E2C6";
-	setAttr ".ftn" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//sourceimages/Scene2_colorswatch.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture3";
-	rename -uid "D2D7EB1F-41B1-7B84-31BB-B9BF18FE7CAC";
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "A0F6EDE3-472B-D708-6344-349FDFDDC50D";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -1047.4923131164562 -1296.4514556920358 ;
-	setAttr ".tgi[0].vh" -type "double2" 1559.0257134976778 904.78480458880335 ;
-	setAttr -s 6 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 1115.7142333984375;
-	setAttr ".tgi[0].ni[0].y" -78.571426391601562;
-	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" 808.5714111328125;
-	setAttr ".tgi[0].ni[1].y" -55.714286804199219;
-	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" -28.571428298950195;
-	setAttr ".tgi[0].ni[2].y" 152.85714721679688;
-	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" 194.28572082519531;
-	setAttr ".tgi[0].ni[3].y" -78.571426391601562;
-	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" 501.42855834960938;
-	setAttr ".tgi[0].ni[4].y" -55.714286804199219;
-	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" -377.14285278320312;
-	setAttr ".tgi[0].ni[5].y" 152.85714721679688;
-	setAttr ".tgi[0].ni[5].nvs" 2387;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3665,29 +3529,27 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
+	setAttr ".msaa" yes;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 12 ".st";
+	setAttr -s 11 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 13 ".s";
+	setAttr -s 12 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 8 ".u";
+	setAttr -s 7 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 16 ".r";
-select -ne :lightList1;
-	setAttr -s 2 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 5 ".tx";
+	setAttr -s 4 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
 	setAttr ".ro" yes;
-	setAttr -s 2 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -3696,8 +3558,6 @@ select -ne :defaultRenderGlobals;
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
-select -ne :defaultLightSet;
-	setAttr -s 2 ".dsm";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -3710,8 +3570,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "GuitarCaseRN.phl[1]" "standardSurface3SG.dsm" -na;
 connectAttr "GuitarCaseRN.phl[2]" "standardSurface3SG.dsm" -na;
 connectAttr "GuitarCaseRN.phl[3]" "standardSurface3SG.dsm" -na;
@@ -3931,20 +3789,13 @@ connectAttr "FloorScene2RN.phl[1]" "standardSurface3SG.dsm" -na;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "standardSurface3SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "standardSurface3SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
-connectAttr "sharedReferenceNode.sr" "GuitarCaseRN.sr";
 connectAttr "tripleShadingSwitch1.msg" "materialInfo1.t" -na;
 connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "file1.cmcf";
@@ -3969,13 +3820,14 @@ connectAttr "place2dTexture1.vc1" "file1.vc1";
 connectAttr "place2dTexture1.o" "file1.uv";
 connectAttr "place2dTexture1.ofs" "file1.fs";
 connectAttr "file2.oc" "Scene2_MAT.bc";
-connectAttr "file2.oa" "Scene2_MAT.opr";
-connectAttr "file2.oa" "Scene2_MAT.opg";
-connectAttr "file2.oa" "Scene2_MAT.opb";
 connectAttr "Scene2_MAT.oc" "standardSurface3SG.ss";
 connectAttr "standardSurface3SG.msg" "materialInfo2.sg";
 connectAttr "Scene2_MAT.msg" "materialInfo2.m";
-connectAttr "file2.msg" "materialInfo2.t" -na;
+connectAttr "Scene2_MAT.msg" "materialInfo2.t" -na;
+connectAttr "Scene2_MAT.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "standardSurface3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
 connectAttr ":defaultColorMgtGlobals.cme" "file2.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "file2.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "file2.cmcp";
@@ -3998,60 +3850,13 @@ connectAttr "place2dTexture2.vt3" "file2.vt3";
 connectAttr "place2dTexture2.vc1" "file2.vc1";
 connectAttr "place2dTexture2.o" "file2.uv";
 connectAttr "place2dTexture2.ofs" "file2.fs";
-connectAttr "file3.oc" "test_MAT.c";
-connectAttr "file3.ot" "test_MAT.it";
-connectAttr "test_MAT.oc" "lambert2SG.ss";
-connectAttr "lambert2SG.msg" "materialInfo3.sg";
-connectAttr "test_MAT.msg" "materialInfo3.m";
-connectAttr "file3.msg" "materialInfo3.t" -na;
-connectAttr ":defaultColorMgtGlobals.cme" "file3.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file3.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file3.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file3.ws";
-connectAttr "place2dTexture3.c" "file3.c";
-connectAttr "place2dTexture3.tf" "file3.tf";
-connectAttr "place2dTexture3.rf" "file3.rf";
-connectAttr "place2dTexture3.mu" "file3.mu";
-connectAttr "place2dTexture3.mv" "file3.mv";
-connectAttr "place2dTexture3.s" "file3.s";
-connectAttr "place2dTexture3.wu" "file3.wu";
-connectAttr "place2dTexture3.wv" "file3.wv";
-connectAttr "place2dTexture3.re" "file3.re";
-connectAttr "place2dTexture3.of" "file3.of";
-connectAttr "place2dTexture3.r" "file3.ro";
-connectAttr "place2dTexture3.n" "file3.n";
-connectAttr "place2dTexture3.vt1" "file3.vt1";
-connectAttr "place2dTexture3.vt2" "file3.vt2";
-connectAttr "place2dTexture3.vt3" "file3.vt3";
-connectAttr "place2dTexture3.vc1" "file3.vc1";
-connectAttr "place2dTexture3.o" "file3.uv";
-connectAttr "place2dTexture3.ofs" "file3.fs";
-connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "test_MAT.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "standardSurface3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "place2dTexture3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "Scene2_MAT.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
+connectAttr "sharedReferenceNode.sr" "GuitarCaseRN.sr";
 connectAttr "standardSurface3SG.pa" ":renderPartition.st" -na;
-connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "Scene2_MAT.msg" ":defaultShaderList1.s" -na;
-connectAttr "test_MAT.msg" ":defaultShaderList1.s" -na;
 connectAttr "tripleShadingSwitch1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "spotLightShape1.ltd" ":lightList1.l" -na;
-connectAttr "spotLightShape2.ltd" ":lightList1.l" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
-connectAttr "spotLight1.iog" ":defaultLightSet.dsm" -na;
-connectAttr "spotLight2.iog" ":defaultLightSet.dsm" -na;
-// End of Scene 2.ma
+// End of Scene 2.0013.ma
